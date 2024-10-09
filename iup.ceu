@@ -111,7 +111,6 @@ val iup :IUP = group {
         }
         func x-iup-get-number (h, name) {
             val s = to.pointer(name)
-            println("AQUI")
             `:number IupGetFloat($h.Pointer, $s.Pointer+1)`
         }
         [x-iup-get-pointer, x-iup-get-bool, x-iup-get-number]

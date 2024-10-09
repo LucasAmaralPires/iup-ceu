@@ -100,7 +100,6 @@ spawn {
                 val date :Date = catch {
                     iup.get.pointer(it.h,:VALUE) -> to-string -> to-date
                 }
-                println(date)
                 if date == :assert {
                     iup.set(it.h, :VALID, false)
                 } else {
