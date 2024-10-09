@@ -50953,7 +50953,6 @@ int iup_value_cb (Ihandle* h) {
 int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h}   },
-        { CEU_VALUE_POINTER, {.Pointer=h}   },
         { CEU_VALUE_NUMBER,  {.Number=item} },
         { CEU_VALUE_BOOL,    {.Bool=state}  }
     };
@@ -51014,7 +51013,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupMainLoop(); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 99, col 9) : ```IupMainLoop();```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 98, col 9) : ```IupMainLoop();```");
             
         
                     
@@ -51094,7 +51093,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 105, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 104, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51108,7 +51107,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 105, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 104, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51187,7 +51186,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73148, ceu_idx_73148));
                         ceu_gc_dec_val(ceu_col_73148);
                         ceu_gc_dec_val(ceu_idx_73148);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer]");
                     
                 }
                 
@@ -51197,7 +51196,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73153 = {
@@ -51215,7 +51214,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73153.Dyn->Clo.proto(&ceux_73153);
                     ceu_gc_dec_val(ceu_clo_73153);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -51225,7 +51224,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 106, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 105, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -51322,7 +51321,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 109, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 108, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51336,7 +51335,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 109, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 108, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51415,7 +51414,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73235, ceu_idx_73235));
                         ceu_gc_dec_val(ceu_col_73235);
                         ceu_gc_dec_val(ceu_idx_73235);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer]");
                     
                 }
                 
@@ -51425,7 +51424,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73240 = {
@@ -51443,7 +51442,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73240.Dyn->Clo.proto(&ceux_73240);
                     ceu_gc_dec_val(ceu_clo_73240);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -51453,7 +51452,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 110, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 109, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -51550,7 +51549,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 113, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 112, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51564,7 +51563,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 113, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 112, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51643,7 +51642,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73322, ceu_idx_73322));
                         ceu_gc_dec_val(ceu_col_73322);
                         ceu_gc_dec_val(ceu_idx_73322);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer]");
                     
                 }
                 
@@ -51653,7 +51652,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73327 = {
@@ -51671,7 +51670,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73327.Dyn->Clo.proto(&ceux_73327);
                     ceu_gc_dec_val(ceu_clo_73327);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -51681,13 +51680,13 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 114, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 113, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
                         ceu_loc_s_73328 = ceu_acc;
                     
-                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetInt((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
+                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetFloat((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
                         
                     } while (0);
 
@@ -51778,7 +51777,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
@@ -51792,7 +51791,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
@@ -51806,7 +51805,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[2], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
@@ -51874,7 +51873,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 121, col 17) : to-pointer(name)"
+                            "@/iup/iup.ceu : (lin 120, col 17) : to-pointer(name)"
                         );
                     }
                     CEUX ceux_75304 = {
@@ -51892,7 +51891,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_75304.Dyn->Clo.proto(&ceux_75304);
                     ceu_gc_dec_val(ceu_clo_75304);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 121, col 17) : to-pointer(name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 120, col 17) : to-pointer(name)");
             
         
                 } // CALL | 
@@ -51902,7 +51901,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 121, col 9) : (val s = to-pointer(name))"
+                            "@/iup/iup.ceu : (lin 120, col 9) : (val s = to-pointer(name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -51967,7 +51966,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 138, col 25) : (val ceu_val = value)"
+                            "@/iup/iup.ceu : (lin 137, col 25) : (val ceu_val = value)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52017,7 +52016,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 126, col 17) : (val it :bool = ceu_val)"
+                            "@/iup/iup.ceu : (lin 125, col 17) : (val it :bool = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52048,7 +52047,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:bool)"
+                            "@/iup/iup.ceu : (lin 123, col 27) : is'(it,:bool)"
                         );
                     }
                     CEUX ceux_75349 = {
@@ -52066,7 +52065,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_75349.Dyn->Clo.proto(&ceux_75349);
                     ceu_gc_dec_val(ceu_clo_75349);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:bool)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : is'(it,:bool)");
             
         
                 } // CALL | 
@@ -52088,7 +52087,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetInt((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Bool); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 24) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 122, col 24) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
             
         
                       // src is on the stack and should be returned
@@ -52099,7 +52098,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 125, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 124, col 37) : ceu_ret"
                         );
                         #endif
                         ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
@@ -52178,7 +52177,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 126, col 11) : (val' ceu_or = do { (val it :bool = ceu_va..."
+                            "@/iup/iup.ceu : (lin 125, col 11) : (val' ceu_or = do { (val it :bool = ceu_va..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52244,7 +52243,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 132, col 17) : (val it :number = ceu_val)"
+                            "@/iup/iup.ceu : (lin 131, col 17) : (val it :number = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52275,7 +52274,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 125, col 27) : is'(it,:number)"
+                            "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:number)"
                         );
                     }
                     CEUX ceux_75425 = {
@@ -52293,7 +52292,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75425.Dyn->Clo.proto(&ceux_75425);
                     ceu_gc_dec_val(ceu_clo_75425);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 27) : is'(it,:number)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:number)");
             
         
                 } // CALL | 
@@ -52350,7 +52349,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get(ceu_col_75446, ceu_idx_75446));
                         ceu_gc_dec_val(ceu_col_75446);
                         ceu_gc_dec_val(ceu_idx_75446);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 27) : math[:floor]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : math[:floor]");
                     
                 }
                 
@@ -52360,7 +52359,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 124, col 27) : math[:floor](value)"
+                            "@/iup/iup.ceu : (lin 123, col 27) : math[:floor](value)"
                         );
                     }
                     CEUX ceux_75451 = {
@@ -52378,7 +52377,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75451.Dyn->Clo.proto(&ceux_75451);
                     ceu_gc_dec_val(ceu_clo_75451);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 27) : math[:floor](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : math[:floor](value)");
             
         
                 } // CALL | 
@@ -52400,7 +52399,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 124, col 45) : {{==}}(math[:floor](value),value)"
+                            "@/iup/iup.ceu : (lin 123, col 45) : {{==}}(math[:floor](value),value)"
                         );
                     }
                     CEUX ceux_75456 = {
@@ -52418,7 +52417,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75456.Dyn->Clo.proto(&ceux_75456);
                     ceu_gc_dec_val(ceu_clo_75456);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 45) : {{==}}(math[:floor](value),value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 45) : {{==}}(math[:floor](value),value)");
             
         
                 } // CALL | 
@@ -52431,7 +52430,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetInt((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 28) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 28) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
             
         
                     
@@ -52441,7 +52440,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetFloat((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 126, col 28) : ```IupSetFloat($h.Pointer, $s.Pointer+1, $...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 28) : ```IupSetFloat($h.Pointer, $s.Pointer+1, $...");
             
         
                     
@@ -52456,7 +52455,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 126, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 125, col 37) : ceu_ret"
                         );
                         #endif
                         ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
@@ -52535,7 +52534,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 127, col 11) : (val' ceu_or = do { (val it :number = ceu_..."
+                            "@/iup/iup.ceu : (lin 126, col 11) : (val' ceu_or = do { (val it :number = ceu_..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52601,7 +52600,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 136, col 17) : (val it :tag = ceu_val)"
+                            "@/iup/iup.ceu : (lin 135, col 17) : (val it :tag = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52632,7 +52631,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 128, col 27) : is'(it,:tag)"
+                            "@/iup/iup.ceu : (lin 127, col 27) : is'(it,:tag)"
                         );
                     }
                     CEUX ceux_75532 = {
@@ -52650,7 +52649,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75532.Dyn->Clo.proto(&ceux_75532);
                     ceu_gc_dec_val(ceu_clo_75532);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 27) : is'(it,:tag)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 127, col 27) : is'(it,:tag)");
             
         
                 } // CALL | 
@@ -52731,7 +52730,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get(ceu_col_75555, ceu_idx_75555));
                         ceu_gc_dec_val(ceu_col_75555);
                         ceu_gc_dec_val(ceu_idx_75555);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 129, col 29) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer]");
                     
                 }
                 
@@ -52741,7 +52740,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 129, col 29) : to[:pointer](value)"
+                            "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer](value)"
                         );
                     }
                     CEUX ceux_75560 = {
@@ -52759,7 +52758,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75560.Dyn->Clo.proto(&ceux_75560);
                     ceu_gc_dec_val(ceu_clo_75560);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 129, col 29) : to[:pointer](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer](value)");
             
         
                 } // CALL | 
@@ -52769,7 +52768,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 129, col 21) : (val t = to[:pointer](value))"
+                            "@/iup/iup.ceu : (lin 128, col 21) : (val t = to[:pointer](value))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52779,7 +52778,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetAttribute((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_t_75561).Pointer+1); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 127, col 24) : ```IupSetAttribute($h.Pointer, $s.Pointer+...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 126, col 24) : ```IupSetAttribute($h.Pointer, $s.Pointer+...");
             
         
                     
@@ -52839,7 +52838,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 129, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 128, col 37) : ceu_ret"
                         );
                         #endif
                         ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
@@ -52918,7 +52917,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 130, col 11) : (val' ceu_or = do { (val it :tag = ceu_val..."
+                            "@/iup/iup.ceu : (lin 129, col 11) : (val' ceu_or = do { (val it :tag = ceu_val..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53006,7 +53005,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get(ceu_col_75622, ceu_idx_75622));
                         ceu_gc_dec_val(ceu_col_75622);
                         ceu_gc_dec_val(ceu_idx_75622);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 133, col 29) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer]");
                     
                 }
                 
@@ -53016,7 +53015,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 133, col 29) : to[:pointer](value)"
+                            "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer](value)"
                         );
                     }
                     CEUX ceux_75627 = {
@@ -53034,7 +53033,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75627.Dyn->Clo.proto(&ceux_75627);
                     ceu_gc_dec_val(ceu_clo_75627);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 133, col 29) : to[:pointer](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer](value)");
             
         
                 } // CALL | 
@@ -53044,7 +53043,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 133, col 21) : (val v = to[:pointer](value))"
+                            "@/iup/iup.ceu : (lin 132, col 21) : (val v = to[:pointer](value))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53054,7 +53053,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetStrAttribute((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_v_75628).Pointer); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 131, col 24) : ```IupSetStrAttribute($h.Pointer, $s.Point...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 130, col 24) : ```IupSetStrAttribute($h.Pointer, $s.Point...");
             
         
                     
@@ -53114,7 +53113,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-0 }),
-                            "@/iup/iup.ceu : (lin 135, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 134, col 37) : ceu_ret"
                         );
                         #endif
                         ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
@@ -53144,7 +53143,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             CEU_ERROR_CHK_PTR (
                                 continue,
                                 ceu_drop(ceu_75658, ceux->depth-2),
-                                "@/iup/iup.ceu : (lin 138, col 25) : drop(ceu_ret)"
+                                "@/iup/iup.ceu : (lin 137, col 25) : drop(ceu_ret)"
                             );
                             CEU_ACC(ceu_75658);
                             ceu_gc_dec_val(ceu_75658);
@@ -53305,7 +53304,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 140, col 5) : (func' :nested (label) { group { (val s = ..."
+                                        "@/iup/iup.ceu : (lin 139, col 5) : (func' :nested (label) { group { (val s = ..."
                                     );
                                 }
                                 */
@@ -53388,7 +53387,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get(ceu_col_75740, ceu_idx_75740));
                         ceu_gc_dec_val(ceu_col_75740);
                         ceu_gc_dec_val(ceu_idx_75740);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 141, col 17) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer]");
                     
                 }
                 
@@ -53398,7 +53397,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 141, col 17) : to[:pointer](label)"
+                            "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer](label)"
                         );
                     }
                     CEUX ceux_75745 = {
@@ -53416,7 +53415,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75745.Dyn->Clo.proto(&ceux_75745);
                     ceu_gc_dec_val(ceu_clo_75745);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 141, col 17) : to[:pointer](label)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer](label)");
             
         
                 } // CALL | 
@@ -53426,7 +53425,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 141, col 9) : (val s = to[:pointer](label))"
+                            "@/iup/iup.ceu : (lin 140, col 9) : (val s = to[:pointer](label))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53441,7 +53440,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 142, col 9) : (val h = ```:pointer   IupButton($s.Pointe..."
+                            "@/iup/iup.ceu : (lin 141, col 9) : (val h = ```:pointer   IupButton($s.Pointe..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53451,7 +53450,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetCallback((ceu_loc_h_75754).Pointer, "ACTION", iup_action_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 143, col 9) : ```IupSetCallback($h.Pointer, .ACTION., iu...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 142, col 9) : ```IupSetCallback($h.Pointer, .ACTION., iu...");
             
         
                     
@@ -53544,7 +53543,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 147, col 5) : (func' :nested (label) { group { (val s = ..."
+                                        "@/iup/iup.ceu : (lin 146, col 5) : (func' :nested (label) { group { (val s = ..."
                                     );
                                 }
                                 */
@@ -53623,7 +53622,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get(ceu_col_75829, ceu_idx_75829));
                         ceu_gc_dec_val(ceu_col_75829);
                         ceu_gc_dec_val(ceu_idx_75829);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 148, col 17) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer]");
                     
                 }
                 
@@ -53633,7 +53632,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 148, col 17) : to[:pointer](label)"
+                            "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer](label)"
                         );
                     }
                     CEUX ceux_75834 = {
@@ -53651,7 +53650,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_75834.Dyn->Clo.proto(&ceux_75834);
                     ceu_gc_dec_val(ceu_clo_75834);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 148, col 17) : to[:pointer](label)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer](label)");
             
         
                 } // CALL | 
@@ -53661,7 +53660,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 148, col 9) : (val s = to[:pointer](label))"
+                            "@/iup/iup.ceu : (lin 147, col 9) : (val s = to[:pointer](label))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53791,7 +53790,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 153, col 9) : (val h = ```:pointer   IupList(NULL)```)"
+                            "@/iup/iup.ceu : (lin 152, col 9) : (val h = ```:pointer   IupList(NULL)```)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53801,7 +53800,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetCallback((ceu_loc_h_75890).Pointer, "ACTION", (Icallback) iup_list_action_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 154, col 9) : ```IupSetCallback($h.Pointer, .ACTION., (I...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 153, col 9) : ```IupSetCallback($h.Pointer, .ACTION., (I...");
             
         
                     
@@ -53925,7 +53924,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 159, col 9) : (val h = ```:pointer   IupText(NULL)```)"
+                            "@/iup/iup.ceu : (lin 158, col 9) : (val h = ```:pointer   IupText(NULL)```)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -53935,7 +53934,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupSetCallback((ceu_loc_h_75947).Pointer, "VALUECHANGED_CB", iup_value_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 160, col 9) : ```IupSetCallback($h.Pointer, .VALUECHANGE...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 159, col 9) : ```IupSetCallback($h.Pointer, .VALUECHANGE...");
             
         
                     
@@ -54226,7 +54225,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 174, col 5) : (func' :nested (h,child) { group { ```:poi..."
+                                        "@/iup/iup.ceu : (lin 173, col 5) : (func' :nested (h,child) { group { ```:poi..."
                                     );
                                 }
                                 */
@@ -54240,7 +54239,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 174, col 5) : (func' :nested (h,child) { group { ```:poi..."
+                                        "@/iup/iup.ceu : (lin 173, col 5) : (func' :nested (h,child) { group { ```:poi..."
                                     );
                                 }
                                 */
@@ -54369,7 +54368,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76072
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 180, col 5) : (func' :nested (h) { group { ```:pointer  ..."
+                                        "@/iup/iup.ceu : (lin 179, col 5) : (func' :nested (h) { group { ```:pointer  ..."
                                     );
                                 }
                                 */
@@ -54492,7 +54491,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76121
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 184, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
@@ -54506,7 +54505,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76121
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 184, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
@@ -54520,7 +54519,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76121
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[2], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 184, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
@@ -63854,7 +63853,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupOpen(NULL,NULL); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 87, col 1) : ```IupOpen(NULL,NULL);```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 86, col 1) : ```IupOpen(NULL,NULL);```");
             
         
                     
@@ -63891,7 +63890,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 98, col 5) : (val x-iup-loop = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 97, col 5) : (val x-iup-loop = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -63928,7 +63927,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 105, col 9) : (val x-iup-get-pointer = (func' :nested (h..."
+                            "@/iup/iup.ceu : (lin 104, col 9) : (val x-iup-get-pointer = (func' :nested (h..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -63961,7 +63960,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 109, col 9) : (val x-iup-get-bool = (func' :nested (h,na..."
+                            "@/iup/iup.ceu : (lin 108, col 9) : (val x-iup-get-bool = (func' :nested (h,na..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -63994,7 +63993,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 113, col 9) : (val x-iup-get-number = (func' :nested (h,..."
+                            "@/iup/iup.ceu : (lin 112, col 9) : (val x-iup-get-number = (func' :nested (h,..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64031,7 +64030,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 104, col 5) : (val x-iup-get :IUP.Get = group { (val x-i..."
+                            "@/iup/iup.ceu : (lin 103, col 5) : (val x-iup-get :IUP.Get = group { (val x-i..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64064,7 +64063,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 120, col 5) : (val x-iup-set = (func' :nested (h,name,va..."
+                            "@/iup/iup.ceu : (lin 119, col 5) : (val x-iup-set = (func' :nested (h,name,va..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64097,7 +64096,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 140, col 5) : (val x-iup-button = (func' :nested (label)..."
+                            "@/iup/iup.ceu : (lin 139, col 5) : (val x-iup-button = (func' :nested (label)..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64130,7 +64129,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 147, col 5) : (val x-iup-label = (func' :nested (label) ..."
+                            "@/iup/iup.ceu : (lin 146, col 5) : (val x-iup-label = (func' :nested (label) ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64163,7 +64162,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 152, col 5) : (val x-iup-list = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 151, col 5) : (val x-iup-list = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64196,7 +64195,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 158, col 5) : (val x-iup-text = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 157, col 5) : (val x-iup-text = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64229,7 +64228,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 166, col 5) : (val x-iup-hbox = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 165, col 5) : (val x-iup-hbox = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64262,7 +64261,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 170, col 5) : (val x-iup-vbox = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 169, col 5) : (val x-iup-vbox = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64295,7 +64294,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 174, col 5) : (val x-iup-append = (func' :nested (h,chil..."
+                            "@/iup/iup.ceu : (lin 173, col 5) : (val x-iup-append = (func' :nested (h,chil..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64328,7 +64327,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 180, col 5) : (val x-iup-dialog = (func' :nested (h) { g..."
+                            "@/iup/iup.ceu : (lin 179, col 5) : (val x-iup-dialog = (func' :nested (h) { g..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64361,7 +64360,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 184, col 5) : (val x-iup-show-xy = (func' :nested (h,x,y..."
+                            "@/iup/iup.ceu : (lin 183, col 5) : (val x-iup-show-xy = (func' :nested (h,x,y..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64443,7 +64442,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 94, col 1) : (val iup :IUP = group { (val x-iup-loop = ..."
+                            "@/iup/iup.ceu : (lin 93, col 1) : (val iup :IUP = group { (val x-iup-loop = ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -64621,7 +64620,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupClose(); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 89, col 5) : ```IupClose();```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 88, col 5) : ```IupClose();```");
             
         
                     

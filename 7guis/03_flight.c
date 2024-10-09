@@ -753,10 +753,13 @@
             #define CEU_TAG_item (78)
             CEU_Tags_Names ceu_tag__item = { CEU_TAG_item, ":item", &ceu_tag__state };
             
-            #define CEU_TAG_assert (79)
-            CEU_Tags_Names ceu_tag__assert = { CEU_TAG_assert, ":assert", &ceu_tag__item };
+            #define CEU_TAG_err (79)
+            CEU_Tags_Names ceu_tag__err = { CEU_TAG_err, ":err", &ceu_tag__item };
             
-            #define CEU_TAG_loop (80)
+            #define CEU_TAG_assert (80)
+            CEU_Tags_Names ceu_tag__assert = { CEU_TAG_assert, ":assert", &ceu_tag__err };
+            
+            #define CEU_TAG_loop (81)
             CEU_Tags_Names ceu_tag__loop = { CEU_TAG_loop, ":loop", &ceu_tag__assert };
             
             CEU_Tags_Names* CEU_TAGS = &ceu_tag__loop;
@@ -2929,14 +2932,14 @@
     
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_93498 {
+                        typedef struct CEU_Pro_94152 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93497;
+                        CEU_Block block_94151;
                     
                     
                     
@@ -2947,10 +2950,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93492;
+                        CEU_Block block_94146;
                     
                     
-                        CEU_Value ceu_ret_85478_93289;
+                        CEU_Value ceu_ret_85742_93943;
                     
                     
                     
@@ -2963,7 +2966,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93482;
+                        CEU_Block block_94136;
                     
                     
                     
@@ -2973,7 +2976,7 @@
                 union {
                     
                 struct { // SET
-                    CEU_Value src_93310;
+                    CEU_Value src_93964;
                     union {
                         
                         
@@ -2982,10 +2985,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93477;
+                        CEU_Block block_94131;
                     
                     
-                        CEU_Value it_93453;
+                        CEU_Value it_94107;
                     
                     
                     
@@ -2993,12 +2996,12 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93452;
+                        CEU_Block block_94106;
                     
                     
-                        CEU_Value it_93327;
+                        CEU_Value it_93981;
                     
-                        CEU_Value ceu_and_85391_93363;
+                        CEU_Value ceu_and_85655_94017;
                     
                     
                     
@@ -3010,7 +3013,7 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_93339[2];
+                    CEU_Value args_93993[2];
                     union {
                         
                         
@@ -3025,12 +3028,12 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93362[2];
+                    CEU_Value args_94016[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_93357;
+                    CEU_Value col_94011;
                     
                     union {
                         
@@ -3047,7 +3050,7 @@
                 union {
                     
                 struct { // INDEX
-                    CEU_Value col_93375;
+                    CEU_Value col_94029;
                     
                     union {
                         
@@ -3070,18 +3073,18 @@
                 union {
                     
                 struct { // SET
-                    CEU_Value src_93429;
+                    CEU_Value src_94083;
                     union {
                         
                         
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93425[3];
+                    CEU_Value args_94079[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93401;
+                    CEU_Value col_94055;
                     
                     union {
                         
@@ -3091,12 +3094,12 @@
                 
                         
                 struct { // CALL
-                    CEU_Value args_93423[2];
+                    CEU_Value args_94077[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_93418;
+                    CEU_Value col_94072;
                     
                     union {
                         
@@ -3199,19 +3202,19 @@
                 
             };
         
-                        } CEU_Pro_93498;                        
+                        } CEU_Pro_94152;                        
                     
                 
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_93909 {
+                        typedef struct CEU_Pro_94612 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93908;
+                        CEU_Block block_94611;
                     
                     
                     
@@ -3222,10 +3225,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93903;
+                        CEU_Block block_94606;
                     
                     
-                        CEU_Value ceu_ret_86343_93527;
+                        CEU_Value ceu_ret_86607_94181;
                     
                     
                     
@@ -3238,7 +3241,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93893;
+                        CEU_Block block_94596;
                     
                     
                     
@@ -3248,7 +3251,7 @@
                 union {
                     
                 struct { // SET
-                    CEU_Value src_93548;
+                    CEU_Value src_94202;
                     union {
                         
                         
@@ -3257,10 +3260,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93888;
+                        CEU_Block block_94591;
                     
                     
-                        CEU_Value it_93864;
+                        CEU_Value it_94567;
                     
                     
                     
@@ -3268,12 +3271,12 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93863;
+                        CEU_Block block_94566;
                     
                     
-                        CEU_Value it_93565;
+                        CEU_Value it_94219;
                     
-                        CEU_Value ceu_or_86240_93601;
+                        CEU_Value ceu_or_86504_94255;
                     
                     
                     
@@ -3285,7 +3288,7 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_93577[2];
+                    CEU_Value args_94231[2];
                     union {
                         
                         
@@ -3300,12 +3303,12 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93600[2];
+                    CEU_Value args_94254[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_93595;
+                    CEU_Value col_94249;
                     
                     union {
                         
@@ -3327,12 +3330,12 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93627[2];
+                    CEU_Value args_94281[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_93622;
+                    CEU_Value col_94276;
                     
                     union {
                         
@@ -3352,25 +3355,50 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93845;
+                        CEU_Block block_94548;
                     
                     
-                        CEU_Value date_93686;
+                        CEU_Value date_94382;
                     
                     
                     
             struct { // SEQ | 
                 
                 struct { // SET
-                    CEU_Value src_93840;
+                    CEU_Value src_94543;
                     union {
                         
                         
                 union {
                     
+                struct { // CALL
+                    CEU_Value args_94314[1];
+                    union {
+                        
+                        
+                struct { // CALL
+                    CEU_Value args_94312[2];
+                    union {
+                        
+                        
+                struct { // INDEX
+                    CEU_Value col_94307;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                    };
+                };
+                
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93684;
+                        CEU_Block block_94380;
                     
                     
                     
@@ -3378,40 +3406,26 @@
             union { // SEQ | 
                 
                 struct { // CALL
-                    CEU_Value args_93682[1];
+                    CEU_Value args_94356[1];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_93680[1];
+                    CEU_Value args_94354[1];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_93678[2];
+                    CEU_Value args_94352[2];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93665;
+                    CEU_Value col_94339;
                     
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93660;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                        
-                struct { // INDEX
-                    CEU_Value col_93673;
+                    CEU_Value col_94334;
                     
                     union {
                         
@@ -3419,9 +3433,41 @@
                     };
                 };
                 
+                        
                     };
                 };
                 
+                        
+                struct { // INDEX
+                    CEU_Value col_94347;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                    };
+                };
+                
+                    };
+                };
+                
+                
+            union { // SEQ | 
+                
+                struct { // CALL
+                    CEU_Value args_94378[2];
+                    union {
+                        
+                        
+                struct { // VECTOR
+                    CEU_Value vec_94376;
+                    union {
+                        
                     };
                 };
                 
@@ -3431,12 +3477,22 @@
                 
             };
         
+            };
+        
+                };
+                
+                struct { // CALL
+                    CEU_Value args_94390[1];
+                    union {
+                        
+                        
+                    };
                 };
                 
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_93698[2];
+                    CEU_Value args_94401[2];
                     union {
                         
                         
@@ -3447,11 +3503,11 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93722[3];
+                    CEU_Value args_94425[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93706;
+                    CEU_Value col_94409;
                     
                     union {
                         
@@ -3461,7 +3517,7 @@
                 
                         
                 struct { // INDEX
-                    CEU_Value col_93714;
+                    CEU_Value col_94417;
                     
                     union {
                         
@@ -3478,11 +3534,11 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93749[3];
+                    CEU_Value args_94452[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93733;
+                    CEU_Value col_94436;
                     
                     union {
                         
@@ -3492,42 +3548,7 @@
                 
                         
                 struct { // INDEX
-                    CEU_Value col_93741;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_93777[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_93756;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // INDEX
-                    CEU_Value col_93764;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                struct { // INDEX
-                    CEU_Value col_93775;
+                    CEU_Value col_94444;
                     
                     union {
                         
@@ -3539,11 +3560,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_93805[3];
+                    CEU_Value args_94480[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93784;
+                    CEU_Value col_94459;
                     
                     union {
                         
@@ -3553,7 +3574,7 @@
                 
                         
                 struct { // INDEX
-                    CEU_Value col_93792;
+                    CEU_Value col_94467;
                     
                     union {
                         
@@ -3562,7 +3583,7 @@
                 };
                 
                 struct { // INDEX
-                    CEU_Value col_93803;
+                    CEU_Value col_94478;
                     
                     union {
                         
@@ -3574,11 +3595,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_93833[3];
+                    CEU_Value args_94508[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93812;
+                    CEU_Value col_94487;
                     
                     union {
                         
@@ -3588,7 +3609,7 @@
                 
                         
                 struct { // INDEX
-                    CEU_Value col_93820;
+                    CEU_Value col_94495;
                     
                     union {
                         
@@ -3597,7 +3618,42 @@
                 };
                 
                 struct { // INDEX
-                    CEU_Value col_93831;
+                    CEU_Value col_94506;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_94536[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_94515;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // INDEX
+                    CEU_Value col_94523;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                struct { // INDEX
+                    CEU_Value col_94534;
                     
                     union {
                         
@@ -3709,32 +3765,32 @@
                 
             };
         
-                        } CEU_Pro_93909;                        
+                        } CEU_Pro_94612;                        
                     
                 
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_94174 {
+                        typedef struct CEU_Pro_94877 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_94173;
+                        CEU_Block block_94876;
                     
                     
-                        CEU_Value list_92082;
+                        CEU_Value list_92736;
                     
-                        CEU_Value start_92299;
+                        CEU_Value start_92953;
                     
-                        CEU_Value end_92507;
+                        CEU_Value end_93161;
                     
-                        CEU_Value button_92747;
+                        CEU_Value button_93401;
                     
-                        CEU_Value vbox_92829;
+                        CEU_Value vbox_93483;
                     
-                        CEU_Value dlg_92964;
+                        CEU_Value dlg_93618;
                     
                     
                     
@@ -3743,11 +3799,11 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_92081[0];
+                    CEU_Value args_92735[0];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92078;
+                    CEU_Value col_92732;
                     
                     union {
                         
@@ -3760,52 +3816,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92131[3];
+                    CEU_Value args_92785[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92090;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92129;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92149[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92138;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92209[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92156;
+                    CEU_Value col_92744;
                     
                     union {
                         
@@ -3815,7 +3830,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_92207;
+                    CEU_Value vec_92783;
                     union {
                         
                     };
@@ -3825,442 +3840,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92266[3];
+                    CEU_Value args_92803[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92216;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92264;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92284[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92273;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92298[0];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92295;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92348[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92307;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92346;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92366[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92355;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92414[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92373;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92412;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92438[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92421;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92436;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92462[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92445;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92460;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92492[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92469;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92490;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92506[0];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92503;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92556[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92515;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92554;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92574[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92563;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92622[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92581;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92620;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92646[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92629;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92644;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92670[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92653;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92668;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92700[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92677;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92698;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92718[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92707;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92746[1];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92729;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92744;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92766[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92755;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92814[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92773;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_92812;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92828[0];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92825;
+                    CEU_Value col_92792;
                     
                     union {
                         
@@ -4277,7 +3861,7 @@
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92837;
+                    CEU_Value col_92810;
                     
                     union {
                         
@@ -4297,7 +3881,7 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92887[3];
+                    CEU_Value args_92920[3];
                     union {
                         
                 struct { // INDEX
@@ -4311,7 +3895,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_92885;
+                    CEU_Value vec_92918;
                     union {
                         
                     };
@@ -4321,11 +3905,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92902[2];
+                    CEU_Value args_92938[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92894;
+                    CEU_Value col_92927;
                     
                     union {
                         
@@ -4338,11 +3922,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92917[2];
+                    CEU_Value args_92952[0];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92909;
+                    CEU_Value col_92949;
                     
                     union {
                         
@@ -4355,62 +3939,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_92932[2];
+                    CEU_Value args_93002[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_92924;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92947[2];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92939;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_92963[1];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92958;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_93016[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_92972;
+                    CEU_Value col_92961;
                     
                     union {
                         
@@ -4420,7 +3953,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_93014;
+                    CEU_Value vec_93000;
                     union {
                         
                     };
@@ -4430,11 +3963,534 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_93034[3];
+                    CEU_Value args_93020[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93023;
+                    CEU_Value col_93009;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93068[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93027;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93066;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93092[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93075;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93090;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93116[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93099;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93114;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93146[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93123;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93144;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93160[0];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93157;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93210[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93169;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93208;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93228[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93217;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93276[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93235;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93274;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93300[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93283;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93298;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93324[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93307;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93322;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93354[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93331;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93352;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93372[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93361;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93400[1];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93383;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93398;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93420[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93409;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93468[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93427;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93466;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93482[0];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93479;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93517[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93491;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93515;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93541[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93524;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93539;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93556[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93548;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93571[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93563;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93586[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93578;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93601[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93593;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93617[1];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93612;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93670[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93626;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_93668;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_93688[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_93677;
                     
                     union {
                         
@@ -4450,12 +4506,12 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_94164;
+                        CEU_Block block_94867;
                     
                     
-                        CEU_Value act2_question__93067;
+                        CEU_Value act2_question__93721;
                     
-                        CEU_Value val2_question__93093;
+                        CEU_Value val2_question__93747;
                     
                     
                     
@@ -4464,16 +4520,16 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93066[2];
+                    CEU_Value args_93720[2];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93058;
+                    CEU_Value col_93712;
                     
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93053;
+                    CEU_Value col_93707;
                     
                     union {
                         
@@ -4490,16 +4546,16 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_93092[2];
+                    CEU_Value args_93746[2];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93084;
+                    CEU_Value col_93738;
                     
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93079;
+                    CEU_Value col_93733;
                     
                     union {
                         
@@ -4517,16 +4573,16 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_93266;
+                        CEU_Block block_93920;
                     
                     
-                        CEU_Value color_93245;
+                        CEU_Value color_93899;
                     
-                        CEU_Value ceu_or_84899_93205;
+                        CEU_Value ceu_or_85161_93859;
                     
-                        CEU_Value ceu_and_84681_93153;
+                        CEU_Value ceu_and_84943_93807;
                     
-                        CEU_Value ceu_or_84567_93121;
+                        CEU_Value ceu_or_84829_93775;
                     
                     
                     
@@ -4574,7 +4630,7 @@
                 union {
                     
                 struct { // VECTOR
-                    CEU_Value vec_93193;
+                    CEU_Value vec_93847;
                     union {
                         
                     };
@@ -4602,7 +4658,7 @@
                 union {
                     
                 struct { // VECTOR
-                    CEU_Value vec_93239;
+                    CEU_Value vec_93893;
                     union {
                         
                     };
@@ -4618,11 +4674,11 @@
             union { // SEQ | 
                 
                 struct { // CALL
-                    CEU_Value args_93264[3];
+                    CEU_Value args_93918[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_93253;
+                    CEU_Value col_93907;
                     
                     union {
                         
@@ -4643,12 +4699,12 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_94159;
+                        CEU_Block block_94862;
                     
                     
-                        CEU_Value ceu_par_0_86202_93505;
+                        CEU_Value ceu_par_0_86466_94159;
                     
-                        CEU_Value ceu_par_1_86202_93916;
+                        CEU_Value ceu_par_1_86466_94619;
                     
                     
                     
@@ -4656,7 +4712,7 @@
                 
                 struct { // SPAWN | 
                      
-                    CEU_Value args_93503[0];
+                    CEU_Value args_94157[0];
                     union {
                          
                         
@@ -4669,7 +4725,7 @@
                 
                 struct { // SPAWN | 
                      
-                    CEU_Value args_93914[0];
+                    CEU_Value args_94617[0];
                     union {
                          
                         
@@ -4684,7 +4740,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_94153;
+                        CEU_Block block_94856;
                     
                     
                     
@@ -4695,22 +4751,22 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_94140;
+                        CEU_Block block_94843;
                     
                     
-                        CEU_Value it_94116;
+                        CEU_Value it_94819;
                     
-                        CEU_Value ceu_or_89869_94006;
+                        CEU_Value ceu_or_90474_94709;
                     
-                        CEU_Value ceu_and_89328_93959;
+                        CEU_Value ceu_and_89933_94662;
                     
-                        CEU_Value ceu_or_89270_93976;
+                        CEU_Value ceu_or_89875_94679;
                     
-                        CEU_Value ceu_or_89685_94092;
+                        CEU_Value ceu_or_90290_94795;
                     
-                        CEU_Value ceu_and_89548_94045;
+                        CEU_Value ceu_and_90153_94748;
                     
-                        CEU_Value ceu_or_89490_94062;
+                        CEU_Value ceu_or_90095_94765;
                     
                     
                     
@@ -4721,12 +4777,12 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_93958[2];
+                    CEU_Value args_94661[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_93953[1];
+                    CEU_Value args_94656[1];
                     union {
                         
                         
@@ -4788,12 +4844,12 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_94044[2];
+                    CEU_Value args_94747[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_94039[1];
+                    CEU_Value args_94742[1];
                     union {
                         
                         
@@ -4922,7 +4978,7 @@
                 
             };
         
-                        } CEU_Pro_94174;                        
+                        } CEU_Pro_94877;                        
                     
                 
                     // PROTO | 
@@ -53011,7 +53067,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         ceu_gc_inc_val(ceu_acc);
                         ceu_loc_s_73328 = ceu_acc;
                     
-                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetInt((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
+                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetFloat((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
                         
                     } while (0);
 
@@ -55984,7 +56040,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_s_82223
+                                    CEU_Value ceu_loc_s_82348
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -56000,7 +56056,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_83503 = NULL;
+                         CEU_Block ceu_block_83765 = NULL;
                     
                     
                     
@@ -56008,33 +56064,33 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_vec_82236;
+                                        CEU_Value ceu_loc_vec_82361;
                                     
-                                        CEU_Value ceu_loc_sub_82245;
+                                        CEU_Value ceu_loc_sub_82370;
                                     
-                                        CEU_Value ceu_loc_ceu_itr_76490_82262;
+                                        CEU_Value ceu_loc_ceu_itr_76490_82387;
                                     
-                                        CEU_Value ceu_loc_ceu_ppp_76660_82426;
+                                        CEU_Value ceu_loc_ceu_ppp_76660_82551;
                                     
-                                        CEU_Value ceu_loc_tup_82481;
+                                        CEU_Value ceu_loc_tup_82739;
                                     
-                                        CEU_Value ceu_loc_valid_question__83488;
+                                        CEU_Value ceu_loc_valid_question__83746;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_vec_82236 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_vec_82361 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_sub_82245 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_sub_82370 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_itr_76490_82262 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_itr_76490_82387 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_ppp_76660_82426 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ppp_76660_82551 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_tup_82481 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_tup_82739 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_valid_question__83488 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_valid_question__83746 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -56048,9 +56104,9 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                 
                         
                 { // VECTOR | 
-                    CEU_Value ceu_vec_82235 = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_Value ceu_vec_82360 = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     
-                    CEU_ACC(ceu_vec_82235);
+                    CEU_ACC(ceu_vec_82360);
                 }
             
                         #ifdef CEU_LEX
@@ -56062,16 +56118,16 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_vec_82236 = ceu_acc;
+                        ceu_loc_vec_82361 = ceu_acc;
                     
                 
                 // DCL | 
                 
                         
                 { // VECTOR | 
-                    CEU_Value ceu_vec_82244 = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_Value ceu_vec_82369 = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     
-                    CEU_ACC(ceu_vec_82244);
+                    CEU_ACC(ceu_vec_82369);
                 }
             
                         #ifdef CEU_LEX
@@ -56083,7 +56139,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_sub_82245 = ceu_acc;
+                        ceu_loc_sub_82370 = ceu_acc;
                     
                 
                 do { // ENCLOSE | 
@@ -56093,29 +56149,29 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82261[1];
+                        CEU_Value ceu_args_82386[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_s_82223);
+                        CEU_ACC(ceu_loc_s_82348);
                     
-                            ceu_args_82261[0] = CEU_ACC_KEEP();
+                            ceu_args_82386[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to_dash_iter);
                     
-                    CEU_Value ceu_clo_82261 = CEU_ACC_KEEP();
-                    if (ceu_clo_82261.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82261);
+                    CEU_Value ceu_clo_82386 = CEU_ACC_KEEP();
+                    if (ceu_clo_82386.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82386);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 8, col 15) : to-iter(s)"
                         );
                     }
-                    CEUX ceux_82261 = {
-                        (CEU_Clo*) ceu_clo_82261.Dyn,
+                    CEUX ceux_82386 = {
+                        (CEU_Clo*) ceu_clo_82386.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56124,10 +56180,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82261
+                        ceu_args_82386
                     };
-                    ceu_clo_82261.Dyn->Clo.proto(&ceux_82261);
-                    ceu_gc_dec_val(ceu_clo_82261);
+                    ceu_clo_82386.Dyn->Clo.proto(&ceux_82386);
+                    ceu_gc_dec_val(ceu_clo_82386);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 8, col 15) : to-iter(s)");
             
@@ -56143,18 +56199,18 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_itr_76490_82262 = ceu_acc;
+                        ceu_loc_ceu_itr_76490_82387 = ceu_acc;
                     
                 
                 // LOOP | 
-                CEU_LOOP_START_82414:
+                CEU_LOOP_START_82539:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_82413 = NULL;
+                         CEU_Block ceu_block_82538 = NULL;
                     
                     
                     
@@ -56162,25 +56218,25 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_val_76490_82282;
+                                        CEU_Value ceu_loc_ceu_val_76490_82407;
                                     
-                                        CEU_Value ceu_loc_c_82319;
+                                        CEU_Value ceu_loc_c_82444;
                                     
-                                        CEU_Value ceu_loc_ceu_ppp_76296_82341;
+                                        CEU_Value ceu_loc_ceu_ppp_76296_82466;
                                     
-                                        CEU_Value ceu_loc_ceu_ppp_76399_82386;
+                                        CEU_Value ceu_loc_ceu_ppp_76399_82511;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_val_76490_82282 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_val_76490_82407 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_c_82319 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_c_82444 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_ppp_76296_82341 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ppp_76296_82466 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_ppp_76399_82386 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ppp_76399_82511 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -56194,13 +56250,13 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82281[1];
+                        CEU_Value ceu_args_82406[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_itr_76490_82262);
+                        CEU_ACC(ceu_loc_ceu_itr_76490_82387);
                     
-                            ceu_args_82281[0] = CEU_ACC_KEEP();
+                            ceu_args_82406[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -56210,34 +56266,34 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_itr_76490_82262);
+                        CEU_ACC(ceu_loc_ceu_itr_76490_82387);
                     
-                    CEU_Value ceu_col_82276 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82401 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_82276 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82401 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_82276, ceu_idx_82276));
-                        ceu_gc_dec_val(ceu_col_82276);
-                        ceu_gc_dec_val(ceu_idx_82276);
+                        CEU_ACC(ceu_col_get(ceu_col_82401, ceu_idx_82401));
+                        ceu_gc_dec_val(ceu_col_82401);
+                        ceu_gc_dec_val(ceu_idx_82401);
                         CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 10, col 57) : ceu_itr[:f]");
                     
                 }
                 
-                    CEU_Value ceu_clo_82281 = CEU_ACC_KEEP();
-                    if (ceu_clo_82281.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82281);
+                    CEU_Value ceu_clo_82406 = CEU_ACC_KEEP();
+                    if (ceu_clo_82406.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82406);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 10, col 57) : ceu_itr[:f](ceu_itr)"
                         );
                     }
-                    CEUX ceux_82281 = {
-                        (CEU_Clo*) ceu_clo_82281.Dyn,
+                    CEUX ceux_82406 = {
+                        (CEU_Clo*) ceu_clo_82406.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56246,10 +56302,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82281
+                        ceu_args_82406
                     };
-                    ceu_clo_82281.Dyn->Clo.proto(&ceux_82281);
-                    ceu_gc_dec_val(ceu_clo_82281);
+                    ceu_clo_82406.Dyn->Clo.proto(&ceux_82406);
+                    ceu_gc_dec_val(ceu_clo_82406);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 10, col 57) : ceu_itr[:f](ceu_itr)");
             
@@ -56265,38 +56321,38 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_val_76490_82282 = ceu_acc;
+                        ceu_loc_ceu_val_76490_82407 = ceu_acc;
                     
                 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82294[2];
+                        CEU_Value ceu_args_82419[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_val_76490_82282);
+                        CEU_ACC(ceu_loc_ceu_val_76490_82407);
                     
-                            ceu_args_82294[0] = CEU_ACC_KEEP();
+                            ceu_args_82419[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                            ceu_args_82294[1] = CEU_ACC_KEEP();
+                            ceu_args_82419[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_82294 = CEU_ACC_KEEP();
-                    if (ceu_clo_82294.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82294);
+                    CEU_Value ceu_clo_82419 = CEU_ACC_KEEP();
+                    if (ceu_clo_82419.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82419);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 11, col 55) : {{==}}(ceu_val,nil)"
                         );
                     }
-                    CEUX ceux_82294 = {
-                        (CEU_Clo*) ceu_clo_82294.Dyn,
+                    CEUX ceux_82419 = {
+                        (CEU_Clo*) ceu_clo_82419.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56305,10 +56361,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82294
+                        ceu_args_82419
                     };
-                    ceu_clo_82294.Dyn->Clo.proto(&ceux_82294);
-                    ceu_gc_dec_val(ceu_clo_82294);
+                    ceu_clo_82419.Dyn->Clo.proto(&ceux_82419);
+                    ceu_gc_dec_val(ceu_clo_82419);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 11, col 55) : {{==}}(ceu_val,nil)");
             
@@ -56339,7 +56395,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_val_76490_82282);
+                        CEU_ACC(ceu_loc_ceu_val_76490_82407);
                     
                         #ifdef CEU_LEX
                         
@@ -56350,38 +56406,38 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_c_82319 = ceu_acc;
+                        ceu_loc_c_82444 = ceu_acc;
                     
                 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82331[2];
+                        CEU_Value ceu_args_82456[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_c_82319);
+                        CEU_ACC(ceu_loc_c_82444);
                     
-                            ceu_args_82331[0] = CEU_ACC_KEEP();
+                            ceu_args_82456[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
-                            ceu_args_82331[1] = CEU_ACC_KEEP();
+                            ceu_args_82456[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_82331 = CEU_ACC_KEEP();
-                    if (ceu_clo_82331.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82331);
+                    CEU_Value ceu_clo_82456 = CEU_ACC_KEEP();
+                    if (ceu_clo_82456.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82456);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 9, col 14) : {{==}}(c,'.')"
                         );
                     }
-                    CEUX ceux_82331 = {
-                        (CEU_Clo*) ceu_clo_82331.Dyn,
+                    CEUX ceux_82456 = {
+                        (CEU_Clo*) ceu_clo_82456.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56390,10 +56446,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82331
+                        ceu_args_82456
                     };
-                    ceu_clo_82331.Dyn->Clo.proto(&ceux_82331);
-                    ceu_gc_dec_val(ceu_clo_82331);
+                    ceu_clo_82456.Dyn->Clo.proto(&ceux_82456);
+                    ceu_gc_dec_val(ceu_clo_82456);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 9, col 14) : {{==}}(c,'.')");
             
@@ -56410,7 +56466,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_vec_82236);
+                        CEU_ACC(ceu_loc_vec_82361);
                     
                         #ifdef CEU_LEX
                         
@@ -56423,56 +56479,56 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ppp_76296_82341 = ceu_acc;
+                        ceu_loc_ceu_ppp_76296_82466 = ceu_acc;
                     
                 
                 { // SET | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_sub_82245);
+                        CEU_ACC(ceu_loc_sub_82370);
                       // src is on the stack and should be returned
                     // <<< SRC | DST >>>
                     
                 { // INDEX | 
                     // VAL
                     
-                        CEU_Value ceu_val_82356 = CEU_ACC_KEEP();
+                        CEU_Value ceu_val_82481 = CEU_ACC_KEEP();
                     
                     
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76296_82341);
+                        CEU_ACC(ceu_loc_ceu_ppp_76296_82466);
                     
-                    CEU_Value ceu_col_82356 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82481 = CEU_ACC_KEEP();
 
                     // IDX
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82354[1];
+                        CEU_Value ceu_args_82479[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76296_82341);
+                        CEU_ACC(ceu_loc_ceu_ppp_76296_82466);
                     
-                            ceu_args_82354[0] = CEU_ACC_KEEP();
+                            ceu_args_82479[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_hash);
                     
-                    CEU_Value ceu_clo_82354 = CEU_ACC_KEEP();
-                    if (ceu_clo_82354.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82354);
+                    CEU_Value ceu_clo_82479 = CEU_ACC_KEEP();
+                    if (ceu_clo_82479.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82479);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 11, col 51) : {{#}}(ceu_ppp)"
                         );
                     }
-                    CEUX ceux_82354 = {
-                        (CEU_Clo*) ceu_clo_82354.Dyn,
+                    CEUX ceux_82479 = {
+                        (CEU_Clo*) ceu_clo_82479.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56481,26 +56537,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82354
+                        ceu_args_82479
                     };
-                    ceu_clo_82354.Dyn->Clo.proto(&ceux_82354);
-                    ceu_gc_dec_val(ceu_clo_82354);
+                    ceu_clo_82479.Dyn->Clo.proto(&ceux_82479);
+                    ceu_gc_dec_val(ceu_clo_82479);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 11, col 51) : {{#}}(ceu_ppp)");
             
         
                 } // CALL | 
             
-                    CEU_Value ceu_idx_82356 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82481 = CEU_ACC_KEEP();
                 
                         { // INDEX | DST | 
-                            char* ceu_err_82356 = ceu_col_set(ceu_col_82356, ceu_idx_82356, ceu_val_82356);
-                            ceu_gc_dec_val(ceu_col_82356);
-                            ceu_gc_dec_val(ceu_idx_82356);
-                            ceu_acc = ceu_val_82356;
+                            char* ceu_err_82481 = ceu_col_set(ceu_col_82481, ceu_idx_82481, ceu_val_82481);
+                            ceu_gc_dec_val(ceu_col_82481);
+                            ceu_gc_dec_val(ceu_idx_82481);
+                            ceu_acc = ceu_val_82481;
                             CEU_ERROR_CHK_PTR (
                                 continue,
-                                ceu_err_82356,
+                                ceu_err_82481,
                                 "03_flight.ceu : (lin 11, col 37) : ceu_ppp[{{#}}(ceu_ppp)]"
                             );
                         }
@@ -56512,9 +56568,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // SET | 
                     
                 { // VECTOR | 
-                    CEU_Value ceu_vec_82371 = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_Value ceu_vec_82496 = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     
-                    CEU_ACC(ceu_vec_82371);
+                    CEU_ACC(ceu_vec_82496);
                 }
               // src is on the stack and should be returned
                     // <<< SRC | DST >>>
@@ -56527,9 +56583,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             "03_flight.ceu : (lin 11, col 17) : sub"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_sub_82245);
+                        ceu_gc_dec_val(ceu_loc_sub_82370);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_sub_82245 = ceu_acc;
+                        ceu_loc_sub_82370 = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -56541,7 +56597,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_sub_82245);
+                        CEU_ACC(ceu_loc_sub_82370);
                     
                         #ifdef CEU_LEX
                         
@@ -56554,56 +56610,56 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ppp_76399_82386 = ceu_acc;
+                        ceu_loc_ceu_ppp_76399_82511 = ceu_acc;
                     
                 
                 { // SET | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_c_82319);
+                        CEU_ACC(ceu_loc_c_82444);
                       // src is on the stack and should be returned
                     // <<< SRC | DST >>>
                     
                 { // INDEX | 
                     // VAL
                     
-                        CEU_Value ceu_val_82401 = CEU_ACC_KEEP();
+                        CEU_Value ceu_val_82526 = CEU_ACC_KEEP();
                     
                     
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76399_82386);
+                        CEU_ACC(ceu_loc_ceu_ppp_76399_82511);
                     
-                    CEU_Value ceu_col_82401 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82526 = CEU_ACC_KEEP();
 
                     // IDX
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82399[1];
+                        CEU_Value ceu_args_82524[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76399_82386);
+                        CEU_ACC(ceu_loc_ceu_ppp_76399_82511);
                     
-                            ceu_args_82399[0] = CEU_ACC_KEEP();
+                            ceu_args_82524[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_hash);
                     
-                    CEU_Value ceu_clo_82399 = CEU_ACC_KEEP();
-                    if (ceu_clo_82399.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82399);
+                    CEU_Value ceu_clo_82524 = CEU_ACC_KEEP();
+                    if (ceu_clo_82524.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82524);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 14, col 51) : {{#}}(ceu_ppp)"
                         );
                     }
-                    CEUX ceux_82399 = {
-                        (CEU_Clo*) ceu_clo_82399.Dyn,
+                    CEUX ceux_82524 = {
+                        (CEU_Clo*) ceu_clo_82524.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56612,26 +56668,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82399
+                        ceu_args_82524
                     };
-                    ceu_clo_82399.Dyn->Clo.proto(&ceux_82399);
-                    ceu_gc_dec_val(ceu_clo_82399);
+                    ceu_clo_82524.Dyn->Clo.proto(&ceux_82524);
+                    ceu_gc_dec_val(ceu_clo_82524);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 14, col 51) : {{#}}(ceu_ppp)");
             
         
                 } // CALL | 
             
-                    CEU_Value ceu_idx_82401 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82526 = CEU_ACC_KEEP();
                 
                         { // INDEX | DST | 
-                            char* ceu_err_82401 = ceu_col_set(ceu_col_82401, ceu_idx_82401, ceu_val_82401);
-                            ceu_gc_dec_val(ceu_col_82401);
-                            ceu_gc_dec_val(ceu_idx_82401);
-                            ceu_acc = ceu_val_82401;
+                            char* ceu_err_82526 = ceu_col_set(ceu_col_82526, ceu_idx_82526, ceu_val_82526);
+                            ceu_gc_dec_val(ceu_col_82526);
+                            ceu_gc_dec_val(ceu_idx_82526);
+                            ceu_acc = ceu_val_82526;
                             CEU_ERROR_CHK_PTR (
                                 continue,
-                                ceu_err_82401,
+                                ceu_err_82526,
                                 "03_flight.ceu : (lin 14, col 37) : ceu_ppp[{{#}}(ceu_ppp)]"
                             );
                         }
@@ -56645,23 +56701,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_82414:
+                            CEU_LOOP_STOP_82539:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_82413 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_82538 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_82413 != NULL) {
-                            CEU_LNKS(ceu_block_82413)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_82538 != NULL) {
+                            CEU_LNKS(ceu_block_82538)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_82413);
+                            CEU_Block cur = ceu_task_get(ceu_block_82538);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56673,18 +56729,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76399_82386);
+                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76399_82511);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76296_82341);
+                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76296_82466);
                             
-                                ceu_gc_dec_val(ceu_loc_c_82319);
+                                ceu_gc_dec_val(ceu_loc_c_82444);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_val_76490_82282);
+                                ceu_gc_dec_val(ceu_loc_ceu_val_76490_82407);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_82413;
+                    ceu_acc = ceu_acc_82538;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56701,7 +56757,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_82414;
+                    goto CEU_LOOP_START_82539;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -56721,7 +56777,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_vec_82236);
+                        CEU_ACC(ceu_loc_vec_82361);
                     
                         #ifdef CEU_LEX
                         
@@ -56734,56 +56790,56 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ppp_76660_82426 = ceu_acc;
+                        ceu_loc_ceu_ppp_76660_82551 = ceu_acc;
                     
                 
                 { // SET | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_sub_82245);
+                        CEU_ACC(ceu_loc_sub_82370);
                       // src is on the stack and should be returned
                     // <<< SRC | DST >>>
                     
                 { // INDEX | 
                     // VAL
                     
-                        CEU_Value ceu_val_82441 = CEU_ACC_KEEP();
+                        CEU_Value ceu_val_82566 = CEU_ACC_KEEP();
                     
                     
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76660_82426);
+                        CEU_ACC(ceu_loc_ceu_ppp_76660_82551);
                     
-                    CEU_Value ceu_col_82441 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82566 = CEU_ACC_KEEP();
 
                     // IDX
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82439[1];
+                        CEU_Value ceu_args_82564[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ppp_76660_82426);
+                        CEU_ACC(ceu_loc_ceu_ppp_76660_82551);
                     
-                            ceu_args_82439[0] = CEU_ACC_KEEP();
+                            ceu_args_82564[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_hash);
                     
-                    CEU_Value ceu_clo_82439 = CEU_ACC_KEEP();
-                    if (ceu_clo_82439.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82439);
+                    CEU_Value ceu_clo_82564 = CEU_ACC_KEEP();
+                    if (ceu_clo_82564.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82564);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 17, col 51) : {{#}}(ceu_ppp)"
                         );
                     }
-                    CEUX ceux_82439 = {
-                        (CEU_Clo*) ceu_clo_82439.Dyn,
+                    CEUX ceux_82564 = {
+                        (CEU_Clo*) ceu_clo_82564.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56792,26 +56848,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82439
+                        ceu_args_82564
                     };
-                    ceu_clo_82439.Dyn->Clo.proto(&ceux_82439);
-                    ceu_gc_dec_val(ceu_clo_82439);
+                    ceu_clo_82564.Dyn->Clo.proto(&ceux_82564);
+                    ceu_gc_dec_val(ceu_clo_82564);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 17, col 51) : {{#}}(ceu_ppp)");
             
         
                 } // CALL | 
             
-                    CEU_Value ceu_idx_82441 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82566 = CEU_ACC_KEEP();
                 
                         { // INDEX | DST | 
-                            char* ceu_err_82441 = ceu_col_set(ceu_col_82441, ceu_idx_82441, ceu_val_82441);
-                            ceu_gc_dec_val(ceu_col_82441);
-                            ceu_gc_dec_val(ceu_idx_82441);
-                            ceu_acc = ceu_val_82441;
+                            char* ceu_err_82566 = ceu_col_set(ceu_col_82566, ceu_idx_82566, ceu_val_82566);
+                            ceu_gc_dec_val(ceu_col_82566);
+                            ceu_gc_dec_val(ceu_idx_82566);
+                            ceu_acc = ceu_val_82566;
                             CEU_ERROR_CHK_PTR (
                                 continue,
-                                ceu_err_82441,
+                                ceu_err_82566,
                                 "03_flight.ceu : (lin 17, col 37) : ceu_ppp[{{#}}(ceu_ppp)]"
                             );
                         }
@@ -56822,39 +56878,39 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
             
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82468[1];
+                        CEU_Value ceu_args_82593[1];
                     
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82466[2];
+                        CEU_Value ceu_args_82591[2];
                     
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82461[1];
+                        CEU_Value ceu_args_82586[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_vec_82236);
+                        CEU_ACC(ceu_loc_vec_82361);
                     
-                            ceu_args_82461[0] = CEU_ACC_KEEP();
+                            ceu_args_82586[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_hash);
                     
-                    CEU_Value ceu_clo_82461 = CEU_ACC_KEEP();
-                    if (ceu_clo_82461.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82461);
+                    CEU_Value ceu_clo_82586 = CEU_ACC_KEEP();
+                    if (ceu_clo_82586.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82586);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 17, col 12) : {{#}}(vec)"
                         );
                     }
-                    CEUX ceux_82461 = {
-                        (CEU_Clo*) ceu_clo_82461.Dyn,
+                    CEUX ceux_82586 = {
+                        (CEU_Clo*) ceu_clo_82586.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56863,35 +56919,35 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82461
+                        ceu_args_82586
                     };
-                    ceu_clo_82461.Dyn->Clo.proto(&ceux_82461);
-                    ceu_gc_dec_val(ceu_clo_82461);
+                    ceu_clo_82586.Dyn->Clo.proto(&ceux_82586);
+                    ceu_gc_dec_val(ceu_clo_82586);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 17, col 12) : {{#}}(vec)");
             
         
                 } // CALL | 
             
-                            ceu_args_82466[0] = CEU_ACC_KEEP();
+                            ceu_args_82591[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
-                            ceu_args_82466[1] = CEU_ACC_KEEP();
+                            ceu_args_82591[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_82466 = CEU_ACC_KEEP();
-                    if (ceu_clo_82466.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82466);
+                    CEU_Value ceu_clo_82591 = CEU_ACC_KEEP();
+                    if (ceu_clo_82591.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82591);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 17, col 17) : {{==}}({{#}}(vec),3)"
                         );
                     }
-                    CEUX ceux_82466 = {
-                        (CEU_Clo*) ceu_clo_82466.Dyn,
+                    CEUX ceux_82591 = {
+                        (CEU_Clo*) ceu_clo_82591.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56900,33 +56956,33 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82466
+                        ceu_args_82591
                     };
-                    ceu_clo_82466.Dyn->Clo.proto(&ceux_82466);
-                    ceu_gc_dec_val(ceu_clo_82466);
+                    ceu_clo_82591.Dyn->Clo.proto(&ceux_82591);
+                    ceu_gc_dec_val(ceu_clo_82591);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 17, col 17) : {{==}}({{#}}(vec),3)");
             
         
                 } // CALL | 
             
-                            ceu_args_82468[0] = CEU_ACC_KEEP();
+                            ceu_args_82593[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_assert);
                     
-                    CEU_Value ceu_clo_82468 = CEU_ACC_KEEP();
-                    if (ceu_clo_82468.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82468);
+                    CEU_Value ceu_clo_82593 = CEU_ACC_KEEP();
+                    if (ceu_clo_82593.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82593);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "03_flight.ceu : (lin 17, col 5) : assert({{==}}({{#}}(vec),3))"
                         );
                     }
-                    CEUX ceux_82468 = {
-                        (CEU_Clo*) ceu_clo_82468.Dyn,
+                    CEUX ceux_82593 = {
+                        (CEU_Clo*) ceu_clo_82593.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56935,12 +56991,793 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82468
+                        ceu_args_82593
                     };
-                    ceu_clo_82468.Dyn->Clo.proto(&ceux_82468);
-                    ceu_gc_dec_val(ceu_clo_82468);
+                    ceu_clo_82593.Dyn->Clo.proto(&ceux_82593);
+                    ceu_gc_dec_val(ceu_clo_82593);
                     
             CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 17, col 5) : assert({{==}}({{#}}(vec),3))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82600[1];
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                            ceu_args_82600[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_82600 = CEU_ACC_KEEP();
+                    if (ceu_clo_82600.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82600);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 18, col 5) : println(vec)"
+                        );
+                    }
+                    CEUX ceux_82600 = {
+                        (CEU_Clo*) ceu_clo_82600.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82600
+                    };
+                    ceu_clo_82600.Dyn->Clo.proto(&ceux_82600);
+                    ceu_gc_dec_val(ceu_clo_82600);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 18, col 5) : println(vec)");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82625[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82623[2];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82618[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82614 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                    CEU_Value ceu_idx_82614 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82614, ceu_idx_82614));
+                        ceu_gc_dec_val(ceu_col_82614);
+                        ceu_gc_dec_val(ceu_idx_82614);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 19, col 13) : vec[0]");
+                    
+                }
+                
+                            ceu_args_82618[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82618 = CEU_ACC_KEEP();
+                    if (ceu_clo_82618.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82618);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 19, col 12) : {{#}}(vec[0])"
+                        );
+                    }
+                    CEUX ceux_82618 = {
+                        (CEU_Clo*) ceu_clo_82618.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82618
+                    };
+                    ceu_clo_82618.Dyn->Clo.proto(&ceux_82618);
+                    ceu_gc_dec_val(ceu_clo_82618);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 19, col 12) : {{#}}(vec[0])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82623[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                            ceu_args_82623[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_82623 = CEU_ACC_KEEP();
+                    if (ceu_clo_82623.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82623);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 19, col 20) : {{==}}({{#}}(vec[0]),2)"
+                        );
+                    }
+                    CEUX ceux_82623 = {
+                        (CEU_Clo*) ceu_clo_82623.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82623
+                    };
+                    ceu_clo_82623.Dyn->Clo.proto(&ceux_82623);
+                    ceu_gc_dec_val(ceu_clo_82623);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 19, col 20) : {{==}}({{#}}(vec[0]),2)");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82625[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_assert);
+                    
+                    CEU_Value ceu_clo_82625 = CEU_ACC_KEEP();
+                    if (ceu_clo_82625.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82625);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 19, col 5) : assert({{==}}({{#}}(vec[0]),2))"
+                        );
+                    }
+                    CEUX ceux_82625 = {
+                        (CEU_Clo*) ceu_clo_82625.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82625
+                    };
+                    ceu_clo_82625.Dyn->Clo.proto(&ceux_82625);
+                    ceu_gc_dec_val(ceu_clo_82625);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 19, col 5) : assert({{==}}({{#}}(vec[0]),2))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82642[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82640[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82636 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                    CEU_Value ceu_idx_82636 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82636, ceu_idx_82636));
+                        ceu_gc_dec_val(ceu_col_82636);
+                        ceu_gc_dec_val(ceu_idx_82636);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 20, col 14) : vec[0]");
+                    
+                }
+                
+                            ceu_args_82640[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82640 = CEU_ACC_KEEP();
+                    if (ceu_clo_82640.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82640);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 20, col 13) : {{#}}(vec[0])"
+                        );
+                    }
+                    CEUX ceux_82640 = {
+                        (CEU_Clo*) ceu_clo_82640.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82640
+                    };
+                    ceu_clo_82640.Dyn->Clo.proto(&ceux_82640);
+                    ceu_gc_dec_val(ceu_clo_82640);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 20, col 13) : {{#}}(vec[0])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82642[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_82642 = CEU_ACC_KEEP();
+                    if (ceu_clo_82642.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82642);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 20, col 5) : println({{#}}(vec[0]))"
+                        );
+                    }
+                    CEUX ceux_82642 = {
+                        (CEU_Clo*) ceu_clo_82642.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82642
+                    };
+                    ceu_clo_82642.Dyn->Clo.proto(&ceux_82642);
+                    ceu_gc_dec_val(ceu_clo_82642);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 20, col 5) : println({{#}}(vec[0]))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82667[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82665[2];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82660[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82656 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                    CEU_Value ceu_idx_82656 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82656, ceu_idx_82656));
+                        ceu_gc_dec_val(ceu_col_82656);
+                        ceu_gc_dec_val(ceu_idx_82656);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 13) : vec[1]");
+                    
+                }
+                
+                            ceu_args_82660[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82660 = CEU_ACC_KEEP();
+                    if (ceu_clo_82660.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82660);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 21, col 12) : {{#}}(vec[1])"
+                        );
+                    }
+                    CEUX ceux_82660 = {
+                        (CEU_Clo*) ceu_clo_82660.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82660
+                    };
+                    ceu_clo_82660.Dyn->Clo.proto(&ceux_82660);
+                    ceu_gc_dec_val(ceu_clo_82660);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 12) : {{#}}(vec[1])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82665[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                            ceu_args_82665[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_82665 = CEU_ACC_KEEP();
+                    if (ceu_clo_82665.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82665);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 21, col 20) : {{==}}({{#}}(vec[1]),2)"
+                        );
+                    }
+                    CEUX ceux_82665 = {
+                        (CEU_Clo*) ceu_clo_82665.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82665
+                    };
+                    ceu_clo_82665.Dyn->Clo.proto(&ceux_82665);
+                    ceu_gc_dec_val(ceu_clo_82665);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 20) : {{==}}({{#}}(vec[1]),2)");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82667[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_assert);
+                    
+                    CEU_Value ceu_clo_82667 = CEU_ACC_KEEP();
+                    if (ceu_clo_82667.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82667);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 21, col 5) : assert({{==}}({{#}}(vec[1]),2))"
+                        );
+                    }
+                    CEUX ceux_82667 = {
+                        (CEU_Clo*) ceu_clo_82667.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82667
+                    };
+                    ceu_clo_82667.Dyn->Clo.proto(&ceux_82667);
+                    ceu_gc_dec_val(ceu_clo_82667);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 5) : assert({{==}}({{#}}(vec[1]),2))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82684[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82682[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82678 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                    CEU_Value ceu_idx_82678 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82678, ceu_idx_82678));
+                        ceu_gc_dec_val(ceu_col_82678);
+                        ceu_gc_dec_val(ceu_idx_82678);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 22, col 14) : vec[1]");
+                    
+                }
+                
+                            ceu_args_82682[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82682 = CEU_ACC_KEEP();
+                    if (ceu_clo_82682.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82682);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 22, col 13) : {{#}}(vec[1])"
+                        );
+                    }
+                    CEUX ceux_82682 = {
+                        (CEU_Clo*) ceu_clo_82682.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82682
+                    };
+                    ceu_clo_82682.Dyn->Clo.proto(&ceux_82682);
+                    ceu_gc_dec_val(ceu_clo_82682);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 22, col 13) : {{#}}(vec[1])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82684[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_82684 = CEU_ACC_KEEP();
+                    if (ceu_clo_82684.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82684);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 22, col 5) : println({{#}}(vec[1]))"
+                        );
+                    }
+                    CEUX ceux_82684 = {
+                        (CEU_Clo*) ceu_clo_82684.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82684
+                    };
+                    ceu_clo_82684.Dyn->Clo.proto(&ceux_82684);
+                    ceu_gc_dec_val(ceu_clo_82684);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 22, col 5) : println({{#}}(vec[1]))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82709[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82707[2];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82702[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82698 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                    CEU_Value ceu_idx_82698 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82698, ceu_idx_82698));
+                        ceu_gc_dec_val(ceu_col_82698);
+                        ceu_gc_dec_val(ceu_idx_82698);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 23, col 13) : vec[2]");
+                    
+                }
+                
+                            ceu_args_82702[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82702 = CEU_ACC_KEEP();
+                    if (ceu_clo_82702.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82702);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 23, col 12) : {{#}}(vec[2])"
+                        );
+                    }
+                    CEUX ceux_82702 = {
+                        (CEU_Clo*) ceu_clo_82702.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82702
+                    };
+                    ceu_clo_82702.Dyn->Clo.proto(&ceux_82702);
+                    ceu_gc_dec_val(ceu_clo_82702);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 23, col 12) : {{#}}(vec[2])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82707[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
+                            ceu_args_82707[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_82707 = CEU_ACC_KEEP();
+                    if (ceu_clo_82707.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82707);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 23, col 20) : {{==}}({{#}}(vec[2]),4)"
+                        );
+                    }
+                    CEUX ceux_82707 = {
+                        (CEU_Clo*) ceu_clo_82707.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82707
+                    };
+                    ceu_clo_82707.Dyn->Clo.proto(&ceux_82707);
+                    ceu_gc_dec_val(ceu_clo_82707);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 23, col 20) : {{==}}({{#}}(vec[2]),4)");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82709[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_assert);
+                    
+                    CEU_Value ceu_clo_82709 = CEU_ACC_KEEP();
+                    if (ceu_clo_82709.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82709);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 23, col 5) : assert({{==}}({{#}}(vec[2]),4))"
+                        );
+                    }
+                    CEUX ceux_82709 = {
+                        (CEU_Clo*) ceu_clo_82709.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82709
+                    };
+                    ceu_clo_82709.Dyn->Clo.proto(&ceux_82709);
+                    ceu_gc_dec_val(ceu_clo_82709);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 23, col 5) : assert({{==}}({{#}}(vec[2]),4))");
+            
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82726[1];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82724[1];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_vec_82361);
+                    
+                    CEU_Value ceu_col_82720 = CEU_ACC_KEEP();
+
+                    // IDX
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                    CEU_Value ceu_idx_82720 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82720, ceu_idx_82720));
+                        ceu_gc_dec_val(ceu_col_82720);
+                        ceu_gc_dec_val(ceu_idx_82720);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 24, col 14) : vec[2]");
+                    
+                }
+                
+                            ceu_args_82724[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_hash);
+                    
+                    CEU_Value ceu_clo_82724 = CEU_ACC_KEEP();
+                    if (ceu_clo_82724.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82724);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 24, col 13) : {{#}}(vec[2])"
+                        );
+                    }
+                    CEUX ceux_82724 = {
+                        (CEU_Clo*) ceu_clo_82724.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82724
+                    };
+                    ceu_clo_82724.Dyn->Clo.proto(&ceux_82724);
+                    ceu_gc_dec_val(ceu_clo_82724);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 24, col 13) : {{#}}(vec[2])");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82726[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_82726 = CEU_ACC_KEEP();
+                    if (ceu_clo_82726.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82726);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 24, col 5) : println({{#}}(vec[2]))"
+                        );
+                    }
+                    CEUX ceux_82726 = {
+                        (CEU_Clo*) ceu_clo_82726.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        ceu_args_82726
+                    };
+                    ceu_clo_82726.Dyn->Clo.proto(&ceux_82726);
+                    ceu_gc_dec_val(ceu_clo_82726);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 24, col 5) : println({{#}}(vec[2]))");
             
         
                 } // CALL | 
@@ -56950,26 +57787,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82480[1];
+                        CEU_Value ceu_args_82738[1];
                     
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
-                            ceu_args_82480[0] = CEU_ACC_KEEP();
+                            ceu_args_82738[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_tuple);
                     
-                    CEU_Value ceu_clo_82480 = CEU_ACC_KEEP();
-                    if (ceu_clo_82480.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82480);
+                    CEU_Value ceu_clo_82738 = CEU_ACC_KEEP();
+                    if (ceu_clo_82738.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82738);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 19, col 21) : tuple(3)"
+                            "03_flight.ceu : (lin 26, col 21) : tuple(3)"
                         );
                     }
-                    CEUX ceux_82480 = {
-                        (CEU_Clo*) ceu_clo_82480.Dyn,
+                    CEUX ceux_82738 = {
+                        (CEU_Clo*) ceu_clo_82738.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56978,12 +57815,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82480
+                        ceu_args_82738
                     };
-                    ceu_clo_82480.Dyn->Clo.proto(&ceux_82480);
-                    ceu_gc_dec_val(ceu_clo_82480);
+                    ceu_clo_82738.Dyn->Clo.proto(&ceux_82738);
+                    ceu_gc_dec_val(ceu_clo_82738);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 19, col 21) : tuple(3)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 26, col 21) : tuple(3)");
             
         
                 } // CALL | 
@@ -56993,11 +57830,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 19, col 5) : (val tup :Date = tuple(3))"
+                            "03_flight.ceu : (lin 26, col 5) : (val tup :Date = tuple(3))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_tup_82481 = ceu_acc;
+                        ceu_loc_tup_82739 = ceu_acc;
                     
                 
                 do { // ENCLOSE | 
@@ -57007,7 +57844,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_82601 = NULL;
+                         CEU_Block ceu_block_82859 = NULL;
                     
                     
                     
@@ -57015,21 +57852,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_ste_76846_82494;
+                                        CEU_Value ceu_loc_ceu_ste_76967_82752;
                                     
-                                        CEU_Value ceu_loc_i_82510;
+                                        CEU_Value ceu_loc_i_82768;
                                     
-                                        CEU_Value ceu_loc_ceu_lim_76846_82518;
+                                        CEU_Value ceu_loc_ceu_lim_76967_82776;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_ste_76846_82494 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ste_76967_82752 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_i_82510 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_i_82768 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_lim_76846_82518 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_lim_76967_82776 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57046,11 +57883,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 24, col 33) : (val ceu_ste = 1)"
+                            "03_flight.ceu : (lin 31, col 33) : (val ceu_ste = 1)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ste_76846_82494 = ceu_acc;
+                        ceu_loc_ceu_ste_76967_82752 = ceu_acc;
                     
                 
                 // DCL | 
@@ -57058,28 +57895,28 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82509[2];
+                        CEU_Value ceu_args_82767[2];
                     
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                            ceu_args_82509[0] = CEU_ACC_KEEP();
+                            ceu_args_82767[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                            ceu_args_82509[1] = CEU_ACC_KEEP();
+                            ceu_args_82767[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_plus);
                     
-                    CEU_Value ceu_clo_82509 = CEU_ACC_KEEP();
-                    if (ceu_clo_82509.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82509);
+                    CEU_Value ceu_clo_82767 = CEU_ACC_KEEP();
+                    if (ceu_clo_82767.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82767);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 20, col 18) : {{+}}(0,0)"
+                            "03_flight.ceu : (lin 27, col 18) : {{+}}(0,0)"
                         );
                     }
-                    CEUX ceux_82509 = {
-                        (CEU_Clo*) ceu_clo_82509.Dyn,
+                    CEUX ceux_82767 = {
+                        (CEU_Clo*) ceu_clo_82767.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57088,12 +57925,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82509
+                        ceu_args_82767
                     };
-                    ceu_clo_82509.Dyn->Clo.proto(&ceux_82509);
-                    ceu_gc_dec_val(ceu_clo_82509);
+                    ceu_clo_82767.Dyn->Clo.proto(&ceux_82767);
+                    ceu_gc_dec_val(ceu_clo_82767);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 20, col 18) : {{+}}(0,0)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 27, col 18) : {{+}}(0,0)");
             
         
                 } // CALL | 
@@ -57103,11 +57940,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 25, col 33) : (var i = {{+}}(0,0))"
+                            "03_flight.ceu : (lin 32, col 33) : (var i = {{+}}(0,0))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_i_82510 = ceu_acc;
+                        ceu_loc_i_82768 = ceu_acc;
                     
                 
                 // DCL | 
@@ -57118,49 +57955,49 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 23, col 33) : (val ceu_lim = 2)"
+                            "03_flight.ceu : (lin 30, col 33) : (val ceu_lim = 2)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_lim_76846_82518 = ceu_acc;
+                        ceu_loc_ceu_lim_76967_82776 = ceu_acc;
                     
                 
                 // LOOP | 
-                CEU_LOOP_START_82599:
+                CEU_LOOP_START_82857:
                     // GROUP | 
 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82532[2];
+                        CEU_Value ceu_args_82790[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_i_82510);
+                        CEU_ACC(ceu_loc_i_82768);
                     
-                            ceu_args_82532[0] = CEU_ACC_KEEP();
+                            ceu_args_82790[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_lim_76846_82518);
+                        CEU_ACC(ceu_loc_ceu_lim_76967_82776);
                     
-                            ceu_args_82532[1] = CEU_ACC_KEEP();
+                            ceu_args_82790[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_greater);
                     
-                    CEU_Value ceu_clo_82532 = CEU_ACC_KEEP();
-                    if (ceu_clo_82532.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82532);
+                    CEU_Value ceu_clo_82790 = CEU_ACC_KEEP();
+                    if (ceu_clo_82790.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82790);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 22, col 43) : {{>}}(i,ceu_lim)"
+                            "03_flight.ceu : (lin 29, col 43) : {{>}}(i,ceu_lim)"
                         );
                     }
-                    CEUX ceux_82532 = {
-                        (CEU_Clo*) ceu_clo_82532.Dyn,
+                    CEUX ceux_82790 = {
+                        (CEU_Clo*) ceu_clo_82790.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57169,12 +58006,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82532
+                        ceu_args_82790
                     };
-                    ceu_clo_82532.Dyn->Clo.proto(&ceux_82532);
-                    ceu_gc_dec_val(ceu_clo_82532);
+                    ceu_clo_82790.Dyn->Clo.proto(&ceux_82790);
+                    ceu_gc_dec_val(ceu_clo_82790);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 22, col 43) : {{>}}(i,ceu_lim)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 29, col 43) : {{>}}(i,ceu_lim)");
             
         
                 } // CALL | 
@@ -57203,12 +58040,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82577[1];
+                        CEU_Value ceu_args_82835[1];
                     
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82575[1];
+                        CEU_Value ceu_args_82833[1];
                     
                     
                 { // INDEX | 
@@ -57218,41 +58055,41 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_vec_82236);
+                        CEU_ACC(ceu_loc_vec_82361);
                     
-                    CEU_Value ceu_col_82573 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82831 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_i_82510);
+                        CEU_ACC(ceu_loc_i_82768);
                     
-                    CEU_Value ceu_idx_82573 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82831 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_82573, ceu_idx_82573));
-                        ceu_gc_dec_val(ceu_col_82573);
-                        ceu_gc_dec_val(ceu_idx_82573);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 22) : vec[i]");
+                        CEU_ACC(ceu_col_get(ceu_col_82831, ceu_idx_82831));
+                        ceu_gc_dec_val(ceu_col_82831);
+                        ceu_gc_dec_val(ceu_idx_82831);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 22) : vec[i]");
                     
                 }
                 
-                            ceu_args_82575[0] = CEU_ACC_KEEP();
+                            ceu_args_82833[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to_dash_number);
                     
-                    CEU_Value ceu_clo_82575 = CEU_ACC_KEEP();
-                    if (ceu_clo_82575.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82575);
+                    CEU_Value ceu_clo_82833 = CEU_ACC_KEEP();
+                    if (ceu_clo_82833.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82833);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 21, col 32) : to-number(vec[i])"
+                            "03_flight.ceu : (lin 28, col 32) : to-number(vec[i])"
                         );
                     }
-                    CEUX ceux_82575 = {
-                        (CEU_Clo*) ceu_clo_82575.Dyn,
+                    CEUX ceux_82833 = {
+                        (CEU_Clo*) ceu_clo_82833.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57261,33 +58098,33 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82575
+                        ceu_args_82833
                     };
-                    ceu_clo_82575.Dyn->Clo.proto(&ceux_82575);
-                    ceu_gc_dec_val(ceu_clo_82575);
+                    ceu_clo_82833.Dyn->Clo.proto(&ceux_82833);
+                    ceu_gc_dec_val(ceu_clo_82833);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 32) : to-number(vec[i])");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 32) : to-number(vec[i])");
             
         
                 } // CALL | 
             
-                            ceu_args_82577[0] = CEU_ACC_KEEP();
+                            ceu_args_82835[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_assert);
                     
-                    CEU_Value ceu_clo_82577 = CEU_ACC_KEEP();
-                    if (ceu_clo_82577.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82577);
+                    CEU_Value ceu_clo_82835 = CEU_ACC_KEEP();
+                    if (ceu_clo_82835.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82835);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 21, col 45) : assert(to-number(vec[i]))"
+                            "03_flight.ceu : (lin 28, col 45) : assert(to-number(vec[i]))"
                         );
                     }
-                    CEUX ceux_82577 = {
-                        (CEU_Clo*) ceu_clo_82577.Dyn,
+                    CEUX ceux_82835 = {
+                        (CEU_Clo*) ceu_clo_82835.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57296,12 +58133,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_82577
+                        ceu_args_82835
                     };
-                    ceu_clo_82577.Dyn->Clo.proto(&ceux_82577);
-                    ceu_gc_dec_val(ceu_clo_82577);
+                    ceu_clo_82835.Dyn->Clo.proto(&ceux_82835);
+                    ceu_gc_dec_val(ceu_clo_82835);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 21, col 45) : assert(to-number(vec[i]))");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 45) : assert(to-number(vec[i]))");
             
         
                 } // CALL | 
@@ -57311,32 +58148,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // INDEX | 
                     // VAL
                     
-                        CEU_Value ceu_val_82559 = CEU_ACC_KEEP();
+                        CEU_Value ceu_val_82817 = CEU_ACC_KEEP();
                     
                     
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_82559 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82817 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_i_82510);
+                        CEU_ACC(ceu_loc_i_82768);
                     
-                    CEU_Value ceu_idx_82559 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82817 = CEU_ACC_KEEP();
                 
                         { // INDEX | DST | 
-                            char* ceu_err_82559 = ceu_col_set(ceu_col_82559, ceu_idx_82559, ceu_val_82559);
-                            ceu_gc_dec_val(ceu_col_82559);
-                            ceu_gc_dec_val(ceu_idx_82559);
-                            ceu_acc = ceu_val_82559;
+                            char* ceu_err_82817 = ceu_col_set(ceu_col_82817, ceu_idx_82817, ceu_val_82817);
+                            ceu_gc_dec_val(ceu_col_82817);
+                            ceu_gc_dec_val(ceu_idx_82817);
+                            ceu_acc = ceu_val_82817;
                             CEU_ERROR_CHK_PTR (
                                 continue,
-                                ceu_err_82559,
-                                "03_flight.ceu : (lin 21, col 13) : tup[i]"
+                                ceu_err_82817,
+                                "03_flight.ceu : (lin 28, col 13) : tup[i]"
                             );
                         }
                         
@@ -57348,34 +58185,34 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82594[2];
+                        CEU_Value ceu_args_82852[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_i_82510);
+                        CEU_ACC(ceu_loc_i_82768);
                     
-                            ceu_args_82594[0] = CEU_ACC_KEEP();
+                            ceu_args_82852[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ste_76846_82494);
+                        CEU_ACC(ceu_loc_ceu_ste_76967_82752);
                     
-                            ceu_args_82594[1] = CEU_ACC_KEEP();
+                            ceu_args_82852[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_plus);
                     
-                    CEU_Value ceu_clo_82594 = CEU_ACC_KEEP();
-                    if (ceu_clo_82594.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82594);
+                    CEU_Value ceu_clo_82852 = CEU_ACC_KEEP();
+                    if (ceu_clo_82852.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82852);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 23, col 47) : {{+}}(i,ceu_ste)"
+                            "03_flight.ceu : (lin 30, col 47) : {{+}}(i,ceu_ste)"
                         );
                     }
-                    CEUX ceux_82594 = {
-                        (CEU_Clo*) ceu_clo_82594.Dyn,
+                    CEUX ceux_82852 = {
+                        (CEU_Clo*) ceu_clo_82852.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57384,12 +58221,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82594
+                        ceu_args_82852
                     };
-                    ceu_clo_82594.Dyn->Clo.proto(&ceux_82594);
-                    ceu_gc_dec_val(ceu_clo_82594);
+                    ceu_clo_82852.Dyn->Clo.proto(&ceux_82852);
+                    ceu_gc_dec_val(ceu_clo_82852);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 23, col 47) : {{+}}(i,ceu_ste)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 47) : {{+}}(i,ceu_ste)");
             
         
                 } // CALL | 
@@ -57401,16 +58238,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-0 }),
-                            "03_flight.ceu : (lin 23, col 41) : i"
+                            "03_flight.ceu : (lin 30, col 41) : i"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_i_82510);
+                        ceu_gc_dec_val(ceu_loc_i_82768);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_i_82510 = ceu_acc;
+                        ceu_loc_i_82768 = ceu_acc;
                           // dst should not pop src
                 }
             
-                    goto CEU_LOOP_START_82599;
+                    goto CEU_LOOP_START_82857;
             
                         
                     } while (0);
@@ -57418,16 +58255,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_82601 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_82859 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_82601 != NULL) {
-                            CEU_LNKS(ceu_block_82601)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_82859 != NULL) {
+                            CEU_LNKS(ceu_block_82859)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_82601);
+                            CEU_Block cur = ceu_task_get(ceu_block_82859);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -57439,16 +58276,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_lim_76846_82518);
+                                ceu_gc_dec_val(ceu_loc_ceu_lim_76967_82776);
                             
-                                ceu_gc_dec_val(ceu_loc_i_82510);
+                                ceu_gc_dec_val(ceu_loc_i_82768);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ste_76846_82494);
+                                ceu_gc_dec_val(ceu_loc_ceu_ste_76967_82752);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_82601;
+                    ceu_acc = ceu_acc_82859;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -57486,7 +58323,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_83487 = NULL;
+                         CEU_Block ceu_block_83745 = NULL;
                     
                     
                     
@@ -57494,21 +58331,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_leap_question__82730;
+                                        CEU_Value ceu_loc_leap_question__82988;
                                     
-                                        CEU_Value ceu_loc_ceu_or_77169_82644;
+                                        CEU_Value ceu_loc_ceu_or_77290_82902;
                                     
-                                        CEU_Value ceu_loc_ceu_and_77033_82685;
+                                        CEU_Value ceu_loc_ceu_and_77154_82943;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_leap_question__82730 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_leap_question__82988 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_77169_82644 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_77290_82902 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_and_77033_82685 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_and_77154_82943 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57526,12 +58363,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82643[2];
+                        CEU_Value ceu_args_82901[2];
                     
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82638[2];
+                        CEU_Value ceu_args_82896[2];
                     
                     
                 { // INDEX | 
@@ -57541,42 +58378,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_82633 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82891 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_82633 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82891 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_82633, ceu_idx_82633));
-                        ceu_gc_dec_val(ceu_col_82633);
-                        ceu_gc_dec_val(ceu_idx_82633);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 23) : tup[:y]");
+                        CEU_ACC(ceu_col_get(ceu_col_82891, ceu_idx_82891));
+                        ceu_gc_dec_val(ceu_col_82891);
+                        ceu_gc_dec_val(ceu_idx_82891);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 23) : tup[:y]");
                     
                 }
                 
-                            ceu_args_82638[0] = CEU_ACC_KEEP();
+                            ceu_args_82896[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=400} }));
-                            ceu_args_82638[1] = CEU_ACC_KEEP();
+                            ceu_args_82896[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_null);
                     
-                    CEU_Value ceu_clo_82638 = CEU_ACC_KEEP();
-                    if (ceu_clo_82638.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82638);
+                    CEU_Value ceu_clo_82896 = CEU_ACC_KEEP();
+                    if (ceu_clo_82896.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82896);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 25, col 28) : {{%}}(tup[:y],400)"
+                            "03_flight.ceu : (lin 32, col 28) : {{%}}(tup[:y],400)"
                         );
                     }
-                    CEUX ceux_82638 = {
-                        (CEU_Clo*) ceu_clo_82638.Dyn,
+                    CEUX ceux_82896 = {
+                        (CEU_Clo*) ceu_clo_82896.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57585,35 +58422,35 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82638
+                        ceu_args_82896
                     };
-                    ceu_clo_82638.Dyn->Clo.proto(&ceux_82638);
-                    ceu_gc_dec_val(ceu_clo_82638);
+                    ceu_clo_82896.Dyn->Clo.proto(&ceux_82896);
+                    ceu_gc_dec_val(ceu_clo_82896);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 28) : {{%}}(tup[:y],400)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 28) : {{%}}(tup[:y],400)");
             
         
                 } // CALL | 
             
-                            ceu_args_82643[0] = CEU_ACC_KEEP();
+                            ceu_args_82901[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                            ceu_args_82643[1] = CEU_ACC_KEEP();
+                            ceu_args_82901[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_82643 = CEU_ACC_KEEP();
-                    if (ceu_clo_82643.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82643);
+                    CEU_Value ceu_clo_82901 = CEU_ACC_KEEP();
+                    if (ceu_clo_82901.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82901);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 25, col 33) : {{==}}({{%}}(tup[:y],400),0)"
+                            "03_flight.ceu : (lin 32, col 33) : {{==}}({{%}}(tup[:y],400),0)"
                         );
                     }
-                    CEUX ceux_82643 = {
-                        (CEU_Clo*) ceu_clo_82643.Dyn,
+                    CEUX ceux_82901 = {
+                        (CEU_Clo*) ceu_clo_82901.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57622,12 +58459,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82643
+                        ceu_args_82901
                     };
-                    ceu_clo_82643.Dyn->Clo.proto(&ceux_82643);
-                    ceu_gc_dec_val(ceu_clo_82643);
+                    ceu_clo_82901.Dyn->Clo.proto(&ceux_82901);
+                    ceu_gc_dec_val(ceu_clo_82901);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 33) : {{==}}({{%}}(tup[:y],400),0)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 33) : {{==}}({{%}}(tup[:y],400),0)");
             
         
                 } // CALL | 
@@ -57639,17 +58476,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 25, col 46) : (val' ceu_or = {{==}}({{%}}(tup[:y],400),0))"
+                            "03_flight.ceu : (lin 32, col 46) : (val' ceu_or = {{==}}({{%}}(tup[:y],400),0))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_77169_82644 = ceu_acc;
+                        ceu_loc_ceu_or_77290_82902 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_77169_82644);
+                        CEU_ACC(ceu_loc_ceu_or_77290_82902);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -57657,7 +58494,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_77169_82644);
+                        CEU_ACC(ceu_loc_ceu_or_77290_82902);
                     
                         } else {
                             // GROUP | 
@@ -57668,858 +58505,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82684[2];
-                    
-                    
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82679[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82674 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_82674 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82674, ceu_idx_82674));
-                        ceu_gc_dec_val(ceu_col_82674);
-                        ceu_gc_dec_val(ceu_idx_82674);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 44) : tup[:y]");
-                    
-                }
-                
-                            ceu_args_82679[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
-                            ceu_args_82679[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_null);
-                    
-                    CEU_Value ceu_clo_82679 = CEU_ACC_KEEP();
-                    if (ceu_clo_82679.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82679);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 25, col 49) : {{%}}(tup[:y],4)"
-                        );
-                    }
-                    CEUX ceux_82679 = {
-                        (CEU_Clo*) ceu_clo_82679.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82679
-                    };
-                    ceu_clo_82679.Dyn->Clo.proto(&ceux_82679);
-                    ceu_gc_dec_val(ceu_clo_82679);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 49) : {{%}}(tup[:y],4)");
-            
-        
-                } // CALL | 
-            
-                            ceu_args_82684[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                            ceu_args_82684[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_equals_equals);
-                    
-                    CEU_Value ceu_clo_82684 = CEU_ACC_KEEP();
-                    if (ceu_clo_82684.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82684);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 25, col 52) : {{==}}({{%}}(tup[:y],4),0)"
-                        );
-                    }
-                    CEUX ceux_82684 = {
-                        (CEU_Clo*) ceu_clo_82684.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82684
-                    };
-                    ceu_clo_82684.Dyn->Clo.proto(&ceux_82684);
-                    ceu_gc_dec_val(ceu_clo_82684);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 52) : {{==}}({{%}}(tup[:y],4),0)");
-            
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 25, col 65) : (val' ceu_and = {{==}}({{%}}(tup[:y],4),0))"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_77033_82685 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77033_82685);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82713[2];
-                    
-                    
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82708[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82703 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_82703 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82703, ceu_idx_82703));
-                        ceu_gc_dec_val(ceu_col_82703);
-                        ceu_gc_dec_val(ceu_idx_82703);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 63) : tup[:y]");
-                    
-                }
-                
-                            ceu_args_82708[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=100} }));
-                            ceu_args_82708[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_null);
-                    
-                    CEU_Value ceu_clo_82708 = CEU_ACC_KEEP();
-                    if (ceu_clo_82708.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82708);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 25, col 68) : {{%}}(tup[:y],100)"
-                        );
-                    }
-                    CEUX ceux_82708 = {
-                        (CEU_Clo*) ceu_clo_82708.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82708
-                    };
-                    ceu_clo_82708.Dyn->Clo.proto(&ceux_82708);
-                    ceu_gc_dec_val(ceu_clo_82708);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 68) : {{%}}(tup[:y],100)");
-            
-        
-                } // CALL | 
-            
-                            ceu_args_82713[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                            ceu_args_82713[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_slash_equals);
-                    
-                    CEU_Value ceu_clo_82713 = CEU_ACC_KEEP();
-                    if (ceu_clo_82713.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82713);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 25, col 73) : {{/=}}({{%}}(tup[:y],100),0)"
-                        );
-                    }
-                    CEUX ceux_82713 = {
-                        (CEU_Clo*) ceu_clo_82713.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82713
-                    };
-                    ceu_clo_82713.Dyn->Clo.proto(&ceux_82713);
-                    ceu_gc_dec_val(ceu_clo_82713);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 25, col 73) : {{/=}}({{%}}(tup[:y],100),0)");
-            
-        
-                } // CALL | 
-            
-                        } else {
-                            // GROUP | 
-
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77033_82685);
-                    
-                        }
-                    }
-                }
-                
-                        }
-                    }
-                }
-                
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 25, col 9) : (val leap? = group { (val' ceu_or = {{==}}..."
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_leap_question__82730 = ceu_acc;
-                    
-                
-                { // BLOCK | 
-            #ifdef CEU_LEX
-                    ceux->depth++;
-            #endif
-                    
-                         CEU_Block ceu_block_83485 = NULL;
-                    
-                    
-                    
-                    
-                            
-                                //{ // inline vars dcls
-                                    
-                                        CEU_Value ceu_loc_ceu_ifs_81442_82753;
-                                    
-                                //}
-                            
-                            { // vars inits
-                                
-                                    ceu_loc_ceu_ifs_81442_82753 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                            }
-                            
-                
-                    
-                    
-                    do { // BLOCK | 
-                        
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82752[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82747 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                        
-                    CEU_Value ceu_idx_82747 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82747, ceu_idx_82747));
-                        ceu_gc_dec_val(ceu_col_82747);
-                        ceu_gc_dec_val(ceu_idx_82747);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 27, col 14) : tup[:d]");
-                    
-                }
-                
-                            ceu_args_82752[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
-                            ceu_args_82752[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_less);
-                    
-                    CEU_Value ceu_clo_82752 = CEU_ACC_KEEP();
-                    if (ceu_clo_82752.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82752);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 27, col 20) : {{<}}(tup[:d],1)"
-                        );
-                    }
-                    CEUX ceux_82752 = {
-                        (CEU_Clo*) ceu_clo_82752.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82752
-                    };
-                    ceu_clo_82752.Dyn->Clo.proto(&ceux_82752);
-                    ceu_gc_dec_val(ceu_clo_82752);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 27, col 20) : {{<}}(tup[:d],1)");
-            
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 38, col 33) : (val ceu_ifs = {{<}}(tup[:d],1))"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81442_82753 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81442_82753);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                        } else {
-                            
-                { // BLOCK | 
-            #ifdef CEU_LEX
-                    ceux->depth++;
-            #endif
-                    
-                         CEU_Block ceu_block_83482 = NULL;
-                    
-                    
-                    
-                    
-                            
-                                //{ // inline vars dcls
-                                    
-                                        CEU_Value ceu_loc_ceu_ifs_81443_82847;
-                                    
-                                        CEU_Value ceu_loc_ceu_and_77529_82815;
-                                    
-                                        CEU_Value ceu_loc_ceu_and_77436_82796;
-                                    
-                                //}
-                            
-                            { // vars inits
-                                
-                                    ceu_loc_ceu_ifs_81443_82847 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                                    ceu_loc_ceu_and_77529_82815 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                                    ceu_loc_ceu_and_77436_82796 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                            }
-                            
-                
-                    
-                    
-                    do { // BLOCK | 
-                        
-                // DCL | 
-                
-                        // GROUP | 
-
-                // DCL | 
-                
-                        // GROUP | 
-
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82795[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82790 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
-                        
-                    CEU_Value ceu_idx_82790 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82790, ceu_idx_82790));
-                        ceu_gc_dec_val(ceu_col_82790);
-                        ceu_gc_dec_val(ceu_idx_82790);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 15) : tup[:m]");
-                    
-                }
-                
-                            ceu_args_82795[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                            ceu_args_82795[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_equals_equals);
-                    
-                    CEU_Value ceu_clo_82795 = CEU_ACC_KEEP();
-                    if (ceu_clo_82795.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82795);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 28, col 20) : {{==}}(tup[:m],2)"
-                        );
-                    }
-                    CEUX ceux_82795 = {
-                        (CEU_Clo*) ceu_clo_82795.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82795
-                    };
-                    ceu_clo_82795.Dyn->Clo.proto(&ceux_82795);
-                    ceu_gc_dec_val(ceu_clo_82795);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 20) : {{==}}(tup[:m],2)");
-            
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 28, col 33) : (val' ceu_and = {{==}}(tup[:m],2))"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_77436_82796 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77436_82796);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_leap_question__82730);
-                    
-                        } else {
-                            // GROUP | 
-
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77436_82796);
-                    
-                        }
-                    }
-                }
-                
-                        #ifdef CEU_LEX
-                        
-                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 30, col 11) : (val' ceu_and = group { (val' ceu_and = {{..."
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_77529_82815 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77529_82815);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82835[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82830 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
-                        
-                    CEU_Value ceu_idx_82830 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82830, ceu_idx_82830));
-                        ceu_gc_dec_val(ceu_col_82830);
-                        ceu_gc_dec_val(ceu_idx_82830);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 41) : tup[:d]");
-                    
-                }
-                
-                            ceu_args_82835[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=29} }));
-                            ceu_args_82835[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_greater);
-                    
-                    CEU_Value ceu_clo_82835 = CEU_ACC_KEEP();
-                    if (ceu_clo_82835.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82835);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 28, col 46) : {{>}}(tup[:d],29)"
-                        );
-                    }
-                    CEUX ceux_82835 = {
-                        (CEU_Clo*) ceu_clo_82835.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82835
-                    };
-                    ceu_clo_82835.Dyn->Clo.proto(&ceux_82835);
-                    ceu_gc_dec_val(ceu_clo_82835);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 28, col 46) : {{>}}(tup[:d],29)");
-            
-        
-                } // CALL | 
-            
-                        } else {
-                            // GROUP | 
-
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77529_82815);
-                    
-                        }
-                    }
-                }
-                
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 31, col 33) : (val ceu_ifs = group { (val' ceu_and = gro..."
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81443_82847 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81443_82847);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                        } else {
-                            
-                { // BLOCK | 
-            #ifdef CEU_LEX
-                    ceux->depth++;
-            #endif
-                    
-                         CEU_Block ceu_block_83479 = NULL;
-                    
-                    
-                    
-                    
-                            
-                                //{ // inline vars dcls
-                                    
-                                        CEU_Value ceu_loc_ceu_ifs_81444_82954;
-                                    
-                                        CEU_Value ceu_loc_ceu_and_77847_82922;
-                                    
-                                        CEU_Value ceu_loc_ceu_and_77728_82890;
-                                    
-                                //}
-                            
-                            { // vars inits
-                                
-                                    ceu_loc_ceu_ifs_81444_82954 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                                    ceu_loc_ceu_and_77847_82922 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                                    ceu_loc_ceu_and_77728_82890 = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                            }
-                            
-                
-                    
-                    
-                    do { // BLOCK | 
-                        
-                // DCL | 
-                
-                        // GROUP | 
-
-                // DCL | 
-                
-                        // GROUP | 
-
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_82889[2];
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
-                    CEU_Value ceu_col_82884 = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
-                        
-                    CEU_Value ceu_idx_82884 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get(ceu_col_82884, ceu_idx_82884));
-                        ceu_gc_dec_val(ceu_col_82884);
-                        ceu_gc_dec_val(ceu_idx_82884);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 29, col 15) : tup[:m]");
-                    
-                }
-                
-                            ceu_args_82889[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                            ceu_args_82889[1] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_equals_equals);
-                    
-                    CEU_Value ceu_clo_82889 = CEU_ACC_KEEP();
-                    if (ceu_clo_82889.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82889);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 29, col 20) : {{==}}(tup[:m],2)"
-                        );
-                    }
-                    CEUX ceux_82889 = {
-                        (CEU_Clo*) ceu_clo_82889.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        ceu_args_82889
-                    };
-                    ceu_clo_82889.Dyn->Clo.proto(&ceux_82889);
-                    ceu_gc_dec_val(ceu_clo_82889);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 29, col 20) : {{==}}(tup[:m],2)");
-            
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 29, col 33) : (val' ceu_and = {{==}}(tup[:m],2))"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_77728_82890 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77728_82890);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_leap_question__82730);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                        } else {
-                            // GROUP | 
-CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
-                        }
-                    }
-                }
-                
-                        } else {
-                            // GROUP | 
-
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77728_82890);
-                    
-                        }
-                    }
-                }
-                
-                        #ifdef CEU_LEX
-                        
-                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 32, col 11) : (val' ceu_and = group { (val' ceu_and = {{..."
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_77847_82922 = ceu_acc;
-                    
-                
-                { // IF | 
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77847_82922);
-                    
-                    {
-                        int v = ceu_as_bool(ceu_acc);
-                        if (v) {
-                            // GROUP | 
-
-                { // CALL | 
-                    
                         CEU_Value ceu_args_82942[2];
                     
                     
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82937[2];
+                    
+                    
                 { // INDEX | 
                     // VAL
                     
@@ -58527,30 +58520,67 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_82937 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_82932 = CEU_ACC_KEEP();
 
                     // IDX
                     
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_82937 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_82932 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_82937, ceu_idx_82937));
-                        ceu_gc_dec_val(ceu_col_82937);
-                        ceu_gc_dec_val(ceu_idx_82937);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 29, col 46) : tup[:d]");
+                        CEU_ACC(ceu_col_get(ceu_col_82932, ceu_idx_82932));
+                        ceu_gc_dec_val(ceu_col_82932);
+                        ceu_gc_dec_val(ceu_idx_82932);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 44) : tup[:y]");
                     
                 }
                 
+                            ceu_args_82937[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
+                            ceu_args_82937[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_null);
+                    
+                    CEU_Value ceu_clo_82937 = CEU_ACC_KEEP();
+                    if (ceu_clo_82937.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82937);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 32, col 49) : {{%}}(tup[:y],4)"
+                        );
+                    }
+                    CEUX ceux_82937 = {
+                        (CEU_Clo*) ceu_clo_82937.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82937
+                    };
+                    ceu_clo_82937.Dyn->Clo.proto(&ceux_82937);
+                    ceu_gc_dec_val(ceu_clo_82937);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 49) : {{%}}(tup[:y],4)");
+            
+        
+                } // CALL | 
+            
                             ceu_args_82942[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=28} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                             ceu_args_82942[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_glb_greater);
+                        CEU_ACC(ceu_glb_equals_equals);
                     
                     CEU_Value ceu_clo_82942 = CEU_ACC_KEEP();
                     if (ceu_clo_82942.type != CEU_VALUE_CLO_FUNC) {
@@ -58558,7 +58588,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 29, col 51) : {{>}}(tup[:d],28)"
+                            "03_flight.ceu : (lin 32, col 52) : {{==}}({{%}}(tup[:y],4),0)"
                         );
                     }
                     CEUX ceux_82942 = {
@@ -58576,7 +58606,139 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     ceu_clo_82942.Dyn->Clo.proto(&ceux_82942);
                     ceu_gc_dec_val(ceu_clo_82942);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 29, col 51) : {{>}}(tup[:d],28)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 52) : {{==}}({{%}}(tup[:y],4),0)");
+            
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
+                            "03_flight.ceu : (lin 32, col 65) : (val' ceu_and = {{==}}({{%}}(tup[:y],4),0))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_and_77154_82943 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77154_82943);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82971[2];
+                    
+                    
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_82966[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_82961 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_82961 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_82961, ceu_idx_82961));
+                        ceu_gc_dec_val(ceu_col_82961);
+                        ceu_gc_dec_val(ceu_idx_82961);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 63) : tup[:y]");
+                    
+                }
+                
+                            ceu_args_82966[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=100} }));
+                            ceu_args_82966[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_null);
+                    
+                    CEU_Value ceu_clo_82966 = CEU_ACC_KEEP();
+                    if (ceu_clo_82966.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82966);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 32, col 68) : {{%}}(tup[:y],100)"
+                        );
+                    }
+                    CEUX ceux_82966 = {
+                        (CEU_Clo*) ceu_clo_82966.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82966
+                    };
+                    ceu_clo_82966.Dyn->Clo.proto(&ceux_82966);
+                    ceu_gc_dec_val(ceu_clo_82966);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 68) : {{%}}(tup[:y],100)");
+            
+        
+                } // CALL | 
+            
+                            ceu_args_82971[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                            ceu_args_82971[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_slash_equals);
+                    
+                    CEU_Value ceu_clo_82971 = CEU_ACC_KEEP();
+                    if (ceu_clo_82971.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_82971);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 32, col 73) : {{/=}}({{%}}(tup[:y],100),0)"
+                        );
+                    }
+                    CEUX ceux_82971 = {
+                        (CEU_Clo*) ceu_clo_82971.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_82971
+                    };
+                    ceu_clo_82971.Dyn->Clo.proto(&ceux_82971);
+                    ceu_gc_dec_val(ceu_clo_82971);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 73) : {{/=}}({{%}}(tup[:y],100),0)");
             
         
                 } // CALL | 
@@ -58585,8 +58747,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_77847_82922);
+                        CEU_ACC(ceu_loc_ceu_and_77154_82943);
                     
+                        }
+                    }
+                }
+                
                         }
                     }
                 }
@@ -58596,17 +58762,126 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 32, col 33) : (val ceu_ifs = group { (val' ceu_and = gro..."
+                            "03_flight.ceu : (lin 32, col 9) : (val leap? = group { (val' ceu_or = {{==}}..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81444_82954 = ceu_acc;
+                        ceu_loc_leap_question__82988 = ceu_acc;
+                    
+                
+                { // BLOCK | 
+            #ifdef CEU_LEX
+                    ceux->depth++;
+            #endif
+                    
+                         CEU_Block ceu_block_83743 = NULL;
+                    
+                    
+                    
+                    
+                            
+                                //{ // inline vars dcls
+                                    
+                                        CEU_Value ceu_loc_ceu_ifs_81563_83011;
+                                    
+                                //}
+                            
+                            { // vars inits
+                                
+                                    ceu_loc_ceu_ifs_81563_83011 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                            }
+                            
+                
+                    
+                    
+                    do { // BLOCK | 
+                        
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_83010[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_83005 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                        
+                    CEU_Value ceu_idx_83005 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_83005, ceu_idx_83005));
+                        ceu_gc_dec_val(ceu_col_83005);
+                        ceu_gc_dec_val(ceu_idx_83005);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 34, col 14) : tup[:d]");
+                    
+                }
+                
+                            ceu_args_83010[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                            ceu_args_83010[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_less);
+                    
+                    CEU_Value ceu_clo_83010 = CEU_ACC_KEEP();
+                    if (ceu_clo_83010.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83010);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 34, col 20) : {{<}}(tup[:d],1)"
+                        );
+                    }
+                    CEUX ceux_83010 = {
+                        (CEU_Clo*) ceu_clo_83010.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_83010
+                    };
+                    ceu_clo_83010.Dyn->Clo.proto(&ceux_83010);
+                    ceu_gc_dec_val(ceu_clo_83010);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 34, col 20) : {{<}}(tup[:d],1)");
+            
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 45, col 33) : (val ceu_ifs = {{<}}(tup[:d],1))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_ifs_81563_83011 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81444_82954);
+                        CEU_ACC(ceu_loc_ceu_ifs_81563_83011);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58620,7 +58895,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_83476 = NULL;
+                         CEU_Block ceu_block_83740 = NULL;
                     
                     
                     
@@ -58628,29 +58903,591 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_ifs_81445_83137;
+                                        CEU_Value ceu_loc_ceu_ifs_81564_83105;
                                     
-                                        CEU_Value ceu_loc_ceu_and_78649_82991;
+                                        CEU_Value ceu_loc_ceu_and_77650_83073;
                                     
-                                        CEU_Value ceu_loc_ceu_or_78393_83094;
-                                    
-                                        CEU_Value ceu_loc_ceu_or_78198_83062;
-                                    
-                                        CEU_Value ceu_loc_ceu_or_78079_83030;
+                                        CEU_Value ceu_loc_ceu_and_77557_83054;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_ifs_81445_83137 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ifs_81564_83105 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_and_78649_82991 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_and_77650_83073 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_78393_83094 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_and_77557_83054 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_78198_83062 = (CEU_Value) { CEU_VALUE_NIL };
+                            }
+                            
+                
+                    
+                    
+                    do { // BLOCK | 
+                        
+                // DCL | 
+                
+                        // GROUP | 
+
+                // DCL | 
+                
+                        // GROUP | 
+
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_83053[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_83048 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_83048 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_83048, ceu_idx_83048));
+                        ceu_gc_dec_val(ceu_col_83048);
+                        ceu_gc_dec_val(ceu_idx_83048);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 35, col 15) : tup[:m]");
+                    
+                }
+                
+                            ceu_args_83053[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                            ceu_args_83053[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_83053 = CEU_ACC_KEEP();
+                    if (ceu_clo_83053.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83053);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 35, col 20) : {{==}}(tup[:m],2)"
+                        );
+                    }
+                    CEUX ceux_83053 = {
+                        (CEU_Clo*) ceu_clo_83053.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_83053
+                    };
+                    ceu_clo_83053.Dyn->Clo.proto(&ceux_83053);
+                    ceu_gc_dec_val(ceu_clo_83053);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 35, col 20) : {{==}}(tup[:m],2)");
+            
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
+                            "03_flight.ceu : (lin 35, col 33) : (val' ceu_and = {{==}}(tup[:m],2))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_and_77557_83054 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77557_83054);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_leap_question__82988);
+                    
+                        } else {
+                            // GROUP | 
+
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77557_83054);
+                    
+                        }
+                    }
+                }
+                
+                        #ifdef CEU_LEX
+                        
+                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
+                            "03_flight.ceu : (lin 37, col 11) : (val' ceu_and = group { (val' ceu_and = {{..."
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_and_77650_83073 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77650_83073);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_83093[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_83088 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                        
+                    CEU_Value ceu_idx_83088 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_83088, ceu_idx_83088));
+                        ceu_gc_dec_val(ceu_col_83088);
+                        ceu_gc_dec_val(ceu_idx_83088);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 35, col 41) : tup[:d]");
+                    
+                }
+                
+                            ceu_args_83093[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=29} }));
+                            ceu_args_83093[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_greater);
+                    
+                    CEU_Value ceu_clo_83093 = CEU_ACC_KEEP();
+                    if (ceu_clo_83093.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83093);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 35, col 46) : {{>}}(tup[:d],29)"
+                        );
+                    }
+                    CEUX ceux_83093 = {
+                        (CEU_Clo*) ceu_clo_83093.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_83093
+                    };
+                    ceu_clo_83093.Dyn->Clo.proto(&ceux_83093);
+                    ceu_gc_dec_val(ceu_clo_83093);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 35, col 46) : {{>}}(tup[:d],29)");
+            
+        
+                } // CALL | 
+            
+                        } else {
+                            // GROUP | 
+
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77650_83073);
+                    
+                        }
+                    }
+                }
+                
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 38, col 33) : (val ceu_ifs = group { (val' ceu_and = gro..."
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_ifs_81564_83105 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_ifs_81564_83105);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
+                        } else {
+                            
+                { // BLOCK | 
+            #ifdef CEU_LEX
+                    ceux->depth++;
+            #endif
+                    
+                         CEU_Block ceu_block_83737 = NULL;
+                    
+                    
+                    
+                    
+                            
+                                //{ // inline vars dcls
+                                    
+                                        CEU_Value ceu_loc_ceu_ifs_81565_83212;
+                                    
+                                        CEU_Value ceu_loc_ceu_and_77968_83180;
+                                    
+                                        CEU_Value ceu_loc_ceu_and_77849_83148;
+                                    
+                                //}
+                            
+                            { // vars inits
                                 
-                                    ceu_loc_ceu_or_78079_83030 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ifs_81565_83212 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_and_77968_83180 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_and_77849_83148 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                            }
+                            
+                
+                    
+                    
+                    do { // BLOCK | 
+                        
+                // DCL | 
+                
+                        // GROUP | 
+
+                // DCL | 
+                
+                        // GROUP | 
+
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_83147[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_83142 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_83142 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_83142, ceu_idx_83142));
+                        ceu_gc_dec_val(ceu_col_83142);
+                        ceu_gc_dec_val(ceu_idx_83142);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 36, col 15) : tup[:m]");
+                    
+                }
+                
+                            ceu_args_83147[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                            ceu_args_83147[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_83147 = CEU_ACC_KEEP();
+                    if (ceu_clo_83147.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83147);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 36, col 20) : {{==}}(tup[:m],2)"
+                        );
+                    }
+                    CEUX ceux_83147 = {
+                        (CEU_Clo*) ceu_clo_83147.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_83147
+                    };
+                    ceu_clo_83147.Dyn->Clo.proto(&ceux_83147);
+                    ceu_gc_dec_val(ceu_clo_83147);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 36, col 20) : {{==}}(tup[:m],2)");
+            
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
+                            "03_flight.ceu : (lin 36, col 33) : (val' ceu_and = {{==}}(tup[:m],2))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_and_77849_83148 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77849_83148);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_leap_question__82988);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
+                        } else {
+                            // GROUP | 
+CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
+                        }
+                    }
+                }
+                
+                        } else {
+                            // GROUP | 
+
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77849_83148);
+                    
+                        }
+                    }
+                }
+                
+                        #ifdef CEU_LEX
+                        
+                            //assert(ceu_acc.type<CEU_VALUE_DYNAMIC || ceu_acc.Dyn->Any.lex.depth!=CEU_LEX_MAX);
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
+                            "03_flight.ceu : (lin 39, col 11) : (val' ceu_and = group { (val' ceu_and = {{..."
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_and_77968_83180 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77968_83180);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+
+                { // CALL | 
+                    
+                        CEU_Value ceu_args_83200[2];
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_tup_82739);
+                    
+                    CEU_Value ceu_col_83195 = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                        
+                    CEU_Value ceu_idx_83195 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get(ceu_col_83195, ceu_idx_83195));
+                        ceu_gc_dec_val(ceu_col_83195);
+                        ceu_gc_dec_val(ceu_idx_83195);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 36, col 46) : tup[:d]");
+                    
+                }
+                
+                            ceu_args_83200[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=28} }));
+                            ceu_args_83200[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_greater);
+                    
+                    CEU_Value ceu_clo_83200 = CEU_ACC_KEEP();
+                    if (ceu_clo_83200.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83200);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 36, col 51) : {{>}}(tup[:d],28)"
+                        );
+                    }
+                    CEUX ceux_83200 = {
+                        (CEU_Clo*) ceu_clo_83200.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        ceu_args_83200
+                    };
+                    ceu_clo_83200.Dyn->Clo.proto(&ceux_83200);
+                    ceu_gc_dec_val(ceu_clo_83200);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 36, col 51) : {{>}}(tup[:d],28)");
+            
+        
+                } // CALL | 
+            
+                        } else {
+                            // GROUP | 
+
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_and_77968_83180);
+                    
+                        }
+                    }
+                }
+                
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 39, col 33) : (val ceu_ifs = group { (val' ceu_and = gro..."
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        ceu_loc_ceu_ifs_81565_83212 = ceu_acc;
+                    
+                
+                { // IF | 
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_loc_ceu_ifs_81565_83212);
+                    
+                    {
+                        int v = ceu_as_bool(ceu_acc);
+                        if (v) {
+                            // GROUP | 
+CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
+                        } else {
+                            
+                { // BLOCK | 
+            #ifdef CEU_LEX
+                    ceux->depth++;
+            #endif
+                    
+                         CEU_Block ceu_block_83734 = NULL;
+                    
+                    
+                    
+                    
+                            
+                                //{ // inline vars dcls
+                                    
+                                        CEU_Value ceu_loc_ceu_ifs_81566_83395;
+                                    
+                                        CEU_Value ceu_loc_ceu_and_78770_83249;
+                                    
+                                        CEU_Value ceu_loc_ceu_or_78514_83352;
+                                    
+                                        CEU_Value ceu_loc_ceu_or_78319_83320;
+                                    
+                                        CEU_Value ceu_loc_ceu_or_78200_83288;
+                                    
+                                //}
+                            
+                            { // vars inits
+                                
+                                    ceu_loc_ceu_ifs_81566_83395 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_and_78770_83249 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_or_78514_83352 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_or_78319_83320 = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    ceu_loc_ceu_or_78200_83288 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -58668,7 +59505,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_82990[2];
+                        CEU_Value ceu_args_83248[2];
                     
                     
                 { // INDEX | 
@@ -58678,42 +59515,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_82985 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83243 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_82985 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83243 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_82985, ceu_idx_82985));
-                        ceu_gc_dec_val(ceu_col_82985);
-                        ceu_gc_dec_val(ceu_idx_82985);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 15) : tup[:d]");
+                        CEU_ACC(ceu_col_get(ceu_col_83243, ceu_idx_83243));
+                        ceu_gc_dec_val(ceu_col_83243);
+                        ceu_gc_dec_val(ceu_idx_83243);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 15) : tup[:d]");
                     
                 }
                 
-                            ceu_args_82990[0] = CEU_ACC_KEEP();
+                            ceu_args_83248[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=30} }));
-                            ceu_args_82990[1] = CEU_ACC_KEEP();
+                            ceu_args_83248[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_greater);
                     
-                    CEU_Value ceu_clo_82990 = CEU_ACC_KEEP();
-                    if (ceu_clo_82990.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_82990);
+                    CEU_Value ceu_clo_83248 = CEU_ACC_KEEP();
+                    if (ceu_clo_83248.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83248);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 30, col 20) : {{>}}(tup[:d],30)"
+                            "03_flight.ceu : (lin 37, col 20) : {{>}}(tup[:d],30)"
                         );
                     }
-                    CEUX ceux_82990 = {
-                        (CEU_Clo*) ceu_clo_82990.Dyn,
+                    CEUX ceux_83248 = {
+                        (CEU_Clo*) ceu_clo_83248.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58722,12 +59559,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_82990
+                        ceu_args_83248
                     };
-                    ceu_clo_82990.Dyn->Clo.proto(&ceux_82990);
-                    ceu_gc_dec_val(ceu_clo_82990);
+                    ceu_clo_83248.Dyn->Clo.proto(&ceux_83248);
+                    ceu_gc_dec_val(ceu_clo_83248);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 20) : {{>}}(tup[:d],30)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 20) : {{>}}(tup[:d],30)");
             
         
                 } // CALL | 
@@ -58739,17 +59576,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 30, col 33) : (val' ceu_and = {{>}}(tup[:d],30))"
+                            "03_flight.ceu : (lin 37, col 33) : (val' ceu_and = {{>}}(tup[:d],30))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_78649_82991 = ceu_acc;
+                        ceu_loc_ceu_and_78770_83249 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_78649_82991);
+                        CEU_ACC(ceu_loc_ceu_and_78770_83249);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58770,7 +59607,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83029[2];
+                        CEU_Value ceu_args_83287[2];
                     
                     
                 { // INDEX | 
@@ -58780,42 +59617,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83024 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83282 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83024 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83282 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83024, ceu_idx_83024));
-                        ceu_gc_dec_val(ceu_col_83024);
-                        ceu_gc_dec_val(ceu_idx_83024);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 31) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83282, ceu_idx_83282));
+                        ceu_gc_dec_val(ceu_col_83282);
+                        ceu_gc_dec_val(ceu_idx_83282);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 31) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83029[0] = CEU_ACC_KEEP();
+                            ceu_args_83287[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
-                            ceu_args_83029[1] = CEU_ACC_KEEP();
+                            ceu_args_83287[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83029 = CEU_ACC_KEEP();
-                    if (ceu_clo_83029.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83029);
+                    CEU_Value ceu_clo_83287 = CEU_ACC_KEEP();
+                    if (ceu_clo_83287.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83287);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 30, col 36) : {{==}}(tup[:m],4)"
+                            "03_flight.ceu : (lin 37, col 36) : {{==}}(tup[:m],4)"
                         );
                     }
-                    CEUX ceux_83029 = {
-                        (CEU_Clo*) ceu_clo_83029.Dyn,
+                    CEUX ceux_83287 = {
+                        (CEU_Clo*) ceu_clo_83287.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58824,12 +59661,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83029
+                        ceu_args_83287
                     };
-                    ceu_clo_83029.Dyn->Clo.proto(&ceux_83029);
-                    ceu_gc_dec_val(ceu_clo_83029);
+                    ceu_clo_83287.Dyn->Clo.proto(&ceux_83287);
+                    ceu_gc_dec_val(ceu_clo_83287);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 36) : {{==}}(tup[:m],4)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 36) : {{==}}(tup[:m],4)");
             
         
                 } // CALL | 
@@ -58841,17 +59678,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 30, col 49) : (val' ceu_or = {{==}}(tup[:m],4))"
+                            "03_flight.ceu : (lin 37, col 49) : (val' ceu_or = {{==}}(tup[:m],4))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_78079_83030 = ceu_acc;
+                        ceu_loc_ceu_or_78200_83288 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78079_83030);
+                        CEU_ACC(ceu_loc_ceu_or_78200_83288);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58859,14 +59696,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78079_83030);
+                        CEU_ACC(ceu_loc_ceu_or_78200_83288);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83056[2];
+                        CEU_Value ceu_args_83314[2];
                     
                     
                 { // INDEX | 
@@ -58876,42 +59713,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83051 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83309 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83051 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83309 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83051, ceu_idx_83051));
-                        ceu_gc_dec_val(ceu_col_83051);
-                        ceu_gc_dec_val(ceu_idx_83051);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 45) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83309, ceu_idx_83309));
+                        ceu_gc_dec_val(ceu_col_83309);
+                        ceu_gc_dec_val(ceu_idx_83309);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 45) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83056[0] = CEU_ACC_KEEP();
+                            ceu_args_83314[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
-                            ceu_args_83056[1] = CEU_ACC_KEEP();
+                            ceu_args_83314[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83056 = CEU_ACC_KEEP();
-                    if (ceu_clo_83056.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83056);
+                    CEU_Value ceu_clo_83314 = CEU_ACC_KEEP();
+                    if (ceu_clo_83314.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83314);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 30, col 50) : {{==}}(tup[:m],6)"
+                            "03_flight.ceu : (lin 37, col 50) : {{==}}(tup[:m],6)"
                         );
                     }
-                    CEUX ceux_83056 = {
-                        (CEU_Clo*) ceu_clo_83056.Dyn,
+                    CEUX ceux_83314 = {
+                        (CEU_Clo*) ceu_clo_83314.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58920,12 +59757,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83056
+                        ceu_args_83314
                     };
-                    ceu_clo_83056.Dyn->Clo.proto(&ceux_83056);
-                    ceu_gc_dec_val(ceu_clo_83056);
+                    ceu_clo_83314.Dyn->Clo.proto(&ceux_83314);
+                    ceu_gc_dec_val(ceu_clo_83314);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 50) : {{==}}(tup[:m],6)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 50) : {{==}}(tup[:m],6)");
             
         
                 } // CALL | 
@@ -58941,17 +59778,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 32, col 11) : (val' ceu_or = group { (val' ceu_or = {{==..."
+                            "03_flight.ceu : (lin 39, col 11) : (val' ceu_or = group { (val' ceu_or = {{==..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_78198_83062 = ceu_acc;
+                        ceu_loc_ceu_or_78319_83320 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78198_83062);
+                        CEU_ACC(ceu_loc_ceu_or_78319_83320);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58959,14 +59796,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78198_83062);
+                        CEU_ACC(ceu_loc_ceu_or_78319_83320);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83088[2];
+                        CEU_Value ceu_args_83346[2];
                     
                     
                 { // INDEX | 
@@ -58976,42 +59813,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83083 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83341 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83083 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83341 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83083, ceu_idx_83083));
-                        ceu_gc_dec_val(ceu_col_83083);
-                        ceu_gc_dec_val(ceu_idx_83083);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 59) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83341, ceu_idx_83341));
+                        ceu_gc_dec_val(ceu_col_83341);
+                        ceu_gc_dec_val(ceu_idx_83341);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 59) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83088[0] = CEU_ACC_KEEP();
+                            ceu_args_83346[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
-                            ceu_args_83088[1] = CEU_ACC_KEEP();
+                            ceu_args_83346[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83088 = CEU_ACC_KEEP();
-                    if (ceu_clo_83088.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83088);
+                    CEU_Value ceu_clo_83346 = CEU_ACC_KEEP();
+                    if (ceu_clo_83346.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83346);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 30, col 64) : {{==}}(tup[:m],9)"
+                            "03_flight.ceu : (lin 37, col 64) : {{==}}(tup[:m],9)"
                         );
                     }
-                    CEUX ceux_83088 = {
-                        (CEU_Clo*) ceu_clo_83088.Dyn,
+                    CEUX ceux_83346 = {
+                        (CEU_Clo*) ceu_clo_83346.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59020,12 +59857,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83088
+                        ceu_args_83346
                     };
-                    ceu_clo_83088.Dyn->Clo.proto(&ceux_83088);
-                    ceu_gc_dec_val(ceu_clo_83088);
+                    ceu_clo_83346.Dyn->Clo.proto(&ceux_83346);
+                    ceu_gc_dec_val(ceu_clo_83346);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 64) : {{==}}(tup[:m],9)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 64) : {{==}}(tup[:m],9)");
             
         
                 } // CALL | 
@@ -59041,17 +59878,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 32, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
+                            "03_flight.ceu : (lin 39, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_78393_83094 = ceu_acc;
+                        ceu_loc_ceu_or_78514_83352 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78393_83094);
+                        CEU_ACC(ceu_loc_ceu_or_78514_83352);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59059,14 +59896,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_78393_83094);
+                        CEU_ACC(ceu_loc_ceu_or_78514_83352);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83120[2];
+                        CEU_Value ceu_args_83378[2];
                     
                     
                 { // INDEX | 
@@ -59076,42 +59913,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83115 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83373 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83115 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83373 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83115, ceu_idx_83115));
-                        ceu_gc_dec_val(ceu_col_83115);
-                        ceu_gc_dec_val(ceu_idx_83115);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 73) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83373, ceu_idx_83373));
+                        ceu_gc_dec_val(ceu_col_83373);
+                        ceu_gc_dec_val(ceu_idx_83373);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 73) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83120[0] = CEU_ACC_KEEP();
+                            ceu_args_83378[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }));
-                            ceu_args_83120[1] = CEU_ACC_KEEP();
+                            ceu_args_83378[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83120 = CEU_ACC_KEEP();
-                    if (ceu_clo_83120.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83120);
+                    CEU_Value ceu_clo_83378 = CEU_ACC_KEEP();
+                    if (ceu_clo_83378.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83378);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 30, col 78) : {{==}}(tup[:m],11)"
+                            "03_flight.ceu : (lin 37, col 78) : {{==}}(tup[:m],11)"
                         );
                     }
-                    CEUX ceux_83120 = {
-                        (CEU_Clo*) ceu_clo_83120.Dyn,
+                    CEUX ceux_83378 = {
+                        (CEU_Clo*) ceu_clo_83378.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59120,12 +59957,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83120
+                        ceu_args_83378
                     };
-                    ceu_clo_83120.Dyn->Clo.proto(&ceux_83120);
-                    ceu_gc_dec_val(ceu_clo_83120);
+                    ceu_clo_83378.Dyn->Clo.proto(&ceux_83378);
+                    ceu_gc_dec_val(ceu_clo_83378);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 30, col 78) : {{==}}(tup[:m],11)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 37, col 78) : {{==}}(tup[:m],11)");
             
         
                 } // CALL | 
@@ -59138,7 +59975,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_78649_82991);
+                        CEU_ACC(ceu_loc_ceu_and_78770_83249);
                     
                         }
                     }
@@ -59149,17 +59986,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 33, col 33) : (val ceu_ifs = group { (val' ceu_and = {{>..."
+                            "03_flight.ceu : (lin 40, col 33) : (val ceu_ifs = group { (val' ceu_and = {{>..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81445_83137 = ceu_acc;
+                        ceu_loc_ceu_ifs_81566_83395 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81445_83137);
+                        CEU_ACC(ceu_loc_ceu_ifs_81566_83395);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59173,7 +60010,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_83473 = NULL;
+                         CEU_Block ceu_block_83731 = NULL;
                     
                     
                     
@@ -59181,41 +60018,41 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_ifs_81446_83434;
+                                        CEU_Value ceu_loc_ceu_ifs_81567_83692;
                                     
-                                        CEU_Value ceu_loc_ceu_and_80872_83174;
+                                        CEU_Value ceu_loc_ceu_and_80993_83432;
                                     
-                                        CEU_Value ceu_loc_ceu_or_80388_83391;
+                                        CEU_Value ceu_loc_ceu_or_80509_83649;
                                     
-                                        CEU_Value ceu_loc_ceu_or_79965_83359;
+                                        CEU_Value ceu_loc_ceu_or_80086_83617;
                                     
-                                        CEU_Value ceu_loc_ceu_or_79618_83327;
+                                        CEU_Value ceu_loc_ceu_or_79739_83585;
                                     
-                                        CEU_Value ceu_loc_ceu_or_79347_83295;
+                                        CEU_Value ceu_loc_ceu_or_79468_83553;
                                     
-                                        CEU_Value ceu_loc_ceu_or_79152_83263;
+                                        CEU_Value ceu_loc_ceu_or_79273_83521;
                                     
-                                        CEU_Value ceu_loc_ceu_or_79033_83231;
+                                        CEU_Value ceu_loc_ceu_or_79154_83489;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_ifs_81446_83434 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ifs_81567_83692 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_and_80872_83174 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_and_80993_83432 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_80388_83391 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_80509_83649 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_79965_83359 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_80086_83617 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_79618_83327 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_79739_83585 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_79347_83295 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_79468_83553 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_79152_83263 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_79273_83521 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_79033_83231 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_79154_83489 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -59233,7 +60070,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83173[2];
+                        CEU_Value ceu_args_83431[2];
                     
                     
                 { // INDEX | 
@@ -59243,42 +60080,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83168 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83426 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_83168 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83426 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83168, ceu_idx_83168));
-                        ceu_gc_dec_val(ceu_col_83168);
-                        ceu_gc_dec_val(ceu_idx_83168);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 15) : tup[:d]");
+                        CEU_ACC(ceu_col_get(ceu_col_83426, ceu_idx_83426));
+                        ceu_gc_dec_val(ceu_col_83426);
+                        ceu_gc_dec_val(ceu_idx_83426);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 15) : tup[:d]");
                     
                 }
                 
-                            ceu_args_83173[0] = CEU_ACC_KEEP();
+                            ceu_args_83431[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=31} }));
-                            ceu_args_83173[1] = CEU_ACC_KEEP();
+                            ceu_args_83431[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_greater);
                     
-                    CEU_Value ceu_clo_83173 = CEU_ACC_KEEP();
-                    if (ceu_clo_83173.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83173);
+                    CEU_Value ceu_clo_83431 = CEU_ACC_KEEP();
+                    if (ceu_clo_83431.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83431);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 31, col 20) : {{>}}(tup[:d],31)"
+                            "03_flight.ceu : (lin 38, col 20) : {{>}}(tup[:d],31)"
                         );
                     }
-                    CEUX ceux_83173 = {
-                        (CEU_Clo*) ceu_clo_83173.Dyn,
+                    CEUX ceux_83431 = {
+                        (CEU_Clo*) ceu_clo_83431.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59287,12 +60124,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83173
+                        ceu_args_83431
                     };
-                    ceu_clo_83173.Dyn->Clo.proto(&ceux_83173);
-                    ceu_gc_dec_val(ceu_clo_83173);
+                    ceu_clo_83431.Dyn->Clo.proto(&ceux_83431);
+                    ceu_gc_dec_val(ceu_clo_83431);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 20) : {{>}}(tup[:d],31)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 20) : {{>}}(tup[:d],31)");
             
         
                 } // CALL | 
@@ -59304,17 +60141,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 31, col 33) : (val' ceu_and = {{>}}(tup[:d],31))"
+                            "03_flight.ceu : (lin 38, col 33) : (val' ceu_and = {{>}}(tup[:d],31))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_and_80872_83174 = ceu_acc;
+                        ceu_loc_ceu_and_80993_83432 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_80872_83174);
+                        CEU_ACC(ceu_loc_ceu_and_80993_83432);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59347,7 +60184,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83230[2];
+                        CEU_Value ceu_args_83488[2];
                     
                     
                 { // INDEX | 
@@ -59357,42 +60194,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83225 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83483 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83225 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83483 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83225, ceu_idx_83225));
-                        ceu_gc_dec_val(ceu_col_83225);
-                        ceu_gc_dec_val(ceu_idx_83225);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 31) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83483, ceu_idx_83483));
+                        ceu_gc_dec_val(ceu_col_83483);
+                        ceu_gc_dec_val(ceu_idx_83483);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 31) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83230[0] = CEU_ACC_KEEP();
+                            ceu_args_83488[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
-                            ceu_args_83230[1] = CEU_ACC_KEEP();
+                            ceu_args_83488[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83230 = CEU_ACC_KEEP();
-                    if (ceu_clo_83230.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83230);
+                    CEU_Value ceu_clo_83488 = CEU_ACC_KEEP();
+                    if (ceu_clo_83488.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83488);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 31, col 36) : {{==}}(tup[:m],1)"
+                            "03_flight.ceu : (lin 38, col 36) : {{==}}(tup[:m],1)"
                         );
                     }
-                    CEUX ceux_83230 = {
-                        (CEU_Clo*) ceu_clo_83230.Dyn,
+                    CEUX ceux_83488 = {
+                        (CEU_Clo*) ceu_clo_83488.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59401,12 +60238,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83230
+                        ceu_args_83488
                     };
-                    ceu_clo_83230.Dyn->Clo.proto(&ceux_83230);
-                    ceu_gc_dec_val(ceu_clo_83230);
+                    ceu_clo_83488.Dyn->Clo.proto(&ceux_83488);
+                    ceu_gc_dec_val(ceu_clo_83488);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 36) : {{==}}(tup[:m],1)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 36) : {{==}}(tup[:m],1)");
             
         
                 } // CALL | 
@@ -59418,17 +60255,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 31, col 49) : (val' ceu_or = {{==}}(tup[:m],1))"
+                            "03_flight.ceu : (lin 38, col 49) : (val' ceu_or = {{==}}(tup[:m],1))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_79033_83231 = ceu_acc;
+                        ceu_loc_ceu_or_79154_83489 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79033_83231);
+                        CEU_ACC(ceu_loc_ceu_or_79154_83489);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59436,14 +60273,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79033_83231);
+                        CEU_ACC(ceu_loc_ceu_or_79154_83489);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83257[2];
+                        CEU_Value ceu_args_83515[2];
                     
                     
                 { // INDEX | 
@@ -59453,42 +60290,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83252 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83510 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83252 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83510 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83252, ceu_idx_83252));
-                        ceu_gc_dec_val(ceu_col_83252);
-                        ceu_gc_dec_val(ceu_idx_83252);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 45) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83510, ceu_idx_83510));
+                        ceu_gc_dec_val(ceu_col_83510);
+                        ceu_gc_dec_val(ceu_idx_83510);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 45) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83257[0] = CEU_ACC_KEEP();
+                            ceu_args_83515[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
-                            ceu_args_83257[1] = CEU_ACC_KEEP();
+                            ceu_args_83515[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83257 = CEU_ACC_KEEP();
-                    if (ceu_clo_83257.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83257);
+                    CEU_Value ceu_clo_83515 = CEU_ACC_KEEP();
+                    if (ceu_clo_83515.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83515);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 31, col 50) : {{==}}(tup[:m],3)"
+                            "03_flight.ceu : (lin 38, col 50) : {{==}}(tup[:m],3)"
                         );
                     }
-                    CEUX ceux_83257 = {
-                        (CEU_Clo*) ceu_clo_83257.Dyn,
+                    CEUX ceux_83515 = {
+                        (CEU_Clo*) ceu_clo_83515.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59497,12 +60334,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83257
+                        ceu_args_83515
                     };
-                    ceu_clo_83257.Dyn->Clo.proto(&ceux_83257);
-                    ceu_gc_dec_val(ceu_clo_83257);
+                    ceu_clo_83515.Dyn->Clo.proto(&ceux_83515);
+                    ceu_gc_dec_val(ceu_clo_83515);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 50) : {{==}}(tup[:m],3)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 50) : {{==}}(tup[:m],3)");
             
         
                 } // CALL | 
@@ -59518,17 +60355,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 33, col 11) : (val' ceu_or = group { (val' ceu_or = {{==..."
+                            "03_flight.ceu : (lin 40, col 11) : (val' ceu_or = group { (val' ceu_or = {{==..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_79152_83263 = ceu_acc;
+                        ceu_loc_ceu_or_79273_83521 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79152_83263);
+                        CEU_ACC(ceu_loc_ceu_or_79273_83521);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59536,14 +60373,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79152_83263);
+                        CEU_ACC(ceu_loc_ceu_or_79273_83521);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83289[2];
+                        CEU_Value ceu_args_83547[2];
                     
                     
                 { // INDEX | 
@@ -59553,42 +60390,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83284 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83542 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83284 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83542 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83284, ceu_idx_83284));
-                        ceu_gc_dec_val(ceu_col_83284);
-                        ceu_gc_dec_val(ceu_idx_83284);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 59) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83542, ceu_idx_83542));
+                        ceu_gc_dec_val(ceu_col_83542);
+                        ceu_gc_dec_val(ceu_idx_83542);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 59) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83289[0] = CEU_ACC_KEEP();
+                            ceu_args_83547[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
-                            ceu_args_83289[1] = CEU_ACC_KEEP();
+                            ceu_args_83547[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83289 = CEU_ACC_KEEP();
-                    if (ceu_clo_83289.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83289);
+                    CEU_Value ceu_clo_83547 = CEU_ACC_KEEP();
+                    if (ceu_clo_83547.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83547);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 31, col 64) : {{==}}(tup[:m],5)"
+                            "03_flight.ceu : (lin 38, col 64) : {{==}}(tup[:m],5)"
                         );
                     }
-                    CEUX ceux_83289 = {
-                        (CEU_Clo*) ceu_clo_83289.Dyn,
+                    CEUX ceux_83547 = {
+                        (CEU_Clo*) ceu_clo_83547.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59597,12 +60434,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83289
+                        ceu_args_83547
                     };
-                    ceu_clo_83289.Dyn->Clo.proto(&ceux_83289);
-                    ceu_gc_dec_val(ceu_clo_83289);
+                    ceu_clo_83547.Dyn->Clo.proto(&ceux_83547);
+                    ceu_gc_dec_val(ceu_clo_83547);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 64) : {{==}}(tup[:m],5)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 64) : {{==}}(tup[:m],5)");
             
         
                 } // CALL | 
@@ -59618,17 +60455,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 33, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
+                            "03_flight.ceu : (lin 40, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_79347_83295 = ceu_acc;
+                        ceu_loc_ceu_or_79468_83553 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79347_83295);
+                        CEU_ACC(ceu_loc_ceu_or_79468_83553);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59636,14 +60473,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79347_83295);
+                        CEU_ACC(ceu_loc_ceu_or_79468_83553);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83321[2];
+                        CEU_Value ceu_args_83579[2];
                     
                     
                 { // INDEX | 
@@ -59653,42 +60490,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83316 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83574 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83316 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83574 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83316, ceu_idx_83316));
-                        ceu_gc_dec_val(ceu_col_83316);
-                        ceu_gc_dec_val(ceu_idx_83316);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 73) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83574, ceu_idx_83574));
+                        ceu_gc_dec_val(ceu_col_83574);
+                        ceu_gc_dec_val(ceu_idx_83574);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 73) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83321[0] = CEU_ACC_KEEP();
+                            ceu_args_83579[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }));
-                            ceu_args_83321[1] = CEU_ACC_KEEP();
+                            ceu_args_83579[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83321 = CEU_ACC_KEEP();
-                    if (ceu_clo_83321.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83321);
+                    CEU_Value ceu_clo_83579 = CEU_ACC_KEEP();
+                    if (ceu_clo_83579.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83579);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 31, col 78) : {{==}}(tup[:m],7)"
+                            "03_flight.ceu : (lin 38, col 78) : {{==}}(tup[:m],7)"
                         );
                     }
-                    CEUX ceux_83321 = {
-                        (CEU_Clo*) ceu_clo_83321.Dyn,
+                    CEUX ceux_83579 = {
+                        (CEU_Clo*) ceu_clo_83579.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59697,12 +60534,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83321
+                        ceu_args_83579
                     };
-                    ceu_clo_83321.Dyn->Clo.proto(&ceux_83321);
-                    ceu_gc_dec_val(ceu_clo_83321);
+                    ceu_clo_83579.Dyn->Clo.proto(&ceux_83579);
+                    ceu_gc_dec_val(ceu_clo_83579);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 31, col 78) : {{==}}(tup[:m],7)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 38, col 78) : {{==}}(tup[:m],7)");
             
         
                 } // CALL | 
@@ -59718,17 +60555,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 33, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
+                            "03_flight.ceu : (lin 40, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_79618_83327 = ceu_acc;
+                        ceu_loc_ceu_or_79739_83585 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79618_83327);
+                        CEU_ACC(ceu_loc_ceu_or_79739_83585);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59736,14 +60573,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79618_83327);
+                        CEU_ACC(ceu_loc_ceu_or_79739_83585);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83353[2];
+                        CEU_Value ceu_args_83611[2];
                     
                     
                 { // INDEX | 
@@ -59753,42 +60590,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83348 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83606 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83348 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83606 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83348, ceu_idx_83348));
-                        ceu_gc_dec_val(ceu_col_83348);
-                        ceu_gc_dec_val(ceu_idx_83348);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 31) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83606, ceu_idx_83606));
+                        ceu_gc_dec_val(ceu_col_83606);
+                        ceu_gc_dec_val(ceu_idx_83606);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 31) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83353[0] = CEU_ACC_KEEP();
+                            ceu_args_83611[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }));
-                            ceu_args_83353[1] = CEU_ACC_KEEP();
+                            ceu_args_83611[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83353 = CEU_ACC_KEEP();
-                    if (ceu_clo_83353.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83353);
+                    CEU_Value ceu_clo_83611 = CEU_ACC_KEEP();
+                    if (ceu_clo_83611.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83611);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 32, col 36) : {{==}}(tup[:m],8)"
+                            "03_flight.ceu : (lin 39, col 36) : {{==}}(tup[:m],8)"
                         );
                     }
-                    CEUX ceux_83353 = {
-                        (CEU_Clo*) ceu_clo_83353.Dyn,
+                    CEUX ceux_83611 = {
+                        (CEU_Clo*) ceu_clo_83611.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59797,12 +60634,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83353
+                        ceu_args_83611
                     };
-                    ceu_clo_83353.Dyn->Clo.proto(&ceux_83353);
-                    ceu_gc_dec_val(ceu_clo_83353);
+                    ceu_clo_83611.Dyn->Clo.proto(&ceux_83611);
+                    ceu_gc_dec_val(ceu_clo_83611);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 36) : {{==}}(tup[:m],8)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 36) : {{==}}(tup[:m],8)");
             
         
                 } // CALL | 
@@ -59818,17 +60655,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 34, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
+                            "03_flight.ceu : (lin 41, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_79965_83359 = ceu_acc;
+                        ceu_loc_ceu_or_80086_83617 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79965_83359);
+                        CEU_ACC(ceu_loc_ceu_or_80086_83617);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59836,14 +60673,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_79965_83359);
+                        CEU_ACC(ceu_loc_ceu_or_80086_83617);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83385[2];
+                        CEU_Value ceu_args_83643[2];
                     
                     
                 { // INDEX | 
@@ -59853,42 +60690,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83380 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83638 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83380 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83638 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83380, ceu_idx_83380));
-                        ceu_gc_dec_val(ceu_col_83380);
-                        ceu_gc_dec_val(ceu_idx_83380);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 45) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83638, ceu_idx_83638));
+                        ceu_gc_dec_val(ceu_col_83638);
+                        ceu_gc_dec_val(ceu_idx_83638);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 45) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83385[0] = CEU_ACC_KEEP();
+                            ceu_args_83643[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }));
-                            ceu_args_83385[1] = CEU_ACC_KEEP();
+                            ceu_args_83643[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83385 = CEU_ACC_KEEP();
-                    if (ceu_clo_83385.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83385);
+                    CEU_Value ceu_clo_83643 = CEU_ACC_KEEP();
+                    if (ceu_clo_83643.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83643);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 32, col 50) : {{==}}(tup[:m],10)"
+                            "03_flight.ceu : (lin 39, col 50) : {{==}}(tup[:m],10)"
                         );
                     }
-                    CEUX ceux_83385 = {
-                        (CEU_Clo*) ceu_clo_83385.Dyn,
+                    CEUX ceux_83643 = {
+                        (CEU_Clo*) ceu_clo_83643.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59897,12 +60734,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83385
+                        ceu_args_83643
                     };
-                    ceu_clo_83385.Dyn->Clo.proto(&ceux_83385);
-                    ceu_gc_dec_val(ceu_clo_83385);
+                    ceu_clo_83643.Dyn->Clo.proto(&ceux_83643);
+                    ceu_gc_dec_val(ceu_clo_83643);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 50) : {{==}}(tup[:m],10)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 50) : {{==}}(tup[:m],10)");
             
         
                 } // CALL | 
@@ -59918,17 +60755,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 34, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
+                            "03_flight.ceu : (lin 41, col 11) : (val' ceu_or = group { (val' ceu_or = grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_80388_83391 = ceu_acc;
+                        ceu_loc_ceu_or_80509_83649 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_80388_83391);
+                        CEU_ACC(ceu_loc_ceu_or_80509_83649);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -59936,14 +60773,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_80388_83391);
+                        CEU_ACC(ceu_loc_ceu_or_80509_83649);
                     
                         } else {
                             // GROUP | 
 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83417[2];
+                        CEU_Value ceu_args_83675[2];
                     
                     
                 { // INDEX | 
@@ -59953,42 +60790,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
+                        CEU_ACC(ceu_loc_tup_82739);
                     
-                    CEU_Value ceu_col_83412 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_83670 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_83412 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83670 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_83412, ceu_idx_83412));
-                        ceu_gc_dec_val(ceu_col_83412);
-                        ceu_gc_dec_val(ceu_idx_83412);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 60) : tup[:m]");
+                        CEU_ACC(ceu_col_get(ceu_col_83670, ceu_idx_83670));
+                        ceu_gc_dec_val(ceu_col_83670);
+                        ceu_gc_dec_val(ceu_idx_83670);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 60) : tup[:m]");
                     
                 }
                 
-                            ceu_args_83417[0] = CEU_ACC_KEEP();
+                            ceu_args_83675[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=12} }));
-                            ceu_args_83417[1] = CEU_ACC_KEEP();
+                            ceu_args_83675[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83417 = CEU_ACC_KEEP();
-                    if (ceu_clo_83417.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83417);
+                    CEU_Value ceu_clo_83675 = CEU_ACC_KEEP();
+                    if (ceu_clo_83675.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83675);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 32, col 65) : {{==}}(tup[:m],12)"
+                            "03_flight.ceu : (lin 39, col 65) : {{==}}(tup[:m],12)"
                         );
                     }
-                    CEUX ceux_83417 = {
-                        (CEU_Clo*) ceu_clo_83417.Dyn,
+                    CEUX ceux_83675 = {
+                        (CEU_Clo*) ceu_clo_83675.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59997,12 +60834,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_83417
+                        ceu_args_83675
                     };
-                    ceu_clo_83417.Dyn->Clo.proto(&ceux_83417);
-                    ceu_gc_dec_val(ceu_clo_83417);
+                    ceu_clo_83675.Dyn->Clo.proto(&ceux_83675);
+                    ceu_gc_dec_val(ceu_clo_83675);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 32, col 65) : {{==}}(tup[:m],12)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 39, col 65) : {{==}}(tup[:m],12)");
             
         
                 } // CALL | 
@@ -60015,7 +60852,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_and_80872_83174);
+                        CEU_ACC(ceu_loc_ceu_and_80993_83432);
                     
                         }
                     }
@@ -60026,17 +60863,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 34, col 33) : (val ceu_ifs = group { (val' ceu_and = {{>..."
+                            "03_flight.ceu : (lin 41, col 33) : (val ceu_ifs = group { (val' ceu_and = {{>..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81446_83434 = ceu_acc;
+                        ceu_loc_ceu_ifs_81567_83692 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81446_83434);
+                        CEU_ACC(ceu_loc_ceu_ifs_81567_83692);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -60050,7 +60887,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_83470 = NULL;
+                         CEU_Block ceu_block_83728 = NULL;
                     
                     
                     
@@ -60058,13 +60895,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_ifs_81447_83452;
+                                        CEU_Value ceu_loc_ceu_ifs_81568_83710;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_ifs_81447_83452 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ifs_81568_83710 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -60081,17 +60918,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 36, col 33) : (val ceu_ifs = true)"
+                            "03_flight.ceu : (lin 43, col 33) : (val ceu_ifs = true)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ifs_81447_83452 = ceu_acc;
+                        ceu_loc_ceu_ifs_81568_83710 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_ifs_81447_83452);
+                        CEU_ACC(ceu_loc_ceu_ifs_81568_83710);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -60111,16 +60948,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83470 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83728 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83470 != NULL) {
-                            CEU_LNKS(ceu_block_83470)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83728 != NULL) {
+                            CEU_LNKS(ceu_block_83728)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83470);
+                            CEU_Block cur = ceu_task_get(ceu_block_83728);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60132,12 +60969,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81447_83452);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81568_83710);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83470;
+                    ceu_acc = ceu_acc_83728;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60164,16 +61001,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83473 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83731 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83473 != NULL) {
-                            CEU_LNKS(ceu_block_83473)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83731 != NULL) {
+                            CEU_LNKS(ceu_block_83731)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83473);
+                            CEU_Block cur = ceu_task_get(ceu_block_83731);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60185,26 +61022,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_or_79033_83231);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_79154_83489);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_79152_83263);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_79273_83521);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_79347_83295);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_79468_83553);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_79618_83327);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_79739_83585);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_79965_83359);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_80086_83617);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_80388_83391);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_80509_83649);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_and_80872_83174);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_80993_83432);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81446_83434);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81567_83692);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83473;
+                    ceu_acc = ceu_acc_83731;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60231,16 +61068,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83476 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83734 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83476 != NULL) {
-                            CEU_LNKS(ceu_block_83476)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83734 != NULL) {
+                            CEU_LNKS(ceu_block_83734)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83476);
+                            CEU_Block cur = ceu_task_get(ceu_block_83734);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60252,20 +61089,20 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_or_78079_83030);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_78200_83288);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_78198_83062);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_78319_83320);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_78393_83094);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_78514_83352);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_and_78649_82991);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_78770_83249);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81445_83137);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81566_83395);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83476;
+                    ceu_acc = ceu_acc_83734;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60292,16 +61129,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83479 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83737 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83479 != NULL) {
-                            CEU_LNKS(ceu_block_83479)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83737 != NULL) {
+                            CEU_LNKS(ceu_block_83737)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83479);
+                            CEU_Block cur = ceu_task_get(ceu_block_83737);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60313,16 +61150,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_and_77728_82890);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_77849_83148);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_and_77847_82922);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_77968_83180);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81444_82954);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81565_83212);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83479;
+                    ceu_acc = ceu_acc_83737;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60349,16 +61186,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83482 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83740 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83482 != NULL) {
-                            CEU_LNKS(ceu_block_83482)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83740 != NULL) {
+                            CEU_LNKS(ceu_block_83740)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83482);
+                            CEU_Block cur = ceu_task_get(ceu_block_83740);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60370,16 +61207,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_and_77436_82796);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_77557_83054);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_and_77529_82815);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_77650_83073);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81443_82847);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81564_83105);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83482;
+                    ceu_acc = ceu_acc_83740;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60406,16 +61243,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83485 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83743 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83485 != NULL) {
-                            CEU_LNKS(ceu_block_83485)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83743 != NULL) {
+                            CEU_LNKS(ceu_block_83743)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83485);
+                            CEU_Block cur = ceu_task_get(ceu_block_83743);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60427,12 +61264,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81442_82753);
+                                ceu_gc_dec_val(ceu_loc_ceu_ifs_81563_83011);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83485;
+                    ceu_acc = ceu_acc_83743;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60455,16 +61292,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83487 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83745 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83487 != NULL) {
-                            CEU_LNKS(ceu_block_83487)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83745 != NULL) {
+                            CEU_LNKS(ceu_block_83745)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83487);
+                            CEU_Block cur = ceu_task_get(ceu_block_83745);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60476,16 +61313,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_and_77033_82685);
+                                ceu_gc_dec_val(ceu_loc_ceu_and_77154_82943);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_77169_82644);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_77290_82902);
                             
-                                ceu_gc_dec_val(ceu_loc_leap_question__82730);
+                                ceu_gc_dec_val(ceu_loc_leap_question__82988);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83487;
+                    ceu_acc = ceu_acc_83745;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60507,38 +61344,38 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 24, col 5) : (val valid? = do { (val leap? = group { (v..."
+                            "03_flight.ceu : (lin 31, col 5) : (val valid? = do { (val leap? = group { (v..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_valid_question__83488 = ceu_acc;
+                        ceu_loc_valid_question__83746 = ceu_acc;
                     
                 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_83496[1];
+                        CEU_Value ceu_args_83754[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_valid_question__83488);
+                        CEU_ACC(ceu_loc_valid_question__83746);
                     
-                            ceu_args_83496[0] = CEU_ACC_KEEP();
+                            ceu_args_83754[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_assert);
                     
-                    CEU_Value ceu_clo_83496 = CEU_ACC_KEEP();
-                    if (ceu_clo_83496.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83496);
+                    CEU_Value ceu_clo_83754 = CEU_ACC_KEEP();
+                    if (ceu_clo_83754.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83754);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 36, col 5) : assert(valid?)"
+                            "03_flight.ceu : (lin 43, col 5) : assert(valid?)"
                         );
                     }
-                    CEUX ceux_83496 = {
-                        (CEU_Clo*) ceu_clo_83496.Dyn,
+                    CEUX ceux_83754 = {
+                        (CEU_Clo*) ceu_clo_83754.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60547,35 +61384,49 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_83496
+                        ceu_args_83754
                     };
-                    ceu_clo_83496.Dyn->Clo.proto(&ceux_83496);
-                    ceu_gc_dec_val(ceu_clo_83496);
+                    ceu_clo_83754.Dyn->Clo.proto(&ceux_83754);
+                    ceu_gc_dec_val(ceu_clo_83754);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 36, col 5) : assert(valid?)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 43, col 5) : assert(valid?)");
             
         
                 } // CALL | 
             
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_tup_82481);
-                    
+                // DROP | 
+                
+                        { // ACC - DROP | 
+                            CEU_ACC((CEU_Value) { CEU_VALUE_NIL });     // ceu_acc may be equal to ceu_loc_tup_82739 (hh_05_coro)
+                            CEU_Value ceu_83758 = ceu_loc_tup_82739;
+                            ceu_loc_tup_82739 = (CEU_Value) { CEU_VALUE_NIL };
+                            CEU_ERROR_CHK_PTR (
+                                continue,
+                                ceu_drop(ceu_83758, ceux->depth-1),
+                                "03_flight.ceu : (lin 45, col 5) : drop(tup)"
+                            );
+                            CEU_ACC(ceu_83758);
+                            ceu_gc_dec_val(ceu_83758);
+                        }
+                        
+                
+            
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_83503 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_83765 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_83503 != NULL) {
-                            CEU_LNKS(ceu_block_83503)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_83765 != NULL) {
+                            CEU_LNKS(ceu_block_83765)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_83503);
+                            CEU_Block cur = ceu_task_get(ceu_block_83765);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60587,22 +61438,22 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_valid_question__83488);
+                                ceu_gc_dec_val(ceu_loc_valid_question__83746);
                             
-                                ceu_gc_dec_val(ceu_loc_tup_82481);
+                                ceu_gc_dec_val(ceu_loc_tup_82739);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76660_82426);
+                                ceu_gc_dec_val(ceu_loc_ceu_ppp_76660_82551);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_itr_76490_82262);
+                                ceu_gc_dec_val(ceu_loc_ceu_itr_76490_82387);
                             
-                                ceu_gc_dec_val(ceu_loc_sub_82245);
+                                ceu_gc_dec_val(ceu_loc_sub_82370);
                             
-                                ceu_gc_dec_val(ceu_loc_vec_82236);
+                                ceu_gc_dec_val(ceu_loc_vec_82361);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_83503;
+                    ceu_acc = ceu_acc_83765;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60628,25 +61479,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_83504 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_83766 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_s_82223
+                                        ceu_loc_s_82348
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_83504;
+                            ceu_acc = ceu_acc_83766;
                         }
 
                         
                     }
                 
                     // PROTO | 
-                    void ceu_pro_93498 (CEUX* ceux) {
+                    void ceu_pro_94152 (CEUX* ceux) {
                         
-                            CEU_Pro_93498* ceu_mem = (CEU_Pro_93498*) ceux->exe->mem;                    
+                            CEU_Pro_94152* ceu_mem = (CEU_Pro_94152*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -60670,7 +61521,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93497) = NULL;
+                          (ceu_mem->block_94151) = NULL;
                     
                     
                     
@@ -60691,7 +61542,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93492) = NULL;
+                          (ceu_mem->block_94146) = NULL;
                     
                     
                     
@@ -60699,7 +61550,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_85478_93289) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_85742_93943) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -60714,14 +61565,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_93483:
+                CEU_LOOP_START_94137:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93482) = NULL;
+                          (ceu_mem->block_94136) = NULL;
                     
                     
                     
@@ -60742,17 +61593,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 93309;
+                    ceux->exe->pc = 93963;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
                         continue,
                         ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, 1 }),
-                        "03_flight.ceu : (lin 92, col 13) : yield(nil)"
+                        "03_flight.ceu : (lin 99, col 13) : yield(nil)"
                     );
                 #endif
                     return;
-                case 93309: // YIELD 
+                case 93963: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -60776,12 +61627,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-1 }),
-                            "03_flight.ceu : (lin 98, col 41) : ceu_ret"
+                            "03_flight.ceu : (lin 105, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_85478_93289));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_85742_93943));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_85478_93289) = ceu_acc;
+                        (ceu_mem->ceu_ret_85742_93943) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -60790,7 +61641,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93477) = NULL;
+                          (ceu_mem->block_94131) = NULL;
                     
                     
                     
@@ -60798,7 +61649,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_93453) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_94107) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -60815,7 +61666,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93452) = NULL;
+                          (ceu_mem->block_94106) = NULL;
                     
                     
                     
@@ -60823,9 +61674,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_93327) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_93981) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_and_85391_93363) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_and_85655_94017) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -60838,18 +61689,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_85478_93289));
+                        CEU_ACC((ceu_mem->ceu_ret_85742_93943));
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 95, col 17) : (val it :Iup.List.Action = ceu_ret)"
+                            "03_flight.ceu : (lin 102, col 17) : (val it :Iup.List.Action = ceu_ret)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_93327) = ceu_acc;
+                        (ceu_mem->it_93981) = ceu_acc;
                     
                 
                 { // IF | 
@@ -60858,27 +61709,27 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93327));
+                        CEU_ACC((ceu_mem->it_93981));
                     
-                            (ceu_mem->args_93339)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93993)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_List_Action} }));
-                            (ceu_mem->args_93339)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93993)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_93339 = CEU_ACC_KEEP();
-                    if (ceu_clo_93339.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93339);
+                    CEU_Value ceu_clo_93993 = CEU_ACC_KEEP();
+                    if (ceu_clo_93993.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93993);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 93, col 27) : is'(it,:Iup.List.Action)"
+                            "03_flight.ceu : (lin 100, col 27) : is'(it,:Iup.List.Action)"
                         );
                     }
-                    CEUX ceux_93339 = {
-                        (CEU_Clo*) ceu_clo_93339.Dyn,
+                    CEUX ceux_93993 = {
+                        (CEU_Clo*) ceu_clo_93993.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60887,12 +61738,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93339)
+                        (ceu_mem->args_93993)
                     };
-                    ceu_clo_93339.Dyn->Clo.proto(&ceux_93339);
-                    ceu_gc_dec_val(ceu_clo_93339);
+                    ceu_clo_93993.Dyn->Clo.proto(&ceux_93993);
+                    ceu_gc_dec_val(ceu_clo_93993);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 93, col 27) : is'(it,:Iup.List.Action)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 27) : is'(it,:Iup.List.Action)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -60922,45 +61773,45 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93327));
+                        CEU_ACC((ceu_mem->it_93981));
                     
-                     (ceu_mem->col_93357) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94011) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93357 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94011 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93357), ceu_idx_93357));
-                        ceu_gc_dec_val((ceu_mem->col_93357));
-                        ceu_gc_dec_val(ceu_idx_93357);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 39) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94011), ceu_idx_94011));
+                        ceu_gc_dec_val((ceu_mem->col_94011));
+                        ceu_gc_dec_val(ceu_idx_94011);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 99, col 39) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93362)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94016)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_94174*)ceux->exe_task->clo->up_nst->mem)->list_92082);
+                        CEU_ACC(((CEU_Pro_94877*)ceux->exe_task->clo->up_nst->mem)->list_92736);
                     
-                            (ceu_mem->args_93362)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94016)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93362 = CEU_ACC_KEEP();
-                    if (ceu_clo_93362.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93362);
+                    CEU_Value ceu_clo_94016 = CEU_ACC_KEEP();
+                    if (ceu_clo_94016.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94016);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 92, col 43) : {{==}}(it[:h],list)"
+                            "03_flight.ceu : (lin 99, col 43) : {{==}}(it[:h],list)"
                         );
                     }
-                    CEUX ceux_93362 = {
-                        (CEU_Clo*) ceu_clo_93362.Dyn,
+                    CEUX ceux_94016 = {
+                        (CEU_Clo*) ceu_clo_94016.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60969,12 +61820,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93362)
+                        (ceu_mem->args_94016)
                     };
-                    ceu_clo_93362.Dyn->Clo.proto(&ceux_93362);
-                    ceu_gc_dec_val(ceu_clo_93362);
+                    ceu_clo_94016.Dyn->Clo.proto(&ceux_94016);
+                    ceu_gc_dec_val(ceu_clo_94016);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 43) : {{==}}(it[:h],list)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 99, col 43) : {{==}}(it[:h],list)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -60990,17 +61841,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 92, col 59) : (val' ceu_and = {{==}}(it[:h],list))"
+                            "03_flight.ceu : (lin 99, col 59) : (val' ceu_and = {{==}}(it[:h],list))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_and_85391_93363) = ceu_acc;
+                        (ceu_mem->ceu_and_85655_94017) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_85391_93363));
+                        CEU_ACC((ceu_mem->ceu_and_85655_94017));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -61014,20 +61865,20 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93327));
+                        CEU_ACC((ceu_mem->it_93981));
                     
-                     (ceu_mem->col_93375) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94029) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93375 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94029 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93375), ceu_idx_93375));
-                        ceu_gc_dec_val((ceu_mem->col_93375));
-                        ceu_gc_dec_val(ceu_idx_93375);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 55) : it[:state]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94029), ceu_idx_94029));
+                        ceu_gc_dec_val((ceu_mem->col_94029));
+                        ceu_gc_dec_val(ceu_idx_94029);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 99, col 56) : it[:state]");
                     
                 }
                 
@@ -61035,7 +61886,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_85391_93363));
+                        CEU_ACC((ceu_mem->ceu_and_85655_94017));
                     
                         }
                     }
@@ -61053,11 +61904,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_94174*)ceux->exe_task->clo->up_nst->mem)->end_92507);
+                        CEU_ACC(((CEU_Pro_94877*)ceux->exe_task->clo->up_nst->mem)->end_93161);
                     
-                            (ceu_mem->args_93425)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94079)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ACTIVE} }));
-                            (ceu_mem->args_93425)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94079)[1] = CEU_ACC_KEEP();
                         
                 { // CALL | 
                     
@@ -61069,42 +61920,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93327));
+                        CEU_ACC((ceu_mem->it_93981));
                     
-                     (ceu_mem->col_93418) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94072) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_93418 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94072 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93418), ceu_idx_93418));
-                        ceu_gc_dec_val((ceu_mem->col_93418));
-                        ceu_gc_dec_val(ceu_idx_93418);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 93, col 40) : it[:item]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94072), ceu_idx_94072));
+                        ceu_gc_dec_val((ceu_mem->col_94072));
+                        ceu_gc_dec_val(ceu_idx_94072);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 40) : it[:item]");
                     
                 }
                 
-                            (ceu_mem->args_93423)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94077)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                            (ceu_mem->args_93423)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94077)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93423 = CEU_ACC_KEEP();
-                    if (ceu_clo_93423.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93423);
+                    CEU_Value ceu_clo_94077 = CEU_ACC_KEEP();
+                    if (ceu_clo_94077.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94077);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 93, col 48) : {{==}}(it[:item],2)"
+                            "03_flight.ceu : (lin 100, col 48) : {{==}}(it[:item],2)"
                         );
                     }
-                    CEUX ceux_93423 = {
-                        (CEU_Clo*) ceu_clo_93423.Dyn,
+                    CEUX ceux_94077 = {
+                        (CEU_Clo*) ceu_clo_94077.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -61113,12 +61964,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93423)
+                        (ceu_mem->args_94077)
                     };
-                    ceu_clo_93423.Dyn->Clo.proto(&ceux_93423);
-                    ceu_gc_dec_val(ceu_clo_93423);
+                    ceu_clo_94077.Dyn->Clo.proto(&ceux_94077);
+                    ceu_gc_dec_val(ceu_clo_94077);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 93, col 48) : {{==}}(it[:item],2)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 48) : {{==}}(it[:item],2)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -61127,7 +61978,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_93425)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94079)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -61139,32 +61990,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93401) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94055) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93401 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94055 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93401), ceu_idx_93401));
-                        ceu_gc_dec_val((ceu_mem->col_93401));
-                        ceu_gc_dec_val(ceu_idx_93401);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 93, col 17) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94055), ceu_idx_94055));
+                        ceu_gc_dec_val((ceu_mem->col_94055));
+                        ceu_gc_dec_val(ceu_idx_94055);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 17) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93425 = CEU_ACC_KEEP();
-                    if (ceu_clo_93425.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93425);
+                    CEU_Value ceu_clo_94079 = CEU_ACC_KEEP();
+                    if (ceu_clo_94079.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94079);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 93, col 17) : iup[:set](end,:ACTIVE,{{==}}(it[:item],2))"
+                            "03_flight.ceu : (lin 100, col 17) : iup[:set](end,:ACTIVE,{{==}}(it[:item],2))"
                         );
                     }
-                    CEUX ceux_93425 = {
-                        (CEU_Clo*) ceu_clo_93425.Dyn,
+                    CEUX ceux_94079 = {
+                        (CEU_Clo*) ceu_clo_94079.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -61173,12 +62024,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93425)
+                        (ceu_mem->args_94079)
                     };
-                    ceu_clo_93425.Dyn->Clo.proto(&ceux_93425);
-                    ceu_gc_dec_val(ceu_clo_93425);
+                    ceu_clo_94079.Dyn->Clo.proto(&ceux_94079);
+                    ceu_gc_dec_val(ceu_clo_94079);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 93, col 17) : iup[:set](end,:ACTIVE,{{==}}(it[:item],2))");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 17) : iup[:set](end,:ACTIVE,{{==}}(it[:item],2))");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -61194,12 +62045,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-3 }),
-                            "03_flight.ceu : (lin 96, col 33) : ceu_ret"
+                            "03_flight.ceu : (lin 103, col 33) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_85478_93289));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_85742_93943));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_85478_93289) = ceu_acc;
+                        (ceu_mem->ceu_ret_85742_93943) = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -61223,16 +62074,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93452 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94106 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93452) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93452))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94106) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94106))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93452));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94106));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -61244,14 +62095,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_and_85391_93363));
+                                ceu_gc_dec_val((ceu_mem->ceu_and_85655_94017));
                             
-                                ceu_gc_dec_val((ceu_mem->it_93327));
+                                ceu_gc_dec_val((ceu_mem->it_93981));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93452;
+                    ceu_acc = ceu_acc_94106;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -61279,17 +62130,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 95, col 8) : (val' it = do { (val it :Iup.List.Action =..."
+                            "03_flight.ceu : (lin 102, col 8) : (val' it = do { (val it :Iup.List.Action =..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_93453) = ceu_acc;
+                        (ceu_mem->it_94107) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93453));
+                        CEU_ACC((ceu_mem->it_94107));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -61300,7 +62151,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93453));
+                        CEU_ACC((ceu_mem->it_94107));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -61320,16 +62171,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93477 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94131 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93477) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93477))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94131) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94131))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93477));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94131));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -61341,12 +62192,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_93453));
+                                ceu_gc_dec_val((ceu_mem->it_94107));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93477;
+                    ceu_acc = ceu_acc_94131;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -61368,23 +62219,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_93483:
+                            CEU_LOOP_STOP_94137:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93482 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94136 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93482) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93482))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94136) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94136))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93482));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94136));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -61399,7 +62250,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93482;
+                    ceu_acc = ceu_acc_94136;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -61420,7 +62271,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_93483;
+                    goto CEU_LOOP_START_94137;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -61443,7 +62294,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 ceux->exe_task->time = CEU_TIME;
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_85478_93289));
+                        CEU_ACC((ceu_mem->ceu_ret_85742_93943));
                     
                         
                     } while (0);
@@ -61451,16 +62302,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93492 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94146 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93492) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93492))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94146) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94146))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93492));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94146));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -61472,12 +62323,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_85478_93289));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_85742_93943));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93492;
+                    ceu_acc = ceu_acc_94146;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -61504,16 +62355,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93497 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94151 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93497) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93497))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94151) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94151))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93497));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94151));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -61528,7 +62379,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93497;
+                    ceu_acc = ceu_acc_94151;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -61554,10 +62405,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_93498 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_94152 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_93498;
+                            ceu_acc = ceu_acc_94152;
                         }
 
                         
@@ -61567,9 +62418,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 
                     // PROTO | 
-                    void ceu_pro_93909 (CEUX* ceux) {
+                    void ceu_pro_94612 (CEUX* ceux) {
                         
-                            CEU_Pro_93909* ceu_mem = (CEU_Pro_93909*) ceux->exe->mem;                    
+                            CEU_Pro_94612* ceu_mem = (CEU_Pro_94612*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -61593,7 +62444,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93908) = NULL;
+                          (ceu_mem->block_94611) = NULL;
                     
                     
                     
@@ -61614,7 +62465,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93903) = NULL;
+                          (ceu_mem->block_94606) = NULL;
                     
                     
                     
@@ -61622,7 +62473,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_86343_93527) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_86607_94181) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -61637,14 +62488,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_93894:
+                CEU_LOOP_START_94597:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93893) = NULL;
+                          (ceu_mem->block_94596) = NULL;
                     
                     
                     
@@ -61665,17 +62516,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 93547;
+                    ceux->exe->pc = 94201;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
                         continue,
                         ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, 1 }),
-                        "03_flight.ceu : (lin 96, col 13) : yield(nil)"
+                        "03_flight.ceu : (lin 103, col 13) : yield(nil)"
                     );
                 #endif
                     return;
-                case 93547: // YIELD 
+                case 94201: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -61699,12 +62550,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-1 }),
-                            "03_flight.ceu : (lin 112, col 41) : ceu_ret"
+                            "03_flight.ceu : (lin 122, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_86343_93527));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_86607_94181));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_86343_93527) = ceu_acc;
+                        (ceu_mem->ceu_ret_86607_94181) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -61713,7 +62564,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93888) = NULL;
+                          (ceu_mem->block_94591) = NULL;
                     
                     
                     
@@ -61721,7 +62572,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_93864) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_94567) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -61738,7 +62589,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93863) = NULL;
+                          (ceu_mem->block_94566) = NULL;
                     
                     
                     
@@ -61746,9 +62597,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_93565) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_94219) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_86240_93601) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_or_86504_94255) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -61761,18 +62612,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_86343_93527));
+                        CEU_ACC((ceu_mem->ceu_ret_86607_94181));
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 99, col 17) : (val it :Iup.Value = ceu_ret)"
+                            "03_flight.ceu : (lin 106, col 17) : (val it :Iup.Value = ceu_ret)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_93565) = ceu_acc;
+                        (ceu_mem->it_94219) = ceu_acc;
                     
                 
                 { // IF | 
@@ -61781,27 +62632,27 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                            (ceu_mem->args_93577)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94231)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Value} }));
-                            (ceu_mem->args_93577)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94231)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_93577 = CEU_ACC_KEEP();
-                    if (ceu_clo_93577.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93577);
+                    CEU_Value ceu_clo_94231 = CEU_ACC_KEEP();
+                    if (ceu_clo_94231.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94231);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 97, col 27) : is'(it,:Iup.Value)"
+                            "03_flight.ceu : (lin 104, col 27) : is'(it,:Iup.Value)"
                         );
                     }
-                    CEUX ceux_93577 = {
-                        (CEU_Clo*) ceu_clo_93577.Dyn,
+                    CEUX ceux_94231 = {
+                        (CEU_Clo*) ceu_clo_94231.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -61810,12 +62661,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93577)
+                        (ceu_mem->args_94231)
                     };
-                    ceu_clo_93577.Dyn->Clo.proto(&ceux_93577);
-                    ceu_gc_dec_val(ceu_clo_93577);
+                    ceu_clo_94231.Dyn->Clo.proto(&ceux_94231);
+                    ceu_gc_dec_val(ceu_clo_94231);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 97, col 27) : is'(it,:Iup.Value)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 27) : is'(it,:Iup.Value)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -61845,45 +62696,45 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93595) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94249) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93595 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94249 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93595), ceu_idx_93595));
-                        ceu_gc_dec_val((ceu_mem->col_93595));
-                        ceu_gc_dec_val(ceu_idx_93595);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 96, col 33) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94249), ceu_idx_94249));
+                        ceu_gc_dec_val((ceu_mem->col_94249));
+                        ceu_gc_dec_val(ceu_idx_94249);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 33) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93600)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94254)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_94174*)ceux->exe_task->clo->up_nst->mem)->start_92299);
+                        CEU_ACC(((CEU_Pro_94877*)ceux->exe_task->clo->up_nst->mem)->start_92953);
                     
-                            (ceu_mem->args_93600)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94254)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93600 = CEU_ACC_KEEP();
-                    if (ceu_clo_93600.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93600);
+                    CEU_Value ceu_clo_94254 = CEU_ACC_KEEP();
+                    if (ceu_clo_94254.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94254);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 96, col 37) : {{==}}(it[:h],start)"
+                            "03_flight.ceu : (lin 103, col 37) : {{==}}(it[:h],start)"
                         );
                     }
-                    CEUX ceux_93600 = {
-                        (CEU_Clo*) ceu_clo_93600.Dyn,
+                    CEUX ceux_94254 = {
+                        (CEU_Clo*) ceu_clo_94254.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -61892,12 +62743,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93600)
+                        (ceu_mem->args_94254)
                     };
-                    ceu_clo_93600.Dyn->Clo.proto(&ceux_93600);
-                    ceu_gc_dec_val(ceu_clo_93600);
+                    ceu_clo_94254.Dyn->Clo.proto(&ceux_94254);
+                    ceu_gc_dec_val(ceu_clo_94254);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 96, col 37) : {{==}}(it[:h],start)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 37) : {{==}}(it[:h],start)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -61913,17 +62764,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 96, col 54) : (val' ceu_or = {{==}}(it[:h],start))"
+                            "03_flight.ceu : (lin 103, col 54) : (val' ceu_or = {{==}}(it[:h],start))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_86240_93601) = ceu_acc;
+                        (ceu_mem->ceu_or_86504_94255) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_86240_93601));
+                        CEU_ACC((ceu_mem->ceu_or_86504_94255));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -61931,7 +62782,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_86240_93601));
+                        CEU_ACC((ceu_mem->ceu_or_86504_94255));
                     
                         } else {
                             // GROUP | 
@@ -61946,45 +62797,45 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93622) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94276) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93622 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94276 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93622), ceu_idx_93622));
-                        ceu_gc_dec_val((ceu_mem->col_93622));
-                        ceu_gc_dec_val(ceu_idx_93622);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 96, col 50) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94276), ceu_idx_94276));
+                        ceu_gc_dec_val((ceu_mem->col_94276));
+                        ceu_gc_dec_val(ceu_idx_94276);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 50) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93627)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94281)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_94174*)ceux->exe_task->clo->up_nst->mem)->end_92507);
+                        CEU_ACC(((CEU_Pro_94877*)ceux->exe_task->clo->up_nst->mem)->end_93161);
                     
-                            (ceu_mem->args_93627)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94281)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93627 = CEU_ACC_KEEP();
-                    if (ceu_clo_93627.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93627);
+                    CEU_Value ceu_clo_94281 = CEU_ACC_KEEP();
+                    if (ceu_clo_94281.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94281);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 96, col 54) : {{==}}(it[:h],end)"
+                            "03_flight.ceu : (lin 103, col 54) : {{==}}(it[:h],end)"
                         );
                     }
-                    CEUX ceux_93627 = {
-                        (CEU_Clo*) ceu_clo_93627.Dyn,
+                    CEUX ceux_94281 = {
+                        (CEU_Clo*) ceu_clo_94281.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -61993,12 +62844,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93627)
+                        (ceu_mem->args_94281)
                     };
-                    ceu_clo_93627.Dyn->Clo.proto(&ceux_93627);
-                    ceu_gc_dec_val(ceu_clo_93627);
+                    ceu_clo_94281.Dyn->Clo.proto(&ceux_94281);
+                    ceu_gc_dec_val(ceu_clo_94281);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 96, col 54) : {{==}}(it[:h],end)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 54) : {{==}}(it[:h],end)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62020,7 +62871,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93845) = NULL;
+                          (ceu_mem->block_94548) = NULL;
                     
                     
                     
@@ -62028,7 +62879,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->date_93686) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->date_94382) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -62040,6 +62891,119 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // SET | 
                     // GROUP | 
 
+                { // CALL | 
+                    
+                    
+                { // CALL | 
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->it_94219));
+                    
+                     (ceu_mem->col_94307) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
+                        
+                    CEU_Value ceu_idx_94307 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94307), ceu_idx_94307));
+                        ceu_gc_dec_val((ceu_mem->col_94307));
+                        ceu_gc_dec_val(ceu_idx_94307);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 25) : it[:h]");
+                    
+                }
+                
+                            (ceu_mem->args_94312)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC(((CEU_Pro_94877*)ceux->exe_task->clo->up_nst->mem)->start_92953);
+                    
+                            (ceu_mem->args_94312)[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_equals_equals);
+                    
+                    CEU_Value ceu_clo_94312 = CEU_ACC_KEEP();
+                    if (ceu_clo_94312.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94312);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 104, col 29) : {{==}}(it[:h],start)"
+                        );
+                    }
+                    CEUX ceux_94312 = {
+                        (CEU_Clo*) ceu_clo_94312.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_94312)
+                    };
+                    ceu_clo_94312.Dyn->Clo.proto(&ceux_94312);
+                    ceu_gc_dec_val(ceu_clo_94312);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 29) : {{==}}(it[:h],start)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                            (ceu_mem->args_94314)[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_94314 = CEU_ACC_KEEP();
+                    if (ceu_clo_94314.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94314);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 104, col 17) : println({{==}}(it[:h],start))"
+                        );
+                    }
+                    CEUX ceux_94314 = {
+                        (CEU_Clo*) ceu_clo_94314.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        (ceu_mem->args_94314)
+                    };
+                    ceu_clo_94314.Dyn->Clo.proto(&ceux_94314);
+                    ceu_gc_dec_val(ceu_clo_94314);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 17) : println({{==}}(it[:h],start))");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
                 // DCL | 
                 
                         
@@ -62051,7 +63015,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93684) = NULL;
+                          (ceu_mem->block_94380) = NULL;
                     
                     
                     
@@ -62082,26 +63046,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93673) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94347) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93673 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94347 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93673), ceu_idx_93673));
-                        ceu_gc_dec_val((ceu_mem->col_93673));
-                        ceu_gc_dec_val(ceu_idx_93673);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 37) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94347), ceu_idx_94347));
+                        ceu_gc_dec_val((ceu_mem->col_94347));
+                        ceu_gc_dec_val(ceu_idx_94347);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 37) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93678)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94352)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_93678)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94352)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62119,47 +63083,47 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93660) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94334) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_93660 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94334 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93660), ceu_idx_93660));
-                        ceu_gc_dec_val((ceu_mem->col_93660));
-                        ceu_gc_dec_val(ceu_idx_93660);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 21) : iup[:get]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94334), ceu_idx_94334));
+                        ceu_gc_dec_val((ceu_mem->col_94334));
+                        ceu_gc_dec_val(ceu_idx_94334);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 21) : iup[:get]");
                     
                 }
                 
-                     (ceu_mem->col_93665) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94339) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93665 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94339 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93665), ceu_idx_93665));
-                        ceu_gc_dec_val((ceu_mem->col_93665));
-                        ceu_gc_dec_val(ceu_idx_93665);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 21) : iup[:get][:pointer]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94339), ceu_idx_94339));
+                        ceu_gc_dec_val((ceu_mem->col_94339));
+                        ceu_gc_dec_val(ceu_idx_94339);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 21) : iup[:get][:pointer]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93678 = CEU_ACC_KEEP();
-                    if (ceu_clo_93678.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93678);
+                    CEU_Value ceu_clo_94352 = CEU_ACC_KEEP();
+                    if (ceu_clo_94352.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94352);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 98, col 21) : iup[:get][:pointer](it[:h],:VALUE)"
+                            "03_flight.ceu : (lin 106, col 21) : iup[:get][:pointer](it[:h],:VALUE)"
                         );
                     }
-                    CEUX ceux_93678 = {
-                        (CEU_Clo*) ceu_clo_93678.Dyn,
+                    CEUX ceux_94352 = {
+                        (CEU_Clo*) ceu_clo_94352.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62168,12 +63132,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93678)
+                        (ceu_mem->args_94352)
                     };
-                    ceu_clo_93678.Dyn->Clo.proto(&ceux_93678);
-                    ceu_gc_dec_val(ceu_clo_93678);
+                    ceu_clo_94352.Dyn->Clo.proto(&ceux_94352);
+                    ceu_gc_dec_val(ceu_clo_94352);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 21) : iup[:get][:pointer](it[:h],:VALUE)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 21) : iup[:get][:pointer](it[:h],:VALUE)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62182,23 +63146,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_93680)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94354)[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to_dash_string);
                     
-                    CEU_Value ceu_clo_93680 = CEU_ACC_KEEP();
-                    if (ceu_clo_93680.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93680);
+                    CEU_Value ceu_clo_94354 = CEU_ACC_KEEP();
+                    if (ceu_clo_94354.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94354);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 98, col 53) : to-string(iup[:get][:pointer](it[:h],:VALUE))"
+                            "03_flight.ceu : (lin 106, col 53) : to-string(iup[:get][:pointer](it[:h],:VALUE))"
                         );
                     }
-                    CEUX ceux_93680 = {
-                        (CEU_Clo*) ceu_clo_93680.Dyn,
+                    CEUX ceux_94354 = {
+                        (CEU_Clo*) ceu_clo_94354.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62207,12 +63171,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_93680)
+                        (ceu_mem->args_94354)
                     };
-                    ceu_clo_93680.Dyn->Clo.proto(&ceux_93680);
-                    ceu_gc_dec_val(ceu_clo_93680);
+                    ceu_clo_94354.Dyn->Clo.proto(&ceux_94354);
+                    ceu_gc_dec_val(ceu_clo_94354);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 53) : to-string(iup[:get][:pointer](it[:h],:VALUE))");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 53) : to-string(iup[:get][:pointer](it[:h],:VALUE))");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62221,23 +63185,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_93682)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94356)[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to_dash_date);
                     
-                    CEU_Value ceu_clo_93682 = CEU_ACC_KEEP();
-                    if (ceu_clo_93682.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93682);
+                    CEU_Value ceu_clo_94356 = CEU_ACC_KEEP();
+                    if (ceu_clo_94356.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94356);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 98, col 66) : to-date(to-string(iup[:get][:pointer](it[:..."
+                            "03_flight.ceu : (lin 106, col 66) : to-date(to-string(iup[:get][:pointer](it[:..."
                         );
                     }
-                    CEUX ceux_93682 = {
-                        (CEU_Clo*) ceu_clo_93682.Dyn,
+                    CEUX ceux_94356 = {
+                        (CEU_Clo*) ceu_clo_94356.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62246,12 +63210,70 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_93682)
+                        (ceu_mem->args_94356)
                     };
-                    ceu_clo_93682.Dyn->Clo.proto(&ceux_93682);
-                    ceu_gc_dec_val(ceu_clo_93682);
+                    ceu_clo_94356.Dyn->Clo.proto(&ceux_94356);
+                    ceu_gc_dec_val(ceu_clo_94356);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 98, col 66) : to-date(to-string(iup[:get][:pointer](it[:...");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 66) : to-date(to-string(iup[:get][:pointer](it[:...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_err} }));
+                            (ceu_mem->args_94378)[0] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_94376) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_94376), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_94376), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_94376), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_94376), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_94376));
+                }
+            
+                            (ceu_mem->args_94378)[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_error);
+                    
+                    CEU_Value ceu_clo_94378 = CEU_ACC_KEEP();
+                    if (ceu_clo_94378.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94378);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 107, col 21) : error(:err,#['e','r','r','o'])"
+                        );
+                    }
+                    CEUX ceux_94378 = {
+                        (CEU_Clo*) ceu_clo_94378.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_94378)
+                    };
+                    ceu_clo_94378.Dyn->Clo.proto(&ceux_94378);
+                    ceu_gc_dec_val(ceu_clo_94378);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 107, col 21) : error(:err,#['e','r','r','o'])");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62266,16 +63288,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93684 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94380 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93684) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93684))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94380) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94380))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93684));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94380));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -62290,7 +63312,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93684;
+                    ceu_acc = ceu_acc_94380;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -62332,40 +63354,85 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 97, col 17) : (val date :Date = catch { to-date(to-strin..."
+                            "03_flight.ceu : (lin 105, col 17) : (val date :Date = catch { to-date(to-strin..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->date_93686) = ceu_acc;
+                        (ceu_mem->date_94382) = ceu_acc;
                     
                 
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->date_94382));
+                    
+                            (ceu_mem->args_94390)[0] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_94390 = CEU_ACC_KEEP();
+                    if (ceu_clo_94390.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94390);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 109, col 17) : println(date)"
+                        );
+                    }
+                    CEUX ceux_94390 = {
+                        (CEU_Clo*) ceu_clo_94390.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        (ceu_mem->args_94390)
+                    };
+                    ceu_clo_94390.Dyn->Clo.proto(&ceux_94390);
+                    ceu_gc_dec_val(ceu_clo_94390);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 109, col 17) : println(date)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
                 { // IF | 
                     
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->date_93686));
+                        CEU_ACC((ceu_mem->date_94382));
                     
-                            (ceu_mem->args_93698)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94401)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_assert} }));
-                            (ceu_mem->args_93698)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94401)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93698 = CEU_ACC_KEEP();
-                    if (ceu_clo_93698.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93698);
+                    CEU_Value ceu_clo_94401 = CEU_ACC_KEEP();
+                    if (ceu_clo_94401.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94401);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 100, col 25) : {{==}}(date,:assert)"
+                            "03_flight.ceu : (lin 110, col 25) : {{==}}(date,:assert)"
                         );
                     }
-                    CEUX ceux_93698 = {
-                        (CEU_Clo*) ceu_clo_93698.Dyn,
+                    CEUX ceux_94401 = {
+                        (CEU_Clo*) ceu_clo_94401.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62374,12 +63441,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93698)
+                        (ceu_mem->args_94401)
                     };
-                    ceu_clo_93698.Dyn->Clo.proto(&ceux_93698);
-                    ceu_gc_dec_val(ceu_clo_93698);
+                    ceu_clo_94401.Dyn->Clo.proto(&ceux_94401);
+                    ceu_gc_dec_val(ceu_clo_94401);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 100, col 25) : {{==}}(date,:assert)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 110, col 25) : {{==}}(date,:assert)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62403,28 +63470,28 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93714) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94417) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93714 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94417 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93714), ceu_idx_93714));
-                        ceu_gc_dec_val((ceu_mem->col_93714));
-                        ceu_gc_dec_val(ceu_idx_93714);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 101, col 29) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94417), ceu_idx_94417));
+                        ceu_gc_dec_val((ceu_mem->col_94417));
+                        ceu_gc_dec_val(ceu_idx_94417);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 111, col 29) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93722)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94425)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
-                            (ceu_mem->args_93722)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94425)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                            (ceu_mem->args_93722)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94425)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62436,32 +63503,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93706) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94409) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93706 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94409 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93706), ceu_idx_93706));
-                        ceu_gc_dec_val((ceu_mem->col_93706));
-                        ceu_gc_dec_val(ceu_idx_93706);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 101, col 21) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94409), ceu_idx_94409));
+                        ceu_gc_dec_val((ceu_mem->col_94409));
+                        ceu_gc_dec_val(ceu_idx_94409);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 111, col 21) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93722 = CEU_ACC_KEEP();
-                    if (ceu_clo_93722.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93722);
+                    CEU_Value ceu_clo_94425 = CEU_ACC_KEEP();
+                    if (ceu_clo_94425.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94425);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 101, col 21) : iup[:set](it[:h],:VALID,false)"
+                            "03_flight.ceu : (lin 111, col 21) : iup[:set](it[:h],:VALID,false)"
                         );
                     }
-                    CEUX ceux_93722 = {
-                        (CEU_Clo*) ceu_clo_93722.Dyn,
+                    CEUX ceux_94425 = {
+                        (CEU_Clo*) ceu_clo_94425.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62470,12 +63537,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93722)
+                        (ceu_mem->args_94425)
                     };
-                    ceu_clo_93722.Dyn->Clo.proto(&ceux_93722);
-                    ceu_gc_dec_val(ceu_clo_93722);
+                    ceu_clo_94425.Dyn->Clo.proto(&ceux_94425);
+                    ceu_gc_dec_val(ceu_clo_94425);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 101, col 21) : iup[:set](it[:h],:VALID,false)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 111, col 21) : iup[:set](it[:h],:VALID,false)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62497,28 +63564,28 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93741) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94444) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93741 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94444 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93741), ceu_idx_93741));
-                        ceu_gc_dec_val((ceu_mem->col_93741));
-                        ceu_gc_dec_val(ceu_idx_93741);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 29) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94444), ceu_idx_94444));
+                        ceu_gc_dec_val((ceu_mem->col_94444));
+                        ceu_gc_dec_val(ceu_idx_94444);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 113, col 29) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93749)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94452)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
-                            (ceu_mem->args_93749)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94452)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
-                            (ceu_mem->args_93749)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94452)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62530,32 +63597,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93733) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94436) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93733 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94436 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93733), ceu_idx_93733));
-                        ceu_gc_dec_val((ceu_mem->col_93733));
-                        ceu_gc_dec_val(ceu_idx_93733);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 21) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94436), ceu_idx_94436));
+                        ceu_gc_dec_val((ceu_mem->col_94436));
+                        ceu_gc_dec_val(ceu_idx_94436);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 113, col 21) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93749 = CEU_ACC_KEEP();
-                    if (ceu_clo_93749.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93749);
+                    CEU_Value ceu_clo_94452 = CEU_ACC_KEEP();
+                    if (ceu_clo_94452.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94452);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 103, col 21) : iup[:set](it[:h],:VALID,true)"
+                            "03_flight.ceu : (lin 113, col 21) : iup[:set](it[:h],:VALID,true)"
                         );
                     }
-                    CEUX ceux_93749 = {
-                        (CEU_Clo*) ceu_clo_93749.Dyn,
+                    CEUX ceux_94452 = {
+                        (CEU_Clo*) ceu_clo_94452.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62564,12 +63631,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93749)
+                        (ceu_mem->args_94452)
                     };
-                    ceu_clo_93749.Dyn->Clo.proto(&ceux_93749);
-                    ceu_gc_dec_val(ceu_clo_93749);
+                    ceu_clo_94452.Dyn->Clo.proto(&ceux_94452);
+                    ceu_gc_dec_val(ceu_clo_94452);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 103, col 21) : iup[:set](it[:h],:VALID,true)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 113, col 21) : iup[:set](it[:h],:VALID,true)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62588,26 +63655,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93764) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94467) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93764 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94467 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93764), ceu_idx_93764));
-                        ceu_gc_dec_val((ceu_mem->col_93764));
-                        ceu_gc_dec_val(ceu_idx_93764);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 29) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94467), ceu_idx_94467));
+                        ceu_gc_dec_val((ceu_mem->col_94467));
+                        ceu_gc_dec_val(ceu_idx_94467);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 114, col 29) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93777)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94480)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DAY} }));
-                            (ceu_mem->args_93777)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94480)[1] = CEU_ACC_KEEP();
                         
                 { // INDEX | 
                     // VAL
@@ -62616,24 +63683,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->date_93686));
+                        CEU_ACC((ceu_mem->date_94382));
                     
-                     (ceu_mem->col_93775) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94478) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93775 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94478 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93775), ceu_idx_93775));
-                        ceu_gc_dec_val((ceu_mem->col_93775));
-                        ceu_gc_dec_val(ceu_idx_93775);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 43) : date[:d]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94478), ceu_idx_94478));
+                        ceu_gc_dec_val((ceu_mem->col_94478));
+                        ceu_gc_dec_val(ceu_idx_94478);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 114, col 43) : date[:d]");
                     
                 }
                 
-                            (ceu_mem->args_93777)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94480)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62645,32 +63712,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93756) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94459) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93756 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94459 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93756), ceu_idx_93756));
-                        ceu_gc_dec_val((ceu_mem->col_93756));
-                        ceu_gc_dec_val(ceu_idx_93756);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 21) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94459), ceu_idx_94459));
+                        ceu_gc_dec_val((ceu_mem->col_94459));
+                        ceu_gc_dec_val(ceu_idx_94459);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 114, col 21) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93777 = CEU_ACC_KEEP();
-                    if (ceu_clo_93777.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93777);
+                    CEU_Value ceu_clo_94480 = CEU_ACC_KEEP();
+                    if (ceu_clo_94480.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94480);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 104, col 21) : iup[:set](it[:h],:DAY,date[:d])"
+                            "03_flight.ceu : (lin 114, col 21) : iup[:set](it[:h],:DAY,date[:d])"
                         );
                     }
-                    CEUX ceux_93777 = {
-                        (CEU_Clo*) ceu_clo_93777.Dyn,
+                    CEUX ceux_94480 = {
+                        (CEU_Clo*) ceu_clo_94480.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62679,12 +63746,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93777)
+                        (ceu_mem->args_94480)
                     };
-                    ceu_clo_93777.Dyn->Clo.proto(&ceux_93777);
-                    ceu_gc_dec_val(ceu_clo_93777);
+                    ceu_clo_94480.Dyn->Clo.proto(&ceux_94480);
+                    ceu_gc_dec_val(ceu_clo_94480);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 104, col 21) : iup[:set](it[:h],:DAY,date[:d])");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 114, col 21) : iup[:set](it[:h],:DAY,date[:d])");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62703,26 +63770,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93792) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94495) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93792 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94495 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93792), ceu_idx_93792));
-                        ceu_gc_dec_val((ceu_mem->col_93792));
-                        ceu_gc_dec_val(ceu_idx_93792);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 105, col 29) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94495), ceu_idx_94495));
+                        ceu_gc_dec_val((ceu_mem->col_94495));
+                        ceu_gc_dec_val(ceu_idx_94495);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 115, col 29) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93805)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94508)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MONTH} }));
-                            (ceu_mem->args_93805)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94508)[1] = CEU_ACC_KEEP();
                         
                 { // INDEX | 
                     // VAL
@@ -62731,24 +63798,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->date_93686));
+                        CEU_ACC((ceu_mem->date_94382));
                     
-                     (ceu_mem->col_93803) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94506) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_93803 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94506 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93803), ceu_idx_93803));
-                        ceu_gc_dec_val((ceu_mem->col_93803));
-                        ceu_gc_dec_val(ceu_idx_93803);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 105, col 43) : date[:m]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94506), ceu_idx_94506));
+                        ceu_gc_dec_val((ceu_mem->col_94506));
+                        ceu_gc_dec_val(ceu_idx_94506);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 115, col 43) : date[:m]");
                     
                 }
                 
-                            (ceu_mem->args_93805)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94508)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62760,32 +63827,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93784) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94487) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93784 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94487 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93784), ceu_idx_93784));
-                        ceu_gc_dec_val((ceu_mem->col_93784));
-                        ceu_gc_dec_val(ceu_idx_93784);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 105, col 21) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94487), ceu_idx_94487));
+                        ceu_gc_dec_val((ceu_mem->col_94487));
+                        ceu_gc_dec_val(ceu_idx_94487);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 115, col 21) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93805 = CEU_ACC_KEEP();
-                    if (ceu_clo_93805.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93805);
+                    CEU_Value ceu_clo_94508 = CEU_ACC_KEEP();
+                    if (ceu_clo_94508.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94508);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 105, col 21) : iup[:set](it[:h],:MONTH,date[:m])"
+                            "03_flight.ceu : (lin 115, col 21) : iup[:set](it[:h],:MONTH,date[:m])"
                         );
                     }
-                    CEUX ceux_93805 = {
-                        (CEU_Clo*) ceu_clo_93805.Dyn,
+                    CEUX ceux_94508 = {
+                        (CEU_Clo*) ceu_clo_94508.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62794,12 +63861,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93805)
+                        (ceu_mem->args_94508)
                     };
-                    ceu_clo_93805.Dyn->Clo.proto(&ceux_93805);
-                    ceu_gc_dec_val(ceu_clo_93805);
+                    ceu_clo_94508.Dyn->Clo.proto(&ceux_94508);
+                    ceu_gc_dec_val(ceu_clo_94508);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 105, col 21) : iup[:set](it[:h],:MONTH,date[:m])");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 115, col 21) : iup[:set](it[:h],:MONTH,date[:m])");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62818,26 +63885,26 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93565));
+                        CEU_ACC((ceu_mem->it_94219));
                     
-                     (ceu_mem->col_93820) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94523) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_93820 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94523 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93820), ceu_idx_93820));
-                        ceu_gc_dec_val((ceu_mem->col_93820));
-                        ceu_gc_dec_val(ceu_idx_93820);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 29) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94523), ceu_idx_94523));
+                        ceu_gc_dec_val((ceu_mem->col_94523));
+                        ceu_gc_dec_val(ceu_idx_94523);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 116, col 29) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_93833)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94536)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_YEAR} }));
-                            (ceu_mem->args_93833)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94536)[1] = CEU_ACC_KEEP();
                         
                 { // INDEX | 
                     // VAL
@@ -62846,24 +63913,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->date_93686));
+                        CEU_ACC((ceu_mem->date_94382));
                     
-                     (ceu_mem->col_93831) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94534) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93831 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94534 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93831), ceu_idx_93831));
-                        ceu_gc_dec_val((ceu_mem->col_93831));
-                        ceu_gc_dec_val(ceu_idx_93831);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 43) : date[:y]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94534), ceu_idx_94534));
+                        ceu_gc_dec_val((ceu_mem->col_94534));
+                        ceu_gc_dec_val(ceu_idx_94534);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 116, col 43) : date[:y]");
                     
                 }
                 
-                            (ceu_mem->args_93833)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94536)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -62875,32 +63942,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93812) = CEU_ACC_KEEP();
+                     (ceu_mem->col_94515) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93812 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94515 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93812), ceu_idx_93812));
-                        ceu_gc_dec_val((ceu_mem->col_93812));
-                        ceu_gc_dec_val(ceu_idx_93812);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 21) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_94515), ceu_idx_94515));
+                        ceu_gc_dec_val((ceu_mem->col_94515));
+                        ceu_gc_dec_val(ceu_idx_94515);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 116, col 21) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93833 = CEU_ACC_KEEP();
-                    if (ceu_clo_93833.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93833);
+                    CEU_Value ceu_clo_94536 = CEU_ACC_KEEP();
+                    if (ceu_clo_94536.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94536);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 106, col 21) : iup[:set](it[:h],:YEAR,date[:y])"
+                            "03_flight.ceu : (lin 116, col 21) : iup[:set](it[:h],:YEAR,date[:y])"
                         );
                     }
-                    CEUX ceux_93833 = {
-                        (CEU_Clo*) ceu_clo_93833.Dyn,
+                    CEUX ceux_94536 = {
+                        (CEU_Clo*) ceu_clo_94536.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -62909,12 +63976,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93833)
+                        (ceu_mem->args_94536)
                     };
-                    ceu_clo_93833.Dyn->Clo.proto(&ceux_93833);
-                    ceu_gc_dec_val(ceu_clo_93833);
+                    ceu_clo_94536.Dyn->Clo.proto(&ceux_94536);
+                    ceu_gc_dec_val(ceu_clo_94536);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 106, col 21) : iup[:set](it[:h],:YEAR,date[:y])");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 116, col 21) : iup[:set](it[:h],:YEAR,date[:y])");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -62934,12 +64001,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-4 }),
-                            "03_flight.ceu : (lin 100, col 33) : ceu_ret"
+                            "03_flight.ceu : (lin 107, col 33) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_86343_93527));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_86607_94181));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_86343_93527) = ceu_acc;
+                        (ceu_mem->ceu_ret_86607_94181) = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -62949,16 +64016,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93845 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94548 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93845) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93845))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94548) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94548))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93845));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94548));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -62970,12 +64037,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->date_93686));
+                                ceu_gc_dec_val((ceu_mem->date_94382));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93845;
+                    ceu_acc = ceu_acc_94548;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63016,16 +64083,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93863 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94566 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93863) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93863))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94566) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94566))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93863));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94566));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -63037,14 +64104,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_or_86240_93601));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_86504_94255));
                             
-                                ceu_gc_dec_val((ceu_mem->it_93565));
+                                ceu_gc_dec_val((ceu_mem->it_94219));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93863;
+                    ceu_acc = ceu_acc_94566;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63072,17 +64139,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 99, col 8) : (val' it = do { (val it :Iup.Value = ceu_r..."
+                            "03_flight.ceu : (lin 106, col 8) : (val' it = do { (val it :Iup.Value = ceu_r..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_93864) = ceu_acc;
+                        (ceu_mem->it_94567) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93864));
+                        CEU_ACC((ceu_mem->it_94567));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -63093,7 +64160,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_93864));
+                        CEU_ACC((ceu_mem->it_94567));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -63113,16 +64180,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93888 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94591 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93888) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93888))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94591) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94591))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93888));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94591));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -63134,12 +64201,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_93864));
+                                ceu_gc_dec_val((ceu_mem->it_94567));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93888;
+                    ceu_acc = ceu_acc_94591;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63161,23 +64228,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_93894:
+                            CEU_LOOP_STOP_94597:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93893 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94596 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93893) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93893))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94596) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94596))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93893));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94596));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -63192,7 +64259,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93893;
+                    ceu_acc = ceu_acc_94596;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63213,7 +64280,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_93894;
+                    goto CEU_LOOP_START_94597;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -63236,7 +64303,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 ceux->exe_task->time = CEU_TIME;
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_86343_93527));
+                        CEU_ACC((ceu_mem->ceu_ret_86607_94181));
                     
                         
                     } while (0);
@@ -63244,16 +64311,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93903 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94606 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93903) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93903))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94606) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94606))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93903));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94606));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -63265,12 +64332,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_86343_93527));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_86607_94181));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93903;
+                    ceu_acc = ceu_acc_94606;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63297,16 +64364,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93908 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94611 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93908) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93908))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94611) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94611))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93908));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94611));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -63321,7 +64388,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93908;
+                    ceu_acc = ceu_acc_94611;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -63347,10 +64414,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_93909 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_94612 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_93909;
+                            ceu_acc = ceu_acc_94612;
                         }
 
                         
@@ -63360,9 +64427,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 
                     // PROTO | 
-                    void ceu_pro_94174 (CEUX* ceux) {
+                    void ceu_pro_94877 (CEUX* ceux) {
                         
-                            CEU_Pro_94174* ceu_mem = (CEU_Pro_94174*) ceux->exe->mem;                    
+                            CEU_Pro_94877* ceu_mem = (CEU_Pro_94877*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -63386,7 +64453,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_94173) = NULL;
+                          (ceu_mem->block_94876) = NULL;
                     
                     
                     
@@ -63394,17 +64461,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->list_92082) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->list_92736) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->start_92299) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->start_92953) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->end_92507) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->end_93161) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->button_92747) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->button_93401) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->vbox_92829) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->vbox_93483) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->dlg_92964) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->dlg_93618) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -63430,32 +64497,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_92078) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92732) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
                         
-                    CEU_Value ceu_idx_92078 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92732 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92078), ceu_idx_92078));
-                        ceu_gc_dec_val((ceu_mem->col_92078));
-                        ceu_gc_dec_val(ceu_idx_92078);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 42, col 16) : iup[:list]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92732), ceu_idx_92732));
+                        ceu_gc_dec_val((ceu_mem->col_92732));
+                        ceu_gc_dec_val(ceu_idx_92732);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 49, col 16) : iup[:list]");
                     
                 }
                 
-                    CEU_Value ceu_clo_92081 = CEU_ACC_KEEP();
-                    if (ceu_clo_92081.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92081);
+                    CEU_Value ceu_clo_92735 = CEU_ACC_KEEP();
+                    if (ceu_clo_92735.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92735);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 42, col 16) : iup[:list]()"
+                            "03_flight.ceu : (lin 49, col 16) : iup[:list]()"
                         );
                     }
-                    CEUX ceux_92081 = {
-                        (CEU_Clo*) ceu_clo_92081.Dyn,
+                    CEUX ceux_92735 = {
+                        (CEU_Clo*) ceu_clo_92735.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -63464,12 +64531,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        (ceu_mem->args_92081)
+                        (ceu_mem->args_92735)
                     };
-                    ceu_clo_92081.Dyn->Clo.proto(&ceux_92081);
-                    ceu_gc_dec_val(ceu_clo_92081);
+                    ceu_clo_92735.Dyn->Clo.proto(&ceux_92735);
+                    ceu_gc_dec_val(ceu_clo_92735);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 42, col 16) : iup[:list]()");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 49, col 16) : iup[:list]()");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -63483,50 +64550,50 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 42, col 5) : (val list = iup[:list]())"
+                            "03_flight.ceu : (lin 49, col 5) : (val list = iup[:list]())"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->list_92082) = ceu_acc;
+                        (ceu_mem->list_92736) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
+                        CEU_ACC((ceu_mem->list_92736));
                     
-                            (ceu_mem->args_92131)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92785)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
-                            (ceu_mem->args_92131)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92785)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_92129) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_92783) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92129), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92783), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_92129));
+                    CEU_ACC((ceu_mem->vec_92783));
                 }
             
-                            (ceu_mem->args_92131)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92785)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -63538,550 +64605,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_92090) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92744) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_92090 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92744 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92090), ceu_idx_92090));
-                        ceu_gc_dec_val((ceu_mem->col_92090));
-                        ceu_gc_dec_val(ceu_idx_92090);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 43, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92131 = CEU_ACC_KEEP();
-                    if (ceu_clo_92131.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92131);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 43, col 9) : iup[:set](list,:EXPAND,#['H','O','R','I','..."
-                        );
-                    }
-                    CEUX ceux_92131 = {
-                        (CEU_Clo*) ceu_clo_92131.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92131)
-                    };
-                    ceu_clo_92131.Dyn->Clo.proto(&ceux_92131);
-                    ceu_gc_dec_val(ceu_clo_92131);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 43, col 9) : iup[:set](list,:EXPAND,#['H','O','R','I','...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
-                    
-                            (ceu_mem->args_92149)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DROPDOWN} }));
-                            (ceu_mem->args_92149)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
-                            (ceu_mem->args_92149)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92138) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92138 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92138), ceu_idx_92138));
-                        ceu_gc_dec_val((ceu_mem->col_92138));
-                        ceu_gc_dec_val(ceu_idx_92138);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 44, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92149 = CEU_ACC_KEEP();
-                    if (ceu_clo_92149.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92149);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 44, col 9) : iup[:set](list,:DROPDOWN,true)"
-                        );
-                    }
-                    CEUX ceux_92149 = {
-                        (CEU_Clo*) ceu_clo_92149.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92149)
-                    };
-                    ceu_clo_92149.Dyn->Clo.proto(&ceux_92149);
-                    ceu_gc_dec_val(ceu_clo_92149);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 44, col 9) : iup[:set](list,:DROPDOWN,true)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
-                    
-                            (ceu_mem->args_92209)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_1} }));
-                            (ceu_mem->args_92209)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92207) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='n'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='-'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='w'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='a'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='y'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='f'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=12} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92207), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=13} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92207));
-                }
-            
-                            (ceu_mem->args_92209)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92156) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92156 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92156), ceu_idx_92156));
-                        ceu_gc_dec_val((ceu_mem->col_92156));
-                        ceu_gc_dec_val(ceu_idx_92156);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 45, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92209 = CEU_ACC_KEEP();
-                    if (ceu_clo_92209.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92209);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 45, col 9) : iup[:set](list,:1,#['o','n','e','-','w','a..."
-                        );
-                    }
-                    CEUX ceux_92209 = {
-                        (CEU_Clo*) ceu_clo_92209.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92209)
-                    };
-                    ceu_clo_92209.Dyn->Clo.proto(&ceux_92209);
-                    ceu_gc_dec_val(ceu_clo_92209);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 45, col 9) : iup[:set](list,:1,#['o','n','e','-','w','a...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
-                    
-                            (ceu_mem->args_92266)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_2} }));
-                            (ceu_mem->args_92266)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92264) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='u'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='n'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='f'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92264), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=12} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92264));
-                }
-            
-                            (ceu_mem->args_92266)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92216) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92216 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92216), ceu_idx_92216));
-                        ceu_gc_dec_val((ceu_mem->col_92216));
-                        ceu_gc_dec_val(ceu_idx_92216);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 46, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92266 = CEU_ACC_KEEP();
-                    if (ceu_clo_92266.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92266);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 46, col 9) : iup[:set](list,:2,#['r','e','t','u','r','n..."
-                        );
-                    }
-                    CEUX ceux_92266 = {
-                        (CEU_Clo*) ceu_clo_92266.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92266)
-                    };
-                    ceu_clo_92266.Dyn->Clo.proto(&ceux_92266);
-                    ceu_gc_dec_val(ceu_clo_92266);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 46, col 9) : iup[:set](list,:2,#['r','e','t','u','r','n...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
-                    
-                            (ceu_mem->args_92284)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_92284)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_1} }));
-                            (ceu_mem->args_92284)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92273) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92273 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92273), ceu_idx_92273));
-                        ceu_gc_dec_val((ceu_mem->col_92273));
-                        ceu_gc_dec_val(ceu_idx_92273);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 47, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92284 = CEU_ACC_KEEP();
-                    if (ceu_clo_92284.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92284);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 47, col 9) : iup[:set](list,:VALUE,:1)"
-                        );
-                    }
-                    CEUX ceux_92284 = {
-                        (CEU_Clo*) ceu_clo_92284.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92284)
-                    };
-                    ceu_clo_92284.Dyn->Clo.proto(&ceux_92284);
-                    ceu_gc_dec_val(ceu_clo_92284);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 47, col 9) : iup[:set](list,:VALUE,:1)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92295) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
-                        
-                    CEU_Value ceu_idx_92295 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92295), ceu_idx_92295));
-                        ceu_gc_dec_val((ceu_mem->col_92295));
-                        ceu_gc_dec_val(ceu_idx_92295);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 49, col 17) : iup[:text]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92298 = CEU_ACC_KEEP();
-                    if (ceu_clo_92298.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92298);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 49, col 17) : iup[:text]()"
-                        );
-                    }
-                    CEUX ceux_92298 = {
-                        (CEU_Clo*) ceu_clo_92298.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        0,
-                        (ceu_mem->args_92298)
-                    };
-                    ceu_clo_92298.Dyn->Clo.proto(&ceux_92298);
-                    ceu_gc_dec_val(ceu_clo_92298);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 49, col 17) : iup[:text]()");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 49, col 5) : (val start = iup[:text]())"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->start_92299) = ceu_acc;
-                    
-                
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92348)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
-                            (ceu_mem->args_92348)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92346) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92346), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92346));
-                }
-            
-                            (ceu_mem->args_92348)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92307) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92307 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92307), ceu_idx_92307));
-                        ceu_gc_dec_val((ceu_mem->col_92307));
-                        ceu_gc_dec_val(ceu_idx_92307);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92744), ceu_idx_92744));
+                        ceu_gc_dec_val((ceu_mem->col_92744));
+                        ceu_gc_dec_val(ceu_idx_92744);
                         CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 50, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_92348 = CEU_ACC_KEEP();
-                    if (ceu_clo_92348.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92348);
+                    CEU_Value ceu_clo_92785 = CEU_ACC_KEEP();
+                    if (ceu_clo_92785.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92785);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 50, col 9) : iup[:set](start,:EXPAND,#['H','O','R','I',..."
+                            "03_flight.ceu : (lin 50, col 9) : iup[:set](list,:EXPAND,#['H','O','R','I','..."
                         );
                     }
-                    CEUX ceux_92348 = {
-                        (CEU_Clo*) ceu_clo_92348.Dyn,
+                    CEUX ceux_92785 = {
+                        (CEU_Clo*) ceu_clo_92785.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -64090,12 +64639,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_92348)
+                        (ceu_mem->args_92785)
                     };
-                    ceu_clo_92348.Dyn->Clo.proto(&ceux_92348);
-                    ceu_gc_dec_val(ceu_clo_92348);
+                    ceu_clo_92785.Dyn->Clo.proto(&ceux_92785);
+                    ceu_gc_dec_val(ceu_clo_92785);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 50, col 9) : iup[:set](start,:EXPAND,#['H','O','R','I',...");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 50, col 9) : iup[:set](list,:EXPAND,#['H','O','R','I','...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -64108,13 +64657,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
+                        CEU_ACC((ceu_mem->list_92736));
                     
-                            (ceu_mem->args_92366)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
-                            (ceu_mem->args_92366)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92803)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DROPDOWN} }));
+                            (ceu_mem->args_92803)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
-                            (ceu_mem->args_92366)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92803)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -64126,32 +64675,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_92355) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92792) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_92355 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92792 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92355), ceu_idx_92355));
-                        ceu_gc_dec_val((ceu_mem->col_92355));
-                        ceu_gc_dec_val(ceu_idx_92355);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92792), ceu_idx_92792));
+                        ceu_gc_dec_val((ceu_mem->col_92792));
+                        ceu_gc_dec_val(ceu_idx_92792);
                         CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 51, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_92366 = CEU_ACC_KEEP();
-                    if (ceu_clo_92366.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92366);
+                    CEU_Value ceu_clo_92803 = CEU_ACC_KEEP();
+                    if (ceu_clo_92803.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92803);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 51, col 9) : iup[:set](start,:VALID,true)"
+                            "03_flight.ceu : (lin 51, col 9) : iup[:set](list,:DROPDOWN,true)"
                         );
                     }
-                    CEUX ceux_92366 = {
-                        (CEU_Clo*) ceu_clo_92366.Dyn,
+                    CEUX ceux_92803 = {
+                        (CEU_Clo*) ceu_clo_92803.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -64160,12 +64709,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_92366)
+                        (ceu_mem->args_92803)
                     };
-                    ceu_clo_92366.Dyn->Clo.proto(&ceux_92366);
-                    ceu_gc_dec_val(ceu_clo_92366);
+                    ceu_clo_92803.Dyn->Clo.proto(&ceux_92803);
+                    ceu_gc_dec_val(ceu_clo_92803);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 51, col 9) : iup[:set](start,:VALID,true)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 51, col 9) : iup[:set](list,:DROPDOWN,true)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -64178,1350 +64727,42 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92414)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_92414)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92412) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92412), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92412));
-                }
-            
-                            (ceu_mem->args_92414)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92373) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92373 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92373), ceu_idx_92373));
-                        ceu_gc_dec_val((ceu_mem->col_92373));
-                        ceu_gc_dec_val(ceu_idx_92373);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 52, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92414 = CEU_ACC_KEEP();
-                    if (ceu_clo_92414.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92414);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 52, col 9) : iup[:set](start,:VALUE,#['2','2','.','0','..."
-                        );
-                    }
-                    CEUX ceux_92414 = {
-                        (CEU_Clo*) ceu_clo_92414.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92414)
-                    };
-                    ceu_clo_92414.Dyn->Clo.proto(&ceux_92414);
-                    ceu_gc_dec_val(ceu_clo_92414);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 52, col 9) : iup[:set](start,:VALUE,#['2','2','.','0','...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92438)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DAY} }));
-                            (ceu_mem->args_92438)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92436) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92436), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92436), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92436));
-                }
-            
-                            (ceu_mem->args_92438)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92421) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92421 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92421), ceu_idx_92421));
-                        ceu_gc_dec_val((ceu_mem->col_92421));
-                        ceu_gc_dec_val(ceu_idx_92421);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 53, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92438 = CEU_ACC_KEEP();
-                    if (ceu_clo_92438.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92438);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 53, col 9) : iup[:set](start,:DAY,#['2','2'])"
-                        );
-                    }
-                    CEUX ceux_92438 = {
-                        (CEU_Clo*) ceu_clo_92438.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92438)
-                    };
-                    ceu_clo_92438.Dyn->Clo.proto(&ceux_92438);
-                    ceu_gc_dec_val(ceu_clo_92438);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 53, col 9) : iup[:set](start,:DAY,#['2','2'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92462)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MONTH} }));
-                            (ceu_mem->args_92462)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92460) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92460), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92460), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92460));
-                }
-            
-                            (ceu_mem->args_92462)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92445) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92445 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92445), ceu_idx_92445));
-                        ceu_gc_dec_val((ceu_mem->col_92445));
-                        ceu_gc_dec_val(ceu_idx_92445);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 54, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92462 = CEU_ACC_KEEP();
-                    if (ceu_clo_92462.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92462);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 54, col 9) : iup[:set](start,:MONTH,#['0','9'])"
-                        );
-                    }
-                    CEUX ceux_92462 = {
-                        (CEU_Clo*) ceu_clo_92462.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92462)
-                    };
-                    ceu_clo_92462.Dyn->Clo.proto(&ceux_92462);
-                    ceu_gc_dec_val(ceu_clo_92462);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 54, col 9) : iup[:set](start,:MONTH,#['0','9'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92492)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_YEAR} }));
-                            (ceu_mem->args_92492)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92490) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92490));
-                }
-            
-                            (ceu_mem->args_92492)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92469) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92469 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92469), ceu_idx_92469));
-                        ceu_gc_dec_val((ceu_mem->col_92469));
-                        ceu_gc_dec_val(ceu_idx_92469);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 55, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92492 = CEU_ACC_KEEP();
-                    if (ceu_clo_92492.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92492);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 55, col 9) : iup[:set](start,:YEAR,#['1','9','5','7'])"
-                        );
-                    }
-                    CEUX ceux_92492 = {
-                        (CEU_Clo*) ceu_clo_92492.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92492)
-                    };
-                    ceu_clo_92492.Dyn->Clo.proto(&ceux_92492);
-                    ceu_gc_dec_val(ceu_clo_92492);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 55, col 9) : iup[:set](start,:YEAR,#['1','9','5','7'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92503) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
-                        
-                    CEU_Value ceu_idx_92503 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92503), ceu_idx_92503));
-                        ceu_gc_dec_val((ceu_mem->col_92503));
-                        ceu_gc_dec_val(ceu_idx_92503);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 57, col 15) : iup[:text]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92506 = CEU_ACC_KEEP();
-                    if (ceu_clo_92506.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92506);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 57, col 15) : iup[:text]()"
-                        );
-                    }
-                    CEUX ceux_92506 = {
-                        (CEU_Clo*) ceu_clo_92506.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        0,
-                        (ceu_mem->args_92506)
-                    };
-                    ceu_clo_92506.Dyn->Clo.proto(&ceux_92506);
-                    ceu_gc_dec_val(ceu_clo_92506);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 57, col 15) : iup[:text]()");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 57, col 5) : (val end = iup[:text]())"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->end_92507) = ceu_acc;
-                    
-                
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92556)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
-                            (ceu_mem->args_92556)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92554) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92554), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92554));
-                }
-            
-                            (ceu_mem->args_92556)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92515) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92515 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92515), ceu_idx_92515));
-                        ceu_gc_dec_val((ceu_mem->col_92515));
-                        ceu_gc_dec_val(ceu_idx_92515);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 58, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92556 = CEU_ACC_KEEP();
-                    if (ceu_clo_92556.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92556);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 58, col 9) : iup[:set](end,:EXPAND,#['H','O','R','I','Z..."
-                        );
-                    }
-                    CEUX ceux_92556 = {
-                        (CEU_Clo*) ceu_clo_92556.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92556)
-                    };
-                    ceu_clo_92556.Dyn->Clo.proto(&ceux_92556);
-                    ceu_gc_dec_val(ceu_clo_92556);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 58, col 9) : iup[:set](end,:EXPAND,#['H','O','R','I','Z...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92574)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
-                            (ceu_mem->args_92574)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
-                            (ceu_mem->args_92574)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92563) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92563 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92563), ceu_idx_92563));
-                        ceu_gc_dec_val((ceu_mem->col_92563));
-                        ceu_gc_dec_val(ceu_idx_92563);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 59, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92574 = CEU_ACC_KEEP();
-                    if (ceu_clo_92574.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92574);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 59, col 9) : iup[:set](end,:VALID,true)"
-                        );
-                    }
-                    CEUX ceux_92574 = {
-                        (CEU_Clo*) ceu_clo_92574.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92574)
-                    };
-                    ceu_clo_92574.Dyn->Clo.proto(&ceux_92574);
-                    ceu_gc_dec_val(ceu_clo_92574);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 59, col 9) : iup[:set](end,:VALID,true)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92622)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_92622)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92620) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92620), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92620));
-                }
-            
-                            (ceu_mem->args_92622)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92581) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92581 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92581), ceu_idx_92581));
-                        ceu_gc_dec_val((ceu_mem->col_92581));
-                        ceu_gc_dec_val(ceu_idx_92581);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 60, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92622 = CEU_ACC_KEEP();
-                    if (ceu_clo_92622.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92622);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 60, col 9) : iup[:set](end,:VALUE,#['2','2','.','0','9'..."
-                        );
-                    }
-                    CEUX ceux_92622 = {
-                        (CEU_Clo*) ceu_clo_92622.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92622)
-                    };
-                    ceu_clo_92622.Dyn->Clo.proto(&ceux_92622);
-                    ceu_gc_dec_val(ceu_clo_92622);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 60, col 9) : iup[:set](end,:VALUE,#['2','2','.','0','9'...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92646)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DAY} }));
-                            (ceu_mem->args_92646)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92644) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92644), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92644), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92644));
-                }
-            
-                            (ceu_mem->args_92646)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92629) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92629 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92629), ceu_idx_92629));
-                        ceu_gc_dec_val((ceu_mem->col_92629));
-                        ceu_gc_dec_val(ceu_idx_92629);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 61, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92646 = CEU_ACC_KEEP();
-                    if (ceu_clo_92646.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92646);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 61, col 9) : iup[:set](end,:DAY,#['2','2'])"
-                        );
-                    }
-                    CEUX ceux_92646 = {
-                        (CEU_Clo*) ceu_clo_92646.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92646)
-                    };
-                    ceu_clo_92646.Dyn->Clo.proto(&ceux_92646);
-                    ceu_gc_dec_val(ceu_clo_92646);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 61, col 9) : iup[:set](end,:DAY,#['2','2'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92670)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MONTH} }));
-                            (ceu_mem->args_92670)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92668) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92668));
-                }
-            
-                            (ceu_mem->args_92670)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92653) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92653 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92653), ceu_idx_92653));
-                        ceu_gc_dec_val((ceu_mem->col_92653));
-                        ceu_gc_dec_val(ceu_idx_92653);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 62, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92670 = CEU_ACC_KEEP();
-                    if (ceu_clo_92670.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92670);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 62, col 9) : iup[:set](end,:MONTH,#['0','9'])"
-                        );
-                    }
-                    CEUX ceux_92670 = {
-                        (CEU_Clo*) ceu_clo_92670.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92670)
-                    };
-                    ceu_clo_92670.Dyn->Clo.proto(&ceux_92670);
-                    ceu_gc_dec_val(ceu_clo_92670);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 62, col 9) : iup[:set](end,:MONTH,#['0','9'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92700)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_YEAR} }));
-                            (ceu_mem->args_92700)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92698) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92698));
-                }
-            
-                            (ceu_mem->args_92700)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92677) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92677 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92677), ceu_idx_92677));
-                        ceu_gc_dec_val((ceu_mem->col_92677));
-                        ceu_gc_dec_val(ceu_idx_92677);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 63, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92700 = CEU_ACC_KEEP();
-                    if (ceu_clo_92700.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92700);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 63, col 9) : iup[:set](end,:YEAR,#['1','9','5','7'])"
-                        );
-                    }
-                    CEUX ceux_92700 = {
-                        (CEU_Clo*) ceu_clo_92700.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92700)
-                    };
-                    ceu_clo_92700.Dyn->Clo.proto(&ceux_92700);
-                    ceu_gc_dec_val(ceu_clo_92700);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 63, col 9) : iup[:set](end,:YEAR,#['1','9','5','7'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92718)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ACTIVE} }));
-                            (ceu_mem->args_92718)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                            (ceu_mem->args_92718)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92707) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92707 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92707), ceu_idx_92707));
-                        ceu_gc_dec_val((ceu_mem->col_92707));
-                        ceu_gc_dec_val(ceu_idx_92707);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 64, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92718 = CEU_ACC_KEEP();
-                    if (ceu_clo_92718.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92718);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 64, col 9) : iup[:set](end,:ACTIVE,false)"
-                        );
-                    }
-                    CEUX ceux_92718 = {
-                        (CEU_Clo*) ceu_clo_92718.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92718)
-                    };
-                    ceu_clo_92718.Dyn->Clo.proto(&ceux_92718);
-                    ceu_gc_dec_val(ceu_clo_92718);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 64, col 9) : iup[:set](end,:ACTIVE,false)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                    
-                { // VECTOR | 
-                     (ceu_mem->vec_92744) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='B'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92744), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92744), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92744), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='k'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92744), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92744));
-                }
-            
-                            (ceu_mem->args_92746)[0] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92729) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
-                        
-                    CEU_Value ceu_idx_92729 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92729), ceu_idx_92729));
-                        ceu_gc_dec_val((ceu_mem->col_92729));
-                        ceu_gc_dec_val(ceu_idx_92729);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 66, col 18) : iup[:button]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92746 = CEU_ACC_KEEP();
-                    if (ceu_clo_92746.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92746);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 66, col 18) : iup[:button](#['B','o','o','k'])"
-                        );
-                    }
-                    CEUX ceux_92746 = {
-                        (CEU_Clo*) ceu_clo_92746.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        1,
-                        (ceu_mem->args_92746)
-                    };
-                    ceu_clo_92746.Dyn->Clo.proto(&ceux_92746);
-                    ceu_gc_dec_val(ceu_clo_92746);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 66, col 18) : iup[:button](#['B','o','o','k'])");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 66, col 5) : (val button = iup[:button](#['B','o','o','..."
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->button_92747) = ceu_acc;
-                    
-                
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->button_92747));
-                    
-                            (ceu_mem->args_92766)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
-                            (ceu_mem->args_92766)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
-                            (ceu_mem->args_92766)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92755) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92755 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92755), ceu_idx_92755));
-                        ceu_gc_dec_val((ceu_mem->col_92755));
-                        ceu_gc_dec_val(ceu_idx_92755);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 67, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92766 = CEU_ACC_KEEP();
-                    if (ceu_clo_92766.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92766);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 67, col 9) : iup[:set](button,:EXPAND,false)"
-                        );
-                    }
-                    CEUX ceux_92766 = {
-                        (CEU_Clo*) ceu_clo_92766.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92766)
-                    };
-                    ceu_clo_92766.Dyn->Clo.proto(&ceux_92766);
-                    ceu_gc_dec_val(ceu_clo_92766);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 67, col 9) : iup[:set](button,:EXPAND,false)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->button_92747));
-                    
-                            (ceu_mem->args_92814)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
-                            (ceu_mem->args_92814)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_92812) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92812), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_92812));
-                }
-            
-                            (ceu_mem->args_92814)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92773) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
-                        
-                    CEU_Value ceu_idx_92773 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92773), ceu_idx_92773));
-                        ceu_gc_dec_val((ceu_mem->col_92773));
-                        ceu_gc_dec_val(ceu_idx_92773);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 68, col 9) : iup[:set]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92814 = CEU_ACC_KEEP();
-                    if (ceu_clo_92814.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92814);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 68, col 9) : iup[:set](button,:EXPAND,#['H','O','R','I'..."
-                        );
-                    }
-                    CEUX ceux_92814 = {
-                        (CEU_Clo*) ceu_clo_92814.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_92814)
-                    };
-                    ceu_clo_92814.Dyn->Clo.proto(&ceux_92814);
-                    ceu_gc_dec_val(ceu_clo_92814);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 68, col 9) : iup[:set](button,:EXPAND,#['H','O','R','I'...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                    
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92825) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }));
-                        
-                    CEU_Value ceu_idx_92825 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92825), ceu_idx_92825));
-                        ceu_gc_dec_val((ceu_mem->col_92825));
-                        ceu_gc_dec_val(ceu_idx_92825);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 70, col 16) : iup[:vbox]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92828 = CEU_ACC_KEEP();
-                    if (ceu_clo_92828.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92828);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 70, col 16) : iup[:vbox]()"
-                        );
-                    }
-                    CEUX ceux_92828 = {
-                        (CEU_Clo*) ceu_clo_92828.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        0,
-                        (ceu_mem->args_92828)
-                    };
-                    ceu_clo_92828.Dyn->Clo.proto(&ceux_92828);
-                    ceu_gc_dec_val(ceu_clo_92828);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 70, col 16) : iup[:vbox]()");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 70, col 5) : (val vbox = iup[:vbox]())"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->vbox_92829) = ceu_acc;
-                    
-                
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
+                        CEU_ACC((ceu_mem->list_92736));
                     
                             (ceu_mem->args_92863)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MARGIN} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_1} }));
                             (ceu_mem->args_92863)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
                      (ceu_mem->vec_92861) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
                             assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='n'} }));
                             assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='x'} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
                             assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='-'} }));
                             assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='w'} }));
                             assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='a'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='y'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='f'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=12} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92861), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=13} }, ceu_acc));
                         
                     CEU_ACC((ceu_mem->vec_92861));
                 }
@@ -65538,18 +64779,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_92837) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92810) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_92837 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92810 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92837), ceu_idx_92837));
-                        ceu_gc_dec_val((ceu_mem->col_92837));
-                        ceu_gc_dec_val(ceu_idx_92837);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 71, col 9) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92810), ceu_idx_92810));
+                        ceu_gc_dec_val((ceu_mem->col_92810));
+                        ceu_gc_dec_val(ceu_idx_92810);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 52, col 9) : iup[:set]");
                     
                 }
                 
@@ -65559,7 +64800,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 71, col 9) : iup[:set](vbox,:MARGIN,#['1','0','x','1','..."
+                            "03_flight.ceu : (lin 52, col 9) : iup[:set](list,:1,#['o','n','e','-','w','a..."
                         );
                     }
                     CEUX ceux_92863 = {
@@ -65577,7 +64818,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceu_clo_92863.Dyn->Clo.proto(&ceux_92863);
                     ceu_gc_dec_val(ceu_clo_92863);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 71, col 9) : iup[:set](vbox,:MARGIN,#['1','0','x','1','...");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 52, col 9) : iup[:set](list,:1,#['o','n','e','-','w','a...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -65590,23 +64831,45 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
+                        CEU_ACC((ceu_mem->list_92736));
                     
-                            (ceu_mem->args_92887)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_GAP} }));
-                            (ceu_mem->args_92887)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92920)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_2} }));
+                            (ceu_mem->args_92920)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_92885) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92885), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_92885), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                     (ceu_mem->vec_92918) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='u'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='n'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='f'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_92918), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=12} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_92885));
+                    CEU_ACC((ceu_mem->vec_92918));
                 }
             
-                            (ceu_mem->args_92887)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92920)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -65629,21 +64892,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(ceu_col_get((ceu_mem->col_92870), ceu_idx_92870));
                         ceu_gc_dec_val((ceu_mem->col_92870));
                         ceu_gc_dec_val(ceu_idx_92870);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 72, col 9) : iup[:set]");
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 53, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_92887 = CEU_ACC_KEEP();
-                    if (ceu_clo_92887.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92887);
+                    CEU_Value ceu_clo_92920 = CEU_ACC_KEEP();
+                    if (ceu_clo_92920.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92920);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 72, col 9) : iup[:set](vbox,:GAP,#['1','0'])"
+                            "03_flight.ceu : (lin 53, col 9) : iup[:set](list,:2,#['r','e','t','u','r','n..."
                         );
                     }
-                    CEUX ceux_92887 = {
-                        (CEU_Clo*) ceu_clo_92887.Dyn,
+                    CEUX ceux_92920 = {
+                        (CEU_Clo*) ceu_clo_92920.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -65652,12 +64915,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_92887)
+                        (ceu_mem->args_92920)
                     };
-                    ceu_clo_92887.Dyn->Clo.proto(&ceux_92887);
-                    ceu_gc_dec_val(ceu_clo_92887);
+                    ceu_clo_92920.Dyn->Clo.proto(&ceux_92920);
+                    ceu_gc_dec_val(ceu_clo_92920);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 72, col 9) : iup[:set](vbox,:GAP,#['1','0'])");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 53, col 9) : iup[:set](list,:2,#['r','e','t','u','r','n...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -65670,85 +64933,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
+                        CEU_ACC((ceu_mem->list_92736));
                     
-                            (ceu_mem->args_92902)[0] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->list_92082));
-                    
-                            (ceu_mem->args_92902)[1] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92894) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
-                        
-                    CEU_Value ceu_idx_92894 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92894), ceu_idx_92894));
-                        ceu_gc_dec_val((ceu_mem->col_92894));
-                        ceu_gc_dec_val(ceu_idx_92894);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 73, col 9) : iup[:append]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92902 = CEU_ACC_KEEP();
-                    if (ceu_clo_92902.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92902);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 73, col 9) : iup[:append](vbox,list)"
-                        );
-                    }
-                    CEUX ceux_92902 = {
-                        (CEU_Clo*) ceu_clo_92902.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        (ceu_mem->args_92902)
-                    };
-                    ceu_clo_92902.Dyn->Clo.proto(&ceux_92902);
-                    ceu_gc_dec_val(ceu_clo_92902);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 73, col 9) : iup[:append](vbox,list)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
-                    
-                            (ceu_mem->args_92917)[0] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->start_92299));
-                    
-                            (ceu_mem->args_92917)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_92938)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
+                            (ceu_mem->args_92938)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_1} }));
+                            (ceu_mem->args_92938)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -65760,353 +64951,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_92909) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
-                        
-                    CEU_Value ceu_idx_92909 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92909), ceu_idx_92909));
-                        ceu_gc_dec_val((ceu_mem->col_92909));
-                        ceu_gc_dec_val(ceu_idx_92909);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 74, col 9) : iup[:append]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92917 = CEU_ACC_KEEP();
-                    if (ceu_clo_92917.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92917);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 74, col 9) : iup[:append](vbox,start)"
-                        );
-                    }
-                    CEUX ceux_92917 = {
-                        (CEU_Clo*) ceu_clo_92917.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        (ceu_mem->args_92917)
-                    };
-                    ceu_clo_92917.Dyn->Clo.proto(&ceux_92917);
-                    ceu_gc_dec_val(ceu_clo_92917);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 74, col 9) : iup[:append](vbox,start)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
-                    
-                            (ceu_mem->args_92932)[0] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_92932)[1] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92924) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
-                        
-                    CEU_Value ceu_idx_92924 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92924), ceu_idx_92924));
-                        ceu_gc_dec_val((ceu_mem->col_92924));
-                        ceu_gc_dec_val(ceu_idx_92924);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 75, col 9) : iup[:append]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92932 = CEU_ACC_KEEP();
-                    if (ceu_clo_92932.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92932);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 75, col 9) : iup[:append](vbox,end)"
-                        );
-                    }
-                    CEUX ceux_92932 = {
-                        (CEU_Clo*) ceu_clo_92932.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        (ceu_mem->args_92932)
-                    };
-                    ceu_clo_92932.Dyn->Clo.proto(&ceux_92932);
-                    ceu_gc_dec_val(ceu_clo_92932);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 75, col 9) : iup[:append](vbox,end)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
-                    
-                            (ceu_mem->args_92947)[0] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->button_92747));
-                    
-                            (ceu_mem->args_92947)[1] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92939) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
-                        
-                    CEU_Value ceu_idx_92939 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92939), ceu_idx_92939));
-                        ceu_gc_dec_val((ceu_mem->col_92939));
-                        ceu_gc_dec_val(ceu_idx_92939);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 76, col 9) : iup[:append]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92947 = CEU_ACC_KEEP();
-                    if (ceu_clo_92947.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92947);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 76, col 9) : iup[:append](vbox,button)"
-                        );
-                    }
-                    CEUX ceux_92947 = {
-                        (CEU_Clo*) ceu_clo_92947.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        (ceu_mem->args_92947)
-                    };
-                    ceu_clo_92947.Dyn->Clo.proto(&ceux_92947);
-                    ceu_gc_dec_val(ceu_clo_92947);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 76, col 9) : iup[:append](vbox,button)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                // DCL | 
-                
-                        
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->vbox_92829));
-                    
-                            (ceu_mem->args_92963)[0] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92958) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }));
-                        
-                    CEU_Value ceu_idx_92958 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92958), ceu_idx_92958));
-                        ceu_gc_dec_val((ceu_mem->col_92958));
-                        ceu_gc_dec_val(ceu_idx_92958);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 78, col 15) : iup[:dialog]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_92963 = CEU_ACC_KEEP();
-                    if (ceu_clo_92963.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_92963);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 78, col 15) : iup[:dialog](vbox)"
-                        );
-                    }
-                    CEUX ceux_92963 = {
-                        (CEU_Clo*) ceu_clo_92963.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        1,
-                        (ceu_mem->args_92963)
-                    };
-                    ceu_clo_92963.Dyn->Clo.proto(&ceux_92963);
-                    ceu_gc_dec_val(ceu_clo_92963);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 78, col 15) : iup[:dialog](vbox)");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            
-                        #ifdef CEU_LEX
-                        
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 78, col 5) : (val dlg = iup[:dialog](vbox))"
-                        );
-                        #endif
-                        ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->dlg_92964) = ceu_acc;
-                    
-                
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->dlg_92964));
-                    
-                            (ceu_mem->args_93016)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_TITLE} }));
-                            (ceu_mem->args_93016)[1] = CEU_ACC_KEEP();
-                        
-                { // VECTOR | 
-                     (ceu_mem->vec_93014) = ceu_create_vector(CEU_LEX_X(ceux->depth));
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='B'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='k'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='F'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93014), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
-                        
-                    CEU_ACC((ceu_mem->vec_93014));
-                }
-            
-                            (ceu_mem->args_93016)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_92972) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92927) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_92972 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92927 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_92972), ceu_idx_92972));
-                        ceu_gc_dec_val((ceu_mem->col_92972));
-                        ceu_gc_dec_val(ceu_idx_92972);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 79, col 9) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92927), ceu_idx_92927));
+                        ceu_gc_dec_val((ceu_mem->col_92927));
+                        ceu_gc_dec_val(ceu_idx_92927);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 54, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93016 = CEU_ACC_KEEP();
-                    if (ceu_clo_93016.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93016);
+                    CEU_Value ceu_clo_92938 = CEU_ACC_KEEP();
+                    if (ceu_clo_92938.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92938);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 79, col 9) : iup[:set](dlg,:TITLE,#['B','o','o','k',' '..."
+                            "03_flight.ceu : (lin 54, col 9) : iup[:set](list,:VALUE,:1)"
                         );
                     }
-                    CEUX ceux_93016 = {
-                        (CEU_Clo*) ceu_clo_93016.Dyn,
+                    CEUX ceux_92938 = {
+                        (CEU_Clo*) ceu_clo_92938.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -66115,12 +64985,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93016)
+                        (ceu_mem->args_92938)
                     };
-                    ceu_clo_93016.Dyn->Clo.proto(&ceux_93016);
-                    ceu_gc_dec_val(ceu_clo_93016);
+                    ceu_clo_92938.Dyn->Clo.proto(&ceux_92938);
+                    ceu_gc_dec_val(ceu_clo_92938);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 79, col 9) : iup[:set](dlg,:TITLE,#['B','o','o','k',' '...");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 54, col 9) : iup[:set](list,:VALUE,:1)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -66129,124 +64999,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                { // CALL | 
-                    
-                    
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->dlg_92964));
-                    
-                            (ceu_mem->args_93034)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
-                            (ceu_mem->args_93034)[1] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
-                            (ceu_mem->args_93034)[2] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_iup);
-                    
-                     (ceu_mem->col_93023) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }));
-                        
-                    CEU_Value ceu_idx_93023 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93023), ceu_idx_93023));
-                        ceu_gc_dec_val((ceu_mem->col_93023));
-                        ceu_gc_dec_val(ceu_idx_93023);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 81, col 5) : iup[:show-xy]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_93034 = CEU_ACC_KEEP();
-                    if (ceu_clo_93034.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93034);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "03_flight.ceu : (lin 81, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`..."
-                        );
-                    }
-                    CEUX ceux_93034 = {
-                        (CEU_Clo*) ceu_clo_93034.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        3,
-                        (ceu_mem->args_93034)
-                    };
-                    ceu_clo_93034.Dyn->Clo.proto(&ceux_93034);
-                    ceu_gc_dec_val(ceu_clo_93034);
-                    
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 81, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`...");
-            
-            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                continue;
-            }
-        
-        
-                } // CALL | 
-            // GROUP | 
-
-                // LOOP | 
-                CEU_LOOP_START_94165:
-                    
-                { // BLOCK | 
-            #ifdef CEU_LEX
-                    ceux->depth++;
-            #endif
-                    
-                          (ceu_mem->block_94164) = NULL;
-                    
-                    
-                    
-                    
-                            
-                            { // vars inits
-                                
-                                    (ceu_mem->act2_question__93067) = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                                    (ceu_mem->val2_question__93093) = (CEU_Value) { CEU_VALUE_NIL };
-                                
-                            }
-                            
-                
-                    
-                    
-                    do { // BLOCK | 
-                        // GROUP | 
-
                 // DCL | 
                 
                         
                 { // CALL | 
                     
                     
-                        // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
-                    
-                            (ceu_mem->args_93066)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ACTIVE} }));
-                            (ceu_mem->args_93066)[1] = CEU_ACC_KEEP();
-                        
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
                     
                 { // INDEX | 
                     // VAL
@@ -66257,47 +65015,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93053) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92949) = CEU_ACC_KEEP();
 
                     // IDX
                     
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
                         
-                    CEU_Value ceu_idx_93053 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92949 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93053), ceu_idx_93053));
-                        ceu_gc_dec_val((ceu_mem->col_93053));
-                        ceu_gc_dec_val(ceu_idx_93053);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 84, col 21) : iup[:get]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92949), ceu_idx_92949));
+                        ceu_gc_dec_val((ceu_mem->col_92949));
+                        ceu_gc_dec_val(ceu_idx_92949);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 56, col 17) : iup[:text]");
                     
                 }
                 
-                     (ceu_mem->col_93058) = CEU_ACC_KEEP();
-
-                    // IDX
-                    
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
-                        
-                    CEU_Value ceu_idx_93058 = CEU_ACC_KEEP();
-                
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93058), ceu_idx_93058));
-                        ceu_gc_dec_val((ceu_mem->col_93058));
-                        ceu_gc_dec_val(ceu_idx_93058);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 84, col 21) : iup[:get][:bool]");
-                    
-                }
-                
-                    CEU_Value ceu_clo_93066 = CEU_ACC_KEEP();
-                    if (ceu_clo_93066.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93066);
+                    CEU_Value ceu_clo_92952 = CEU_ACC_KEEP();
+                    if (ceu_clo_92952.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_92952);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 84, col 21) : iup[:get][:bool](end,:ACTIVE)"
+                            "03_flight.ceu : (lin 56, col 17) : iup[:text]()"
                         );
                     }
-                    CEUX ceux_93066 = {
-                        (CEU_Clo*) ceu_clo_93066.Dyn,
+                    CEUX ceux_92952 = {
+                        (CEU_Clo*) ceu_clo_92952.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -66305,13 +65048,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceux,
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
-                        (ceu_mem->args_93066)
+                        0,
+                        (ceu_mem->args_92952)
                     };
-                    ceu_clo_93066.Dyn->Clo.proto(&ceux_93066);
-                    ceu_gc_dec_val(ceu_clo_93066);
+                    ceu_clo_92952.Dyn->Clo.proto(&ceux_92952);
+                    ceu_gc_dec_val(ceu_clo_92952);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 84, col 21) : iup[:get][:bool](end,:ACTIVE)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 56, col 17) : iup[:text]()");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -66325,32 +65068,51 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 84, col 9) : (val act2? = iup[:get][:bool](end,:ACTIVE))"
+                            "03_flight.ceu : (lin 56, col 5) : (val start = iup[:text]())"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->act2_question__93067) = ceu_acc;
+                        (ceu_mem->start_92953) = ceu_acc;
                     
                 
-                // DCL | 
-                
-                        
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
+                        CEU_ACC((ceu_mem->start_92953));
                     
-                            (ceu_mem->args_93092)[0] = CEU_ACC_KEEP();
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
-                            (ceu_mem->args_93092)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93002)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
+                            (ceu_mem->args_93002)[1] = CEU_ACC_KEEP();
                         
-                    
-                { // INDEX | 
-                    // VAL
-                    
-                    
-                    // COL
+                { // VECTOR | 
+                     (ceu_mem->vec_93000) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93000), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93000));
+                }
+            
+                            (ceu_mem->args_93002)[2] = CEU_ACC_KEEP();
+                        
                     
                 { // INDEX | 
                     // VAL
@@ -66361,33 +65123,264 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93079) = CEU_ACC_KEEP();
+                     (ceu_mem->col_92961) = CEU_ACC_KEEP();
 
                     // IDX
                     
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93079 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_92961 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93079), ceu_idx_93079));
-                        ceu_gc_dec_val((ceu_mem->col_93079));
-                        ceu_gc_dec_val(ceu_idx_93079);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 85, col 21) : iup[:get]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_92961), ceu_idx_92961));
+                        ceu_gc_dec_val((ceu_mem->col_92961));
+                        ceu_gc_dec_val(ceu_idx_92961);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 57, col 9) : iup[:set]");
                     
                 }
                 
-                     (ceu_mem->col_93084) = CEU_ACC_KEEP();
+                    CEU_Value ceu_clo_93002 = CEU_ACC_KEEP();
+                    if (ceu_clo_93002.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93002);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 57, col 9) : iup[:set](start,:EXPAND,#['H','O','R','I',..."
+                        );
+                    }
+                    CEUX ceux_93002 = {
+                        (CEU_Clo*) ceu_clo_93002.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93002)
+                    };
+                    ceu_clo_93002.Dyn->Clo.proto(&ceux_93002);
+                    ceu_gc_dec_val(ceu_clo_93002);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 57, col 9) : iup[:set](start,:EXPAND,#['H','O','R','I',...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93020)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
+                            (ceu_mem->args_93020)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
+                            (ceu_mem->args_93020)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93009) = CEU_ACC_KEEP();
 
                     // IDX
                     
-                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93084 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_93009 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93084), ceu_idx_93084));
-                        ceu_gc_dec_val((ceu_mem->col_93084));
-                        ceu_gc_dec_val(ceu_idx_93084);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 85, col 21) : iup[:get][:bool]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93009), ceu_idx_93009));
+                        ceu_gc_dec_val((ceu_mem->col_93009));
+                        ceu_gc_dec_val(ceu_idx_93009);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 58, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93020 = CEU_ACC_KEEP();
+                    if (ceu_clo_93020.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93020);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 58, col 9) : iup[:set](start,:VALID,true)"
+                        );
+                    }
+                    CEUX ceux_93020 = {
+                        (CEU_Clo*) ceu_clo_93020.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93020)
+                    };
+                    ceu_clo_93020.Dyn->Clo.proto(&ceux_93020);
+                    ceu_gc_dec_val(ceu_clo_93020);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 58, col 9) : iup[:set](start,:VALID,true)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93068)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
+                            (ceu_mem->args_93068)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93066) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93066), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93066));
+                }
+            
+                            (ceu_mem->args_93068)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93027) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93027 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93027), ceu_idx_93027));
+                        ceu_gc_dec_val((ceu_mem->col_93027));
+                        ceu_gc_dec_val(ceu_idx_93027);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 59, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93068 = CEU_ACC_KEEP();
+                    if (ceu_clo_93068.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93068);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 59, col 9) : iup[:set](start,:VALUE,#['2','2','.','0','..."
+                        );
+                    }
+                    CEUX ceux_93068 = {
+                        (CEU_Clo*) ceu_clo_93068.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93068)
+                    };
+                    ceu_clo_93068.Dyn->Clo.proto(&ceux_93068);
+                    ceu_gc_dec_val(ceu_clo_93068);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 59, col 9) : iup[:set](start,:VALUE,#['2','2','.','0','...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93092)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DAY} }));
+                            (ceu_mem->args_93092)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93090) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93090), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93090), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93090));
+                }
+            
+                            (ceu_mem->args_93092)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93075) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93075 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93075), ceu_idx_93075));
+                        ceu_gc_dec_val((ceu_mem->col_93075));
+                        ceu_gc_dec_val(ceu_idx_93075);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 60, col 9) : iup[:set]");
                     
                 }
                 
@@ -66397,7 +65390,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 85, col 21) : iup[:get][:bool](end,:VALID)"
+                            "03_flight.ceu : (lin 60, col 9) : iup[:set](start,:DAY,#['2','2'])"
                         );
                     }
                     CEUX ceux_93092 = {
@@ -66409,13 +65402,241 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceux,
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
-                        2,
+                        3,
                         (ceu_mem->args_93092)
                     };
                     ceu_clo_93092.Dyn->Clo.proto(&ceux_93092);
                     ceu_gc_dec_val(ceu_clo_93092);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 85, col 21) : iup[:get][:bool](end,:VALID)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 60, col 9) : iup[:set](start,:DAY,#['2','2'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93116)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MONTH} }));
+                            (ceu_mem->args_93116)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93114) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93114), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93114), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93114));
+                }
+            
+                            (ceu_mem->args_93116)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93099) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93099 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93099), ceu_idx_93099));
+                        ceu_gc_dec_val((ceu_mem->col_93099));
+                        ceu_gc_dec_val(ceu_idx_93099);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 61, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93116 = CEU_ACC_KEEP();
+                    if (ceu_clo_93116.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93116);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 61, col 9) : iup[:set](start,:MONTH,#['0','9'])"
+                        );
+                    }
+                    CEUX ceux_93116 = {
+                        (CEU_Clo*) ceu_clo_93116.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93116)
+                    };
+                    ceu_clo_93116.Dyn->Clo.proto(&ceux_93116);
+                    ceu_gc_dec_val(ceu_clo_93116);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 61, col 9) : iup[:set](start,:MONTH,#['0','9'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93146)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_YEAR} }));
+                            (ceu_mem->args_93146)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93144) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93144), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93144), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93144), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93144), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93144));
+                }
+            
+                            (ceu_mem->args_93146)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93123) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93123 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93123), ceu_idx_93123));
+                        ceu_gc_dec_val((ceu_mem->col_93123));
+                        ceu_gc_dec_val(ceu_idx_93123);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 62, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93146 = CEU_ACC_KEEP();
+                    if (ceu_clo_93146.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93146);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 62, col 9) : iup[:set](start,:YEAR,#['1','9','5','7'])"
+                        );
+                    }
+                    CEUX ceux_93146 = {
+                        (CEU_Clo*) ceu_clo_93146.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93146)
+                    };
+                    ceu_clo_93146.Dyn->Clo.proto(&ceux_93146);
+                    ceu_gc_dec_val(ceu_clo_93146);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 62, col 9) : iup[:set](start,:YEAR,#['1','9','5','7'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93157) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
+                        
+                    CEU_Value ceu_idx_93157 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93157), ceu_idx_93157));
+                        ceu_gc_dec_val((ceu_mem->col_93157));
+                        ceu_gc_dec_val(ceu_idx_93157);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 64, col 15) : iup[:text]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93160 = CEU_ACC_KEEP();
+                    if (ceu_clo_93160.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93160);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 64, col 15) : iup[:text]()"
+                        );
+                    }
+                    CEUX ceux_93160 = {
+                        (CEU_Clo*) ceu_clo_93160.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        0,
+                        (ceu_mem->args_93160)
+                    };
+                    ceu_clo_93160.Dyn->Clo.proto(&ceux_93160);
+                    ceu_gc_dec_val(ceu_clo_93160);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 64, col 15) : iup[:text]()");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -66429,19 +65650,1632 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 85, col 9) : (val val2? = iup[:get][:bool](end,:VALID))"
+                            "03_flight.ceu : (lin 64, col 5) : (val end = iup[:text]())"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->val2_question__93093) = ceu_acc;
+                        (ceu_mem->end_93161) = ceu_acc;
                     
                 
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93210)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
+                            (ceu_mem->args_93210)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93208) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93208), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93208));
+                }
+            
+                            (ceu_mem->args_93210)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93169) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93169 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93169), ceu_idx_93169));
+                        ceu_gc_dec_val((ceu_mem->col_93169));
+                        ceu_gc_dec_val(ceu_idx_93169);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 65, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93210 = CEU_ACC_KEEP();
+                    if (ceu_clo_93210.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93210);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 65, col 9) : iup[:set](end,:EXPAND,#['H','O','R','I','Z..."
+                        );
+                    }
+                    CEUX ceux_93210 = {
+                        (CEU_Clo*) ceu_clo_93210.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93210)
+                    };
+                    ceu_clo_93210.Dyn->Clo.proto(&ceux_93210);
+                    ceu_gc_dec_val(ceu_clo_93210);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 65, col 9) : iup[:set](end,:EXPAND,#['H','O','R','I','Z...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93228)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
+                            (ceu_mem->args_93228)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
+                            (ceu_mem->args_93228)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93217) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93217 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93217), ceu_idx_93217));
+                        ceu_gc_dec_val((ceu_mem->col_93217));
+                        ceu_gc_dec_val(ceu_idx_93217);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 66, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93228 = CEU_ACC_KEEP();
+                    if (ceu_clo_93228.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93228);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 66, col 9) : iup[:set](end,:VALID,true)"
+                        );
+                    }
+                    CEUX ceux_93228 = {
+                        (CEU_Clo*) ceu_clo_93228.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93228)
+                    };
+                    ceu_clo_93228.Dyn->Clo.proto(&ceux_93228);
+                    ceu_gc_dec_val(ceu_clo_93228);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 66, col 9) : iup[:set](end,:VALID,true)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93276)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
+                            (ceu_mem->args_93276)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93274) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='.'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93274), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93274));
+                }
+            
+                            (ceu_mem->args_93276)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93235) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93235 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93235), ceu_idx_93235));
+                        ceu_gc_dec_val((ceu_mem->col_93235));
+                        ceu_gc_dec_val(ceu_idx_93235);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 67, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93276 = CEU_ACC_KEEP();
+                    if (ceu_clo_93276.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93276);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 67, col 9) : iup[:set](end,:VALUE,#['2','2','.','0','9'..."
+                        );
+                    }
+                    CEUX ceux_93276 = {
+                        (CEU_Clo*) ceu_clo_93276.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93276)
+                    };
+                    ceu_clo_93276.Dyn->Clo.proto(&ceux_93276);
+                    ceu_gc_dec_val(ceu_clo_93276);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 67, col 9) : iup[:set](end,:VALUE,#['2','2','.','0','9'...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93300)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_DAY} }));
+                            (ceu_mem->args_93300)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93298) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93298), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93298), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93298));
+                }
+            
+                            (ceu_mem->args_93300)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93283) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93283 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93283), ceu_idx_93283));
+                        ceu_gc_dec_val((ceu_mem->col_93283));
+                        ceu_gc_dec_val(ceu_idx_93283);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 68, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93300 = CEU_ACC_KEEP();
+                    if (ceu_clo_93300.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93300);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 68, col 9) : iup[:set](end,:DAY,#['2','2'])"
+                        );
+                    }
+                    CEUX ceux_93300 = {
+                        (CEU_Clo*) ceu_clo_93300.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93300)
+                    };
+                    ceu_clo_93300.Dyn->Clo.proto(&ceux_93300);
+                    ceu_gc_dec_val(ceu_clo_93300);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 68, col 9) : iup[:set](end,:DAY,#['2','2'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93324)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MONTH} }));
+                            (ceu_mem->args_93324)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93322) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93322), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93322), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93322));
+                }
+            
+                            (ceu_mem->args_93324)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93307) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93307 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93307), ceu_idx_93307));
+                        ceu_gc_dec_val((ceu_mem->col_93307));
+                        ceu_gc_dec_val(ceu_idx_93307);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 69, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93324 = CEU_ACC_KEEP();
+                    if (ceu_clo_93324.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93324);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 69, col 9) : iup[:set](end,:MONTH,#['0','9'])"
+                        );
+                    }
+                    CEUX ceux_93324 = {
+                        (CEU_Clo*) ceu_clo_93324.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93324)
+                    };
+                    ceu_clo_93324.Dyn->Clo.proto(&ceux_93324);
+                    ceu_gc_dec_val(ceu_clo_93324);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 69, col 9) : iup[:set](end,:MONTH,#['0','9'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93354)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_YEAR} }));
+                            (ceu_mem->args_93354)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93352) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93352), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='9'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93352), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93352), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='7'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93352), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93352));
+                }
+            
+                            (ceu_mem->args_93354)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93331) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93331 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93331), ceu_idx_93331));
+                        ceu_gc_dec_val((ceu_mem->col_93331));
+                        ceu_gc_dec_val(ceu_idx_93331);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 70, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93354 = CEU_ACC_KEEP();
+                    if (ceu_clo_93354.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93354);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 70, col 9) : iup[:set](end,:YEAR,#['1','9','5','7'])"
+                        );
+                    }
+                    CEUX ceux_93354 = {
+                        (CEU_Clo*) ceu_clo_93354.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93354)
+                    };
+                    ceu_clo_93354.Dyn->Clo.proto(&ceux_93354);
+                    ceu_gc_dec_val(ceu_clo_93354);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 70, col 9) : iup[:set](end,:YEAR,#['1','9','5','7'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93372)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ACTIVE} }));
+                            (ceu_mem->args_93372)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
+                            (ceu_mem->args_93372)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93361) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93361 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93361), ceu_idx_93361));
+                        ceu_gc_dec_val((ceu_mem->col_93361));
+                        ceu_gc_dec_val(ceu_idx_93361);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 71, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93372 = CEU_ACC_KEEP();
+                    if (ceu_clo_93372.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93372);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 71, col 9) : iup[:set](end,:ACTIVE,false)"
+                        );
+                    }
+                    CEUX ceux_93372 = {
+                        (CEU_Clo*) ceu_clo_93372.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93372)
+                    };
+                    ceu_clo_93372.Dyn->Clo.proto(&ceux_93372);
+                    ceu_gc_dec_val(ceu_clo_93372);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 71, col 9) : iup[:set](end,:ACTIVE,false)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                { // VECTOR | 
+                     (ceu_mem->vec_93398) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='B'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93398), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93398), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93398), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='k'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93398), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93398));
+                }
+            
+                            (ceu_mem->args_93400)[0] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93383) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
+                        
+                    CEU_Value ceu_idx_93383 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93383), ceu_idx_93383));
+                        ceu_gc_dec_val((ceu_mem->col_93383));
+                        ceu_gc_dec_val(ceu_idx_93383);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 73, col 18) : iup[:button]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93400 = CEU_ACC_KEEP();
+                    if (ceu_clo_93400.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93400);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 73, col 18) : iup[:button](#['B','o','o','k'])"
+                        );
+                    }
+                    CEUX ceux_93400 = {
+                        (CEU_Clo*) ceu_clo_93400.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        (ceu_mem->args_93400)
+                    };
+                    ceu_clo_93400.Dyn->Clo.proto(&ceux_93400);
+                    ceu_gc_dec_val(ceu_clo_93400);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 73, col 18) : iup[:button](#['B','o','o','k'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 73, col 5) : (val button = iup[:button](#['B','o','o','..."
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        (ceu_mem->button_93401) = ceu_acc;
+                    
+                
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->button_93401));
+                    
+                            (ceu_mem->args_93420)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
+                            (ceu_mem->args_93420)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
+                            (ceu_mem->args_93420)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93409) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93409 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93409), ceu_idx_93409));
+                        ceu_gc_dec_val((ceu_mem->col_93409));
+                        ceu_gc_dec_val(ceu_idx_93409);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 74, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93420 = CEU_ACC_KEEP();
+                    if (ceu_clo_93420.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93420);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 74, col 9) : iup[:set](button,:EXPAND,false)"
+                        );
+                    }
+                    CEUX ceux_93420 = {
+                        (CEU_Clo*) ceu_clo_93420.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93420)
+                    };
+                    ceu_clo_93420.Dyn->Clo.proto(&ceux_93420);
+                    ceu_gc_dec_val(ceu_clo_93420);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 74, col 9) : iup[:set](button,:EXPAND,false)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->button_93401));
+                    
+                            (ceu_mem->args_93468)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_EXPAND} }));
+                            (ceu_mem->args_93468)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93466) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='H'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='I'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='Z'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='O'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='L'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93466), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93466));
+                }
+            
+                            (ceu_mem->args_93468)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93427) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93427 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93427), ceu_idx_93427));
+                        ceu_gc_dec_val((ceu_mem->col_93427));
+                        ceu_gc_dec_val(ceu_idx_93427);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 75, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93468 = CEU_ACC_KEEP();
+                    if (ceu_clo_93468.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93468);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 75, col 9) : iup[:set](button,:EXPAND,#['H','O','R','I'..."
+                        );
+                    }
+                    CEUX ceux_93468 = {
+                        (CEU_Clo*) ceu_clo_93468.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93468)
+                    };
+                    ceu_clo_93468.Dyn->Clo.proto(&ceux_93468);
+                    ceu_gc_dec_val(ceu_clo_93468);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 75, col 9) : iup[:set](button,:EXPAND,#['H','O','R','I'...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93479) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }));
+                        
+                    CEU_Value ceu_idx_93479 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93479), ceu_idx_93479));
+                        ceu_gc_dec_val((ceu_mem->col_93479));
+                        ceu_gc_dec_val(ceu_idx_93479);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 77, col 16) : iup[:vbox]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93482 = CEU_ACC_KEEP();
+                    if (ceu_clo_93482.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93482);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 77, col 16) : iup[:vbox]()"
+                        );
+                    }
+                    CEUX ceux_93482 = {
+                        (CEU_Clo*) ceu_clo_93482.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        0,
+                        (ceu_mem->args_93482)
+                    };
+                    ceu_clo_93482.Dyn->Clo.proto(&ceux_93482);
+                    ceu_gc_dec_val(ceu_clo_93482);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 77, col 16) : iup[:vbox]()");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 77, col 5) : (val vbox = iup[:vbox]())"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        (ceu_mem->vbox_93483) = ceu_acc;
+                    
+                
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93517)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MARGIN} }));
+                            (ceu_mem->args_93517)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93515) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93515), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93515), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='x'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93515), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93515), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93515), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93515));
+                }
+            
+                            (ceu_mem->args_93517)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93491) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93491 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93491), ceu_idx_93491));
+                        ceu_gc_dec_val((ceu_mem->col_93491));
+                        ceu_gc_dec_val(ceu_idx_93491);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 78, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93517 = CEU_ACC_KEEP();
+                    if (ceu_clo_93517.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93517);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 78, col 9) : iup[:set](vbox,:MARGIN,#['1','0','x','1','..."
+                        );
+                    }
+                    CEUX ceux_93517 = {
+                        (CEU_Clo*) ceu_clo_93517.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93517)
+                    };
+                    ceu_clo_93517.Dyn->Clo.proto(&ceux_93517);
+                    ceu_gc_dec_val(ceu_clo_93517);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 78, col 9) : iup[:set](vbox,:MARGIN,#['1','0','x','1','...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93541)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_GAP} }));
+                            (ceu_mem->args_93541)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93539) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93539), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93539), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93539));
+                }
+            
+                            (ceu_mem->args_93541)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93524) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93524 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93524), ceu_idx_93524));
+                        ceu_gc_dec_val((ceu_mem->col_93524));
+                        ceu_gc_dec_val(ceu_idx_93524);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 79, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93541 = CEU_ACC_KEEP();
+                    if (ceu_clo_93541.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93541);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 79, col 9) : iup[:set](vbox,:GAP,#['1','0'])"
+                        );
+                    }
+                    CEUX ceux_93541 = {
+                        (CEU_Clo*) ceu_clo_93541.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93541)
+                    };
+                    ceu_clo_93541.Dyn->Clo.proto(&ceux_93541);
+                    ceu_gc_dec_val(ceu_clo_93541);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 79, col 9) : iup[:set](vbox,:GAP,#['1','0'])");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93556)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->list_92736));
+                    
+                            (ceu_mem->args_93556)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93548) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
+                        
+                    CEU_Value ceu_idx_93548 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93548), ceu_idx_93548));
+                        ceu_gc_dec_val((ceu_mem->col_93548));
+                        ceu_gc_dec_val(ceu_idx_93548);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 80, col 9) : iup[:append]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93556 = CEU_ACC_KEEP();
+                    if (ceu_clo_93556.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93556);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 80, col 9) : iup[:append](vbox,list)"
+                        );
+                    }
+                    CEUX ceux_93556 = {
+                        (CEU_Clo*) ceu_clo_93556.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93556)
+                    };
+                    ceu_clo_93556.Dyn->Clo.proto(&ceux_93556);
+                    ceu_gc_dec_val(ceu_clo_93556);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 80, col 9) : iup[:append](vbox,list)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93571)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->start_92953));
+                    
+                            (ceu_mem->args_93571)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93563) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
+                        
+                    CEU_Value ceu_idx_93563 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93563), ceu_idx_93563));
+                        ceu_gc_dec_val((ceu_mem->col_93563));
+                        ceu_gc_dec_val(ceu_idx_93563);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 81, col 9) : iup[:append]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93571 = CEU_ACC_KEEP();
+                    if (ceu_clo_93571.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93571);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 81, col 9) : iup[:append](vbox,start)"
+                        );
+                    }
+                    CEUX ceux_93571 = {
+                        (CEU_Clo*) ceu_clo_93571.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93571)
+                    };
+                    ceu_clo_93571.Dyn->Clo.proto(&ceux_93571);
+                    ceu_gc_dec_val(ceu_clo_93571);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 81, col 9) : iup[:append](vbox,start)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93586)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93586)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93578) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
+                        
+                    CEU_Value ceu_idx_93578 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93578), ceu_idx_93578));
+                        ceu_gc_dec_val((ceu_mem->col_93578));
+                        ceu_gc_dec_val(ceu_idx_93578);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 82, col 9) : iup[:append]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93586 = CEU_ACC_KEEP();
+                    if (ceu_clo_93586.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93586);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 82, col 9) : iup[:append](vbox,end)"
+                        );
+                    }
+                    CEUX ceux_93586 = {
+                        (CEU_Clo*) ceu_clo_93586.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93586)
+                    };
+                    ceu_clo_93586.Dyn->Clo.proto(&ceux_93586);
+                    ceu_gc_dec_val(ceu_clo_93586);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 82, col 9) : iup[:append](vbox,end)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93601)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->button_93401));
+                    
+                            (ceu_mem->args_93601)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93593) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
+                        
+                    CEU_Value ceu_idx_93593 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93593), ceu_idx_93593));
+                        ceu_gc_dec_val((ceu_mem->col_93593));
+                        ceu_gc_dec_val(ceu_idx_93593);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 83, col 9) : iup[:append]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93601 = CEU_ACC_KEEP();
+                    if (ceu_clo_93601.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93601);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 83, col 9) : iup[:append](vbox,button)"
+                        );
+                    }
+                    CEUX ceux_93601 = {
+                        (CEU_Clo*) ceu_clo_93601.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93601)
+                    };
+                    ceu_clo_93601.Dyn->Clo.proto(&ceux_93601);
+                    ceu_gc_dec_val(ceu_clo_93601);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 83, col 9) : iup[:append](vbox,button)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->vbox_93483));
+                    
+                            (ceu_mem->args_93617)[0] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93612) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }));
+                        
+                    CEU_Value ceu_idx_93612 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93612), ceu_idx_93612));
+                        ceu_gc_dec_val((ceu_mem->col_93612));
+                        ceu_gc_dec_val(ceu_idx_93612);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 85, col 15) : iup[:dialog]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93617 = CEU_ACC_KEEP();
+                    if (ceu_clo_93617.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93617);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 85, col 15) : iup[:dialog](vbox)"
+                        );
+                    }
+                    CEUX ceux_93617 = {
+                        (CEU_Clo*) ceu_clo_93617.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        1,
+                        (ceu_mem->args_93617)
+                    };
+                    ceu_clo_93617.Dyn->Clo.proto(&ceux_93617);
+                    ceu_gc_dec_val(ceu_clo_93617);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 85, col 15) : iup[:dialog](vbox)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 85, col 5) : (val dlg = iup[:dialog](vbox))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        (ceu_mem->dlg_93618) = ceu_acc;
+                    
+                
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->dlg_93618));
+                    
+                            (ceu_mem->args_93670)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_TITLE} }));
+                            (ceu_mem->args_93670)[1] = CEU_ACC_KEEP();
+                        
+                { // VECTOR | 
+                     (ceu_mem->vec_93668) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='B'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='o'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='k'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='F'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='g'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93668), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
+                        
+                    CEU_ACC((ceu_mem->vec_93668));
+                }
+            
+                            (ceu_mem->args_93670)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93626) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
+                        
+                    CEU_Value ceu_idx_93626 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93626), ceu_idx_93626));
+                        ceu_gc_dec_val((ceu_mem->col_93626));
+                        ceu_gc_dec_val(ceu_idx_93626);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 86, col 9) : iup[:set]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93670 = CEU_ACC_KEEP();
+                    if (ceu_clo_93670.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93670);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 86, col 9) : iup[:set](dlg,:TITLE,#['B','o','o','k',' '..."
+                        );
+                    }
+                    CEUX ceux_93670 = {
+                        (CEU_Clo*) ceu_clo_93670.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93670)
+                    };
+                    ceu_clo_93670.Dyn->Clo.proto(&ceux_93670);
+                    ceu_gc_dec_val(ceu_clo_93670);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 86, col 9) : iup[:set](dlg,:TITLE,#['B','o','o','k',' '...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->dlg_93618));
+                    
+                            (ceu_mem->args_93688)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
+                            (ceu_mem->args_93688)[1] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
+                            (ceu_mem->args_93688)[2] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93677) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }));
+                        
+                    CEU_Value ceu_idx_93677 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93677), ceu_idx_93677));
+                        ceu_gc_dec_val((ceu_mem->col_93677));
+                        ceu_gc_dec_val(ceu_idx_93677);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 88, col 5) : iup[:show-xy]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93688 = CEU_ACC_KEEP();
+                    if (ceu_clo_93688.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93688);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 88, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`..."
+                        );
+                    }
+                    CEUX ceux_93688 = {
+                        (CEU_Clo*) ceu_clo_93688.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        3,
+                        (ceu_mem->args_93688)
+                    };
+                    ceu_clo_93688.Dyn->Clo.proto(&ceux_93688);
+                    ceu_gc_dec_val(ceu_clo_93688);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 88, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`...");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            // GROUP | 
+
+                // LOOP | 
+                CEU_LOOP_START_94868:
+                    
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_93266) = NULL;
+                          (ceu_mem->block_94867) = NULL;
                     
                     
                     
@@ -66449,13 +67283,246 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->color_93245) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->act2_question__93721) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_84899_93205) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->val2_question__93747) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_and_84681_93153) = (CEU_Value) { CEU_VALUE_NIL };
+                            }
+                            
+                
+                    
+                    
+                    do { // BLOCK | 
+                        // GROUP | 
+
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93720)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ACTIVE} }));
+                            (ceu_mem->args_93720)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93707) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_93707 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93707), ceu_idx_93707));
+                        ceu_gc_dec_val((ceu_mem->col_93707));
+                        ceu_gc_dec_val(ceu_idx_93707);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 91, col 21) : iup[:get]");
+                    
+                }
+                
+                     (ceu_mem->col_93712) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_93712 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93712), ceu_idx_93712));
+                        ceu_gc_dec_val((ceu_mem->col_93712));
+                        ceu_gc_dec_val(ceu_idx_93712);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 91, col 21) : iup[:get][:bool]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93720 = CEU_ACC_KEEP();
+                    if (ceu_clo_93720.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93720);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 91, col 21) : iup[:get][:bool](end,:ACTIVE)"
+                        );
+                    }
+                    CEUX ceux_93720 = {
+                        (CEU_Clo*) ceu_clo_93720.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93720)
+                    };
+                    ceu_clo_93720.Dyn->Clo.proto(&ceux_93720);
+                    ceu_gc_dec_val(ceu_clo_93720);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 91, col 21) : iup[:get][:bool](end,:ACTIVE)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 91, col 9) : (val act2? = iup[:get][:bool](end,:ACTIVE))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        (ceu_mem->act2_question__93721) = ceu_acc;
+                    
+                
+                // DCL | 
+                
+                        
+                { // CALL | 
+                    
+                    
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->end_93161));
+                    
+                            (ceu_mem->args_93746)[0] = CEU_ACC_KEEP();
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALID} }));
+                            (ceu_mem->args_93746)[1] = CEU_ACC_KEEP();
+                        
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                { // INDEX | 
+                    // VAL
+                    
+                    
+                    // COL
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_iup);
+                    
+                     (ceu_mem->col_93733) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_93733 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93733), ceu_idx_93733));
+                        ceu_gc_dec_val((ceu_mem->col_93733));
+                        ceu_gc_dec_val(ceu_idx_93733);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 21) : iup[:get]");
+                    
+                }
+                
+                     (ceu_mem->col_93738) = CEU_ACC_KEEP();
+
+                    // IDX
+                    
+                        CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
+                        
+                    CEU_Value ceu_idx_93738 = CEU_ACC_KEEP();
+                
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93738), ceu_idx_93738));
+                        ceu_gc_dec_val((ceu_mem->col_93738));
+                        ceu_gc_dec_val(ceu_idx_93738);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 21) : iup[:get][:bool]");
+                    
+                }
+                
+                    CEU_Value ceu_clo_93746 = CEU_ACC_KEEP();
+                    if (ceu_clo_93746.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93746);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "03_flight.ceu : (lin 92, col 21) : iup[:get][:bool](end,:VALID)"
+                        );
+                    }
+                    CEUX ceux_93746 = {
+                        (CEU_Clo*) ceu_clo_93746.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_93746)
+                    };
+                    ceu_clo_93746.Dyn->Clo.proto(&ceux_93746);
+                    ceu_gc_dec_val(ceu_clo_93746);
+                    
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 92, col 21) : iup[:get][:bool](end,:VALID)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
+                        #ifdef CEU_LEX
+                        
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
+                            "03_flight.ceu : (lin 92, col 9) : (val val2? = iup[:get][:bool](end,:VALID))"
+                        );
+                        #endif
+                        ceu_gc_inc_val(ceu_acc);
+                        (ceu_mem->val2_question__93747) = ceu_acc;
+                    
+                
+                { // BLOCK | 
+            #ifdef CEU_LEX
+                    ceux->depth++;
+            #endif
+                    
+                          (ceu_mem->block_93920) = NULL;
+                    
+                    
+                    
+                    
+                            
+                            { // vars inits
                                 
-                                    (ceu_mem->ceu_or_84567_93121) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->color_93899) = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    (ceu_mem->ceu_or_85161_93859) = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    (ceu_mem->ceu_and_84943_93807) = (CEU_Value) { CEU_VALUE_NIL };
+                                
+                                    (ceu_mem->ceu_or_84829_93775) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -66480,7 +67547,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->val2_question__93093));
+                        CEU_ACC((ceu_mem->val2_question__93747));
                     
                         #ifdef CEU_LEX
                         
@@ -66489,17 +67556,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 88, col 41) : (val' ceu_or = val2?)"
+                            "03_flight.ceu : (lin 95, col 41) : (val' ceu_or = val2?)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_84567_93121) = ceu_acc;
+                        (ceu_mem->ceu_or_84829_93775) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_84567_93121));
+                        CEU_ACC((ceu_mem->ceu_or_84829_93775));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -66507,7 +67574,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_84567_93121));
+                        CEU_ACC((ceu_mem->ceu_or_84829_93775));
                     
                         } else {
                             // GROUP | 
@@ -66515,7 +67582,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->act2_question__93067));
+                        CEU_ACC((ceu_mem->act2_question__93721));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -66540,17 +67607,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 91, col 11) : (val' ceu_and = group { (val' ceu_or = val..."
+                            "03_flight.ceu : (lin 98, col 11) : (val' ceu_and = group { (val' ceu_or = val..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_and_84681_93153) = ceu_acc;
+                        (ceu_mem->ceu_and_84943_93807) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_84681_93153));
+                        CEU_ACC((ceu_mem->ceu_and_84943_93807));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -66558,38 +67625,38 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                 { // VECTOR | 
-                     (ceu_mem->vec_93193) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_93847) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93193), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93847), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_93193));
+                    CEU_ACC((ceu_mem->vec_93847));
                 }
             
                         } else {
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_84681_93153));
+                        CEU_ACC((ceu_mem->ceu_and_84943_93807));
                     
                         }
                     }
@@ -66602,17 +67669,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 90, col 11) : (val' ceu_or = group { (val' ceu_and = gro..."
+                            "03_flight.ceu : (lin 97, col 11) : (val' ceu_or = group { (val' ceu_and = gro..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_84899_93205) = ceu_acc;
+                        (ceu_mem->ceu_or_85161_93859) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_84899_93205));
+                        CEU_ACC((ceu_mem->ceu_or_85161_93859));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -66620,29 +67687,29 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_84899_93205));
+                        CEU_ACC((ceu_mem->ceu_or_85161_93859));
                     
                         } else {
                             // GROUP | 
 
                 { // VECTOR | 
-                     (ceu_mem->vec_93239) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_93893) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='2'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_93239), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_93893), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_93239));
+                    CEU_ACC((ceu_mem->vec_93893));
                 }
             
                         }
@@ -66654,27 +67721,27 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 88, col 13) : (val color = group { (val' ceu_or = group ..."
+                            "03_flight.ceu : (lin 95, col 13) : (val color = group { (val' ceu_or = group ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->color_93245) = ceu_acc;
+                        (ceu_mem->color_93899) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->end_92507));
+                        CEU_ACC((ceu_mem->end_93161));
                     
-                            (ceu_mem->args_93264)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93918)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_BGCOLOR} }));
-                            (ceu_mem->args_93264)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93918)[1] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->color_93245));
+                        CEU_ACC((ceu_mem->color_93899));
                     
-                            (ceu_mem->args_93264)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_93918)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -66686,32 +67753,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_93253) = CEU_ACC_KEEP();
+                     (ceu_mem->col_93907) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_93253 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_93907 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_93253), ceu_idx_93253));
-                        ceu_gc_dec_val((ceu_mem->col_93253));
-                        ceu_gc_dec_val(ceu_idx_93253);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 87, col 9) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_93907), ceu_idx_93907));
+                        ceu_gc_dec_val((ceu_mem->col_93907));
+                        ceu_gc_dec_val(ceu_idx_93907);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 94, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_93264 = CEU_ACC_KEEP();
-                    if (ceu_clo_93264.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93264);
+                    CEU_Value ceu_clo_93918 = CEU_ACC_KEEP();
+                    if (ceu_clo_93918.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_93918);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 87, col 9) : iup[:set](end,:BGCOLOR,color)"
+                            "03_flight.ceu : (lin 94, col 9) : iup[:set](end,:BGCOLOR,color)"
                         );
                     }
-                    CEUX ceux_93264 = {
-                        (CEU_Clo*) ceu_clo_93264.Dyn,
+                    CEUX ceux_93918 = {
+                        (CEU_Clo*) ceu_clo_93918.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -66720,12 +67787,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_93264)
+                        (ceu_mem->args_93918)
                     };
-                    ceu_clo_93264.Dyn->Clo.proto(&ceux_93264);
-                    ceu_gc_dec_val(ceu_clo_93264);
+                    ceu_clo_93918.Dyn->Clo.proto(&ceux_93918);
+                    ceu_gc_dec_val(ceu_clo_93918);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 87, col 9) : iup[:set](end,:BGCOLOR,color)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 94, col 9) : iup[:set](end,:BGCOLOR,color)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -66740,16 +67807,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_93266 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_93920 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_93266) != NULL) {
-                            CEU_LNKS((ceu_mem->block_93266))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_93920) != NULL) {
+                            CEU_LNKS((ceu_mem->block_93920))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_93266));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_93920));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -66761,18 +67828,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_or_84567_93121));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_84829_93775));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_and_84681_93153));
+                                ceu_gc_dec_val((ceu_mem->ceu_and_84943_93807));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_or_84899_93205));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_85161_93859));
                             
-                                ceu_gc_dec_val((ceu_mem->color_93245));
+                                ceu_gc_dec_val((ceu_mem->color_93899));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_93266;
+                    ceu_acc = ceu_acc_93920;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -66798,7 +67865,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_94159) = NULL;
+                          (ceu_mem->block_94862) = NULL;
                     
                     
                     
@@ -66806,9 +67873,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_par_0_86202_93505) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_par_0_86466_94159) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_par_1_86202_93916) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_par_1_86466_94619) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -66831,10 +67898,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_93498,
+                            ceu_pro_94152,
                             0,
                             2
-                            , sizeof(CEU_Pro_93498)
+                            , sizeof(CEU_Pro_94152)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
@@ -66844,14 +67911,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     {                        
                         
                             {
-                                CEU_Value upv = (ceu_mem->list_92082);
+                                CEU_Value upv = (ceu_mem->list_92736);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[0] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->end_92507);
+                                CEU_Value upv = (ceu_mem->end_93161);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[1] = upv;
                             }
@@ -66859,11 +67926,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_93503 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_93503 = &(ceu_mem->block_94159);
-                    CEU_Value ceu_exe_93503 = ceu_create_exe_task(ceu_acc, ceu_a_93503, ceu_b_93503 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_93503);
-                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 108, col 30) : (spawn (task' :fake () { group { do { (var...");
+                    CEU_Dyn* ceu_a_94157 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_94157 = &(ceu_mem->block_94862);
+                    CEU_Value ceu_exe_94157 = ceu_create_exe_task(ceu_acc, ceu_a_94157, ceu_b_94157 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_94157);
+                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 115, col 30) : (spawn (task' :fake () { group { do { (var...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -66871,35 +67938,35 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "03_flight.ceu : (lin 108, col 30) : (spawn (task' :fake () { group { do { (var..."
+                        "03_flight.ceu : (lin 115, col 30) : (spawn (task' :fake () { group { do { (var..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_93503 = {
-                            ceu_exe_93503.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_93503.Dyn},
+                        CEUX ceux_94157 = {
+                            ceu_exe_94157.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_94157.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_93503.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_94157.Dyn->Exe.depth COMMA)
                             0,
-                            (ceu_mem->args_93503)
+                            (ceu_mem->args_94157)
                         };
-                        ceu_exe_93503.Dyn->Exe.clo->proto(&ceux_93503);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_93503);continue;}, "03_flight.ceu : (lin 108, col 30) : (spawn (task' :fake () { group { do { (var...");
+                        ceu_exe_94157.Dyn->Exe.clo->proto(&ceux_94157);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_94157);continue;}, "03_flight.ceu : (lin 115, col 30) : (spawn (task' :fake () { group { do { (var...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_93503);
+                            ceu_gc_dec_val(ceu_exe_94157);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                {ceu_gc_dec_val(ceu_exe_93503);continue;};
+                {ceu_gc_dec_val(ceu_exe_94157);continue;};
             }
         
-                        ceu_acc = ceu_exe_93503;
+                        ceu_acc = ceu_exe_94157;
                     }
                 } // SPAWN | 
                 
@@ -66908,11 +67975,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 93, col 29) : (val ceu_par = (spawn (task' :fake () { gr..."
+                            "03_flight.ceu : (lin 100, col 29) : (val ceu_par = (spawn (task' :fake () { gr..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_par_0_86202_93505) = ceu_acc;
+                        (ceu_mem->ceu_par_0_86466_94159) = ceu_acc;
                     
                 
                 // DCL | 
@@ -66929,39 +67996,46 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_93909,
+                            ceu_pro_94612,
                             0,
-                            2
-                            , sizeof(CEU_Pro_93909)
+                            3
+                            , sizeof(CEU_Pro_94612)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
                     );
                     
-                    // UPVALS = 2
+                    // UPVALS = 3
                     {                        
                         
                             {
-                                CEU_Value upv = (ceu_mem->start_92299);
+                                CEU_Value upv = (ceu_mem->start_92953);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[0] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->end_92507);
+                                CEU_Value upv = (ceu_mem->start_92953);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[1] = upv;
+                            }
+                            
+
+                            {
+                                CEU_Value upv = (ceu_mem->end_93161);
+                                ceu_gc_inc_val(upv);
+                                ceu_acc.Dyn->Clo.upvs.buf[2] = upv;
                             }
                             
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_93914 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_93914 = &(ceu_mem->block_94159);
-                    CEU_Value ceu_exe_93914 = ceu_create_exe_task(ceu_acc, ceu_a_93914, ceu_b_93914 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_93914);
-                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 122, col 30) : (spawn (task' :fake () { group { do { (var...");
+                    CEU_Dyn* ceu_a_94617 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_94617 = &(ceu_mem->block_94862);
+                    CEU_Value ceu_exe_94617 = ceu_create_exe_task(ceu_acc, ceu_a_94617, ceu_b_94617 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_94617);
+                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 132, col 30) : (spawn (task' :fake () { group { do { (var...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -66969,35 +68043,35 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "03_flight.ceu : (lin 122, col 30) : (spawn (task' :fake () { group { do { (var..."
+                        "03_flight.ceu : (lin 132, col 30) : (spawn (task' :fake () { group { do { (var..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_93914 = {
-                            ceu_exe_93914.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_93914.Dyn},
+                        CEUX ceux_94617 = {
+                            ceu_exe_94617.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_94617.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_93914.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_94617.Dyn->Exe.depth COMMA)
                             0,
-                            (ceu_mem->args_93914)
+                            (ceu_mem->args_94617)
                         };
-                        ceu_exe_93914.Dyn->Exe.clo->proto(&ceux_93914);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_93914);continue;}, "03_flight.ceu : (lin 122, col 30) : (spawn (task' :fake () { group { do { (var...");
+                        ceu_exe_94617.Dyn->Exe.clo->proto(&ceux_94617);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_94617);continue;}, "03_flight.ceu : (lin 132, col 30) : (spawn (task' :fake () { group { do { (var...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_93914);
+                            ceu_gc_dec_val(ceu_exe_94617);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                {ceu_gc_dec_val(ceu_exe_93914);continue;};
+                {ceu_gc_dec_val(ceu_exe_94617);continue;};
             }
         
-                        ceu_acc = ceu_exe_93914;
+                        ceu_acc = ceu_exe_94617;
                     }
                 } // SPAWN | 
                 
@@ -67006,24 +68080,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "03_flight.ceu : (lin 110, col 29) : (val ceu_par = (spawn (task' :fake () { gr..."
+                            "03_flight.ceu : (lin 117, col 29) : (val ceu_par = (spawn (task' :fake () { gr..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_par_1_86202_93916) = ceu_acc;
+                        (ceu_mem->ceu_par_1_86466_94619) = ceu_acc;
                     
                 
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_94154:
+                CEU_LOOP_START_94857:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_94153) = NULL;
+                          (ceu_mem->block_94856) = NULL;
                     
                     
                     
@@ -67044,7 +68118,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_94140) = NULL;
+                          (ceu_mem->block_94843) = NULL;
                     
                     
                     
@@ -67052,19 +68126,19 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_94116) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_94819) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_89869_94006) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_or_90474_94709) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_and_89328_93959) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_and_89933_94662) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_89270_93976) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_or_89875_94679) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_89685_94092) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_or_90290_94795) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_and_89548_94045) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_and_90153_94748) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->ceu_or_89490_94062) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_or_90095_94765) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -67091,25 +68165,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_par_0_86202_93505));
+                        CEU_ACC((ceu_mem->ceu_par_0_86466_94159));
                     
-                            (ceu_mem->args_93953)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94656)[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_status);
                     
-                    CEU_Value ceu_clo_93953 = CEU_ACC_KEEP();
-                    if (ceu_clo_93953.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93953);
+                    CEU_Value ceu_clo_94656 = CEU_ACC_KEEP();
+                    if (ceu_clo_94656.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94656);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 127, col 40) : status(ceu_par)"
+                            "03_flight.ceu : (lin 137, col 40) : status(ceu_par)"
                         );
                     }
-                    CEUX ceux_93953 = {
-                        (CEU_Clo*) ceu_clo_93953.Dyn,
+                    CEUX ceux_94656 = {
+                        (CEU_Clo*) ceu_clo_94656.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -67118,12 +68192,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_93953)
+                        (ceu_mem->args_94656)
                     };
-                    ceu_clo_93953.Dyn->Clo.proto(&ceux_93953);
-                    ceu_gc_dec_val(ceu_clo_93953);
+                    ceu_clo_94656.Dyn->Clo.proto(&ceux_94656);
+                    ceu_gc_dec_val(ceu_clo_94656);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 127, col 40) : status(ceu_par)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 137, col 40) : status(ceu_par)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -67132,25 +68206,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_93958)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94661)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_terminated} }));
-                            (ceu_mem->args_93958)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94661)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_93958 = CEU_ACC_KEEP();
-                    if (ceu_clo_93958.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_93958);
+                    CEU_Value ceu_clo_94661 = CEU_ACC_KEEP();
+                    if (ceu_clo_94661.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94661);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 127, col 64) : {{==}}(status(ceu_par),:terminated)"
+                            "03_flight.ceu : (lin 137, col 64) : {{==}}(status(ceu_par),:terminated)"
                         );
                     }
-                    CEUX ceux_93958 = {
-                        (CEU_Clo*) ceu_clo_93958.Dyn,
+                    CEUX ceux_94661 = {
+                        (CEU_Clo*) ceu_clo_94661.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -67159,12 +68233,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_93958)
+                        (ceu_mem->args_94661)
                     };
-                    ceu_clo_93958.Dyn->Clo.proto(&ceux_93958);
-                    ceu_gc_dec_val(ceu_clo_93958);
+                    ceu_clo_94661.Dyn->Clo.proto(&ceux_94661);
+                    ceu_gc_dec_val(ceu_clo_94661);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 127, col 64) : {{==}}(status(ceu_par),:terminated)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 137, col 64) : {{==}}(status(ceu_par),:terminated)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -67180,17 +68254,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 127, col 88) : (val' ceu_and = {{==}}(status(ceu_par),:te..."
+                            "03_flight.ceu : (lin 137, col 88) : (val' ceu_and = {{==}}(status(ceu_par),:te..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_and_89328_93959) = ceu_acc;
+                        (ceu_mem->ceu_and_89933_94662) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_89328_93959));
+                        CEU_ACC((ceu_mem->ceu_and_89933_94662));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67203,24 +68277,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         
                 { // PUB | 
                     
-                    CEU_Value ceu_tsk_98121; {
+                    CEU_Value ceu_tsk_98853; {
                         
                             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_par_0_86202_93505));
+                        CEU_ACC((ceu_mem->ceu_par_0_86466_94159));
                     
-                            ceu_tsk_98121 = ceu_acc;
-                            if (!ceu_istask_val(ceu_tsk_98121)) {
+                            ceu_tsk_98853 = ceu_acc;
+                            if (!ceu_istask_val(ceu_tsk_98853)) {
                                 CEU_ERROR_CHK_PTR (
                                     continue,
                                     "expected task",
-                                    "03_flight.ceu : (lin 127, col 85) : ceu_par.pub"
+                                    "03_flight.ceu : (lin 137, col 85) : ceu_par.pub"
                                 );
                             }
                         
                     }
                     
-                            CEU_ACC(ceu_tsk_98121.Dyn->Exe_Task.pub);                        
+                            CEU_ACC(ceu_tsk_98853.Dyn->Exe_Task.pub);                        
                         
                 }
                 
@@ -67231,17 +68305,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 127, col 113) : (val' ceu_or = ceu_par.pub)"
+                            "03_flight.ceu : (lin 137, col 113) : (val' ceu_or = ceu_par.pub)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_89270_93976) = ceu_acc;
+                        (ceu_mem->ceu_or_89875_94679) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89270_93976));
+                        CEU_ACC((ceu_mem->ceu_or_89875_94679));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67249,7 +68323,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89270_93976));
+                        CEU_ACC((ceu_mem->ceu_or_89875_94679));
                     
                         } else {
                             // GROUP | 
@@ -67262,7 +68336,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_89328_93959));
+                        CEU_ACC((ceu_mem->ceu_and_89933_94662));
                     
                         }
                     }
@@ -67275,17 +68349,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 131, col 11) : (val' ceu_or = group { (val' ceu_and = {{=..."
+                            "03_flight.ceu : (lin 141, col 11) : (val' ceu_or = group { (val' ceu_and = {{=..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_89869_94006) = ceu_acc;
+                        (ceu_mem->ceu_or_90474_94709) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89869_94006));
+                        CEU_ACC((ceu_mem->ceu_or_90474_94709));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67293,7 +68367,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89869_94006));
+                        CEU_ACC((ceu_mem->ceu_or_90474_94709));
                     
                         } else {
                             // GROUP | 
@@ -67313,25 +68387,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_par_1_86202_93916));
+                        CEU_ACC((ceu_mem->ceu_par_1_86466_94619));
                     
-                            (ceu_mem->args_94039)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94742)[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_status);
                     
-                    CEU_Value ceu_clo_94039 = CEU_ACC_KEEP();
-                    if (ceu_clo_94039.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_94039);
+                    CEU_Value ceu_clo_94742 = CEU_ACC_KEEP();
+                    if (ceu_clo_94742.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94742);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 129, col 40) : status(ceu_par)"
+                            "03_flight.ceu : (lin 139, col 40) : status(ceu_par)"
                         );
                     }
-                    CEUX ceux_94039 = {
-                        (CEU_Clo*) ceu_clo_94039.Dyn,
+                    CEUX ceux_94742 = {
+                        (CEU_Clo*) ceu_clo_94742.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -67340,12 +68414,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_94039)
+                        (ceu_mem->args_94742)
                     };
-                    ceu_clo_94039.Dyn->Clo.proto(&ceux_94039);
-                    ceu_gc_dec_val(ceu_clo_94039);
+                    ceu_clo_94742.Dyn->Clo.proto(&ceux_94742);
+                    ceu_gc_dec_val(ceu_clo_94742);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 129, col 40) : status(ceu_par)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 139, col 40) : status(ceu_par)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -67354,25 +68428,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_94044)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94747)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_terminated} }));
-                            (ceu_mem->args_94044)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_94747)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_94044 = CEU_ACC_KEEP();
-                    if (ceu_clo_94044.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_94044);
+                    CEU_Value ceu_clo_94747 = CEU_ACC_KEEP();
+                    if (ceu_clo_94747.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94747);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 129, col 64) : {{==}}(status(ceu_par),:terminated)"
+                            "03_flight.ceu : (lin 139, col 64) : {{==}}(status(ceu_par),:terminated)"
                         );
                     }
-                    CEUX ceux_94044 = {
-                        (CEU_Clo*) ceu_clo_94044.Dyn,
+                    CEUX ceux_94747 = {
+                        (CEU_Clo*) ceu_clo_94747.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -67381,12 +68455,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_94044)
+                        (ceu_mem->args_94747)
                     };
-                    ceu_clo_94044.Dyn->Clo.proto(&ceux_94044);
-                    ceu_gc_dec_val(ceu_clo_94044);
+                    ceu_clo_94747.Dyn->Clo.proto(&ceux_94747);
+                    ceu_gc_dec_val(ceu_clo_94747);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 129, col 64) : {{==}}(status(ceu_par),:terminated)");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 139, col 64) : {{==}}(status(ceu_par),:terminated)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -67402,17 +68476,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 129, col 88) : (val' ceu_and = {{==}}(status(ceu_par),:te..."
+                            "03_flight.ceu : (lin 139, col 88) : (val' ceu_and = {{==}}(status(ceu_par),:te..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_and_89548_94045) = ceu_acc;
+                        (ceu_mem->ceu_and_90153_94748) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_89548_94045));
+                        CEU_ACC((ceu_mem->ceu_and_90153_94748));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67425,24 +68499,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         
                 { // PUB | 
                     
-                    CEU_Value ceu_tsk_98121; {
+                    CEU_Value ceu_tsk_98853; {
                         
                             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_par_1_86202_93916));
+                        CEU_ACC((ceu_mem->ceu_par_1_86466_94619));
                     
-                            ceu_tsk_98121 = ceu_acc;
-                            if (!ceu_istask_val(ceu_tsk_98121)) {
+                            ceu_tsk_98853 = ceu_acc;
+                            if (!ceu_istask_val(ceu_tsk_98853)) {
                                 CEU_ERROR_CHK_PTR (
                                     continue,
                                     "expected task",
-                                    "03_flight.ceu : (lin 129, col 85) : ceu_par.pub"
+                                    "03_flight.ceu : (lin 139, col 85) : ceu_par.pub"
                                 );
                             }
                         
                     }
                     
-                            CEU_ACC(ceu_tsk_98121.Dyn->Exe_Task.pub);                        
+                            CEU_ACC(ceu_tsk_98853.Dyn->Exe_Task.pub);                        
                         
                 }
                 
@@ -67453,17 +68527,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 129, col 113) : (val' ceu_or = ceu_par.pub)"
+                            "03_flight.ceu : (lin 139, col 113) : (val' ceu_or = ceu_par.pub)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_89490_94062) = ceu_acc;
+                        (ceu_mem->ceu_or_90095_94765) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89490_94062));
+                        CEU_ACC((ceu_mem->ceu_or_90095_94765));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67471,7 +68545,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89490_94062));
+                        CEU_ACC((ceu_mem->ceu_or_90095_94765));
                     
                         } else {
                             // GROUP | 
@@ -67484,7 +68558,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_and_89548_94045));
+                        CEU_ACC((ceu_mem->ceu_and_90153_94748));
                     
                         }
                     }
@@ -67497,17 +68571,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 133, col 11) : (val' ceu_or = group { (val' ceu_and = {{=..."
+                            "03_flight.ceu : (lin 143, col 11) : (val' ceu_or = group { (val' ceu_and = {{=..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_or_89685_94092) = ceu_acc;
+                        (ceu_mem->ceu_or_90290_94795) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89685_94092));
+                        CEU_ACC((ceu_mem->ceu_or_90290_94795));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67515,7 +68589,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_or_89685_94092));
+                        CEU_ACC((ceu_mem->ceu_or_90290_94795));
                     
                         } else {
                             // GROUP | 
@@ -67535,17 +68609,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "03_flight.ceu : (lin 134, col 8) : (val' it = group { (val' ceu_or = group { ..."
+                            "03_flight.ceu : (lin 144, col 8) : (val' it = group { (val' ceu_or = group { ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_94116) = ceu_acc;
+                        (ceu_mem->it_94819) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_94116));
+                        CEU_ACC((ceu_mem->it_94819));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -67556,7 +68630,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=0} }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_94116));
+                        CEU_ACC((ceu_mem->it_94819));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -67576,16 +68650,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94140 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94843 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_94140) != NULL) {
-                            CEU_LNKS((ceu_mem->block_94140))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94843) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94843))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_94140));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94843));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -67597,24 +68671,24 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_or_89490_94062));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_90095_94765));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_and_89548_94045));
+                                ceu_gc_dec_val((ceu_mem->ceu_and_90153_94748));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_or_89685_94092));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_90290_94795));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_or_89270_93976));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_89875_94679));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_and_89328_93959));
+                                ceu_gc_dec_val((ceu_mem->ceu_and_89933_94662));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_or_89869_94006));
+                                ceu_gc_dec_val((ceu_mem->ceu_or_90474_94709));
                             
-                                ceu_gc_dec_val((ceu_mem->it_94116));
+                                ceu_gc_dec_val((ceu_mem->it_94819));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94140;
+                    ceu_acc = ceu_acc_94843;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -67638,17 +68712,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 94146;
+                    ceux->exe->pc = 94849;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
                         continue,
                         ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, 1 }),
-                        "03_flight.ceu : (lin 132, col 29) : yield(nil)"
+                        "03_flight.ceu : (lin 142, col 29) : yield(nil)"
                     );
                 #endif
                     return;
-                case 94146: // YIELD 
+                case 94849: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -67669,23 +68743,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 ceux->exe_task->time = CEU_TIME;
             
                         
-                            CEU_LOOP_STOP_94154:
+                            CEU_LOOP_STOP_94857:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94153 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94856 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_94153) != NULL) {
-                            CEU_LNKS((ceu_mem->block_94153))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94856) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94856))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_94153));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94856));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -67700,7 +68774,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94153;
+                    ceu_acc = ceu_acc_94856;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -67721,7 +68795,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_94154;
+                    goto CEU_LOOP_START_94857;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -67746,16 +68820,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94159 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94862 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_94159) != NULL) {
-                            CEU_LNKS((ceu_mem->block_94159))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94862) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94862))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_94159));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94862));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -67767,14 +68841,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_par_1_86202_93916));
+                                ceu_gc_dec_val((ceu_mem->ceu_par_1_86466_94619));
                             
-                                ceu_gc_dec_val((ceu_mem->ceu_par_0_86202_93505));
+                                ceu_gc_dec_val((ceu_mem->ceu_par_0_86466_94159));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94159;
+                    ceu_acc = ceu_acc_94862;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -67796,23 +68870,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_94165:
+                            CEU_LOOP_STOP_94868:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94164 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94867 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_94164) != NULL) {
-                            CEU_LNKS((ceu_mem->block_94164))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94867) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94867))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_94164));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94867));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -67824,14 +68898,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->val2_question__93093));
+                                ceu_gc_dec_val((ceu_mem->val2_question__93747));
                             
-                                ceu_gc_dec_val((ceu_mem->act2_question__93067));
+                                ceu_gc_dec_val((ceu_mem->act2_question__93721));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94164;
+                    ceu_acc = ceu_acc_94867;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -67852,7 +68926,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_94165;
+                    goto CEU_LOOP_START_94868;
             
                         
                     } while (0);
@@ -67860,16 +68934,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94173 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94876 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_94173) != NULL) {
-                            CEU_LNKS((ceu_mem->block_94173))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_94876) != NULL) {
+                            CEU_LNKS((ceu_mem->block_94876))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_94173));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_94876));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -67881,22 +68955,22 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->dlg_92964));
+                                ceu_gc_dec_val((ceu_mem->dlg_93618));
                             
-                                ceu_gc_dec_val((ceu_mem->vbox_92829));
+                                ceu_gc_dec_val((ceu_mem->vbox_93483));
                             
-                                ceu_gc_dec_val((ceu_mem->button_92747));
+                                ceu_gc_dec_val((ceu_mem->button_93401));
                             
-                                ceu_gc_dec_val((ceu_mem->end_92507));
+                                ceu_gc_dec_val((ceu_mem->end_93161));
                             
-                                ceu_gc_dec_val((ceu_mem->start_92299));
+                                ceu_gc_dec_val((ceu_mem->start_92953));
                             
-                                ceu_gc_dec_val((ceu_mem->list_92082));
+                                ceu_gc_dec_val((ceu_mem->list_92736));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94173;
+                    ceu_acc = ceu_acc_94876;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -67922,10 +68996,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_94174 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_94877 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_94174;
+                            ceu_acc = ceu_acc_94877;
                         }
 
                         
@@ -67955,7 +69029,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_94235 = NULL;
+                         CEU_Block ceu_block_94938 = NULL;
                     
                     
                         { // ARGC / ARGV
@@ -75136,8 +76210,8 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                 { // SPAWN | 
                     
-                        CEU_Value ceu_tsks_94179;
-                        CEU_Value ceu_args_94179[0];
+                        CEU_Value ceu_tsks_94882;
+                        CEU_Value ceu_args_94882[0];
                     
 
                     
@@ -75148,10 +76222,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_94174,
+                            ceu_pro_94877,
                             0,
                             0
-                            , sizeof(CEU_Pro_94174)
+                            , sizeof(CEU_Pro_94877)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
@@ -75163,11 +76237,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_94179 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_94179 = &ceu_block_94235;
-                    CEU_Value ceu_exe_94179 = ceu_create_exe_task(ceu_acc, ceu_a_94179, ceu_b_94179 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_94179);
-                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 111, col 2) : (spawn (task' :fake () { group { (val list...");
+                    CEU_Dyn* ceu_a_94882 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_94882 = &ceu_block_94938;
+                    CEU_Value ceu_exe_94882 = ceu_create_exe_task(ceu_acc, ceu_a_94882, ceu_b_94882 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_94882);
+                    CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 121, col 2) : (spawn (task' :fake () { group { (val list...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -75175,37 +76249,37 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "03_flight.ceu : (lin 111, col 2) : (spawn (task' :fake () { group { (val list..."
+                        "03_flight.ceu : (lin 121, col 2) : (spawn (task' :fake () { group { (val list..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_94179 = {
-                            ceu_exe_94179.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_94179.Dyn},
+                        CEUX ceux_94882 = {
+                            ceu_exe_94882.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_94882.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_94179.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_94882.Dyn->Exe.depth COMMA)
                             0,
-                            ceu_args_94179
+                            ceu_args_94882
                         };
-                        ceu_exe_94179.Dyn->Exe.clo->proto(&ceux_94179);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_94179);continue;}, "03_flight.ceu : (lin 111, col 2) : (spawn (task' :fake () { group { (val list...");
+                        ceu_exe_94882.Dyn->Exe.clo->proto(&ceux_94882);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_94882);continue;}, "03_flight.ceu : (lin 121, col 2) : (spawn (task' :fake () { group { (val list...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_94179);
+                            ceu_gc_dec_val(ceu_exe_94882);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
-                        ceu_acc = ceu_exe_94179;
+                        ceu_acc = ceu_exe_94882;
                     }
                 } // SPAWN | 
                 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_94190[0];
+                        CEU_Value ceu_args_94893[0];
                     
                     
                     
@@ -75218,32 +76292,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                    CEU_Value ceu_col_94187 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_94890 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_94187 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_94890 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_94187, ceu_idx_94187));
-                        ceu_gc_dec_val(ceu_col_94187);
-                        ceu_gc_dec_val(ceu_idx_94187);
-                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 113, col 1) : iup[:loop]");
+                        CEU_ACC(ceu_col_get(ceu_col_94890, ceu_idx_94890));
+                        ceu_gc_dec_val(ceu_col_94890);
+                        ceu_gc_dec_val(ceu_idx_94890);
+                        CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 123, col 1) : iup[:loop]");
                     
                 }
                 
-                    CEU_Value ceu_clo_94190 = CEU_ACC_KEEP();
-                    if (ceu_clo_94190.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_94190);
+                    CEU_Value ceu_clo_94893 = CEU_ACC_KEEP();
+                    if (ceu_clo_94893.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_94893);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "03_flight.ceu : (lin 113, col 1) : iup[:loop]()"
+                            "03_flight.ceu : (lin 123, col 1) : iup[:loop]()"
                         );
                     }
-                    CEUX ceux_94190 = {
-                        (CEU_Clo*) ceu_clo_94190.Dyn,
+                    CEUX ceux_94893 = {
+                        (CEU_Clo*) ceu_clo_94893.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -75252,12 +76326,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        ceu_args_94190
+                        ceu_args_94893
                     };
-                    ceu_clo_94190.Dyn->Clo.proto(&ceux_94190);
-                    ceu_gc_dec_val(ceu_clo_94190);
+                    ceu_clo_94893.Dyn->Clo.proto(&ceux_94893);
+                    ceu_gc_dec_val(ceu_clo_94893);
                     
-            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 113, col 1) : iup[:loop]()");
+            CEU_ERROR_CHK_ERR(continue, "03_flight.ceu : (lin 123, col 1) : iup[:loop]()");
             
         
                 } // CALL | 
@@ -75268,7 +76342,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_94235 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_94938 = CEU_ACC_KEEP();
 
                     
                         { // BLOCK | defers | term | 
@@ -75365,11 +76439,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                     
-                        if (ceu_block_94235 != NULL) {
-                            CEU_LNKS(ceu_block_94235)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_94938 != NULL) {
+                            CEU_LNKS(ceu_block_94938)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_94235);
+                            CEU_Block cur = ceu_task_get(ceu_block_94938);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -75624,7 +76698,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_94235;
+                    ceu_acc = ceu_acc_94938;
                     
             #ifdef CEU_LEX
                     ceux->depth--;

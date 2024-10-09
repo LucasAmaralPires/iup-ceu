@@ -663,20 +663,20 @@
             #define CEU_TAG_IUP (48)
             CEU_Tags_Names ceu_tag__IUP = { CEU_TAG_IUP, ":IUP", &ceu_tag__PICO_dash_Get };
             
-            #define CEU_TAG_set (49)
-            CEU_Tags_Names ceu_tag__set = { CEU_TAG_set, ":set", &ceu_tag__IUP };
+            #define CEU_TAG_floor (49)
+            CEU_Tags_Names ceu_tag__floor = { CEU_TAG_floor, ":floor", &ceu_tag__IUP };
             
-            #define CEU_TAG_floor (50)
-            CEU_Tags_Names ceu_tag__floor = { CEU_TAG_floor, ":floor", &ceu_tag__set };
-            
-            #define CEU_TAG_label (51)
+            #define CEU_TAG_label (50)
             CEU_Tags_Names ceu_tag__label = { CEU_TAG_label, ":label", &ceu_tag__floor };
             
-            #define CEU_TAG_text (52)
+            #define CEU_TAG_text (51)
             CEU_Tags_Names ceu_tag__text = { CEU_TAG_text, ":text", &ceu_tag__label };
             
+            #define CEU_TAG_set (52)
+            CEU_Tags_Names ceu_tag__set = { CEU_TAG_set, ":set", &ceu_tag__text };
+            
             #define CEU_TAG_SIZE (53)
-            CEU_Tags_Names ceu_tag__SIZE = { CEU_TAG_SIZE, ":SIZE", &ceu_tag__text };
+            CEU_Tags_Names ceu_tag__SIZE = { CEU_TAG_SIZE, ":SIZE", &ceu_tag__set };
             
             #define CEU_TAG_MASK (54)
             CEU_Tags_Names ceu_tag__MASK = { CEU_TAG_MASK, ":MASK", &ceu_tag__SIZE };
@@ -711,8 +711,14 @@
             #define CEU_TAG_get (64)
             CEU_Tags_Names ceu_tag__get = { CEU_TAG_get, ":get", &ceu_tag__show_dash_xy };
             
-            #define CEU_TAG_loop (65)
-            CEU_Tags_Names ceu_tag__loop = { CEU_TAG_loop, ":loop", &ceu_tag__get };
+            #define CEU_TAG_celsi (65)
+            CEU_Tags_Names ceu_tag__celsi = { CEU_TAG_celsi, ":celsi", &ceu_tag__get };
+            
+            #define CEU_TAG_fahr (66)
+            CEU_Tags_Names ceu_tag__fahr = { CEU_TAG_fahr, ":fahr", &ceu_tag__celsi };
+            
+            #define CEU_TAG_loop (67)
+            CEU_Tags_Names ceu_tag__loop = { CEU_TAG_loop, ":loop", &ceu_tag__fahr };
             
             CEU_Tags_Names* CEU_TAGS = &ceu_tag__loop;
         
@@ -2882,14 +2888,14 @@
     
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_84245 {
+                        typedef struct CEU_Pro_84463 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84244;
+                        CEU_Block block_84462;
                     
                     
                     
@@ -2900,10 +2906,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84239;
+                        CEU_Block block_84457;
                     
                     
-                        CEU_Value ceu_ret_76772_83884;
+                        CEU_Value ceu_ret_76740_84092;
                     
                     
                     
@@ -2920,10 +2926,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84226;
+                        CEU_Block block_84444;
                     
                     
-                        CEU_Value it_84202;
+                        CEU_Value it_84420;
                     
                     
                     
@@ -2931,10 +2937,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84201;
+                        CEU_Block block_84419;
                     
                     
-                        CEU_Value ceu_ret_76896_83905;
+                        CEU_Value ceu_ret_76874_84113;
                     
                     
                     
@@ -2947,7 +2953,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84191;
+                        CEU_Block block_84409;
                     
                     
                     
@@ -2957,7 +2963,7 @@
                 union {
                     
                 struct { // SET
-                    CEU_Value src_83926;
+                    CEU_Value src_84134;
                     union {
                         
                         
@@ -2966,10 +2972,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84186;
+                        CEU_Block block_84404;
                     
                     
-                        CEU_Value it_84162;
+                        CEU_Value it_84380;
                     
                     
                     
@@ -2977,10 +2983,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84161;
+                        CEU_Block block_84379;
                     
                     
-                        CEU_Value it_83943;
+                        CEU_Value it_84151;
                     
                     
                     
@@ -2992,7 +2998,7 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_83955[2];
+                    CEU_Value args_84163[2];
                     union {
                         
                         
@@ -3005,12 +3011,12 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_83972[2];
+                    CEU_Value args_84180[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_83967;
+                    CEU_Value col_84175;
                     
                     union {
                         
@@ -3024,24 +3030,24 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84143;
+                        CEU_Block block_84361;
                     
                     
-                        CEU_Value ceu_brk_76772_83987;
+                        CEU_Value ceu_brk_76740_84195;
                     
                     
                     
             struct { // SEQ | 
                 
                 struct { // SET
-                    CEU_Value src_84138;
+                    CEU_Value src_84356;
                     union {
                         
                         
                 union {
                     
                 struct { // SET
-                    CEU_Value src_84131;
+                    CEU_Value src_84349;
                     union {
                         
                         
@@ -3049,12 +3055,12 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84126;
+                        CEU_Block block_84344;
                     
                     
-                        CEU_Value c_84026;
+                        CEU_Value c_84234;
                     
-                        CEU_Value f_84058;
+                        CEU_Value f_84276;
                     
                     
                     
@@ -3063,16 +3069,16 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_84025[2];
+                    CEU_Value args_84233[2];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84017;
+                    CEU_Value col_84225;
                     
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84012;
+                    CEU_Value col_84220;
                     
                     union {
                         
@@ -3089,17 +3095,25 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_84057[2];
+                    CEU_Value args_84245[2];
+                    union {
+                        
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_84275[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_84052[2];
+                    CEU_Value args_84270[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_84050[2];
+                    CEU_Value args_84268[2];
                     union {
                         
                         
@@ -3113,11 +3127,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_84079[3];
+                    CEU_Value args_84297[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84068;
+                    CEU_Value col_84286;
                     
                     union {
                         
@@ -3130,7 +3144,7 @@
                 };
                 
                 struct { // SET
-                    CEU_Value src_84087;
+                    CEU_Value src_84305;
                     union {
                         
                         
@@ -3139,10 +3153,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84121;
+                        CEU_Block block_84339;
                     
                     
-                        CEU_Value it_84097;
+                        CEU_Value it_84315;
                     
                     
                     
@@ -3323,19 +3337,19 @@
                 
             };
         
-                        } CEU_Pro_84245;                        
+                        } CEU_Pro_84463;                        
                     
                 
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_84629 {
+                        typedef struct CEU_Pro_84857 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84628;
+                        CEU_Block block_84856;
                     
                     
                     
@@ -3346,10 +3360,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84623;
+                        CEU_Block block_84851;
                     
                     
-                        CEU_Value ceu_ret_79289_84268;
+                        CEU_Value ceu_ret_79357_84486;
                     
                     
                     
@@ -3366,10 +3380,10 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84610;
+                        CEU_Block block_84838;
                     
                     
-                        CEU_Value it_84586;
+                        CEU_Value it_84814;
                     
                     
                     
@@ -3377,10 +3391,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84585;
+                        CEU_Block block_84813;
                     
                     
-                        CEU_Value ceu_ret_79413_84289;
+                        CEU_Value ceu_ret_79491_84507;
                     
                     
                     
@@ -3393,7 +3407,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84575;
+                        CEU_Block block_84803;
                     
                     
                     
@@ -3403,7 +3417,7 @@
                 union {
                     
                 struct { // SET
-                    CEU_Value src_84310;
+                    CEU_Value src_84528;
                     union {
                         
                         
@@ -3412,10 +3426,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84570;
+                        CEU_Block block_84798;
                     
                     
-                        CEU_Value it_84546;
+                        CEU_Value it_84774;
                     
                     
                     
@@ -3423,10 +3437,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84545;
+                        CEU_Block block_84773;
                     
                     
-                        CEU_Value it_84327;
+                        CEU_Value it_84545;
                     
                     
                     
@@ -3438,7 +3452,7 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_84339[2];
+                    CEU_Value args_84557[2];
                     union {
                         
                         
@@ -3451,12 +3465,12 @@
                 union { // IF
                     
                 struct { // CALL
-                    CEU_Value args_84356[2];
+                    CEU_Value args_84574[2];
                     union {
                         
                         
                 struct { // INDEX
-                    CEU_Value col_84351;
+                    CEU_Value col_84569;
                     
                     union {
                         
@@ -3470,24 +3484,24 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84527;
+                        CEU_Block block_84755;
                     
                     
-                        CEU_Value ceu_brk_79289_84371;
+                        CEU_Value ceu_brk_79357_84589;
                     
                     
                     
             struct { // SEQ | 
                 
                 struct { // SET
-                    CEU_Value src_84522;
+                    CEU_Value src_84750;
                     union {
                         
                         
                 union {
                     
                 struct { // SET
-                    CEU_Value src_84515;
+                    CEU_Value src_84743;
                     union {
                         
                         
@@ -3495,12 +3509,12 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84510;
+                        CEU_Block block_84738;
                     
                     
-                        CEU_Value f_84410;
+                        CEU_Value f_84628;
                     
-                        CEU_Value c_84442;
+                        CEU_Value c_84670;
                     
                     
                     
@@ -3509,16 +3523,16 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_84409[2];
+                    CEU_Value args_84627[2];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84401;
+                    CEU_Value col_84619;
                     
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84396;
+                    CEU_Value col_84614;
                     
                     union {
                         
@@ -3535,17 +3549,25 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_84441[2];
+                    CEU_Value args_84639[2];
+                    union {
+                        
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_84669[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_84436[2];
+                    CEU_Value args_84664[2];
                     union {
                         
                         
                 struct { // CALL
-                    CEU_Value args_84431[2];
+                    CEU_Value args_84659[2];
                     union {
                         
                         
@@ -3559,11 +3581,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_84463[3];
+                    CEU_Value args_84691[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_84452;
+                    CEU_Value col_84680;
                     
                     union {
                         
@@ -3576,7 +3598,7 @@
                 };
                 
                 struct { // SET
-                    CEU_Value src_84471;
+                    CEU_Value src_84699;
                     union {
                         
                         
@@ -3585,10 +3607,10 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84505;
+                        CEU_Block block_84733;
                     
                     
-                        CEU_Value it_84481;
+                        CEU_Value it_84709;
                     
                     
                     
@@ -3769,32 +3791,32 @@
                 
             };
         
-                        } CEU_Pro_84629;                        
+                        } CEU_Pro_84857;                        
                     
                 
                     // PROTO | 
                     
-                        typedef struct CEU_Pro_84666 {
+                        typedef struct CEU_Pro_84894 {
                             
             struct { // PROTO | 
                 
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84665;
+                        CEU_Block block_84893;
                     
                     
-                        CEU_Value labelC_83403;
+                        CEU_Value labelC_83611;
                     
-                        CEU_Value labelF_83451;
+                        CEU_Value labelF_83659;
                     
-                        CEU_Value tempC_83467;
+                        CEU_Value tempC_83675;
                     
-                        CEU_Value tempF_83544;
+                        CEU_Value tempF_83752;
                     
-                        CEU_Value hbox_83621;
+                        CEU_Value hbox_83829;
                     
-                        CEU_Value dlg_83795;
+                        CEU_Value dlg_84003;
                     
                     
                     
@@ -3803,11 +3825,11 @@
                 union {
                     
                 struct { // CALL
-                    CEU_Value args_83402[1];
+                    CEU_Value args_83610[1];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83370;
+                    CEU_Value col_83578;
                     
                     union {
                         
@@ -3817,7 +3839,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83400;
+                    CEU_Value vec_83608;
                     union {
                         
                     };
@@ -3827,11 +3849,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83450[1];
+                    CEU_Value args_83658[1];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83415;
+                    CEU_Value col_83623;
                     
                     union {
                         
@@ -3841,7 +3863,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83448;
+                    CEU_Value vec_83656;
                     union {
                         
                     };
@@ -3851,11 +3873,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83466[0];
+                    CEU_Value args_83674[0];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83463;
+                    CEU_Value col_83671;
                     
                     union {
                         
@@ -3868,52 +3890,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83492[3];
+                    CEU_Value args_83700[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83475;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_83490;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83510[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83499;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83529[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83517;
+                    CEU_Value col_83683;
                     
                     union {
                         
@@ -3923,7 +3904,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83527;
+                    CEU_Value vec_83698;
                     union {
                         
                     };
@@ -3933,11 +3914,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83543[0];
+                    CEU_Value args_83718[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83540;
+                    CEU_Value col_83707;
                     
                     union {
                         
@@ -3950,52 +3931,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83569[3];
+                    CEU_Value args_83737[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83552;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                struct { // VECTOR
-                    CEU_Value vec_83567;
-                    union {
-                        
-                    };
-                };
-                
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83587[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83576;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83606[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83594;
+                    CEU_Value col_83725;
                     
                     union {
                         
@@ -4005,7 +3945,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83604;
+                    CEU_Value vec_83735;
                     union {
                         
                     };
@@ -4015,11 +3955,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83620[0];
+                    CEU_Value args_83751[0];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83617;
+                    CEU_Value col_83748;
                     
                     union {
                         
@@ -4032,79 +3972,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83637[2];
+                    CEU_Value args_83777[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83629;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83652[2];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83644;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83667[2];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83659;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83682[2];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83674;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83715[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83689;
+                    CEU_Value col_83760;
                     
                     union {
                         
@@ -4114,7 +3986,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83713;
+                    CEU_Value vec_83775;
                     union {
                         
                     };
@@ -4124,11 +3996,28 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83739[3];
+                    CEU_Value args_83795[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83722;
+                    CEU_Value col_83784;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83814[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83802;
                     
                     union {
                         
@@ -4138,7 +4027,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83737;
+                    CEU_Value vec_83812;
                     union {
                         
                     };
@@ -4148,11 +4037,96 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83778[3];
+                    CEU_Value args_83828[0];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83746;
+                    CEU_Value col_83825;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83845[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83837;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83860[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83852;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83875[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83867;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83890[2];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83882;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_83923[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83897;
                     
                     union {
                         
@@ -4162,7 +4136,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83776;
+                    CEU_Value vec_83921;
                     union {
                         
                     };
@@ -4172,28 +4146,11 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83794[1];
+                    CEU_Value args_83947[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83789;
-                    
-                    union {
-                        
-                        
-                    };
-                };
-                
-                        
-                    };
-                };
-                
-                struct { // CALL
-                    CEU_Value args_83847[3];
-                    union {
-                        
-                struct { // INDEX
-                    CEU_Value col_83803;
+                    CEU_Value col_83930;
                     
                     union {
                         
@@ -4203,7 +4160,7 @@
                 
                         
                 struct { // VECTOR
-                    CEU_Value vec_83845;
+                    CEU_Value vec_83945;
                     union {
                         
                     };
@@ -4213,11 +4170,76 @@
                 };
                 
                 struct { // CALL
-                    CEU_Value args_83865[3];
+                    CEU_Value args_83986[3];
                     union {
                         
                 struct { // INDEX
-                    CEU_Value col_83854;
+                    CEU_Value col_83954;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_83984;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_84002[1];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_83997;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_84055[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_84011;
+                    
+                    union {
+                        
+                        
+                    };
+                };
+                
+                        
+                struct { // VECTOR
+                    CEU_Value vec_84053;
+                    union {
+                        
+                    };
+                };
+                
+                    };
+                };
+                
+                struct { // CALL
+                    CEU_Value args_84073[3];
+                    union {
+                        
+                struct { // INDEX
+                    CEU_Value col_84062;
                     
                     union {
                         
@@ -4231,7 +4253,7 @@
                 
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84660;
+                        CEU_Block block_84888;
                     
                     
                     
@@ -4240,7 +4262,7 @@
                 
                 struct { // SPAWN | 
                      
-                    CEU_Value args_84250[0];
+                    CEU_Value args_84468[0];
                     union {
                          
                         
@@ -4253,7 +4275,7 @@
                 
                 struct { // SPAWN | 
                      
-                    CEU_Value args_84634[0];
+                    CEU_Value args_84862[0];
                     union {
                          
                         
@@ -4268,7 +4290,7 @@
                     
                 struct { // BLOCK | 
                     
-                        CEU_Block block_84654;
+                        CEU_Block block_84882;
                     
                     
                     
@@ -4304,7 +4326,7 @@
                 
             };
         
-                        } CEU_Pro_84666;                        
+                        } CEU_Pro_84894;                        
                     
                 
                     // PROTO | 
@@ -51660,7 +51682,6 @@ int iup_value_cb (Ihandle* h) {
 int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h}   },
-        { CEU_VALUE_POINTER, {.Pointer=h}   },
         { CEU_VALUE_NUMBER,  {.Number=item} },
         { CEU_VALUE_BOOL,    {.Bool=state}  }
     };
@@ -51721,7 +51742,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupMainLoop(); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 99, col 9) : ```IupMainLoop();```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 98, col 9) : ```IupMainLoop();```");
             
         
                     
@@ -51801,7 +51822,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 105, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 104, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51815,7 +51836,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 105, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 104, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -51894,7 +51915,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73148, ceu_idx_73148));
                         ceu_gc_dec_val(ceu_col_73148);
                         ceu_gc_dec_val(ceu_idx_73148);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer]");
                     
                 }
                 
@@ -51904,7 +51925,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73153 = {
@@ -51922,7 +51943,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73153.Dyn->Clo.proto(&ceux_73153);
                     ceu_gc_dec_val(ceu_clo_73153);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 106, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 105, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -51932,7 +51953,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 106, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 105, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52029,7 +52050,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 109, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 108, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -52043,7 +52064,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 109, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 108, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -52122,7 +52143,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73235, ceu_idx_73235));
                         ceu_gc_dec_val(ceu_col_73235);
                         ceu_gc_dec_val(ceu_idx_73235);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer]");
                     
                 }
                 
@@ -52132,7 +52153,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73240 = {
@@ -52150,7 +52171,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73240.Dyn->Clo.proto(&ceux_73240);
                     ceu_gc_dec_val(ceu_clo_73240);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 110, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 109, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -52160,7 +52181,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 110, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 109, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -52257,7 +52278,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 113, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 112, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -52271,7 +52292,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 113, col 9) : (func' :nested (h,name) { group { (val s =..."
+                                        "@/iup/iup.ceu : (lin 112, col 9) : (func' :nested (h,name) { group { (val s =..."
                                     );
                                 }
                                 */
@@ -52350,7 +52371,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ACC(ceu_col_get(ceu_col_73322, ceu_idx_73322));
                         ceu_gc_dec_val(ceu_col_73322);
                         ceu_gc_dec_val(ceu_idx_73322);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer]");
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer]");
                     
                 }
                 
@@ -52360,7 +52381,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer](name)"
+                            "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer](name)"
                         );
                     }
                     CEUX ceux_73327 = {
@@ -52378,7 +52399,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceu_clo_73327.Dyn->Clo.proto(&ceux_73327);
                     ceu_gc_dec_val(ceu_clo_73327);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 114, col 21) : to[:pointer](name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 113, col 21) : to[:pointer](name)");
             
         
                 } // CALL | 
@@ -52388,13 +52409,13 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 114, col 13) : (val s = to[:pointer](name))"
+                            "@/iup/iup.ceu : (lin 113, col 13) : (val s = to[:pointer](name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
                         ceu_loc_s_73328 = ceu_acc;
                     
-                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetInt((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
+                CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupGetFloat((ceu_loc_h_73302).Pointer, (ceu_loc_s_73328).Pointer+1))} }));
                         
                     } while (0);
 
@@ -52485,12 +52506,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_h_75296
+                                    CEU_Value ceu_loc_h_75280
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -52499,12 +52520,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_name_75300
+                                    CEU_Value ceu_loc_name_75284
                                 
                                     = (1 < ceux->n) ? ceux->args[1] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -52513,12 +52534,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[2], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 120, col 5) : (func' :nested (h,name,value) { group { (v..."
+                                        "@/iup/iup.ceu : (lin 119, col 5) : (func' :nested (h,name,value) { group { (v..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_value_75304
+                                    CEU_Value ceu_loc_value_75288
                                 
                                     = (2 < ceux->n) ? ceux->args[2] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -52534,7 +52555,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75699 = NULL;
+                         CEU_Block ceu_block_75667 = NULL;
                     
                     
                     
@@ -52542,13 +52563,13 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_s_75321;
+                                        CEU_Value ceu_loc_s_75305;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_s_75321 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_s_75305 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -52563,29 +52584,29 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75320[1];
+                        CEU_Value ceu_args_75304[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_name_75300);
+                        CEU_ACC(ceu_loc_name_75284);
                     
-                            ceu_args_75320[0] = CEU_ACC_KEEP();
+                            ceu_args_75304[0] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to_dash_pointer);
                     
-                    CEU_Value ceu_clo_75320 = CEU_ACC_KEEP();
-                    if (ceu_clo_75320.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75320);
+                    CEU_Value ceu_clo_75304 = CEU_ACC_KEEP();
+                    if (ceu_clo_75304.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75304);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 121, col 17) : to-pointer(name)"
+                            "@/iup/iup.ceu : (lin 120, col 17) : to-pointer(name)"
                         );
                     }
-                    CEUX ceux_75320 = {
-                        (CEU_Clo*) ceu_clo_75320.Dyn,
+                    CEUX ceux_75304 = {
+                        (CEU_Clo*) ceu_clo_75304.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -52594,12 +52615,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75320
+                        ceu_args_75304
                     };
-                    ceu_clo_75320.Dyn->Clo.proto(&ceux_75320);
-                    ceu_gc_dec_val(ceu_clo_75320);
+                    ceu_clo_75304.Dyn->Clo.proto(&ceux_75304);
+                    ceu_gc_dec_val(ceu_clo_75304);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 121, col 17) : to-pointer(name)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 120, col 17) : to-pointer(name)");
             
         
                 } // CALL | 
@@ -52609,74 +52630,19 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 121, col 9) : (val s = to-pointer(name))"
+                            "@/iup/iup.ceu : (lin 120, col 9) : (val s = to-pointer(name))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_s_75321 = ceu_acc;
+                        ceu_loc_s_75305 = ceu_acc;
                     
                 
-                { // CALL | 
-                    
-                        CEU_Value ceu_args_75338[4];
-                    
-                    CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_set} }));
-                            ceu_args_75338[0] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_h_75296);
-                    
-                            ceu_args_75338[1] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_name_75300);
-                    
-                            ceu_args_75338[2] = CEU_ACC_KEEP();
-                        
-                        // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
-                    
-                            ceu_args_75338[3] = CEU_ACC_KEEP();
-                        
-                    
-                        // ACC - GET | 
-                        CEU_ACC(ceu_glb_println);
-                    
-                    CEU_Value ceu_clo_75338 = CEU_ACC_KEEP();
-                    if (ceu_clo_75338.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75338);
-                        CEU_ERROR_CHK_PTR (
-                            continue,
-                            "expected function",
-                            "@/iup/iup.ceu : (lin 122, col 9) : println(:set,h,name,value)"
-                        );
-                    }
-                    CEUX ceux_75338 = {
-                        (CEU_Clo*) ceu_clo_75338.Dyn,
-                    #if CEU >= 3
-                        {NULL}, CEU_ACTION_INVALID,
-                    #endif
-                    #if CEU >= 4
-                        ceux,
-                    #endif
-                        CEU_LEX_X(ceux->depth+1 COMMA)
-                        4,
-                        ceu_args_75338
-                    };
-                    ceu_clo_75338.Dyn->Clo.proto(&ceux_75338);
-                    ceu_gc_dec_val(ceu_clo_75338);
-                    
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 122, col 9) : println(:set,h,name,value)");
-            
-        
-                } // CALL | 
-            
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75694 = NULL;
+                         CEU_Block ceu_block_75662 = NULL;
                     
                     
                     
@@ -52684,29 +52650,29 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_ceu_ret_73400_75344;
+                                        CEU_Value ceu_loc_ceu_ret_73384_75312;
                                     
-                                        CEU_Value ceu_loc_ceu_val_73400_75352;
+                                        CEU_Value ceu_loc_ceu_val_73384_75320;
                                     
-                                        CEU_Value ceu_loc_ceu_or_74606_75418;
+                                        CEU_Value ceu_loc_ceu_or_74590_75386;
                                     
-                                        CEU_Value ceu_loc_ceu_or_74104_75525;
+                                        CEU_Value ceu_loc_ceu_or_74088_75493;
                                     
-                                        CEU_Value ceu_loc_ceu_or_73826_75623;
+                                        CEU_Value ceu_loc_ceu_or_73810_75591;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_ceu_ret_73400_75344 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_ret_73384_75312 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_val_73400_75352 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_val_73384_75320 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_74606_75418 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_74590_75386 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_74104_75525 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_74088_75493 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_ceu_or_73826_75623 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_ceu_or_73810_75591 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -52722,18 +52688,18 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
+                        CEU_ACC(ceu_loc_value_75288);
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 139, col 25) : (val ceu_val = value)"
+                            "@/iup/iup.ceu : (lin 137, col 25) : (val ceu_val = value)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_val_73400_75352 = ceu_acc;
+                        ceu_loc_ceu_val_73384_75320 = ceu_acc;
                     
                 // GROUP | 
 
@@ -52745,7 +52711,7 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75417 = NULL;
+                         CEU_Block ceu_block_75385 = NULL;
                     
                     
                     
@@ -52753,13 +52719,13 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_it_75369;
+                                        CEU_Value ceu_loc_it_75337;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_it_75369 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_it_75337 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -52772,49 +52738,49 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_val_73400_75352);
+                        CEU_ACC(ceu_loc_ceu_val_73384_75320);
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 127, col 17) : (val it :bool = ceu_val)"
+                            "@/iup/iup.ceu : (lin 125, col 17) : (val it :bool = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_it_75369 = ceu_acc;
+                        ceu_loc_it_75337 = ceu_acc;
                     
                 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75381[2];
+                        CEU_Value ceu_args_75349[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_it_75369);
+                        CEU_ACC(ceu_loc_it_75337);
                     
-                            ceu_args_75381[0] = CEU_ACC_KEEP();
+                            ceu_args_75349[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_bool} }));
-                            ceu_args_75381[1] = CEU_ACC_KEEP();
+                            ceu_args_75349[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_75381 = CEU_ACC_KEEP();
-                    if (ceu_clo_75381.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75381);
+                    CEU_Value ceu_clo_75349 = CEU_ACC_KEEP();
+                    if (ceu_clo_75349.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75349);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 125, col 27) : is'(it,:bool)"
+                            "@/iup/iup.ceu : (lin 123, col 27) : is'(it,:bool)"
                         );
                     }
-                    CEUX ceux_75381 = {
-                        (CEU_Clo*) ceu_clo_75381.Dyn,
+                    CEUX ceux_75349 = {
+                        (CEU_Clo*) ceu_clo_75349.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -52823,12 +52789,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_75381
+                        ceu_args_75349
                     };
-                    ceu_clo_75381.Dyn->Clo.proto(&ceux_75381);
-                    ceu_gc_dec_val(ceu_clo_75381);
+                    ceu_clo_75349.Dyn->Clo.proto(&ceux_75349);
+                    ceu_gc_dec_val(ceu_clo_75349);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 27) : is'(it,:bool)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : is'(it,:bool)");
             
         
                 } // CALL | 
@@ -52848,9 +52814,9 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                 { // SET | 
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetInt((ceu_loc_h_75296).Pointer, (ceu_loc_s_75321).Pointer+1, (ceu_loc_value_75304).Bool); 
+                        IupSetInt((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Bool); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 24) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 122, col 24) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
             
         
                       // src is on the stack and should be returned
@@ -52861,12 +52827,12 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 126, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 124, col 37) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_ceu_ret_73400_75344);
+                        ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ret_73400_75344 = ceu_acc;
+                        ceu_loc_ceu_ret_73384_75312 = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -52890,16 +52856,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75417 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75385 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75417 != NULL) {
-                            CEU_LNKS(ceu_block_75417)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75385 != NULL) {
+                            CEU_LNKS(ceu_block_75385)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75417);
+                            CEU_Block cur = ceu_task_get(ceu_block_75385);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -52911,12 +52877,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_it_75369);
+                                ceu_gc_dec_val(ceu_loc_it_75337);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75417;
+                    ceu_acc = ceu_acc_75385;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -52940,17 +52906,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 127, col 11) : (val' ceu_or = do { (val it :bool = ceu_va..."
+                            "@/iup/iup.ceu : (lin 125, col 11) : (val' ceu_or = do { (val it :bool = ceu_va..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_74606_75418 = ceu_acc;
+                        ceu_loc_ceu_or_74590_75386 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_74606_75418);
+                        CEU_ACC(ceu_loc_ceu_or_74590_75386);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -52958,7 +52924,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_74606_75418);
+                        CEU_ACC(ceu_loc_ceu_or_74590_75386);
                     
                         } else {
                             // GROUP | 
@@ -52972,7 +52938,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75524 = NULL;
+                         CEU_Block ceu_block_75492 = NULL;
                     
                     
                     
@@ -52980,13 +52946,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_it_75445;
+                                        CEU_Value ceu_loc_it_75413;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_it_75445 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_it_75413 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -52999,49 +52965,49 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_val_73400_75352);
+                        CEU_ACC(ceu_loc_ceu_val_73384_75320);
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 133, col 17) : (val it :number = ceu_val)"
+                            "@/iup/iup.ceu : (lin 131, col 17) : (val it :number = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_it_75445 = ceu_acc;
+                        ceu_loc_it_75413 = ceu_acc;
                     
                 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75457[2];
+                        CEU_Value ceu_args_75425[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_it_75445);
+                        CEU_ACC(ceu_loc_it_75413);
                     
-                            ceu_args_75457[0] = CEU_ACC_KEEP();
+                            ceu_args_75425[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_number} }));
-                            ceu_args_75457[1] = CEU_ACC_KEEP();
+                            ceu_args_75425[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_75457 = CEU_ACC_KEEP();
-                    if (ceu_clo_75457.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75457);
+                    CEU_Value ceu_clo_75425 = CEU_ACC_KEEP();
+                    if (ceu_clo_75425.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75425);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 126, col 27) : is'(it,:number)"
+                            "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:number)"
                         );
                     }
-                    CEUX ceux_75457 = {
-                        (CEU_Clo*) ceu_clo_75457.Dyn,
+                    CEUX ceux_75425 = {
+                        (CEU_Clo*) ceu_clo_75425.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53050,12 +53016,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_75457
+                        ceu_args_75425
                     };
-                    ceu_clo_75457.Dyn->Clo.proto(&ceux_75457);
-                    ceu_gc_dec_val(ceu_clo_75457);
+                    ceu_clo_75425.Dyn->Clo.proto(&ceux_75425);
+                    ceu_gc_dec_val(ceu_clo_75425);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 126, col 27) : is'(it,:number)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 27) : is'(it,:number)");
             
         
                 } // CALL | 
@@ -53078,18 +53044,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75488[2];
+                        CEU_Value ceu_args_75456[2];
                     
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75483[1];
+                        CEU_Value ceu_args_75451[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
+                        CEU_ACC(ceu_loc_value_75288);
                     
-                            ceu_args_75483[0] = CEU_ACC_KEEP();
+                            ceu_args_75451[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -53101,32 +53067,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_math);
                     
-                    CEU_Value ceu_col_75478 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_75446 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }));
                         
-                    CEU_Value ceu_idx_75478 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_75446 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_75478, ceu_idx_75478));
-                        ceu_gc_dec_val(ceu_col_75478);
-                        ceu_gc_dec_val(ceu_idx_75478);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 27) : math[:floor]");
+                        CEU_ACC(ceu_col_get(ceu_col_75446, ceu_idx_75446));
+                        ceu_gc_dec_val(ceu_col_75446);
+                        ceu_gc_dec_val(ceu_idx_75446);
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : math[:floor]");
                     
                 }
                 
-                    CEU_Value ceu_clo_75483 = CEU_ACC_KEEP();
-                    if (ceu_clo_75483.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75483);
+                    CEU_Value ceu_clo_75451 = CEU_ACC_KEEP();
+                    if (ceu_clo_75451.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75451);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 125, col 27) : math[:floor](value)"
+                            "@/iup/iup.ceu : (lin 123, col 27) : math[:floor](value)"
                         );
                     }
-                    CEUX ceux_75483 = {
-                        (CEU_Clo*) ceu_clo_75483.Dyn,
+                    CEUX ceux_75451 = {
+                        (CEU_Clo*) ceu_clo_75451.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53135,38 +53101,38 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75483
+                        ceu_args_75451
                     };
-                    ceu_clo_75483.Dyn->Clo.proto(&ceux_75483);
-                    ceu_gc_dec_val(ceu_clo_75483);
+                    ceu_clo_75451.Dyn->Clo.proto(&ceux_75451);
+                    ceu_gc_dec_val(ceu_clo_75451);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 27) : math[:floor](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 27) : math[:floor](value)");
             
         
                 } // CALL | 
             
-                            ceu_args_75488[0] = CEU_ACC_KEEP();
+                            ceu_args_75456[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
+                        CEU_ACC(ceu_loc_value_75288);
                     
-                            ceu_args_75488[1] = CEU_ACC_KEEP();
+                            ceu_args_75456[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_75488 = CEU_ACC_KEEP();
-                    if (ceu_clo_75488.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75488);
+                    CEU_Value ceu_clo_75456 = CEU_ACC_KEEP();
+                    if (ceu_clo_75456.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75456);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 125, col 45) : {{==}}(math[:floor](value),value)"
+                            "@/iup/iup.ceu : (lin 123, col 45) : {{==}}(math[:floor](value),value)"
                         );
                     }
-                    CEUX ceux_75488 = {
-                        (CEU_Clo*) ceu_clo_75488.Dyn,
+                    CEUX ceux_75456 = {
+                        (CEU_Clo*) ceu_clo_75456.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53175,12 +53141,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_75488
+                        ceu_args_75456
                     };
-                    ceu_clo_75488.Dyn->Clo.proto(&ceux_75488);
-                    ceu_gc_dec_val(ceu_clo_75488);
+                    ceu_clo_75456.Dyn->Clo.proto(&ceux_75456);
+                    ceu_gc_dec_val(ceu_clo_75456);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 45) : {{==}}(math[:floor](value),value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 123, col 45) : {{==}}(math[:floor](value),value)");
             
         
                 } // CALL | 
@@ -53191,9 +53157,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetInt((ceu_loc_h_75296).Pointer, (ceu_loc_s_75321).Pointer+1, (ceu_loc_value_75304).Number); 
+                        IupSetInt((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 126, col 28) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 124, col 28) : ```IupSetInt($h.Pointer, $s.Pointer+1, $va...");
             
         
                     
@@ -53201,9 +53167,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetFloat((ceu_loc_h_75296).Pointer, (ceu_loc_s_75321).Pointer+1, (ceu_loc_value_75304).Number); 
+                        IupSetFloat((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_value_75288).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 127, col 28) : ```IupSetFloat($h.Pointer, $s.Pointer+1, $...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 125, col 28) : ```IupSetFloat($h.Pointer, $s.Pointer+1, $...");
             
         
                     
@@ -53218,12 +53184,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 127, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 125, col 37) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_ceu_ret_73400_75344);
+                        ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ret_73400_75344 = ceu_acc;
+                        ceu_loc_ceu_ret_73384_75312 = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -53247,16 +53213,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75524 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75492 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75524 != NULL) {
-                            CEU_LNKS(ceu_block_75524)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75492 != NULL) {
+                            CEU_LNKS(ceu_block_75492)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75524);
+                            CEU_Block cur = ceu_task_get(ceu_block_75492);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53268,12 +53234,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_it_75445);
+                                ceu_gc_dec_val(ceu_loc_it_75413);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75524;
+                    ceu_acc = ceu_acc_75492;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -53297,17 +53263,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 128, col 11) : (val' ceu_or = do { (val it :number = ceu_..."
+                            "@/iup/iup.ceu : (lin 126, col 11) : (val' ceu_or = do { (val it :number = ceu_..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_74104_75525 = ceu_acc;
+                        ceu_loc_ceu_or_74088_75493 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_74104_75525);
+                        CEU_ACC(ceu_loc_ceu_or_74088_75493);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -53315,7 +53281,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_74104_75525);
+                        CEU_ACC(ceu_loc_ceu_or_74088_75493);
                     
                         } else {
                             // GROUP | 
@@ -53329,7 +53295,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75622 = NULL;
+                         CEU_Block ceu_block_75590 = NULL;
                     
                     
                     
@@ -53337,13 +53303,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_it_75552;
+                                        CEU_Value ceu_loc_it_75520;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_it_75552 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_it_75520 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -53356,49 +53322,49 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_val_73400_75352);
+                        CEU_ACC(ceu_loc_ceu_val_73384_75320);
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 137, col 17) : (val it :tag = ceu_val)"
+                            "@/iup/iup.ceu : (lin 135, col 17) : (val it :tag = ceu_val)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_it_75552 = ceu_acc;
+                        ceu_loc_it_75520 = ceu_acc;
                     
                 
                 { // IF | 
                     
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75564[2];
+                        CEU_Value ceu_args_75532[2];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_it_75552);
+                        CEU_ACC(ceu_loc_it_75520);
                     
-                            ceu_args_75564[0] = CEU_ACC_KEEP();
+                            ceu_args_75532[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_tag} }));
-                            ceu_args_75564[1] = CEU_ACC_KEEP();
+                            ceu_args_75532[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_75564 = CEU_ACC_KEEP();
-                    if (ceu_clo_75564.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75564);
+                    CEU_Value ceu_clo_75532 = CEU_ACC_KEEP();
+                    if (ceu_clo_75532.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75532);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 129, col 27) : is'(it,:tag)"
+                            "@/iup/iup.ceu : (lin 127, col 27) : is'(it,:tag)"
                         );
                     }
-                    CEUX ceux_75564 = {
-                        (CEU_Clo*) ceu_clo_75564.Dyn,
+                    CEUX ceux_75532 = {
+                        (CEU_Clo*) ceu_clo_75532.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53407,12 +53373,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        ceu_args_75564
+                        ceu_args_75532
                     };
-                    ceu_clo_75564.Dyn->Clo.proto(&ceux_75564);
-                    ceu_gc_dec_val(ceu_clo_75564);
+                    ceu_clo_75532.Dyn->Clo.proto(&ceux_75532);
+                    ceu_gc_dec_val(ceu_clo_75532);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 129, col 27) : is'(it,:tag)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 127, col 27) : is'(it,:tag)");
             
         
                 } // CALL | 
@@ -53436,7 +53402,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75598 = NULL;
+                         CEU_Block ceu_block_75566 = NULL;
                     
                     
                     
@@ -53444,13 +53410,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_t_75593;
+                                        CEU_Value ceu_loc_t_75561;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_t_75593 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_t_75561 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -53464,13 +53430,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75592[1];
+                        CEU_Value ceu_args_75560[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
+                        CEU_ACC(ceu_loc_value_75288);
                     
-                            ceu_args_75592[0] = CEU_ACC_KEEP();
+                            ceu_args_75560[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -53482,32 +53448,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to);
                     
-                    CEU_Value ceu_col_75587 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_75555 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
                         
-                    CEU_Value ceu_idx_75587 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_75555 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_75587, ceu_idx_75587));
-                        ceu_gc_dec_val(ceu_col_75587);
-                        ceu_gc_dec_val(ceu_idx_75587);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 130, col 29) : to[:pointer]");
+                        CEU_ACC(ceu_col_get(ceu_col_75555, ceu_idx_75555));
+                        ceu_gc_dec_val(ceu_col_75555);
+                        ceu_gc_dec_val(ceu_idx_75555);
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer]");
                     
                 }
                 
-                    CEU_Value ceu_clo_75592 = CEU_ACC_KEEP();
-                    if (ceu_clo_75592.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75592);
+                    CEU_Value ceu_clo_75560 = CEU_ACC_KEEP();
+                    if (ceu_clo_75560.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75560);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 130, col 29) : to[:pointer](value)"
+                            "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer](value)"
                         );
                     }
-                    CEUX ceux_75592 = {
-                        (CEU_Clo*) ceu_clo_75592.Dyn,
+                    CEUX ceux_75560 = {
+                        (CEU_Clo*) ceu_clo_75560.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53516,12 +53482,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75592
+                        ceu_args_75560
                     };
-                    ceu_clo_75592.Dyn->Clo.proto(&ceux_75592);
-                    ceu_gc_dec_val(ceu_clo_75592);
+                    ceu_clo_75560.Dyn->Clo.proto(&ceux_75560);
+                    ceu_gc_dec_val(ceu_clo_75560);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 130, col 29) : to[:pointer](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 29) : to[:pointer](value)");
             
         
                 } // CALL | 
@@ -53531,17 +53497,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 130, col 21) : (val t = to[:pointer](value))"
+                            "@/iup/iup.ceu : (lin 128, col 21) : (val t = to[:pointer](value))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_t_75593 = ceu_acc;
+                        ceu_loc_t_75561 = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetAttribute((ceu_loc_h_75296).Pointer, (ceu_loc_s_75321).Pointer+1, (ceu_loc_t_75593).Pointer+1); 
+                        IupSetAttribute((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_t_75561).Pointer+1); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 128, col 24) : ```IupSetAttribute($h.Pointer, $s.Pointer+...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 126, col 24) : ```IupSetAttribute($h.Pointer, $s.Pointer+...");
             
         
                     
@@ -53551,16 +53517,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75598 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75566 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75598 != NULL) {
-                            CEU_LNKS(ceu_block_75598)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75566 != NULL) {
+                            CEU_LNKS(ceu_block_75566)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75598);
+                            CEU_Block cur = ceu_task_get(ceu_block_75566);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53572,12 +53538,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_t_75593);
+                                ceu_gc_dec_val(ceu_loc_t_75561);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75598;
+                    ceu_acc = ceu_acc_75566;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -53601,12 +53567,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "@/iup/iup.ceu : (lin 130, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 128, col 37) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_ceu_ret_73400_75344);
+                        ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ret_73400_75344 = ceu_acc;
+                        ceu_loc_ceu_ret_73384_75312 = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -53630,16 +53596,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75622 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75590 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75622 != NULL) {
-                            CEU_LNKS(ceu_block_75622)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75590 != NULL) {
+                            CEU_LNKS(ceu_block_75590)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75622);
+                            CEU_Block cur = ceu_task_get(ceu_block_75590);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53651,12 +53617,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_it_75552);
+                                ceu_gc_dec_val(ceu_loc_it_75520);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75622;
+                    ceu_acc = ceu_acc_75590;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -53680,17 +53646,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 131, col 11) : (val' ceu_or = do { (val it :tag = ceu_val..."
+                            "@/iup/iup.ceu : (lin 129, col 11) : (val' ceu_or = do { (val it :tag = ceu_val..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_or_73826_75623 = ceu_acc;
+                        ceu_loc_ceu_or_73810_75591 = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_73826_75623);
+                        CEU_ACC(ceu_loc_ceu_or_73810_75591);
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -53698,7 +53664,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             // GROUP | 
 
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_ceu_or_73826_75623);
+                        CEU_ACC(ceu_loc_ceu_or_73810_75591);
                     
                         } else {
                             // GROUP | 
@@ -53711,7 +53677,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75665 = NULL;
+                         CEU_Block ceu_block_75633 = NULL;
                     
                     
                     
@@ -53719,13 +53685,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_v_75660;
+                                        CEU_Value ceu_loc_v_75628;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_v_75660 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_v_75628 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -53739,13 +53705,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75659[1];
+                        CEU_Value ceu_args_75627[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_value_75304);
+                        CEU_ACC(ceu_loc_value_75288);
                     
-                            ceu_args_75659[0] = CEU_ACC_KEEP();
+                            ceu_args_75627[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -53757,32 +53723,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to);
                     
-                    CEU_Value ceu_col_75654 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_75622 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
                         
-                    CEU_Value ceu_idx_75654 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_75622 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_75654, ceu_idx_75654));
-                        ceu_gc_dec_val(ceu_col_75654);
-                        ceu_gc_dec_val(ceu_idx_75654);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 134, col 29) : to[:pointer]");
+                        CEU_ACC(ceu_col_get(ceu_col_75622, ceu_idx_75622));
+                        ceu_gc_dec_val(ceu_col_75622);
+                        ceu_gc_dec_val(ceu_idx_75622);
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer]");
                     
                 }
                 
-                    CEU_Value ceu_clo_75659 = CEU_ACC_KEEP();
-                    if (ceu_clo_75659.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75659);
+                    CEU_Value ceu_clo_75627 = CEU_ACC_KEEP();
+                    if (ceu_clo_75627.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75627);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 134, col 29) : to[:pointer](value)"
+                            "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer](value)"
                         );
                     }
-                    CEUX ceux_75659 = {
-                        (CEU_Clo*) ceu_clo_75659.Dyn,
+                    CEUX ceux_75627 = {
+                        (CEU_Clo*) ceu_clo_75627.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -53791,12 +53757,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75659
+                        ceu_args_75627
                     };
-                    ceu_clo_75659.Dyn->Clo.proto(&ceux_75659);
-                    ceu_gc_dec_val(ceu_clo_75659);
+                    ceu_clo_75627.Dyn->Clo.proto(&ceux_75627);
+                    ceu_gc_dec_val(ceu_clo_75627);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 134, col 29) : to[:pointer](value)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 132, col 29) : to[:pointer](value)");
             
         
                 } // CALL | 
@@ -53806,17 +53772,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 134, col 21) : (val v = to[:pointer](value))"
+                            "@/iup/iup.ceu : (lin 132, col 21) : (val v = to[:pointer](value))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_v_75660 = ceu_acc;
+                        ceu_loc_v_75628 = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetStrAttribute((ceu_loc_h_75296).Pointer, (ceu_loc_s_75321).Pointer+1, (ceu_loc_v_75660).Pointer); 
+                        IupSetStrAttribute((ceu_loc_h_75280).Pointer, (ceu_loc_s_75305).Pointer+1, (ceu_loc_v_75628).Pointer); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 132, col 24) : ```IupSetStrAttribute($h.Pointer, $s.Point...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 130, col 24) : ```IupSetStrAttribute($h.Pointer, $s.Point...");
             
         
                     
@@ -53826,16 +53792,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75665 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75633 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75665 != NULL) {
-                            CEU_LNKS(ceu_block_75665)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75633 != NULL) {
+                            CEU_LNKS(ceu_block_75633)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75665);
+                            CEU_Block cur = ceu_task_get(ceu_block_75633);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53847,12 +53813,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_v_75660);
+                                ceu_gc_dec_val(ceu_loc_v_75628);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75665;
+                    ceu_acc = ceu_acc_75633;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -53876,12 +53842,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-0 }),
-                            "@/iup/iup.ceu : (lin 136, col 37) : ceu_ret"
+                            "@/iup/iup.ceu : (lin 134, col 37) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val(ceu_loc_ceu_ret_73400_75344);
+                        ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_ceu_ret_73400_75344 = ceu_acc;
+                        ceu_loc_ceu_ret_73384_75312 = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -53900,16 +53866,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 // DROP | 
                 
                         { // ACC - DROP | 
-                            CEU_ACC((CEU_Value) { CEU_VALUE_NIL });     // ceu_acc may be equal to ceu_loc_ceu_ret_73400_75344 (hh_05_coro)
-                            CEU_Value ceu_75690 = ceu_loc_ceu_ret_73400_75344;
-                            ceu_loc_ceu_ret_73400_75344 = (CEU_Value) { CEU_VALUE_NIL };
+                            CEU_ACC((CEU_Value) { CEU_VALUE_NIL });     // ceu_acc may be equal to ceu_loc_ceu_ret_73384_75312 (hh_05_coro)
+                            CEU_Value ceu_75658 = ceu_loc_ceu_ret_73384_75312;
+                            ceu_loc_ceu_ret_73384_75312 = (CEU_Value) { CEU_VALUE_NIL };
                             CEU_ERROR_CHK_PTR (
                                 continue,
-                                ceu_drop(ceu_75690, ceux->depth-2),
-                                "@/iup/iup.ceu : (lin 139, col 25) : drop(ceu_ret)"
+                                ceu_drop(ceu_75658, ceux->depth-2),
+                                "@/iup/iup.ceu : (lin 137, col 25) : drop(ceu_ret)"
                             );
-                            CEU_ACC(ceu_75690);
-                            ceu_gc_dec_val(ceu_75690);
+                            CEU_ACC(ceu_75658);
+                            ceu_gc_dec_val(ceu_75658);
                         }
                         
                 
@@ -53920,16 +53886,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75694 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75662 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75694 != NULL) {
-                            CEU_LNKS(ceu_block_75694)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75662 != NULL) {
+                            CEU_LNKS(ceu_block_75662)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75694);
+                            CEU_Block cur = ceu_task_get(ceu_block_75662);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53941,20 +53907,20 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_ceu_or_73826_75623);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_73810_75591);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_74104_75525);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_74088_75493);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_or_74606_75418);
+                                ceu_gc_dec_val(ceu_loc_ceu_or_74590_75386);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_val_73400_75352);
+                                ceu_gc_dec_val(ceu_loc_ceu_val_73384_75320);
                             
-                                ceu_gc_dec_val(ceu_loc_ceu_ret_73400_75344);
+                                ceu_gc_dec_val(ceu_loc_ceu_ret_73384_75312);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75694;
+                    ceu_acc = ceu_acc_75662;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -53977,16 +53943,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75699 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75667 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75699 != NULL) {
-                            CEU_LNKS(ceu_block_75699)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75667 != NULL) {
+                            CEU_LNKS(ceu_block_75667)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75699);
+                            CEU_Block cur = ceu_task_get(ceu_block_75667);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -53998,12 +53964,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_s_75321);
+                                ceu_gc_dec_val(ceu_loc_s_75305);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75699;
+                    ceu_acc = ceu_acc_75667;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54029,28 +53995,28 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_75700 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75668 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_h_75296
+                                        ceu_loc_h_75280
                                     
                                 );
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_name_75300
+                                        ceu_loc_name_75284
                                     
                                 );
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_value_75304
+                                        ceu_loc_value_75288
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_75700;
+                            ceu_acc = ceu_acc_75668;
                         }
 
                         
@@ -54067,12 +54033,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 141, col 5) : (func' :nested (label) { group { (val s = ..."
+                                        "@/iup/iup.ceu : (lin 139, col 5) : (func' :nested (label) { group { (val s = ..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_label_75756
+                                    CEU_Value ceu_loc_label_75724
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -54088,7 +54054,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75796 = NULL;
+                         CEU_Block ceu_block_75764 = NULL;
                     
                     
                     
@@ -54096,17 +54062,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_s_75778;
+                                        CEU_Value ceu_loc_s_75746;
                                     
-                                        CEU_Value ceu_loc_h_75786;
+                                        CEU_Value ceu_loc_h_75754;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_s_75778 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_s_75746 = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    ceu_loc_h_75786 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_h_75754 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -54121,13 +54087,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75777[1];
+                        CEU_Value ceu_args_75745[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_label_75756);
+                        CEU_ACC(ceu_loc_label_75724);
                     
-                            ceu_args_75777[0] = CEU_ACC_KEEP();
+                            ceu_args_75745[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -54139,32 +54105,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to);
                     
-                    CEU_Value ceu_col_75772 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_75740 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
                         
-                    CEU_Value ceu_idx_75772 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_75740 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_75772, ceu_idx_75772));
-                        ceu_gc_dec_val(ceu_col_75772);
-                        ceu_gc_dec_val(ceu_idx_75772);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 142, col 17) : to[:pointer]");
+                        CEU_ACC(ceu_col_get(ceu_col_75740, ceu_idx_75740));
+                        ceu_gc_dec_val(ceu_col_75740);
+                        ceu_gc_dec_val(ceu_idx_75740);
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer]");
                     
                 }
                 
-                    CEU_Value ceu_clo_75777 = CEU_ACC_KEEP();
-                    if (ceu_clo_75777.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75777);
+                    CEU_Value ceu_clo_75745 = CEU_ACC_KEEP();
+                    if (ceu_clo_75745.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75745);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 142, col 17) : to[:pointer](label)"
+                            "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer](label)"
                         );
                     }
-                    CEUX ceux_75777 = {
-                        (CEU_Clo*) ceu_clo_75777.Dyn,
+                    CEUX ceux_75745 = {
+                        (CEU_Clo*) ceu_clo_75745.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -54173,12 +54139,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75777
+                        ceu_args_75745
                     };
-                    ceu_clo_75777.Dyn->Clo.proto(&ceux_75777);
-                    ceu_gc_dec_val(ceu_clo_75777);
+                    ceu_clo_75745.Dyn->Clo.proto(&ceux_75745);
+                    ceu_gc_dec_val(ceu_clo_75745);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 142, col 17) : to[:pointer](label)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 140, col 17) : to[:pointer](label)");
             
         
                 } // CALL | 
@@ -54188,37 +54154,37 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 142, col 9) : (val s = to[:pointer](label))"
+                            "@/iup/iup.ceu : (lin 140, col 9) : (val s = to[:pointer](label))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_s_75778 = ceu_acc;
+                        ceu_loc_s_75746 = ceu_acc;
                     
                 
                 // DCL | 
                 
-                        CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupButton((ceu_loc_s_75778).Pointer, NULL))} }));
+                        CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupButton((ceu_loc_s_75746).Pointer, NULL))} }));
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 143, col 9) : (val h = ```:pointer   IupButton($s.Pointe..."
+                            "@/iup/iup.ceu : (lin 141, col 9) : (val h = ```:pointer   IupButton($s.Pointe..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_h_75786 = ceu_acc;
+                        ceu_loc_h_75754 = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetCallback((ceu_loc_h_75786).Pointer, "ACTION", iup_action_cb); 
+                        IupSetCallback((ceu_loc_h_75754).Pointer, "ACTION", iup_action_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 144, col 9) : ```IupSetCallback($h.Pointer, .ACTION., iu...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 142, col 9) : ```IupSetCallback($h.Pointer, .ACTION., iu...");
             
         
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_h_75786);
+                        CEU_ACC(ceu_loc_h_75754);
                     
                         
                     } while (0);
@@ -54226,16 +54192,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75796 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75764 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75796 != NULL) {
-                            CEU_LNKS(ceu_block_75796)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75764 != NULL) {
+                            CEU_LNKS(ceu_block_75764)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75796);
+                            CEU_Block cur = ceu_task_get(ceu_block_75764);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54247,14 +54213,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_h_75786);
+                                ceu_gc_dec_val(ceu_loc_h_75754);
                             
-                                ceu_gc_dec_val(ceu_loc_s_75778);
+                                ceu_gc_dec_val(ceu_loc_s_75746);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75796;
+                    ceu_acc = ceu_acc_75764;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54280,16 +54246,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_75797 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75765 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_label_75756
+                                        ceu_loc_label_75724
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_75797;
+                            ceu_acc = ceu_acc_75765;
                         }
 
                         
@@ -54306,12 +54272,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 148, col 5) : (func' :nested (label) { group { (val s = ..."
+                                        "@/iup/iup.ceu : (lin 146, col 5) : (func' :nested (label) { group { (val s = ..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_label_75845
+                                    CEU_Value ceu_loc_label_75813
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -54327,7 +54293,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75875 = NULL;
+                         CEU_Block ceu_block_75843 = NULL;
                     
                     
                     
@@ -54335,13 +54301,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_s_75867;
+                                        CEU_Value ceu_loc_s_75835;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_s_75867 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_s_75835 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -54356,13 +54322,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
                 { // CALL | 
                     
-                        CEU_Value ceu_args_75866[1];
+                        CEU_Value ceu_args_75834[1];
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_label_75845);
+                        CEU_ACC(ceu_loc_label_75813);
                     
-                            ceu_args_75866[0] = CEU_ACC_KEEP();
+                            ceu_args_75834[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -54374,32 +54340,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_to);
                     
-                    CEU_Value ceu_col_75861 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_75829 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }));
                         
-                    CEU_Value ceu_idx_75861 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_75829 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_75861, ceu_idx_75861));
-                        ceu_gc_dec_val(ceu_col_75861);
-                        ceu_gc_dec_val(ceu_idx_75861);
-                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 149, col 17) : to[:pointer]");
+                        CEU_ACC(ceu_col_get(ceu_col_75829, ceu_idx_75829));
+                        ceu_gc_dec_val(ceu_col_75829);
+                        ceu_gc_dec_val(ceu_idx_75829);
+                        CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer]");
                     
                 }
                 
-                    CEU_Value ceu_clo_75866 = CEU_ACC_KEEP();
-                    if (ceu_clo_75866.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_75866);
+                    CEU_Value ceu_clo_75834 = CEU_ACC_KEEP();
+                    if (ceu_clo_75834.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_75834);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "@/iup/iup.ceu : (lin 149, col 17) : to[:pointer](label)"
+                            "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer](label)"
                         );
                     }
-                    CEUX ceux_75866 = {
-                        (CEU_Clo*) ceu_clo_75866.Dyn,
+                    CEUX ceux_75834 = {
+                        (CEU_Clo*) ceu_clo_75834.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -54408,12 +54374,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        ceu_args_75866
+                        ceu_args_75834
                     };
-                    ceu_clo_75866.Dyn->Clo.proto(&ceux_75866);
-                    ceu_gc_dec_val(ceu_clo_75866);
+                    ceu_clo_75834.Dyn->Clo.proto(&ceux_75834);
+                    ceu_gc_dec_val(ceu_clo_75834);
                     
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 149, col 17) : to[:pointer](label)");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 147, col 17) : to[:pointer](label)");
             
         
                 } // CALL | 
@@ -54423,29 +54389,29 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 149, col 9) : (val s = to[:pointer](label))"
+                            "@/iup/iup.ceu : (lin 147, col 9) : (val s = to[:pointer](label))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_s_75867 = ceu_acc;
+                        ceu_loc_s_75835 = ceu_acc;
                     
-                CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupLabel((ceu_loc_s_75867).Pointer))} }));
+                CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupLabel((ceu_loc_s_75835).Pointer))} }));
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75875 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75843 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75875 != NULL) {
-                            CEU_LNKS(ceu_block_75875)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75843 != NULL) {
+                            CEU_LNKS(ceu_block_75843)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75875);
+                            CEU_Block cur = ceu_task_get(ceu_block_75843);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54457,12 +54423,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_s_75867);
+                                ceu_gc_dec_val(ceu_loc_s_75835);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75875;
+                    ceu_acc = ceu_acc_75843;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54488,16 +54454,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_75876 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75844 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_label_75845
+                                        ceu_loc_label_75813
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_75876;
+                            ceu_acc = ceu_acc_75844;
                         }
 
                         
@@ -54521,7 +54487,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75932 = NULL;
+                         CEU_Block ceu_block_75900 = NULL;
                     
                     
                     
@@ -54529,13 +54495,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_h_75922;
+                                        CEU_Value ceu_loc_h_75890;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_h_75922 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_h_75890 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -54553,22 +54519,22 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 154, col 9) : (val h = ```:pointer   IupList(NULL)```)"
+                            "@/iup/iup.ceu : (lin 152, col 9) : (val h = ```:pointer   IupList(NULL)```)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_h_75922 = ceu_acc;
+                        ceu_loc_h_75890 = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetCallback((ceu_loc_h_75922).Pointer, "ACTION", (Icallback) iup_list_action_cb); 
+                        IupSetCallback((ceu_loc_h_75890).Pointer, "ACTION", (Icallback) iup_list_action_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 155, col 9) : ```IupSetCallback($h.Pointer, .ACTION., (I...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 153, col 9) : ```IupSetCallback($h.Pointer, .ACTION., (I...");
             
         
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_h_75922);
+                        CEU_ACC(ceu_loc_h_75890);
                     
                         
                     } while (0);
@@ -54576,16 +54542,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75932 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75900 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75932 != NULL) {
-                            CEU_LNKS(ceu_block_75932)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75900 != NULL) {
+                            CEU_LNKS(ceu_block_75900)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75932);
+                            CEU_Block cur = ceu_task_get(ceu_block_75900);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54597,12 +54563,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_h_75922);
+                                ceu_gc_dec_val(ceu_loc_h_75890);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75932;
+                    ceu_acc = ceu_acc_75900;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54628,10 +54594,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_75933 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75901 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_75933;
+                            ceu_acc = ceu_acc_75901;
                         }
 
                         
@@ -54655,7 +54621,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_75989 = NULL;
+                         CEU_Block ceu_block_75957 = NULL;
                     
                     
                     
@@ -54663,13 +54629,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                                 //{ // inline vars dcls
                                     
-                                        CEU_Value ceu_loc_h_75979;
+                                        CEU_Value ceu_loc_h_75947;
                                     
                                 //}
                             
                             { // vars inits
                                 
-                                    ceu_loc_h_75979 = (CEU_Value) { CEU_VALUE_NIL };
+                                    ceu_loc_h_75947 = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -54687,22 +54653,22 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 160, col 9) : (val h = ```:pointer   IupText(NULL)```)"
+                            "@/iup/iup.ceu : (lin 158, col 9) : (val h = ```:pointer   IupText(NULL)```)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        ceu_loc_h_75979 = ceu_acc;
+                        ceu_loc_h_75947 = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        IupSetCallback((ceu_loc_h_75979).Pointer, "VALUECHANGED_CB", iup_value_cb); 
+                        IupSetCallback((ceu_loc_h_75947).Pointer, "VALUECHANGED_CB", iup_value_cb); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 161, col 9) : ```IupSetCallback($h.Pointer, .VALUECHANGE...");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 159, col 9) : ```IupSetCallback($h.Pointer, .VALUECHANGE...");
             
         
                     
                         // ACC - GET | 
-                        CEU_ACC(ceu_loc_h_75979);
+                        CEU_ACC(ceu_loc_h_75947);
                     
                         
                     } while (0);
@@ -54710,16 +54676,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_75989 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75957 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_75989 != NULL) {
-                            CEU_LNKS(ceu_block_75989)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75957 != NULL) {
+                            CEU_LNKS(ceu_block_75957)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_75989);
+                            CEU_Block cur = ceu_task_get(ceu_block_75957);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54731,12 +54697,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val(ceu_loc_h_75979);
+                                ceu_gc_dec_val(ceu_loc_h_75947);
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_75989;
+                    ceu_acc = ceu_acc_75957;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54762,10 +54728,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_75990 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75958 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_75990;
+                            ceu_acc = ceu_acc_75958;
                         }
 
                         
@@ -54789,7 +54755,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_76028 = NULL;
+                         CEU_Block ceu_block_75996 = NULL;
                     
                     
                     
@@ -54815,16 +54781,16 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupHbox(NULL))} }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_76028 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_75996 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_76028 != NULL) {
-                            CEU_LNKS(ceu_block_76028)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_75996 != NULL) {
+                            CEU_LNKS(ceu_block_75996)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_76028);
+                            CEU_Block cur = ceu_task_get(ceu_block_75996);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54839,7 +54805,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupHbox(NULL))} }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_76028;
+                    ceu_acc = ceu_acc_75996;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54865,10 +54831,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupHbox(NULL))} }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_76029 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_75997 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_76029;
+                            ceu_acc = ceu_acc_75997;
                         }
 
                         
@@ -54892,7 +54858,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupHbox(NULL))} }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_76067 = NULL;
+                         CEU_Block ceu_block_76035 = NULL;
                     
                     
                     
@@ -54918,16 +54884,16 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_76067 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_76035 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_76067 != NULL) {
-                            CEU_LNKS(ceu_block_76067)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_76035 != NULL) {
+                            CEU_LNKS(ceu_block_76035)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_76067);
+                            CEU_Block cur = ceu_task_get(ceu_block_76035);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -54942,7 +54908,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_76067;
+                    ceu_acc = ceu_acc_76035;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -54968,10 +54934,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_76068 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_76036 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_76068;
+                            ceu_acc = ceu_acc_76036;
                         }
 
                         
@@ -54988,12 +54954,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 175, col 5) : (func' :nested (h,child) { group { ```:poi..."
+                                        "@/iup/iup.ceu : (lin 173, col 5) : (func' :nested (h,child) { group { ```:poi..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_h_76104
+                                    CEU_Value ceu_loc_h_76072
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55002,12 +54968,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 175, col 5) : (func' :nested (h,child) { group { ```:poi..."
+                                        "@/iup/iup.ceu : (lin 173, col 5) : (func' :nested (h,child) { group { ```:poi..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_child_76108
+                                    CEU_Value ceu_loc_child_76076
                                 
                                     = (1 < ceux->n) ? ceux->args[1] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55023,7 +54989,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_76120 = NULL;
+                         CEU_Block ceu_block_76088 = NULL;
                     
                     
                     
@@ -55042,23 +55008,23 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupVbox(NULL))} }));
                     
                     do { // BLOCK | 
                         // GROUP | 
-CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104).Pointer, (ceu_loc_child_76108).Pointer))} }));
+CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76072).Pointer, (ceu_loc_child_76076).Pointer))} }));
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_76120 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_76088 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_76120 != NULL) {
-                            CEU_LNKS(ceu_block_76120)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_76088 != NULL) {
+                            CEU_LNKS(ceu_block_76088)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_76120);
+                            CEU_Block cur = ceu_task_get(ceu_block_76088);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -55073,7 +55039,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_76120;
+                    ceu_acc = ceu_acc_76088;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -55099,22 +55065,22 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104
                         
 
                         { // pars
-                            CEU_Value ceu_acc_76121 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_76089 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_h_76104
+                                        ceu_loc_h_76072
                                     
                                 );
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_child_76108
+                                        ceu_loc_child_76076
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_76121;
+                            ceu_acc = ceu_acc_76089;
                         }
 
                         
@@ -55131,12 +55097,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 181, col 5) : (func' :nested (h) { group { ```:pointer  ..."
+                                        "@/iup/iup.ceu : (lin 179, col 5) : (func' :nested (h) { group { ```:pointer  ..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_h_76153
+                                    CEU_Value ceu_loc_h_76121
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55152,7 +55118,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_76165 = NULL;
+                         CEU_Block ceu_block_76133 = NULL;
                     
                     
                     
@@ -55171,23 +55137,23 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupAppend((ceu_loc_h_76104
                     
                     do { // BLOCK | 
                         // GROUP | 
-CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153).Pointer))} }));
+CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76121).Pointer))} }));
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_76165 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_76133 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_76165 != NULL) {
-                            CEU_LNKS(ceu_block_76165)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_76133 != NULL) {
+                            CEU_LNKS(ceu_block_76133)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_76165);
+                            CEU_Block cur = ceu_task_get(ceu_block_76133);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -55202,7 +55168,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_76165;
+                    ceu_acc = ceu_acc_76133;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -55228,16 +55194,16 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                         
 
                         { // pars
-                            CEU_Value ceu_acc_76166 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_76134 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_h_76153
+                                        ceu_loc_h_76121
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_76166;
+                            ceu_acc = ceu_acc_76134;
                         }
 
                         
@@ -55254,12 +55220,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[0], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 185, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_h_76206
+                                    CEU_Value ceu_loc_h_76174
                                 
                                     = (0 < ceux->n) ? ceux->args[0] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55268,12 +55234,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[1], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 185, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_x_76210
+                                    CEU_Value ceu_loc_x_76178
                                 
                                     = (1 < ceux->n) ? ceux->args[1] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55282,12 +55248,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                                     CEU_ERROR_CHK_PTR (
                                         assert(0 && "XXX"),
                                         ceu_lex_chk_own(ceux->args[2], (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                                        "@/iup/iup.ceu : (lin 185, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
+                                        "@/iup/iup.ceu : (lin 183, col 5) : (func' :nested (h,x,y) { group { ```:numbe..."
                                     );
                                 }
                                 */
                                 
-                                    CEU_Value ceu_loc_y_76214
+                                    CEU_Value ceu_loc_y_76182
                                 
                                     = (2 < ceux->n) ? ceux->args[2] : (CEU_Value) { CEU_VALUE_NIL };
                             
@@ -55303,7 +55269,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_76226 = NULL;
+                         CEU_Block ceu_block_76194 = NULL;
                     
                     
                     
@@ -55322,23 +55288,23 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IupDialog((ceu_loc_h_76153
                     
                     do { // BLOCK | 
                         // GROUP | 
-CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).Pointer, (ceu_loc_x_76210).Number, (ceu_loc_y_76214).Number))} }));
+CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76174).Pointer, (ceu_loc_x_76178).Number, (ceu_loc_y_76182).Number))} }));
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_76226 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_76194 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if (ceu_block_76226 != NULL) {
-                            CEU_LNKS(ceu_block_76226)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_76194 != NULL) {
+                            CEU_LNKS(ceu_block_76194)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_76226);
+                            CEU_Block cur = ceu_task_get(ceu_block_76194);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -55353,7 +55319,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_76226;
+                    ceu_acc = ceu_acc_76194;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -55379,37 +55345,37 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         
 
                         { // pars
-                            CEU_Value ceu_acc_76227 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_76195 = CEU_ACC_KEEP();
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_h_76206
+                                        ceu_loc_h_76174
                                     
                                 );
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_x_76210
+                                        ceu_loc_x_76178
                                     
                                 );
                             
                                 ceu_gc_dec_val (
                                     
-                                        ceu_loc_y_76214
+                                        ceu_loc_y_76182
                                     
                                 );
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_76227;
+                            ceu_acc = ceu_acc_76195;
                         }
 
                         
                     }
                 
                     // PROTO | 
-                    void ceu_pro_84245 (CEUX* ceux) {
+                    void ceu_pro_84463 (CEUX* ceux) {
                         
-                            CEU_Pro_84245* ceu_mem = (CEU_Pro_84245*) ceux->exe->mem;                    
+                            CEU_Pro_84463* ceu_mem = (CEU_Pro_84463*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -55433,7 +55399,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84244) = NULL;
+                          (ceu_mem->block_84462) = NULL;
                     
                     
                     
@@ -55454,7 +55420,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84239) = NULL;
+                          (ceu_mem->block_84457) = NULL;
                     
                     
                     
@@ -55462,7 +55428,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_76772_83884) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_76740_84092) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55477,7 +55443,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84232:
+                CEU_LOOP_START_84450:
                     // GROUP | 
 // GROUP | 
 
@@ -55486,7 +55452,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84226) = NULL;
+                          (ceu_mem->block_84444) = NULL;
                     
                     
                     
@@ -55494,7 +55460,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84202) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84420) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55511,7 +55477,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84201) = NULL;
+                          (ceu_mem->block_84419) = NULL;
                     
                     
                     
@@ -55519,7 +55485,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_76896_83905) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_76874_84113) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55534,14 +55500,14 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84192:
+                CEU_LOOP_START_84410:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84191) = NULL;
+                          (ceu_mem->block_84409) = NULL;
                     
                     
                     
@@ -55562,17 +55528,17 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 83925;
+                    ceux->exe->pc = 84133;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
                         continue,
                         ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, 1 }),
-                        "02_temperature.ceu : (lin 41, col 39) : yield(nil)"
+                        "02_temperature.ceu : (lin 42, col 39) : yield(nil)"
                     );
                 #endif
                     return;
-                case 83925: // YIELD 
+                case 84133: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -55596,12 +55562,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-1 }),
-                            "02_temperature.ceu : (lin 46, col 41) : ceu_ret"
+                            "02_temperature.ceu : (lin 47, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_76896_83905));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_76874_84113));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_76896_83905) = ceu_acc;
+                        (ceu_mem->ceu_ret_76874_84113) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -55610,7 +55576,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84186) = NULL;
+                          (ceu_mem->block_84404) = NULL;
                     
                     
                     
@@ -55618,7 +55584,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84162) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84380) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55635,7 +55601,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84161) = NULL;
+                          (ceu_mem->block_84379) = NULL;
                     
                     
                     
@@ -55643,7 +55609,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_83943) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84151) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55656,18 +55622,18 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_76896_83905));
+                        CEU_ACC((ceu_mem->ceu_ret_76874_84113));
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 44, col 17) : (val it :Iup.Value = ceu_ret)"
+                            "02_temperature.ceu : (lin 45, col 17) : (val it :Iup.Value = ceu_ret)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_83943) = ceu_acc;
+                        (ceu_mem->it_84151) = ceu_acc;
                     
                 
                 { // IF | 
@@ -55676,27 +55642,27 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_83943));
+                        CEU_ACC((ceu_mem->it_84151));
                     
-                            (ceu_mem->args_83955)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84163)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Value} }));
-                            (ceu_mem->args_83955)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84163)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_83955 = CEU_ACC_KEEP();
-                    if (ceu_clo_83955.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83955);
+                    CEU_Value ceu_clo_84163 = CEU_ACC_KEEP();
+                    if (ceu_clo_84163.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84163);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 33, col 27) : is'(it,:Iup.Value)"
                         );
                     }
-                    CEUX ceux_83955 = {
-                        (CEU_Clo*) ceu_clo_83955.Dyn,
+                    CEUX ceux_84163 = {
+                        (CEU_Clo*) ceu_clo_84163.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -55705,10 +55671,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83955)
+                        (ceu_mem->args_84163)
                     };
-                    ceu_clo_83955.Dyn->Clo.proto(&ceux_83955);
-                    ceu_gc_dec_val(ceu_clo_83955);
+                    ceu_clo_84163.Dyn->Clo.proto(&ceux_84163);
+                    ceu_gc_dec_val(ceu_clo_84163);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 33, col 27) : is'(it,:Iup.Value)");
             
@@ -55736,45 +55702,45 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_83943));
+                        CEU_ACC((ceu_mem->it_84151));
                     
-                     (ceu_mem->col_83967) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84175) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_83967 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84175 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83967), ceu_idx_83967));
-                        ceu_gc_dec_val((ceu_mem->col_83967));
-                        ceu_gc_dec_val(ceu_idx_83967);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84175), ceu_idx_84175));
+                        ceu_gc_dec_val((ceu_mem->col_84175));
+                        ceu_gc_dec_val(ceu_idx_84175);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 32, col 28) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_83972)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84180)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempC_83467);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempC_83675);
                     
-                            (ceu_mem->args_83972)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84180)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_83972 = CEU_ACC_KEEP();
-                    if (ceu_clo_83972.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83972);
+                    CEU_Value ceu_clo_84180 = CEU_ACC_KEEP();
+                    if (ceu_clo_84180.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84180);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 32, col 32) : {{==}}(it[:h],tempC)"
                         );
                     }
-                    CEUX ceux_83972 = {
-                        (CEU_Clo*) ceu_clo_83972.Dyn,
+                    CEUX ceux_84180 = {
+                        (CEU_Clo*) ceu_clo_84180.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -55783,10 +55749,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83972)
+                        (ceu_mem->args_84180)
                     };
-                    ceu_clo_83972.Dyn->Clo.proto(&ceux_83972);
-                    ceu_gc_dec_val(ceu_clo_83972);
+                    ceu_clo_84180.Dyn->Clo.proto(&ceux_84180);
+                    ceu_gc_dec_val(ceu_clo_84180);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 32, col 32) : {{==}}(it[:h],tempC)");
             
@@ -55806,7 +55772,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84143) = NULL;
+                          (ceu_mem->block_84361) = NULL;
                     
                     
                     
@@ -55814,7 +55780,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_brk_76772_83987) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_brk_76740_84195) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55838,7 +55804,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_brk_76772_83987) = ceu_acc;
+                        (ceu_mem->ceu_brk_76740_84195) = ceu_acc;
                     
                 
                 { // SET | 
@@ -55846,14 +55812,14 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84127:
+                CEU_LOOP_START_84345:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84126) = NULL;
+                          (ceu_mem->block_84344) = NULL;
                     
                     
                     
@@ -55861,9 +55827,9 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->c_84026) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->c_84234) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->f_84058) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->f_84276) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -55880,11 +55846,11 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempC_83467);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempC_83675);
                     
-                            (ceu_mem->args_84025)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84233)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_84025)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84233)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -55902,47 +55868,47 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_84012) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84220) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_84012 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84220 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84012), ceu_idx_84012));
-                        ceu_gc_dec_val((ceu_mem->col_84012));
-                        ceu_gc_dec_val(ceu_idx_84012);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84220), ceu_idx_84220));
+                        ceu_gc_dec_val((ceu_mem->col_84220));
+                        ceu_gc_dec_val(ceu_idx_84220);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 33, col 21) : iup[:get]");
                     
                 }
                 
-                     (ceu_mem->col_84017) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84225) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_84017 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84225 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84017), ceu_idx_84017));
-                        ceu_gc_dec_val((ceu_mem->col_84017));
-                        ceu_gc_dec_val(ceu_idx_84017);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84225), ceu_idx_84225));
+                        ceu_gc_dec_val((ceu_mem->col_84225));
+                        ceu_gc_dec_val(ceu_idx_84225);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 33, col 21) : iup[:get][:number]");
                     
                 }
                 
-                    CEU_Value ceu_clo_84025 = CEU_ACC_KEEP();
-                    if (ceu_clo_84025.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84025);
+                    CEU_Value ceu_clo_84233 = CEU_ACC_KEEP();
+                    if (ceu_clo_84233.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84233);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 33, col 21) : iup[:get][:number](tempC,:VALUE)"
                         );
                     }
-                    CEUX ceux_84025 = {
-                        (CEU_Clo*) ceu_clo_84025.Dyn,
+                    CEUX ceux_84233 = {
+                        (CEU_Clo*) ceu_clo_84233.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -55951,10 +55917,10 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84025)
+                        (ceu_mem->args_84233)
                     };
-                    ceu_clo_84025.Dyn->Clo.proto(&ceux_84025);
-                    ceu_gc_dec_val(ceu_clo_84025);
+                    ceu_clo_84233.Dyn->Clo.proto(&ceux_84233);
+                    ceu_gc_dec_val(ceu_clo_84233);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 33, col 21) : iup[:get][:number](tempC,:VALUE)");
             
@@ -55974,9 +55940,56 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->c_84026) = ceu_acc;
+                        (ceu_mem->c_84234) = ceu_acc;
                     
                 
+                { // CALL | 
+                    
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_celsi} }));
+                            (ceu_mem->args_84245)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->c_84234));
+                    
+                            (ceu_mem->args_84245)[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_84245 = CEU_ACC_KEEP();
+                    if (ceu_clo_84245.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84245);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "02_temperature.ceu : (lin 34, col 13) : println(:celsi,c)"
+                        );
+                    }
+                    CEUX ceux_84245 = {
+                        (CEU_Clo*) ceu_clo_84245.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_84245)
+                    };
+                    ceu_clo_84245.Dyn->Clo.proto(&ceux_84245);
+                    ceu_gc_dec_val(ceu_clo_84245);
+                    
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 34, col 13) : println(:celsi,c)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
                 // DCL | 
                 
                         
@@ -55987,32 +56000,32 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->c_84026));
+                        CEU_ACC((ceu_mem->c_84234));
                     
-                            (ceu_mem->args_84052)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84270)[0] = CEU_ACC_KEEP();
                         
                 { // CALL | 
                     
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9.0} }));
-                            (ceu_mem->args_84050)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84268)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5.0} }));
-                            (ceu_mem->args_84050)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84268)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_slash);
                     
-                    CEU_Value ceu_clo_84050 = CEU_ACC_KEEP();
-                    if (ceu_clo_84050.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84050);
+                    CEU_Value ceu_clo_84268 = CEU_ACC_KEEP();
+                    if (ceu_clo_84268.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84268);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 34, col 28) : {{/}}(9.0,5.0)"
+                            "02_temperature.ceu : (lin 35, col 28) : {{/}}(9.0,5.0)"
                         );
                     }
-                    CEUX ceux_84050 = {
-                        (CEU_Clo*) ceu_clo_84050.Dyn,
+                    CEUX ceux_84268 = {
+                        (CEU_Clo*) ceu_clo_84268.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56021,12 +56034,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84050)
+                        (ceu_mem->args_84268)
                     };
-                    ceu_clo_84050.Dyn->Clo.proto(&ceux_84050);
-                    ceu_gc_dec_val(ceu_clo_84050);
+                    ceu_clo_84268.Dyn->Clo.proto(&ceux_84268);
+                    ceu_gc_dec_val(ceu_clo_84268);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 34, col 28) : {{/}}(9.0,5.0)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 35, col 28) : {{/}}(9.0,5.0)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -56035,23 +56048,23 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
         
                 } // CALL | 
             
-                            (ceu_mem->args_84052)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84270)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_asterisk);
                     
-                    CEU_Value ceu_clo_84052 = CEU_ACC_KEEP();
-                    if (ceu_clo_84052.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84052);
+                    CEU_Value ceu_clo_84270 = CEU_ACC_KEEP();
+                    if (ceu_clo_84270.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84270);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 34, col 23) : {{*}}(c,{{/}}(9.0,5.0))"
+                            "02_temperature.ceu : (lin 35, col 23) : {{*}}(c,{{/}}(9.0,5.0))"
                         );
                     }
-                    CEUX ceux_84052 = {
-                        (CEU_Clo*) ceu_clo_84052.Dyn,
+                    CEUX ceux_84270 = {
+                        (CEU_Clo*) ceu_clo_84270.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56060,12 +56073,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84052)
+                        (ceu_mem->args_84270)
                     };
-                    ceu_clo_84052.Dyn->Clo.proto(&ceux_84052);
-                    ceu_gc_dec_val(ceu_clo_84052);
+                    ceu_clo_84270.Dyn->Clo.proto(&ceux_84270);
+                    ceu_gc_dec_val(ceu_clo_84270);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 34, col 23) : {{*}}(c,{{/}}(9.0,5.0))");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 35, col 23) : {{*}}(c,{{/}}(9.0,5.0))");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -56074,25 +56087,25 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
         
                 } // CALL | 
             
-                            (ceu_mem->args_84057)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84275)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=32} }));
-                            (ceu_mem->args_84057)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84275)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_plus);
                     
-                    CEU_Value ceu_clo_84057 = CEU_ACC_KEEP();
-                    if (ceu_clo_84057.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84057);
+                    CEU_Value ceu_clo_84275 = CEU_ACC_KEEP();
+                    if (ceu_clo_84275.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84275);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 34, col 35) : {{+}}({{*}}(c,{{/}}(9.0,5.0)),32)"
+                            "02_temperature.ceu : (lin 35, col 35) : {{+}}({{*}}(c,{{/}}(9.0,5.0)),32)"
                         );
                     }
-                    CEUX ceux_84057 = {
-                        (CEU_Clo*) ceu_clo_84057.Dyn,
+                    CEUX ceux_84275 = {
+                        (CEU_Clo*) ceu_clo_84275.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56101,12 +56114,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84057)
+                        (ceu_mem->args_84275)
                     };
-                    ceu_clo_84057.Dyn->Clo.proto(&ceux_84057);
-                    ceu_gc_dec_val(ceu_clo_84057);
+                    ceu_clo_84275.Dyn->Clo.proto(&ceux_84275);
+                    ceu_gc_dec_val(ceu_clo_84275);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 34, col 35) : {{+}}({{*}}(c,{{/}}(9.0,5.0)),32)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 35, col 35) : {{+}}({{*}}(c,{{/}}(9.0,5.0)),32)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -56120,17 +56133,17 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 34, col 13) : (val f = {{+}}({{*}}(c,{{/}}(9.0,5.0)),32))"
+                            "02_temperature.ceu : (lin 35, col 13) : (val f = {{+}}({{*}}(c,{{/}}(9.0,5.0)),32))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->f_84058) = ceu_acc;
+                        (ceu_mem->f_84276) = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        static char str[16]; sprintf(str, "%.2lf", ((ceu_mem->f_84058)).Number); 
+                        static char str[16]; sprintf(str, "%.2lf", ((ceu_mem->f_84276)).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 35, col 13) : ```static char str[16]; sprintf(str, .%.2l...");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 36, col 13) : ```static char str[16]; sprintf(str, .%.2l...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -56142,13 +56155,13 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempF_83544);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempF_83752);
                     
-                            (ceu_mem->args_84079)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84297)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_84079)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84297)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(             str)} }));
-                            (ceu_mem->args_84079)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84297)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -56160,32 +56173,32 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_84068) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84286) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_84068 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84286 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84068), ceu_idx_84068));
-                        ceu_gc_dec_val((ceu_mem->col_84068));
-                        ceu_gc_dec_val(ceu_idx_84068);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 36, col 13) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84286), ceu_idx_84286));
+                        ceu_gc_dec_val((ceu_mem->col_84286));
+                        ceu_gc_dec_val(ceu_idx_84286);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 37, col 13) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_84079 = CEU_ACC_KEEP();
-                    if (ceu_clo_84079.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84079);
+                    CEU_Value ceu_clo_84297 = CEU_ACC_KEEP();
+                    if (ceu_clo_84297.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84297);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 36, col 13) : iup[:set](tempF,:VALUE,```:pointer        ..."
+                            "02_temperature.ceu : (lin 37, col 13) : iup[:set](tempF,:VALUE,```:pointer        ..."
                         );
                     }
-                    CEUX ceux_84079 = {
-                        (CEU_Clo*) ceu_clo_84079.Dyn,
+                    CEUX ceux_84297 = {
+                        (CEU_Clo*) ceu_clo_84297.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -56194,12 +56207,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_84079)
+                        (ceu_mem->args_84297)
                     };
-                    ceu_clo_84079.Dyn->Clo.proto(&ceux_84079);
-                    ceu_gc_dec_val(ceu_clo_84079);
+                    ceu_clo_84297.Dyn->Clo.proto(&ceux_84297);
+                    ceu_gc_dec_val(ceu_clo_84297);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 36, col 13) : iup[:set](tempF,:VALUE,```:pointer        ...");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 37, col 13) : iup[:set](tempF,:VALUE,```:pointer        ...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -56217,12 +56230,12 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "02_temperature.ceu : (lin 38, col 45) : ceu_brk"
+                            "02_temperature.ceu : (lin 39, col 45) : ceu_brk"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_brk_76772_83987));
+                        ceu_gc_dec_val((ceu_mem->ceu_brk_76740_84195));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_brk_76772_83987) = ceu_acc;
+                        (ceu_mem->ceu_brk_76740_84195) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -56231,7 +56244,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84121) = NULL;
+                          (ceu_mem->block_84339) = NULL;
                     
                     
                     
@@ -56239,7 +56252,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84097) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84315) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -56258,17 +56271,17 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "02_temperature.ceu : (lin 39, col 57) : (val' it = true)"
+                            "02_temperature.ceu : (lin 40, col 57) : (val' it = true)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84097) = ceu_acc;
+                        (ceu_mem->it_84315) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84097));
+                        CEU_ACC((ceu_mem->it_84315));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -56279,7 +56292,7 @@ CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IupShowXY((ceu_loc_h_76206).
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84097));
+                        CEU_ACC((ceu_mem->it_84315));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -56299,16 +56312,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84121 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84339 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84121) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84121))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84339) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84339))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84121));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84339));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56320,12 +56333,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84097));
+                                ceu_gc_dec_val((ceu_mem->it_84315));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84121;
+                    ceu_acc = ceu_acc_84339;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56347,23 +56360,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_84127:
+                            CEU_LOOP_STOP_84345:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84126 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84344 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84126) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84126))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84344) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84344))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84126));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84344));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56375,14 +56388,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->f_84058));
+                                ceu_gc_dec_val((ceu_mem->f_84276));
                             
-                                ceu_gc_dec_val((ceu_mem->c_84026));
+                                ceu_gc_dec_val((ceu_mem->c_84234));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84126;
+                    ceu_acc = ceu_acc_84344;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56403,7 +56416,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84127;
+                    goto CEU_LOOP_START_84345;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -56432,14 +56445,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             "02_temperature.ceu : (lin 34, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_76772_83884));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_76740_84092));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_76772_83884) = ceu_acc;
+                        (ceu_mem->ceu_ret_76740_84092) = ceu_acc;
                           // dst should not pop src
                 }
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_brk_76772_83987));
+                        CEU_ACC((ceu_mem->ceu_brk_76740_84195));
                       // src is on the stack and should be returned
                     // <<< SRC | DST >>>
                     
@@ -56451,9 +56464,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             "02_temperature.ceu : (lin 34, col 33) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_76896_83905));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_76874_84113));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_76896_83905) = ceu_acc;
+                        (ceu_mem->ceu_ret_76874_84113) = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -56463,16 +56476,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84143 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84361 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84143) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84143))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84361) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84361))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84143));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84361));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56484,12 +56497,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_brk_76772_83987));
+                                ceu_gc_dec_val((ceu_mem->ceu_brk_76740_84195));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84143;
+                    ceu_acc = ceu_acc_84361;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56530,16 +56543,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84161 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84379 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84161) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84161))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84379) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84379))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84161));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84379));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56551,12 +56564,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_83943));
+                                ceu_gc_dec_val((ceu_mem->it_84151));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84161;
+                    ceu_acc = ceu_acc_84379;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56588,13 +56601,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84162) = ceu_acc;
+                        (ceu_mem->it_84380) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84162));
+                        CEU_ACC((ceu_mem->it_84380));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -56605,7 +56618,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84162));
+                        CEU_ACC((ceu_mem->it_84380));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -56625,16 +56638,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84186 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84404 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84186) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84186))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84404) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84404))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84186));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84404));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56646,12 +56659,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84162));
+                                ceu_gc_dec_val((ceu_mem->it_84380));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84186;
+                    ceu_acc = ceu_acc_84404;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56673,23 +56686,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_84192:
+                            CEU_LOOP_STOP_84410:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84191 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84409 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84191) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84191))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84409) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84409))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84191));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84409));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56704,7 +56717,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84191;
+                    ceu_acc = ceu_acc_84409;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56725,7 +56738,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84192;
+                    goto CEU_LOOP_START_84410;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -56748,7 +56761,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 ceux->exe_task->time = CEU_TIME;
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_76896_83905));
+                        CEU_ACC((ceu_mem->ceu_ret_76874_84113));
                     
                         
                     } while (0);
@@ -56756,16 +56769,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84201 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84419 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84201) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84201))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84419) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84419))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84201));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84419));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56777,12 +56790,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_76896_83905));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_76874_84113));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84201;
+                    ceu_acc = ceu_acc_84419;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56810,17 +56823,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "02_temperature.ceu : (lin 54, col 8) : (val' it = do { (var' ceu_ret); enclose' :..."
+                            "02_temperature.ceu : (lin 55, col 8) : (val' it = do { (var' ceu_ret); enclose' :..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84202) = ceu_acc;
+                        (ceu_mem->it_84420) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84202));
+                        CEU_ACC((ceu_mem->it_84420));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -56831,7 +56844,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84202));
+                        CEU_ACC((ceu_mem->it_84420));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -56851,16 +56864,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84226 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84444 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84226) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84226))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84444) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84444))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84226));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84444));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56872,12 +56885,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84202));
+                                ceu_gc_dec_val((ceu_mem->it_84420));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84226;
+                    ceu_acc = ceu_acc_84444;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56898,7 +56911,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84232;
+                    goto CEU_LOOP_START_84450;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -56918,7 +56931,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }                                                            
                 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_76772_83884));
+                        CEU_ACC((ceu_mem->ceu_ret_76740_84092));
                     
                         
                     } while (0);
@@ -56926,16 +56939,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84239 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84457 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84239) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84239))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84457) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84457))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84239));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84457));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -56947,12 +56960,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_76772_83884));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_76740_84092));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84239;
+                    ceu_acc = ceu_acc_84457;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -56979,16 +56992,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84244 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84462 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84244) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84244))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84462) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84462))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84244));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84462));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -57003,7 +57016,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84244;
+                    ceu_acc = ceu_acc_84462;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -57029,10 +57042,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_84245 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_84463 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_84245;
+                            ceu_acc = ceu_acc_84463;
                         }
 
                         
@@ -57042,9 +57055,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 
                     // PROTO | 
-                    void ceu_pro_84629 (CEUX* ceux) {
+                    void ceu_pro_84857 (CEUX* ceux) {
                         
-                            CEU_Pro_84629* ceu_mem = (CEU_Pro_84629*) ceux->exe->mem;                    
+                            CEU_Pro_84857* ceu_mem = (CEU_Pro_84857*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -57068,7 +57081,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84628) = NULL;
+                          (ceu_mem->block_84856) = NULL;
                     
                     
                     
@@ -57089,7 +57102,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84623) = NULL;
+                          (ceu_mem->block_84851) = NULL;
                     
                     
                     
@@ -57097,7 +57110,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_79289_84268) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_79357_84486) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57112,7 +57125,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84616:
+                CEU_LOOP_START_84844:
                     // GROUP | 
 // GROUP | 
 
@@ -57121,7 +57134,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84610) = NULL;
+                          (ceu_mem->block_84838) = NULL;
                     
                     
                     
@@ -57129,7 +57142,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84586) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84814) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57146,7 +57159,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84585) = NULL;
+                          (ceu_mem->block_84813) = NULL;
                     
                     
                     
@@ -57154,7 +57167,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_ret_79413_84289) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_ret_79491_84507) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57169,14 +57182,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84576:
+                CEU_LOOP_START_84804:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84575) = NULL;
+                          (ceu_mem->block_84803) = NULL;
                     
                     
                     
@@ -57197,17 +57210,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 84309;
+                    ceux->exe->pc = 84527;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
                         continue,
                         ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, 1 }),
-                        "02_temperature.ceu : (lin 48, col 39) : yield(nil)"
+                        "02_temperature.ceu : (lin 50, col 39) : yield(nil)"
                     );
                 #endif
                     return;
-                case 84309: // YIELD 
+                case 84527: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -57231,12 +57244,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-1 }),
-                            "02_temperature.ceu : (lin 53, col 41) : ceu_ret"
+                            "02_temperature.ceu : (lin 55, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_79413_84289));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_79491_84507));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_79413_84289) = ceu_acc;
+                        (ceu_mem->ceu_ret_79491_84507) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -57245,7 +57258,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84570) = NULL;
+                          (ceu_mem->block_84798) = NULL;
                     
                     
                     
@@ -57253,7 +57266,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84546) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84774) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57270,7 +57283,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84545) = NULL;
+                          (ceu_mem->block_84773) = NULL;
                     
                     
                     
@@ -57278,7 +57291,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84327) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84545) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57291,18 +57304,18 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_79413_84289));
+                        CEU_ACC((ceu_mem->ceu_ret_79491_84507));
                     
                         #ifdef CEU_LEX
                         
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 51, col 17) : (val it :Iup.Value = ceu_ret)"
+                            "02_temperature.ceu : (lin 53, col 17) : (val it :Iup.Value = ceu_ret)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84327) = ceu_acc;
+                        (ceu_mem->it_84545) = ceu_acc;
                     
                 
                 { // IF | 
@@ -57311,27 +57324,27 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84327));
+                        CEU_ACC((ceu_mem->it_84545));
                     
-                            (ceu_mem->args_84339)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84557)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Value} }));
-                            (ceu_mem->args_84339)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84557)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_is_plic_);
                     
-                    CEU_Value ceu_clo_84339 = CEU_ACC_KEEP();
-                    if (ceu_clo_84339.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84339);
+                    CEU_Value ceu_clo_84557 = CEU_ACC_KEEP();
+                    if (ceu_clo_84557.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84557);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 40, col 27) : is'(it,:Iup.Value)"
+                            "02_temperature.ceu : (lin 41, col 27) : is'(it,:Iup.Value)"
                         );
                     }
-                    CEUX ceux_84339 = {
-                        (CEU_Clo*) ceu_clo_84339.Dyn,
+                    CEUX ceux_84557 = {
+                        (CEU_Clo*) ceu_clo_84557.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57340,12 +57353,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84339)
+                        (ceu_mem->args_84557)
                     };
-                    ceu_clo_84339.Dyn->Clo.proto(&ceux_84339);
-                    ceu_gc_dec_val(ceu_clo_84339);
+                    ceu_clo_84557.Dyn->Clo.proto(&ceux_84557);
+                    ceu_gc_dec_val(ceu_clo_84557);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 27) : is'(it,:Iup.Value)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 27) : is'(it,:Iup.Value)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57371,45 +57384,45 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // COL
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84327));
+                        CEU_ACC((ceu_mem->it_84545));
                     
-                     (ceu_mem->col_84351) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84569) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_84351 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84569 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84351), ceu_idx_84351));
-                        ceu_gc_dec_val((ceu_mem->col_84351));
-                        ceu_gc_dec_val(ceu_idx_84351);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 39, col 28) : it[:h]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84569), ceu_idx_84569));
+                        ceu_gc_dec_val((ceu_mem->col_84569));
+                        ceu_gc_dec_val(ceu_idx_84569);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 28) : it[:h]");
                     
                 }
                 
-                            (ceu_mem->args_84356)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84574)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempF_83544);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempF_83752);
                     
-                            (ceu_mem->args_84356)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84574)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_equals_equals);
                     
-                    CEU_Value ceu_clo_84356 = CEU_ACC_KEEP();
-                    if (ceu_clo_84356.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84356);
+                    CEU_Value ceu_clo_84574 = CEU_ACC_KEEP();
+                    if (ceu_clo_84574.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84574);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 39, col 32) : {{==}}(it[:h],tempF)"
+                            "02_temperature.ceu : (lin 40, col 32) : {{==}}(it[:h],tempF)"
                         );
                     }
-                    CEUX ceux_84356 = {
-                        (CEU_Clo*) ceu_clo_84356.Dyn,
+                    CEUX ceux_84574 = {
+                        (CEU_Clo*) ceu_clo_84574.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57418,12 +57431,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84356)
+                        (ceu_mem->args_84574)
                     };
-                    ceu_clo_84356.Dyn->Clo.proto(&ceux_84356);
-                    ceu_gc_dec_val(ceu_clo_84356);
+                    ceu_clo_84574.Dyn->Clo.proto(&ceux_84574);
+                    ceu_gc_dec_val(ceu_clo_84574);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 39, col 32) : {{==}}(it[:h],tempF)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 32) : {{==}}(it[:h],tempF)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57441,7 +57454,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84527) = NULL;
+                          (ceu_mem->block_84755) = NULL;
                     
                     
                     
@@ -57449,7 +57462,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->ceu_brk_79289_84371) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->ceu_brk_79357_84589) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57469,11 +57482,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 40, col 37) : (var ceu_brk = true)"
+                            "02_temperature.ceu : (lin 41, col 37) : (var ceu_brk = true)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_brk_79289_84371) = ceu_acc;
+                        (ceu_mem->ceu_brk_79357_84589) = ceu_acc;
                     
                 
                 { // SET | 
@@ -57481,14 +57494,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 do { // ENCLOSE | 
                     
                 // LOOP | 
-                CEU_LOOP_START_84511:
+                CEU_LOOP_START_84739:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84510) = NULL;
+                          (ceu_mem->block_84738) = NULL;
                     
                     
                     
@@ -57496,9 +57509,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->f_84410) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->f_84628) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->c_84442) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->c_84670) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57515,11 +57528,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempF_83544);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempF_83752);
                     
-                            (ceu_mem->args_84409)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84627)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_84409)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84627)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -57537,47 +57550,47 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_84396) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84614) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }));
                         
-                    CEU_Value ceu_idx_84396 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84614 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84396), ceu_idx_84396));
-                        ceu_gc_dec_val((ceu_mem->col_84396));
-                        ceu_gc_dec_val(ceu_idx_84396);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 21) : iup[:get]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84614), ceu_idx_84614));
+                        ceu_gc_dec_val((ceu_mem->col_84614));
+                        ceu_gc_dec_val(ceu_idx_84614);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 21) : iup[:get]");
                     
                 }
                 
-                     (ceu_mem->col_84401) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84619) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_84401 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84619 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84401), ceu_idx_84401));
-                        ceu_gc_dec_val((ceu_mem->col_84401));
-                        ceu_gc_dec_val(ceu_idx_84401);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 21) : iup[:get][:number]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84619), ceu_idx_84619));
+                        ceu_gc_dec_val((ceu_mem->col_84619));
+                        ceu_gc_dec_val(ceu_idx_84619);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 21) : iup[:get][:number]");
                     
                 }
                 
-                    CEU_Value ceu_clo_84409 = CEU_ACC_KEEP();
-                    if (ceu_clo_84409.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84409);
+                    CEU_Value ceu_clo_84627 = CEU_ACC_KEEP();
+                    if (ceu_clo_84627.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84627);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 40, col 21) : iup[:get][:number](tempF,:VALUE)"
+                            "02_temperature.ceu : (lin 41, col 21) : iup[:get][:number](tempF,:VALUE)"
                         );
                     }
-                    CEUX ceux_84409 = {
-                        (CEU_Clo*) ceu_clo_84409.Dyn,
+                    CEUX ceux_84627 = {
+                        (CEU_Clo*) ceu_clo_84627.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57586,12 +57599,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84409)
+                        (ceu_mem->args_84627)
                     };
-                    ceu_clo_84409.Dyn->Clo.proto(&ceux_84409);
-                    ceu_gc_dec_val(ceu_clo_84409);
+                    ceu_clo_84627.Dyn->Clo.proto(&ceux_84627);
+                    ceu_gc_dec_val(ceu_clo_84627);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 40, col 21) : iup[:get][:number](tempF,:VALUE)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 21) : iup[:get][:number](tempF,:VALUE)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57605,13 +57618,60 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 40, col 13) : (val f = iup[:get][:number](tempF,:VALUE))"
+                            "02_temperature.ceu : (lin 41, col 13) : (val f = iup[:get][:number](tempF,:VALUE))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->f_84410) = ceu_acc;
+                        (ceu_mem->f_84628) = ceu_acc;
                     
                 
+                { // CALL | 
+                    
+                    CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_fahr} }));
+                            (ceu_mem->args_84639)[0] = CEU_ACC_KEEP();
+                        
+                        // ACC - GET | 
+                        CEU_ACC((ceu_mem->f_84628));
+                    
+                            (ceu_mem->args_84639)[1] = CEU_ACC_KEEP();
+                        
+                    
+                        // ACC - GET | 
+                        CEU_ACC(ceu_glb_println);
+                    
+                    CEU_Value ceu_clo_84639 = CEU_ACC_KEEP();
+                    if (ceu_clo_84639.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84639);
+                        CEU_ERROR_CHK_PTR (
+                            continue,
+                            "expected function",
+                            "02_temperature.ceu : (lin 42, col 13) : println(:fahr,f)"
+                        );
+                    }
+                    CEUX ceux_84639 = {
+                        (CEU_Clo*) ceu_clo_84639.Dyn,
+                    #if CEU >= 3
+                        {NULL}, CEU_ACTION_INVALID,
+                    #endif
+                    #if CEU >= 4
+                        ceux,
+                    #endif
+                        CEU_LEX_X(ceux->depth+1 COMMA)
+                        2,
+                        (ceu_mem->args_84639)
+                    };
+                    ceu_clo_84639.Dyn->Clo.proto(&ceux_84639);
+                    ceu_gc_dec_val(ceu_clo_84639);
+                    
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 42, col 13) : println(:fahr,f)");
+            
+            if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
+                continue;
+            }
+        
+        
+                } // CALL | 
+            
                 // DCL | 
                 
                         
@@ -57625,27 +57685,27 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->f_84410));
+                        CEU_ACC((ceu_mem->f_84628));
                     
-                            (ceu_mem->args_84431)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84659)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=32} }));
-                            (ceu_mem->args_84431)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84659)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_minus);
                     
-                    CEU_Value ceu_clo_84431 = CEU_ACC_KEEP();
-                    if (ceu_clo_84431.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84431);
+                    CEU_Value ceu_clo_84659 = CEU_ACC_KEEP();
+                    if (ceu_clo_84659.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84659);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 41, col 24) : {{-}}(f,32)"
+                            "02_temperature.ceu : (lin 43, col 24) : {{-}}(f,32)"
                         );
                     }
-                    CEUX ceux_84431 = {
-                        (CEU_Clo*) ceu_clo_84431.Dyn,
+                    CEUX ceux_84659 = {
+                        (CEU_Clo*) ceu_clo_84659.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57654,12 +57714,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84431)
+                        (ceu_mem->args_84659)
                     };
-                    ceu_clo_84431.Dyn->Clo.proto(&ceux_84431);
-                    ceu_gc_dec_val(ceu_clo_84431);
+                    ceu_clo_84659.Dyn->Clo.proto(&ceux_84659);
+                    ceu_gc_dec_val(ceu_clo_84659);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 24) : {{-}}(f,32)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 43, col 24) : {{-}}(f,32)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57668,25 +57728,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_84436)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84664)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=5.0} }));
-                            (ceu_mem->args_84436)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84664)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_asterisk);
                     
-                    CEU_Value ceu_clo_84436 = CEU_ACC_KEEP();
-                    if (ceu_clo_84436.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84436);
+                    CEU_Value ceu_clo_84664 = CEU_ACC_KEEP();
+                    if (ceu_clo_84664.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84664);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 41, col 29) : {{*}}({{-}}(f,32),5.0)"
+                            "02_temperature.ceu : (lin 43, col 29) : {{*}}({{-}}(f,32),5.0)"
                         );
                     }
-                    CEUX ceux_84436 = {
-                        (CEU_Clo*) ceu_clo_84436.Dyn,
+                    CEUX ceux_84664 = {
+                        (CEU_Clo*) ceu_clo_84664.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57695,12 +57755,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84436)
+                        (ceu_mem->args_84664)
                     };
-                    ceu_clo_84436.Dyn->Clo.proto(&ceux_84436);
-                    ceu_gc_dec_val(ceu_clo_84436);
+                    ceu_clo_84664.Dyn->Clo.proto(&ceux_84664);
+                    ceu_gc_dec_val(ceu_clo_84664);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 29) : {{*}}({{-}}(f,32),5.0)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 43, col 29) : {{*}}({{-}}(f,32),5.0)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57709,25 +57769,25 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
         
                 } // CALL | 
             
-                            (ceu_mem->args_84441)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84669)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9.0} }));
-                            (ceu_mem->args_84441)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84669)[1] = CEU_ACC_KEEP();
                         
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_slash);
                     
-                    CEU_Value ceu_clo_84441 = CEU_ACC_KEEP();
-                    if (ceu_clo_84441.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84441);
+                    CEU_Value ceu_clo_84669 = CEU_ACC_KEEP();
+                    if (ceu_clo_84669.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84669);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 41, col 36) : {{/}}({{*}}({{-}}(f,32),5.0),9.0)"
+                            "02_temperature.ceu : (lin 43, col 36) : {{/}}({{*}}({{-}}(f,32),5.0),9.0)"
                         );
                     }
-                    CEUX ceux_84441 = {
-                        (CEU_Clo*) ceu_clo_84441.Dyn,
+                    CEUX ceux_84669 = {
+                        (CEU_Clo*) ceu_clo_84669.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57736,12 +57796,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_84441)
+                        (ceu_mem->args_84669)
                     };
-                    ceu_clo_84441.Dyn->Clo.proto(&ceux_84441);
-                    ceu_gc_dec_val(ceu_clo_84441);
+                    ceu_clo_84669.Dyn->Clo.proto(&ceux_84669);
+                    ceu_gc_dec_val(ceu_clo_84669);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 41, col 36) : {{/}}({{*}}({{-}}(f,32),5.0),9.0)");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 43, col 36) : {{/}}({{*}}({{-}}(f,32),5.0),9.0)");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57755,17 +57815,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "02_temperature.ceu : (lin 41, col 13) : (val c = {{/}}({{*}}({{-}}(f,32),5.0),9.0))"
+                            "02_temperature.ceu : (lin 43, col 13) : (val c = {{/}}({{*}}({{-}}(f,32),5.0),9.0))"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->c_84442) = ceu_acc;
+                        (ceu_mem->c_84670) = ceu_acc;
                     
                 
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
-                        static char str[16]; sprintf(str, "%.2lf", ((ceu_mem->c_84442)).Number); 
+                        static char str[16]; sprintf(str, "%.2lf", ((ceu_mem->c_84670)).Number); 
                         
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 42, col 13) : ```static char str[16]; sprintf(str, .%.2l...");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 44, col 13) : ```static char str[16]; sprintf(str, .%.2l...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57777,13 +57837,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC(((CEU_Pro_84666*)ceux->exe_task->clo->up_nst->mem)->tempC_83467);
+                        CEU_ACC(((CEU_Pro_84894*)ceux->exe_task->clo->up_nst->mem)->tempC_83675);
                     
-                            (ceu_mem->args_84463)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84691)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_84463)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84691)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(             str)} }));
-                            (ceu_mem->args_84463)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84691)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -57795,32 +57855,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_84452) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84680) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_84452 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84680 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_84452), ceu_idx_84452));
-                        ceu_gc_dec_val((ceu_mem->col_84452));
-                        ceu_gc_dec_val(ceu_idx_84452);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 43, col 13) : iup[:set]");
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84680), ceu_idx_84680));
+                        ceu_gc_dec_val((ceu_mem->col_84680));
+                        ceu_gc_dec_val(ceu_idx_84680);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 45, col 13) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_84463 = CEU_ACC_KEEP();
-                    if (ceu_clo_84463.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84463);
+                    CEU_Value ceu_clo_84691 = CEU_ACC_KEEP();
+                    if (ceu_clo_84691.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84691);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 43, col 13) : iup[:set](tempC,:VALUE,```:pointer        ..."
+                            "02_temperature.ceu : (lin 45, col 13) : iup[:set](tempC,:VALUE,```:pointer        ..."
                         );
                     }
-                    CEUX ceux_84463 = {
-                        (CEU_Clo*) ceu_clo_84463.Dyn,
+                    CEUX ceux_84691 = {
+                        (CEU_Clo*) ceu_clo_84691.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -57829,12 +57889,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_84463)
+                        (ceu_mem->args_84691)
                     };
-                    ceu_clo_84463.Dyn->Clo.proto(&ceux_84463);
-                    ceu_gc_dec_val(ceu_clo_84463);
+                    ceu_clo_84691.Dyn->Clo.proto(&ceux_84691);
+                    ceu_gc_dec_val(ceu_clo_84691);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 43, col 13) : iup[:set](tempC,:VALUE,```:pointer        ...");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 45, col 13) : iup[:set](tempC,:VALUE,```:pointer        ...");
             
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
                 continue;
@@ -57852,12 +57912,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-1 }),
-                            "02_temperature.ceu : (lin 45, col 45) : ceu_brk"
+                            "02_temperature.ceu : (lin 47, col 45) : ceu_brk"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_brk_79289_84371));
+                        ceu_gc_dec_val((ceu_mem->ceu_brk_79357_84589));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_brk_79289_84371) = ceu_acc;
+                        (ceu_mem->ceu_brk_79357_84589) = ceu_acc;
                           // dst should not pop src
                 }
             
@@ -57866,7 +57926,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84505) = NULL;
+                          (ceu_mem->block_84733) = NULL;
                     
                     
                     
@@ -57874,7 +57934,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->it_84481) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->it_84709) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -57893,17 +57953,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "02_temperature.ceu : (lin 46, col 57) : (val' it = true)"
+                            "02_temperature.ceu : (lin 48, col 57) : (val' it = true)"
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84481) = ceu_acc;
+                        (ceu_mem->it_84709) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84481));
+                        CEU_ACC((ceu_mem->it_84709));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -57914,7 +57974,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84481));
+                        CEU_ACC((ceu_mem->it_84709));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -57934,16 +57994,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84505 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84733 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84505) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84505))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84733) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84733))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84505));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84733));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -57955,12 +58015,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84481));
+                                ceu_gc_dec_val((ceu_mem->it_84709));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84505;
+                    ceu_acc = ceu_acc_84733;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -57982,23 +58042,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_84511:
+                            CEU_LOOP_STOP_84739:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84510 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84738 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84510) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84510))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84738) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84738))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84510));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84738));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58010,14 +58070,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->c_84442));
+                                ceu_gc_dec_val((ceu_mem->c_84670));
                             
-                                ceu_gc_dec_val((ceu_mem->f_84410));
+                                ceu_gc_dec_val((ceu_mem->f_84628));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84510;
+                    ceu_acc = ceu_acc_84738;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58038,7 +58098,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84511;
+                    goto CEU_LOOP_START_84739;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -58064,17 +58124,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth-6 }),
-                            "02_temperature.ceu : (lin 41, col 41) : ceu_ret"
+                            "02_temperature.ceu : (lin 42, col 41) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_79289_84268));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_79357_84486));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_79289_84268) = ceu_acc;
+                        (ceu_mem->ceu_ret_79357_84486) = ceu_acc;
                           // dst should not pop src
                 }
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_brk_79289_84371));
+                        CEU_ACC((ceu_mem->ceu_brk_79357_84589));
                       // src is on the stack and should be returned
                     // <<< SRC | DST >>>
                     
@@ -58083,12 +58143,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth-4 }),
-                            "02_temperature.ceu : (lin 41, col 33) : ceu_ret"
+                            "02_temperature.ceu : (lin 42, col 33) : ceu_ret"
                         );
                         #endif
-                        ceu_gc_dec_val((ceu_mem->ceu_ret_79413_84289));
+                        ceu_gc_dec_val((ceu_mem->ceu_ret_79491_84507));
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->ceu_ret_79413_84289) = ceu_acc;
+                        (ceu_mem->ceu_ret_79491_84507) = ceu_acc;
                           // dst should not pop src
                 }
             CEU_ACC(((CEU_Value) { CEU_VALUE_BOOL, {.Bool=1} }));
@@ -58098,16 +58158,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84527 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84755 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84527) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84527))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84755) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84755))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84527));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84755));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58119,12 +58179,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_brk_79289_84371));
+                                ceu_gc_dec_val((ceu_mem->ceu_brk_79357_84589));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84527;
+                    ceu_acc = ceu_acc_84755;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58165,16 +58225,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84545 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84773 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84545) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84545))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84773) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84773))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84545));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84773));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58186,12 +58246,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84327));
+                                ceu_gc_dec_val((ceu_mem->it_84545));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84545;
+                    ceu_acc = ceu_acc_84773;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58219,17 +58279,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "02_temperature.ceu : (lin 42, col 8) : (val' it = do { (val it :Iup.Value = ceu_r..."
+                            "02_temperature.ceu : (lin 43, col 8) : (val' it = do { (val it :Iup.Value = ceu_r..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84546) = ceu_acc;
+                        (ceu_mem->it_84774) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84546));
+                        CEU_ACC((ceu_mem->it_84774));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58240,7 +58300,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84546));
+                        CEU_ACC((ceu_mem->it_84774));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -58260,16 +58320,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84570 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84798 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84570) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84570))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84798) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84798))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84570));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84798));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58281,12 +58341,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84546));
+                                ceu_gc_dec_val((ceu_mem->it_84774));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84570;
+                    ceu_acc = ceu_acc_84798;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58308,23 +58368,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
                 
                         
-                            CEU_LOOP_STOP_84576:
+                            CEU_LOOP_STOP_84804:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84575 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84803 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84575) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84575))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84803) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84803))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84575));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84803));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58339,7 +58399,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84575;
+                    ceu_acc = ceu_acc_84803;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58360,7 +58420,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84576;
+                    goto CEU_LOOP_START_84804;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -58383,7 +58443,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 ceux->exe_task->time = CEU_TIME;
             
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_79413_84289));
+                        CEU_ACC((ceu_mem->ceu_ret_79491_84507));
                     
                         
                     } while (0);
@@ -58391,16 +58451,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84585 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84813 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84585) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84585))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84813) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84813))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84585));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84813));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58412,12 +58472,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_79413_84289));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_79491_84507));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84585;
+                    ceu_acc = ceu_acc_84813;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58445,17 +58505,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_FLEET, ceux->depth }),
-                            "02_temperature.ceu : (lin 61, col 8) : (val' it = do { (var' ceu_ret); enclose' :..."
+                            "02_temperature.ceu : (lin 63, col 8) : (val' it = do { (var' ceu_ret); enclose' :..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->it_84586) = ceu_acc;
+                        (ceu_mem->it_84814) = ceu_acc;
                     
                 
                 { // IF | 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84586));
+                        CEU_ACC((ceu_mem->it_84814));
                     
                     {
                         int v = ceu_as_bool(ceu_acc);
@@ -58466,7 +58526,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->it_84586));
+                        CEU_ACC((ceu_mem->it_84814));
                     
                 
                 CEU_ESCAPE = CEU_TAG_break;
@@ -58486,16 +58546,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84610 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84838 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84610) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84610))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84838) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84838))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84610));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84838));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58507,12 +58567,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->it_84586));
+                                ceu_gc_dec_val((ceu_mem->it_84814));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84610;
+                    ceu_acc = ceu_acc_84838;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58533,7 +58593,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84616;
+                    goto CEU_LOOP_START_84844;
             
                 } while (0);
                 if (CEU_ERROR != CEU_ERROR_NONE) {
@@ -58553,7 +58613,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }                                                            
                 
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->ceu_ret_79289_84268));
+                        CEU_ACC((ceu_mem->ceu_ret_79357_84486));
                     
                         
                     } while (0);
@@ -58561,16 +58621,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84623 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84851 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84623) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84623))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84851) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84851))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84623));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84851));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58582,12 +58642,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->ceu_ret_79289_84268));
+                                ceu_gc_dec_val((ceu_mem->ceu_ret_79357_84486));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84623;
+                    ceu_acc = ceu_acc_84851;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58614,16 +58674,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84628 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84856 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84628) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84628))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84856) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84856))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84628));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84856));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -58638,7 +58698,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84628;
+                    ceu_acc = ceu_acc_84856;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -58664,10 +58724,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_84629 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_84857 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_84629;
+                            ceu_acc = ceu_acc_84857;
                         }
 
                         
@@ -58677,9 +58737,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 
                     // PROTO | 
-                    void ceu_pro_84666 (CEUX* ceux) {
+                    void ceu_pro_84894 (CEUX* ceux) {
                         
-                            CEU_Pro_84666* ceu_mem = (CEU_Pro_84666*) ceux->exe->mem;                    
+                            CEU_Pro_84894* ceu_mem = (CEU_Pro_84894*) ceux->exe->mem;                    
                             ceux->exe->status = (ceux->act == CEU_ACTION_ABORT) ? CEU_EXE_STATUS_TERMINATED : CEU_EXE_STATUS_RESUMED;
                             switch (ceux->exe->pc) {
                                 case 0:
@@ -58703,7 +58763,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84665) = NULL;
+                          (ceu_mem->block_84893) = NULL;
                     
                     
                     
@@ -58711,17 +58771,17 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                             
                             { // vars inits
                                 
-                                    (ceu_mem->labelC_83403) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->labelC_83611) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->labelF_83451) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->labelF_83659) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->tempC_83467) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->tempC_83675) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->tempF_83544) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->tempF_83752) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->hbox_83621) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->hbox_83829) = (CEU_Value) { CEU_VALUE_NIL };
                                 
-                                    (ceu_mem->dlg_83795) = (CEU_Value) { CEU_VALUE_NIL };
+                                    (ceu_mem->dlg_84003) = (CEU_Value) { CEU_VALUE_NIL };
                                 
                             }
                             
@@ -58738,30 +58798,30 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                 { // VECTOR | 
-                     (ceu_mem->vec_83400) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83608) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='C'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='l'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='s'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='u'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='s'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char=' '} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='='} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83400), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83608), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83400));
+                    CEU_ACC((ceu_mem->vec_83608));
                 }
             
-                            (ceu_mem->args_83402)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83610)[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -58773,32 +58833,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83370) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83578) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
                         
-                    CEU_Value ceu_idx_83370 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83578 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83370), ceu_idx_83370));
-                        ceu_gc_dec_val((ceu_mem->col_83370));
-                        ceu_gc_dec_val(ceu_idx_83370);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83578), ceu_idx_83578));
+                        ceu_gc_dec_val((ceu_mem->col_83578));
+                        ceu_gc_dec_val(ceu_idx_83578);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 4, col 18) : iup[:label]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83402 = CEU_ACC_KEEP();
-                    if (ceu_clo_83402.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83402);
+                    CEU_Value ceu_clo_83610 = CEU_ACC_KEEP();
+                    if (ceu_clo_83610.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83610);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 4, col 18) : iup[:label](#['C','e','l','s','i','u','s',..."
                         );
                     }
-                    CEUX ceux_83402 = {
-                        (CEU_Clo*) ceu_clo_83402.Dyn,
+                    CEUX ceux_83610 = {
+                        (CEU_Clo*) ceu_clo_83610.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58807,10 +58867,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_83402)
+                        (ceu_mem->args_83610)
                     };
-                    ceu_clo_83402.Dyn->Clo.proto(&ceux_83402);
-                    ceu_gc_dec_val(ceu_clo_83402);
+                    ceu_clo_83610.Dyn->Clo.proto(&ceux_83610);
+                    ceu_gc_dec_val(ceu_clo_83610);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 4, col 18) : iup[:label](#['C','e','l','s','i','u','s',...");
             
@@ -58830,7 +58890,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->labelC_83403) = ceu_acc;
+                        (ceu_mem->labelC_83611) = ceu_acc;
                     
                 
                 // DCL | 
@@ -58840,32 +58900,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                 { // VECTOR | 
-                     (ceu_mem->vec_83448) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83656) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='F'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='a'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='n'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='h'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='i'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83448), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83656), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83448));
+                    CEU_ACC((ceu_mem->vec_83656));
                 }
             
-                            (ceu_mem->args_83450)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83658)[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -58877,32 +58937,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83415) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83623) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }));
                         
-                    CEU_Value ceu_idx_83415 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83623 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83415), ceu_idx_83415));
-                        ceu_gc_dec_val((ceu_mem->col_83415));
-                        ceu_gc_dec_val(ceu_idx_83415);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83623), ceu_idx_83623));
+                        ceu_gc_dec_val((ceu_mem->col_83623));
+                        ceu_gc_dec_val(ceu_idx_83623);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 5, col 18) : iup[:label]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83450 = CEU_ACC_KEEP();
-                    if (ceu_clo_83450.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83450);
+                    CEU_Value ceu_clo_83658 = CEU_ACC_KEEP();
+                    if (ceu_clo_83658.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83658);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 5, col 18) : iup[:label](#['F','a','h','r','e','n','h',..."
                         );
                     }
-                    CEUX ceux_83450 = {
-                        (CEU_Clo*) ceu_clo_83450.Dyn,
+                    CEUX ceux_83658 = {
+                        (CEU_Clo*) ceu_clo_83658.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58911,10 +58971,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_83450)
+                        (ceu_mem->args_83658)
                     };
-                    ceu_clo_83450.Dyn->Clo.proto(&ceux_83450);
-                    ceu_gc_dec_val(ceu_clo_83450);
+                    ceu_clo_83658.Dyn->Clo.proto(&ceux_83658);
+                    ceu_gc_dec_val(ceu_clo_83658);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 5, col 18) : iup[:label](#['F','a','h','r','e','n','h',...");
             
@@ -58934,7 +58994,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->labelF_83451) = ceu_acc;
+                        (ceu_mem->labelF_83659) = ceu_acc;
                     
                 
                 // DCL | 
@@ -58953,32 +59013,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83463) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83671) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
                         
-                    CEU_Value ceu_idx_83463 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83671 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83463), ceu_idx_83463));
-                        ceu_gc_dec_val((ceu_mem->col_83463));
-                        ceu_gc_dec_val(ceu_idx_83463);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83671), ceu_idx_83671));
+                        ceu_gc_dec_val((ceu_mem->col_83671));
+                        ceu_gc_dec_val(ceu_idx_83671);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 7, col 17) : iup[:text]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83466 = CEU_ACC_KEEP();
-                    if (ceu_clo_83466.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83466);
+                    CEU_Value ceu_clo_83674 = CEU_ACC_KEEP();
+                    if (ceu_clo_83674.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83674);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 7, col 17) : iup[:text]()"
                         );
                     }
-                    CEUX ceux_83466 = {
-                        (CEU_Clo*) ceu_clo_83466.Dyn,
+                    CEUX ceux_83674 = {
+                        (CEU_Clo*) ceu_clo_83674.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -58987,10 +59047,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        (ceu_mem->args_83466)
+                        (ceu_mem->args_83674)
                     };
-                    ceu_clo_83466.Dyn->Clo.proto(&ceux_83466);
-                    ceu_gc_dec_val(ceu_clo_83466);
+                    ceu_clo_83674.Dyn->Clo.proto(&ceux_83674);
+                    ceu_gc_dec_val(ceu_clo_83674);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 7, col 17) : iup[:text]()");
             
@@ -59010,30 +59070,30 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->tempC_83467) = ceu_acc;
+                        (ceu_mem->tempC_83675) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempC_83467));
+                        CEU_ACC((ceu_mem->tempC_83675));
                     
-                            (ceu_mem->args_83492)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83700)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_SIZE} }));
-                            (ceu_mem->args_83492)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83700)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83490) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83698) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83490), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83698), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83490));
+                    CEU_ACC((ceu_mem->vec_83698));
                 }
             
-                            (ceu_mem->args_83492)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83700)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59045,32 +59105,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83475) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83683) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83475 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83683 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83475), ceu_idx_83475));
-                        ceu_gc_dec_val((ceu_mem->col_83475));
-                        ceu_gc_dec_val(ceu_idx_83475);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83683), ceu_idx_83683));
+                        ceu_gc_dec_val((ceu_mem->col_83683));
+                        ceu_gc_dec_val(ceu_idx_83683);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 8, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83492 = CEU_ACC_KEEP();
-                    if (ceu_clo_83492.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83492);
+                    CEU_Value ceu_clo_83700 = CEU_ACC_KEEP();
+                    if (ceu_clo_83700.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83700);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 8, col 9) : iup[:set](tempC,:SIZE,#['5','0'])"
                         );
                     }
-                    CEUX ceux_83492 = {
-                        (CEU_Clo*) ceu_clo_83492.Dyn,
+                    CEUX ceux_83700 = {
+                        (CEU_Clo*) ceu_clo_83700.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59079,10 +59139,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83492)
+                        (ceu_mem->args_83700)
                     };
-                    ceu_clo_83492.Dyn->Clo.proto(&ceux_83492);
-                    ceu_gc_dec_val(ceu_clo_83492);
+                    ceu_clo_83700.Dyn->Clo.proto(&ceux_83700);
+                    ceu_gc_dec_val(ceu_clo_83700);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 8, col 9) : iup[:set](tempC,:SIZE,#['5','0'])");
             
@@ -59097,13 +59157,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempC_83467));
+                        CEU_ACC((ceu_mem->tempC_83675));
                     
-                            (ceu_mem->args_83510)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83718)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MASK} }));
-                            (ceu_mem->args_83510)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83718)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IUP_MASK_FLOAT)} }));
-                            (ceu_mem->args_83510)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83718)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59115,32 +59175,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83499) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83707) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83499 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83707 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83499), ceu_idx_83499));
-                        ceu_gc_dec_val((ceu_mem->col_83499));
-                        ceu_gc_dec_val(ceu_idx_83499);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83707), ceu_idx_83707));
+                        ceu_gc_dec_val((ceu_mem->col_83707));
+                        ceu_gc_dec_val(ceu_idx_83707);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 9, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83510 = CEU_ACC_KEEP();
-                    if (ceu_clo_83510.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83510);
+                    CEU_Value ceu_clo_83718 = CEU_ACC_KEEP();
+                    if (ceu_clo_83718.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83718);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 9, col 9) : iup[:set](tempC,:MASK,```:pointer   IUP_MA..."
                         );
                     }
-                    CEUX ceux_83510 = {
-                        (CEU_Clo*) ceu_clo_83510.Dyn,
+                    CEUX ceux_83718 = {
+                        (CEU_Clo*) ceu_clo_83718.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59149,10 +59209,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83510)
+                        (ceu_mem->args_83718)
                     };
-                    ceu_clo_83510.Dyn->Clo.proto(&ceux_83510);
-                    ceu_gc_dec_val(ceu_clo_83510);
+                    ceu_clo_83718.Dyn->Clo.proto(&ceux_83718);
+                    ceu_gc_dec_val(ceu_clo_83718);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 9, col 9) : iup[:set](tempC,:MASK,```:pointer   IUP_MA...");
             
@@ -59167,19 +59227,19 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempC_83467));
+                        CEU_ACC((ceu_mem->tempC_83675));
                     
-                            (ceu_mem->args_83529)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83737)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_83529)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83737)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83527) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83735) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     
-                    CEU_ACC((ceu_mem->vec_83527));
+                    CEU_ACC((ceu_mem->vec_83735));
                 }
             
-                            (ceu_mem->args_83529)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83737)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59191,32 +59251,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83517) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83725) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83517 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83725 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83517), ceu_idx_83517));
-                        ceu_gc_dec_val((ceu_mem->col_83517));
-                        ceu_gc_dec_val(ceu_idx_83517);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83725), ceu_idx_83725));
+                        ceu_gc_dec_val((ceu_mem->col_83725));
+                        ceu_gc_dec_val(ceu_idx_83725);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 10, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83529 = CEU_ACC_KEEP();
-                    if (ceu_clo_83529.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83529);
+                    CEU_Value ceu_clo_83737 = CEU_ACC_KEEP();
+                    if (ceu_clo_83737.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83737);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 10, col 9) : iup[:set](tempC,:VALUE,#[])"
                         );
                     }
-                    CEUX ceux_83529 = {
-                        (CEU_Clo*) ceu_clo_83529.Dyn,
+                    CEUX ceux_83737 = {
+                        (CEU_Clo*) ceu_clo_83737.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59225,10 +59285,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83529)
+                        (ceu_mem->args_83737)
                     };
-                    ceu_clo_83529.Dyn->Clo.proto(&ceux_83529);
-                    ceu_gc_dec_val(ceu_clo_83529);
+                    ceu_clo_83737.Dyn->Clo.proto(&ceux_83737);
+                    ceu_gc_dec_val(ceu_clo_83737);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 10, col 9) : iup[:set](tempC,:VALUE,#[])");
             
@@ -59255,32 +59315,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83540) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83748) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }));
                         
-                    CEU_Value ceu_idx_83540 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83748 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83540), ceu_idx_83540));
-                        ceu_gc_dec_val((ceu_mem->col_83540));
-                        ceu_gc_dec_val(ceu_idx_83540);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83748), ceu_idx_83748));
+                        ceu_gc_dec_val((ceu_mem->col_83748));
+                        ceu_gc_dec_val(ceu_idx_83748);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 12, col 17) : iup[:text]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83543 = CEU_ACC_KEEP();
-                    if (ceu_clo_83543.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83543);
+                    CEU_Value ceu_clo_83751 = CEU_ACC_KEEP();
+                    if (ceu_clo_83751.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83751);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 12, col 17) : iup[:text]()"
                         );
                     }
-                    CEUX ceux_83543 = {
-                        (CEU_Clo*) ceu_clo_83543.Dyn,
+                    CEUX ceux_83751 = {
+                        (CEU_Clo*) ceu_clo_83751.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59289,10 +59349,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        (ceu_mem->args_83543)
+                        (ceu_mem->args_83751)
                     };
-                    ceu_clo_83543.Dyn->Clo.proto(&ceux_83543);
-                    ceu_gc_dec_val(ceu_clo_83543);
+                    ceu_clo_83751.Dyn->Clo.proto(&ceux_83751);
+                    ceu_gc_dec_val(ceu_clo_83751);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 12, col 17) : iup[:text]()");
             
@@ -59312,30 +59372,30 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->tempF_83544) = ceu_acc;
+                        (ceu_mem->tempF_83752) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempF_83544));
+                        CEU_ACC((ceu_mem->tempF_83752));
                     
-                            (ceu_mem->args_83569)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83777)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_SIZE} }));
-                            (ceu_mem->args_83569)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83777)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83567) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83775) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='5'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83567), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83775), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83567), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83775), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83567));
+                    CEU_ACC((ceu_mem->vec_83775));
                 }
             
-                            (ceu_mem->args_83569)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83777)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59347,32 +59407,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83552) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83760) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83552 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83760 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83552), ceu_idx_83552));
-                        ceu_gc_dec_val((ceu_mem->col_83552));
-                        ceu_gc_dec_val(ceu_idx_83552);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83760), ceu_idx_83760));
+                        ceu_gc_dec_val((ceu_mem->col_83760));
+                        ceu_gc_dec_val(ceu_idx_83760);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 13, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83569 = CEU_ACC_KEEP();
-                    if (ceu_clo_83569.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83569);
+                    CEU_Value ceu_clo_83777 = CEU_ACC_KEEP();
+                    if (ceu_clo_83777.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83777);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 13, col 9) : iup[:set](tempF,:SIZE,#['5','0'])"
                         );
                     }
-                    CEUX ceux_83569 = {
-                        (CEU_Clo*) ceu_clo_83569.Dyn,
+                    CEUX ceux_83777 = {
+                        (CEU_Clo*) ceu_clo_83777.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59381,10 +59441,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83569)
+                        (ceu_mem->args_83777)
                     };
-                    ceu_clo_83569.Dyn->Clo.proto(&ceux_83569);
-                    ceu_gc_dec_val(ceu_clo_83569);
+                    ceu_clo_83777.Dyn->Clo.proto(&ceux_83777);
+                    ceu_gc_dec_val(ceu_clo_83777);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 13, col 9) : iup[:set](tempF,:SIZE,#['5','0'])");
             
@@ -59399,13 +59459,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempF_83544));
+                        CEU_ACC((ceu_mem->tempF_83752));
                     
-                            (ceu_mem->args_83587)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83795)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MASK} }));
-                            (ceu_mem->args_83587)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83795)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_POINTER, {.Pointer=(  IUP_MASK_FLOAT)} }));
-                            (ceu_mem->args_83587)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83795)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59417,32 +59477,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83576) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83784) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83576 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83784 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83576), ceu_idx_83576));
-                        ceu_gc_dec_val((ceu_mem->col_83576));
-                        ceu_gc_dec_val(ceu_idx_83576);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83784), ceu_idx_83784));
+                        ceu_gc_dec_val((ceu_mem->col_83784));
+                        ceu_gc_dec_val(ceu_idx_83784);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 14, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83587 = CEU_ACC_KEEP();
-                    if (ceu_clo_83587.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83587);
+                    CEU_Value ceu_clo_83795 = CEU_ACC_KEEP();
+                    if (ceu_clo_83795.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83795);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 14, col 9) : iup[:set](tempF,:MASK,```:pointer   IUP_MA..."
                         );
                     }
-                    CEUX ceux_83587 = {
-                        (CEU_Clo*) ceu_clo_83587.Dyn,
+                    CEUX ceux_83795 = {
+                        (CEU_Clo*) ceu_clo_83795.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59451,10 +59511,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83587)
+                        (ceu_mem->args_83795)
                     };
-                    ceu_clo_83587.Dyn->Clo.proto(&ceux_83587);
-                    ceu_gc_dec_val(ceu_clo_83587);
+                    ceu_clo_83795.Dyn->Clo.proto(&ceux_83795);
+                    ceu_gc_dec_val(ceu_clo_83795);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 14, col 9) : iup[:set](tempF,:MASK,```:pointer   IUP_MA...");
             
@@ -59469,19 +59529,19 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempF_83544));
+                        CEU_ACC((ceu_mem->tempF_83752));
                     
-                            (ceu_mem->args_83606)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83814)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_VALUE} }));
-                            (ceu_mem->args_83606)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83814)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83604) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83812) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     
-                    CEU_ACC((ceu_mem->vec_83604));
+                    CEU_ACC((ceu_mem->vec_83812));
                 }
             
-                            (ceu_mem->args_83606)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83814)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59493,32 +59553,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83594) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83802) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83594 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83802 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83594), ceu_idx_83594));
-                        ceu_gc_dec_val((ceu_mem->col_83594));
-                        ceu_gc_dec_val(ceu_idx_83594);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83802), ceu_idx_83802));
+                        ceu_gc_dec_val((ceu_mem->col_83802));
+                        ceu_gc_dec_val(ceu_idx_83802);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 15, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83606 = CEU_ACC_KEEP();
-                    if (ceu_clo_83606.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83606);
+                    CEU_Value ceu_clo_83814 = CEU_ACC_KEEP();
+                    if (ceu_clo_83814.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83814);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 15, col 9) : iup[:set](tempF,:VALUE,#[])"
                         );
                     }
-                    CEUX ceux_83606 = {
-                        (CEU_Clo*) ceu_clo_83606.Dyn,
+                    CEUX ceux_83814 = {
+                        (CEU_Clo*) ceu_clo_83814.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59527,10 +59587,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83606)
+                        (ceu_mem->args_83814)
                     };
-                    ceu_clo_83606.Dyn->Clo.proto(&ceux_83606);
-                    ceu_gc_dec_val(ceu_clo_83606);
+                    ceu_clo_83814.Dyn->Clo.proto(&ceux_83814);
+                    ceu_gc_dec_val(ceu_clo_83814);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 15, col 9) : iup[:set](tempF,:VALUE,#[])");
             
@@ -59557,32 +59617,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83617) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83825) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }));
                         
-                    CEU_Value ceu_idx_83617 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83825 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83617), ceu_idx_83617));
-                        ceu_gc_dec_val((ceu_mem->col_83617));
-                        ceu_gc_dec_val(ceu_idx_83617);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83825), ceu_idx_83825));
+                        ceu_gc_dec_val((ceu_mem->col_83825));
+                        ceu_gc_dec_val(ceu_idx_83825);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 17, col 16) : iup[:hbox]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83620 = CEU_ACC_KEEP();
-                    if (ceu_clo_83620.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83620);
+                    CEU_Value ceu_clo_83828 = CEU_ACC_KEEP();
+                    if (ceu_clo_83828.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83828);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 17, col 16) : iup[:hbox]()"
                         );
                     }
-                    CEUX ceux_83620 = {
-                        (CEU_Clo*) ceu_clo_83620.Dyn,
+                    CEUX ceux_83828 = {
+                        (CEU_Clo*) ceu_clo_83828.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59591,10 +59651,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        (ceu_mem->args_83620)
+                        (ceu_mem->args_83828)
                     };
-                    ceu_clo_83620.Dyn->Clo.proto(&ceux_83620);
-                    ceu_gc_dec_val(ceu_clo_83620);
+                    ceu_clo_83828.Dyn->Clo.proto(&ceux_83828);
+                    ceu_gc_dec_val(ceu_clo_83828);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 17, col 16) : iup[:hbox]()");
             
@@ -59614,21 +59674,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->hbox_83621) = ceu_acc;
+                        (ceu_mem->hbox_83829) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83637)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83845)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempC_83467));
+                        CEU_ACC((ceu_mem->tempC_83675));
                     
-                            (ceu_mem->args_83637)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83845)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59640,32 +59700,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83629) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83837) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
                         
-                    CEU_Value ceu_idx_83629 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83837 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83629), ceu_idx_83629));
-                        ceu_gc_dec_val((ceu_mem->col_83629));
-                        ceu_gc_dec_val(ceu_idx_83629);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83837), ceu_idx_83837));
+                        ceu_gc_dec_val((ceu_mem->col_83837));
+                        ceu_gc_dec_val(ceu_idx_83837);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 18, col 9) : iup[:append]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83637 = CEU_ACC_KEEP();
-                    if (ceu_clo_83637.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83637);
+                    CEU_Value ceu_clo_83845 = CEU_ACC_KEEP();
+                    if (ceu_clo_83845.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83845);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 18, col 9) : iup[:append](hbox,tempC)"
                         );
                     }
-                    CEUX ceux_83637 = {
-                        (CEU_Clo*) ceu_clo_83637.Dyn,
+                    CEUX ceux_83845 = {
+                        (CEU_Clo*) ceu_clo_83845.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59674,10 +59734,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83637)
+                        (ceu_mem->args_83845)
                     };
-                    ceu_clo_83637.Dyn->Clo.proto(&ceux_83637);
-                    ceu_gc_dec_val(ceu_clo_83637);
+                    ceu_clo_83845.Dyn->Clo.proto(&ceux_83845);
+                    ceu_gc_dec_val(ceu_clo_83845);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 18, col 9) : iup[:append](hbox,tempC)");
             
@@ -59692,14 +59752,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83652)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83860)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->labelC_83403));
+                        CEU_ACC((ceu_mem->labelC_83611));
                     
-                            (ceu_mem->args_83652)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83860)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59711,32 +59771,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83644) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83852) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
                         
-                    CEU_Value ceu_idx_83644 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83852 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83644), ceu_idx_83644));
-                        ceu_gc_dec_val((ceu_mem->col_83644));
-                        ceu_gc_dec_val(ceu_idx_83644);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83852), ceu_idx_83852));
+                        ceu_gc_dec_val((ceu_mem->col_83852));
+                        ceu_gc_dec_val(ceu_idx_83852);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 19, col 9) : iup[:append]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83652 = CEU_ACC_KEEP();
-                    if (ceu_clo_83652.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83652);
+                    CEU_Value ceu_clo_83860 = CEU_ACC_KEEP();
+                    if (ceu_clo_83860.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83860);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 19, col 9) : iup[:append](hbox,labelC)"
                         );
                     }
-                    CEUX ceux_83652 = {
-                        (CEU_Clo*) ceu_clo_83652.Dyn,
+                    CEUX ceux_83860 = {
+                        (CEU_Clo*) ceu_clo_83860.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59745,10 +59805,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83652)
+                        (ceu_mem->args_83860)
                     };
-                    ceu_clo_83652.Dyn->Clo.proto(&ceux_83652);
-                    ceu_gc_dec_val(ceu_clo_83652);
+                    ceu_clo_83860.Dyn->Clo.proto(&ceux_83860);
+                    ceu_gc_dec_val(ceu_clo_83860);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 19, col 9) : iup[:append](hbox,labelC)");
             
@@ -59763,14 +59823,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83667)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83875)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->tempF_83544));
+                        CEU_ACC((ceu_mem->tempF_83752));
                     
-                            (ceu_mem->args_83667)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83875)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59782,32 +59842,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83659) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83867) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
                         
-                    CEU_Value ceu_idx_83659 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83867 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83659), ceu_idx_83659));
-                        ceu_gc_dec_val((ceu_mem->col_83659));
-                        ceu_gc_dec_val(ceu_idx_83659);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83867), ceu_idx_83867));
+                        ceu_gc_dec_val((ceu_mem->col_83867));
+                        ceu_gc_dec_val(ceu_idx_83867);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 20, col 9) : iup[:append]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83667 = CEU_ACC_KEEP();
-                    if (ceu_clo_83667.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83667);
+                    CEU_Value ceu_clo_83875 = CEU_ACC_KEEP();
+                    if (ceu_clo_83875.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83875);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 20, col 9) : iup[:append](hbox,tempF)"
                         );
                     }
-                    CEUX ceux_83667 = {
-                        (CEU_Clo*) ceu_clo_83667.Dyn,
+                    CEUX ceux_83875 = {
+                        (CEU_Clo*) ceu_clo_83875.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59816,10 +59876,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83667)
+                        (ceu_mem->args_83875)
                     };
-                    ceu_clo_83667.Dyn->Clo.proto(&ceux_83667);
-                    ceu_gc_dec_val(ceu_clo_83667);
+                    ceu_clo_83875.Dyn->Clo.proto(&ceux_83875);
+                    ceu_gc_dec_val(ceu_clo_83875);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 20, col 9) : iup[:append](hbox,tempF)");
             
@@ -59834,14 +59894,14 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83682)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83890)[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->labelF_83451));
+                        CEU_ACC((ceu_mem->labelF_83659));
                     
-                            (ceu_mem->args_83682)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83890)[1] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59853,32 +59913,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83674) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83882) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }));
                         
-                    CEU_Value ceu_idx_83674 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83882 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83674), ceu_idx_83674));
-                        ceu_gc_dec_val((ceu_mem->col_83674));
-                        ceu_gc_dec_val(ceu_idx_83674);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83882), ceu_idx_83882));
+                        ceu_gc_dec_val((ceu_mem->col_83882));
+                        ceu_gc_dec_val(ceu_idx_83882);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 21, col 9) : iup[:append]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83682 = CEU_ACC_KEEP();
-                    if (ceu_clo_83682.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83682);
+                    CEU_Value ceu_clo_83890 = CEU_ACC_KEEP();
+                    if (ceu_clo_83890.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83890);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 21, col 9) : iup[:append](hbox,labelF)"
                         );
                     }
-                    CEUX ceux_83682 = {
-                        (CEU_Clo*) ceu_clo_83682.Dyn,
+                    CEUX ceux_83890 = {
+                        (CEU_Clo*) ceu_clo_83890.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59887,10 +59947,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         2,
-                        (ceu_mem->args_83682)
+                        (ceu_mem->args_83890)
                     };
-                    ceu_clo_83682.Dyn->Clo.proto(&ceux_83682);
-                    ceu_gc_dec_val(ceu_clo_83682);
+                    ceu_clo_83890.Dyn->Clo.proto(&ceux_83890);
+                    ceu_gc_dec_val(ceu_clo_83890);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 21, col 9) : iup[:append](hbox,labelF)");
             
@@ -59905,29 +59965,29 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83715)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83923)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_MARGIN} }));
-                            (ceu_mem->args_83715)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83923)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83713) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83921) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83713), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83921), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83713), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83921), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='x'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83713), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83921), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83713), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83921), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83713), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83921), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83713));
+                    CEU_ACC((ceu_mem->vec_83921));
                 }
             
-                            (ceu_mem->args_83715)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83923)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -59939,32 +59999,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83689) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83897) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83689 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83897 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83689), ceu_idx_83689));
-                        ceu_gc_dec_val((ceu_mem->col_83689));
-                        ceu_gc_dec_val(ceu_idx_83689);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83897), ceu_idx_83897));
+                        ceu_gc_dec_val((ceu_mem->col_83897));
+                        ceu_gc_dec_val(ceu_idx_83897);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 22, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83715 = CEU_ACC_KEEP();
-                    if (ceu_clo_83715.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83715);
+                    CEU_Value ceu_clo_83923 = CEU_ACC_KEEP();
+                    if (ceu_clo_83923.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83923);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 22, col 9) : iup[:set](hbox,:MARGIN,#['1','0','x','1','..."
                         );
                     }
-                    CEUX ceux_83715 = {
-                        (CEU_Clo*) ceu_clo_83715.Dyn,
+                    CEUX ceux_83923 = {
+                        (CEU_Clo*) ceu_clo_83923.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -59973,10 +60033,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83715)
+                        (ceu_mem->args_83923)
                     };
-                    ceu_clo_83715.Dyn->Clo.proto(&ceux_83715);
-                    ceu_gc_dec_val(ceu_clo_83715);
+                    ceu_clo_83923.Dyn->Clo.proto(&ceux_83923);
+                    ceu_gc_dec_val(ceu_clo_83923);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 22, col 9) : iup[:set](hbox,:MARGIN,#['1','0','x','1','...");
             
@@ -59991,23 +60051,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83739)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83947)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_GAP} }));
-                            (ceu_mem->args_83739)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83947)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83737) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83945) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='1'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83737), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83945), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='0'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83737), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83945), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83737));
+                    CEU_ACC((ceu_mem->vec_83945));
                 }
             
-                            (ceu_mem->args_83739)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83947)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -60019,32 +60079,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83722) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83930) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83722 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83930 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83722), ceu_idx_83722));
-                        ceu_gc_dec_val((ceu_mem->col_83722));
-                        ceu_gc_dec_val(ceu_idx_83722);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83930), ceu_idx_83930));
+                        ceu_gc_dec_val((ceu_mem->col_83930));
+                        ceu_gc_dec_val(ceu_idx_83930);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 23, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83739 = CEU_ACC_KEEP();
-                    if (ceu_clo_83739.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83739);
+                    CEU_Value ceu_clo_83947 = CEU_ACC_KEEP();
+                    if (ceu_clo_83947.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83947);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 23, col 9) : iup[:set](hbox,:GAP,#['1','0'])"
                         );
                     }
-                    CEUX ceux_83739 = {
-                        (CEU_Clo*) ceu_clo_83739.Dyn,
+                    CEUX ceux_83947 = {
+                        (CEU_Clo*) ceu_clo_83947.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60053,10 +60113,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83739)
+                        (ceu_mem->args_83947)
                     };
-                    ceu_clo_83739.Dyn->Clo.proto(&ceux_83739);
-                    ceu_gc_dec_val(ceu_clo_83739);
+                    ceu_clo_83947.Dyn->Clo.proto(&ceux_83947);
+                    ceu_gc_dec_val(ceu_clo_83947);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 23, col 9) : iup[:set](hbox,:GAP,#['1','0'])");
             
@@ -60071,33 +60131,33 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83778)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83986)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_ALIGNMENT} }));
-                            (ceu_mem->args_83778)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83986)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83776) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_83984) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='A'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='C'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='E'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='N'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='E'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='R'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83776), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_83984), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83776));
+                    CEU_ACC((ceu_mem->vec_83984));
                 }
             
-                            (ceu_mem->args_83778)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_83986)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -60109,32 +60169,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83746) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83954) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83746 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83954 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83746), ceu_idx_83746));
-                        ceu_gc_dec_val((ceu_mem->col_83746));
-                        ceu_gc_dec_val(ceu_idx_83746);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83954), ceu_idx_83954));
+                        ceu_gc_dec_val((ceu_mem->col_83954));
+                        ceu_gc_dec_val(ceu_idx_83954);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 24, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83778 = CEU_ACC_KEEP();
-                    if (ceu_clo_83778.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83778);
+                    CEU_Value ceu_clo_83986 = CEU_ACC_KEEP();
+                    if (ceu_clo_83986.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_83986);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 24, col 9) : iup[:set](hbox,:ALIGNMENT,#['A','C','E','N..."
                         );
                     }
-                    CEUX ceux_83778 = {
-                        (CEU_Clo*) ceu_clo_83778.Dyn,
+                    CEUX ceux_83986 = {
+                        (CEU_Clo*) ceu_clo_83986.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60143,10 +60203,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83778)
+                        (ceu_mem->args_83986)
                     };
-                    ceu_clo_83778.Dyn->Clo.proto(&ceux_83778);
-                    ceu_gc_dec_val(ceu_clo_83778);
+                    ceu_clo_83986.Dyn->Clo.proto(&ceux_83986);
+                    ceu_gc_dec_val(ceu_clo_83986);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 24, col 9) : iup[:set](hbox,:ALIGNMENT,#['A','C','E','N...");
             
@@ -60164,9 +60224,9 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->hbox_83621));
+                        CEU_ACC((ceu_mem->hbox_83829));
                     
-                            (ceu_mem->args_83794)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84002)[0] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -60178,32 +60238,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83789) = CEU_ACC_KEEP();
+                     (ceu_mem->col_83997) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }));
                         
-                    CEU_Value ceu_idx_83789 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_83997 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83789), ceu_idx_83789));
-                        ceu_gc_dec_val((ceu_mem->col_83789));
-                        ceu_gc_dec_val(ceu_idx_83789);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_83997), ceu_idx_83997));
+                        ceu_gc_dec_val((ceu_mem->col_83997));
+                        ceu_gc_dec_val(ceu_idx_83997);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 26, col 15) : iup[:dialog]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83794 = CEU_ACC_KEEP();
-                    if (ceu_clo_83794.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83794);
+                    CEU_Value ceu_clo_84002 = CEU_ACC_KEEP();
+                    if (ceu_clo_84002.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84002);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 26, col 15) : iup[:dialog](hbox)"
                         );
                     }
-                    CEUX ceux_83794 = {
-                        (CEU_Clo*) ceu_clo_83794.Dyn,
+                    CEUX ceux_84002 = {
+                        (CEU_Clo*) ceu_clo_84002.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60212,10 +60272,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         1,
-                        (ceu_mem->args_83794)
+                        (ceu_mem->args_84002)
                     };
-                    ceu_clo_83794.Dyn->Clo.proto(&ceux_83794);
-                    ceu_gc_dec_val(ceu_clo_83794);
+                    ceu_clo_84002.Dyn->Clo.proto(&ceux_84002);
+                    ceu_gc_dec_val(ceu_clo_84002);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 26, col 15) : iup[:dialog](hbox)");
             
@@ -60235,48 +60295,48 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
-                        (ceu_mem->dlg_83795) = ceu_acc;
+                        (ceu_mem->dlg_84003) = ceu_acc;
                     
                 
                 { // CALL | 
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->dlg_83795));
+                        CEU_ACC((ceu_mem->dlg_84003));
                     
-                            (ceu_mem->args_83847)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84055)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value) { CEU_VALUE_TAG, {.Tag=CEU_TAG_TITLE} }));
-                            (ceu_mem->args_83847)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84055)[1] = CEU_ACC_KEEP();
                         
                 { // VECTOR | 
-                     (ceu_mem->vec_83845) = ceu_create_vector(CEU_LEX_X(ceux->depth));
+                     (ceu_mem->vec_84053) = ceu_create_vector(CEU_LEX_X(ceux->depth));
                     CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='T'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=1} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='m'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='p'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=3} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=4} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=5} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='a'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=6} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='t'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=7} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='u'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=8} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='r'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=9} }, ceu_acc));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_CHAR, {.Char='e'} }));
-                            assert(NULL == ceu_col_set((ceu_mem->vec_83845), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
+                            assert(NULL == ceu_col_set((ceu_mem->vec_84053), (CEU_Value) { CEU_VALUE_NUMBER, {.Number=10} }, ceu_acc));
                         
-                    CEU_ACC((ceu_mem->vec_83845));
+                    CEU_ACC((ceu_mem->vec_84053));
                 }
             
-                            (ceu_mem->args_83847)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84055)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -60288,32 +60348,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83803) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84011) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=2} }));
                         
-                    CEU_Value ceu_idx_83803 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84011 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83803), ceu_idx_83803));
-                        ceu_gc_dec_val((ceu_mem->col_83803));
-                        ceu_gc_dec_val(ceu_idx_83803);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84011), ceu_idx_84011));
+                        ceu_gc_dec_val((ceu_mem->col_84011));
+                        ceu_gc_dec_val(ceu_idx_84011);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 27, col 9) : iup[:set]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83847 = CEU_ACC_KEEP();
-                    if (ceu_clo_83847.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83847);
+                    CEU_Value ceu_clo_84055 = CEU_ACC_KEEP();
+                    if (ceu_clo_84055.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84055);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 27, col 9) : iup[:set](dlg,:TITLE,#['T','e','m','p','e'..."
                         );
                     }
-                    CEUX ceux_83847 = {
-                        (CEU_Clo*) ceu_clo_83847.Dyn,
+                    CEUX ceux_84055 = {
+                        (CEU_Clo*) ceu_clo_84055.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60322,10 +60382,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83847)
+                        (ceu_mem->args_84055)
                     };
-                    ceu_clo_83847.Dyn->Clo.proto(&ceux_83847);
-                    ceu_gc_dec_val(ceu_clo_83847);
+                    ceu_clo_84055.Dyn->Clo.proto(&ceux_84055);
+                    ceu_gc_dec_val(ceu_clo_84055);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 27, col 9) : iup[:set](dlg,:TITLE,#['T','e','m','p','e'...");
             
@@ -60340,13 +60400,13 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                         // ACC - GET | 
-                        CEU_ACC((ceu_mem->dlg_83795));
+                        CEU_ACC((ceu_mem->dlg_84003));
                     
-                            (ceu_mem->args_83865)[0] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84073)[0] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
-                            (ceu_mem->args_83865)[1] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84073)[1] = CEU_ACC_KEEP();
                         CEU_ACC(((CEU_Value){ CEU_VALUE_NUMBER, {.Number=(  IUP_CENTER)} }));
-                            (ceu_mem->args_83865)[2] = CEU_ACC_KEEP();
+                            (ceu_mem->args_84073)[2] = CEU_ACC_KEEP();
                         
                     
                 { // INDEX | 
@@ -60358,32 +60418,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                     (ceu_mem->col_83854) = CEU_ACC_KEEP();
+                     (ceu_mem->col_84062) = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=11} }));
                         
-                    CEU_Value ceu_idx_83854 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84062 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get((ceu_mem->col_83854), ceu_idx_83854));
-                        ceu_gc_dec_val((ceu_mem->col_83854));
-                        ceu_gc_dec_val(ceu_idx_83854);
+                        CEU_ACC(ceu_col_get((ceu_mem->col_84062), ceu_idx_84062));
+                        ceu_gc_dec_val((ceu_mem->col_84062));
+                        ceu_gc_dec_val(ceu_idx_84062);
                         CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 29, col 5) : iup[:show-xy]");
                     
                 }
                 
-                    CEU_Value ceu_clo_83865 = CEU_ACC_KEEP();
-                    if (ceu_clo_83865.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_83865);
+                    CEU_Value ceu_clo_84073 = CEU_ACC_KEEP();
+                    if (ceu_clo_84073.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84073);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
                             "02_temperature.ceu : (lin 29, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`..."
                         );
                     }
-                    CEUX ceux_83865 = {
-                        (CEU_Clo*) ceu_clo_83865.Dyn,
+                    CEUX ceux_84073 = {
+                        (CEU_Clo*) ceu_clo_84073.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -60392,10 +60452,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         3,
-                        (ceu_mem->args_83865)
+                        (ceu_mem->args_84073)
                     };
-                    ceu_clo_83865.Dyn->Clo.proto(&ceux_83865);
-                    ceu_gc_dec_val(ceu_clo_83865);
+                    ceu_clo_84073.Dyn->Clo.proto(&ceux_84073);
+                    ceu_gc_dec_val(ceu_clo_84073);
                     
             CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 29, col 5) : iup[:show-xy](dlg,```:number   IUP_CENTER`...");
             
@@ -60411,7 +60471,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84660) = NULL;
+                          (ceu_mem->block_84888) = NULL;
                     
                     
                     
@@ -60437,10 +60497,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_84245,
+                            ceu_pro_84463,
                             0,
                             3
-                            , sizeof(CEU_Pro_84245)
+                            , sizeof(CEU_Pro_84463)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
@@ -60450,21 +60510,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     {                        
                         
                             {
-                                CEU_Value upv = (ceu_mem->tempC_83467);
+                                CEU_Value upv = (ceu_mem->tempC_83675);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[0] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->tempC_83467);
+                                CEU_Value upv = (ceu_mem->tempC_83675);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[1] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->tempF_83544);
+                                CEU_Value upv = (ceu_mem->tempF_83752);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[2] = upv;
                             }
@@ -60472,11 +60532,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_84250 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_84250 = &(ceu_mem->block_84660);
-                    CEU_Value ceu_exe_84250 = ceu_create_exe_task(ceu_acc, ceu_a_84250, ceu_b_84250 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_84250);
-                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 47, col 22) : (spawn (task' :fake () { group { do { (var...");
+                    CEU_Dyn* ceu_a_84468 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_84468 = &(ceu_mem->block_84888);
+                    CEU_Value ceu_exe_84468 = ceu_create_exe_task(ceu_acc, ceu_a_84468, ceu_b_84468 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_84468);
+                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 48, col 22) : (spawn (task' :fake () { group { do { (var...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -60484,35 +60544,35 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "02_temperature.ceu : (lin 47, col 22) : (spawn (task' :fake () { group { do { (var..."
+                        "02_temperature.ceu : (lin 48, col 22) : (spawn (task' :fake () { group { do { (var..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_84250 = {
-                            ceu_exe_84250.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_84250.Dyn},
+                        CEUX ceux_84468 = {
+                            ceu_exe_84468.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_84468.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_84250.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_84468.Dyn->Exe.depth COMMA)
                             0,
-                            (ceu_mem->args_84250)
+                            (ceu_mem->args_84468)
                         };
-                        ceu_exe_84250.Dyn->Exe.clo->proto(&ceux_84250);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84250);continue;}, "02_temperature.ceu : (lin 47, col 22) : (spawn (task' :fake () { group { do { (var...");
+                        ceu_exe_84468.Dyn->Exe.clo->proto(&ceux_84468);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84468);continue;}, "02_temperature.ceu : (lin 48, col 22) : (spawn (task' :fake () { group { do { (var...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_84250);
+                            ceu_gc_dec_val(ceu_exe_84468);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                {ceu_gc_dec_val(ceu_exe_84250);continue;};
+                {ceu_gc_dec_val(ceu_exe_84468);continue;};
             }
         
-                        ceu_acc = ceu_exe_84250;
+                        ceu_acc = ceu_exe_84468;
                     }
                 } // SPAWN | 
                 
@@ -60527,10 +60587,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_84629,
+                            ceu_pro_84857,
                             0,
                             3
-                            , sizeof(CEU_Pro_84629)
+                            , sizeof(CEU_Pro_84857)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
@@ -60540,21 +60600,21 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     {                        
                         
                             {
-                                CEU_Value upv = (ceu_mem->tempC_83467);
+                                CEU_Value upv = (ceu_mem->tempC_83675);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[0] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->tempF_83544);
+                                CEU_Value upv = (ceu_mem->tempF_83752);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[1] = upv;
                             }
                             
 
                             {
-                                CEU_Value upv = (ceu_mem->tempF_83544);
+                                CEU_Value upv = (ceu_mem->tempF_83752);
                                 ceu_gc_inc_val(upv);
                                 ceu_acc.Dyn->Clo.upvs.buf[2] = upv;
                             }
@@ -60562,11 +60622,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_84634 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_84634 = &(ceu_mem->block_84660);
-                    CEU_Value ceu_exe_84634 = ceu_create_exe_task(ceu_acc, ceu_a_84634, ceu_b_84634 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_84634);
-                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 54, col 22) : (spawn (task' :fake () { group { do { (var...");
+                    CEU_Dyn* ceu_a_84862 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_84862 = &(ceu_mem->block_84888);
+                    CEU_Value ceu_exe_84862 = ceu_create_exe_task(ceu_acc, ceu_a_84862, ceu_b_84862 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_84862);
+                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 56, col 22) : (spawn (task' :fake () { group { do { (var...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -60574,48 +60634,48 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "02_temperature.ceu : (lin 54, col 22) : (spawn (task' :fake () { group { do { (var..."
+                        "02_temperature.ceu : (lin 56, col 22) : (spawn (task' :fake () { group { do { (var..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_84634 = {
-                            ceu_exe_84634.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_84634.Dyn},
+                        CEUX ceux_84862 = {
+                            ceu_exe_84862.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_84862.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_84634.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_84862.Dyn->Exe.depth COMMA)
                             0,
-                            (ceu_mem->args_84634)
+                            (ceu_mem->args_84862)
                         };
-                        ceu_exe_84634.Dyn->Exe.clo->proto(&ceux_84634);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84634);continue;}, "02_temperature.ceu : (lin 54, col 22) : (spawn (task' :fake () { group { do { (var...");
+                        ceu_exe_84862.Dyn->Exe.clo->proto(&ceux_84862);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84862);continue;}, "02_temperature.ceu : (lin 56, col 22) : (spawn (task' :fake () { group { do { (var...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_84634);
+                            ceu_gc_dec_val(ceu_exe_84862);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
             if (ceux->exe->status == CEU_EXE_STATUS_TERMINATED) {
-                {ceu_gc_dec_val(ceu_exe_84634);continue;};
+                {ceu_gc_dec_val(ceu_exe_84862);continue;};
             }
         
-                        ceu_acc = ceu_exe_84634;
+                        ceu_acc = ceu_exe_84862;
                     }
                 } // SPAWN | 
                 // GROUP | 
 
                 // LOOP | 
-                CEU_LOOP_START_84655:
+                CEU_LOOP_START_84883:
                     
                 { // BLOCK | 
             #ifdef CEU_LEX
                     ceux->depth++;
             #endif
                     
-                          (ceu_mem->block_84654) = NULL;
+                          (ceu_mem->block_84882) = NULL;
                     
                     
                     
@@ -60634,7 +60694,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 { // YIELD 
                     CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->exe->status = CEU_EXE_STATUS_YIELDED;
-                    ceux->exe->pc = 84649;
+                    ceux->exe->pc = 84877;
                 #ifdef CEU_LEX
                     ceux->exe->depth = ceux->depth;
                     CEU_ERROR_CHK_PTR (
@@ -60644,7 +60704,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     );
                 #endif
                     return;
-                case 84649: // YIELD 
+                case 84877: // YIELD 
                     if (ceux->act == CEU_ACTION_ABORT) {
                         //CEU_ACC((CEU_Value) { CEU_VALUE_NIL }); // to be ignored in further move/checks
                         continue;
@@ -60662,23 +60722,23 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 }
             
                         
-                            CEU_LOOP_STOP_84655:
+                            CEU_LOOP_STOP_84883:
                         
                     } while (0);
 
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84654 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84882 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84654) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84654))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84882) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84882))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84654));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84882));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60693,7 +60753,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84654;
+                    ceu_acc = ceu_acc_84882;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60714,7 +60774,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                 }
                 
-                    goto CEU_LOOP_START_84655;
+                    goto CEU_LOOP_START_84883;
             
                         
                     } while (0);
@@ -60722,16 +60782,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84660 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84888 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84660) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84660))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84888) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84888))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84660));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84888));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60746,7 +60806,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84660;
+                    ceu_acc = ceu_acc_84888;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60773,16 +60833,16 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84665 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84893 = CEU_ACC_KEEP();
 
                     
                     
                     
-                        if ((ceu_mem->block_84665) != NULL) {
-                            CEU_LNKS((ceu_mem->block_84665))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if ((ceu_mem->block_84893) != NULL) {
+                            CEU_LNKS((ceu_mem->block_84893))->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get((ceu_mem->block_84665));
+                            CEU_Block cur = ceu_task_get((ceu_mem->block_84893));
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -60794,22 +60854,22 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
 
                     { // dcls gc-dec
                         
-                                ceu_gc_dec_val((ceu_mem->dlg_83795));
+                                ceu_gc_dec_val((ceu_mem->dlg_84003));
                             
-                                ceu_gc_dec_val((ceu_mem->hbox_83621));
+                                ceu_gc_dec_val((ceu_mem->hbox_83829));
                             
-                                ceu_gc_dec_val((ceu_mem->tempF_83544));
+                                ceu_gc_dec_val((ceu_mem->tempF_83752));
                             
-                                ceu_gc_dec_val((ceu_mem->tempC_83467));
+                                ceu_gc_dec_val((ceu_mem->tempC_83675));
                             
-                                ceu_gc_dec_val((ceu_mem->labelF_83451));
+                                ceu_gc_dec_val((ceu_mem->labelF_83659));
                             
-                                ceu_gc_dec_val((ceu_mem->labelC_83403));
+                                ceu_gc_dec_val((ceu_mem->labelC_83611));
                             
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84665;
+                    ceu_acc = ceu_acc_84893;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
@@ -60835,10 +60895,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         
 
                         { // pars
-                            CEU_Value ceu_acc_84666 = CEU_ACC_KEEP();
+                            CEU_Value ceu_acc_84894 = CEU_ACC_KEEP();
                             
                             CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                            ceu_acc = ceu_acc_84666;
+                            ceu_acc = ceu_acc_84894;
                         }
 
                         
@@ -60868,7 +60928,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     ceux->depth++;
             #endif
                     
-                         CEU_Block ceu_block_84727 = NULL;
+                         CEU_Block ceu_block_84955 = NULL;
                     
                     
                         { // ARGC / ARGV
@@ -67417,7 +67477,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupOpen(NULL,NULL); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 87, col 1) : ```IupOpen(NULL,NULL);```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 86, col 1) : ```IupOpen(NULL,NULL);```");
             
         
                     
@@ -67454,7 +67514,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 98, col 5) : (val x-iup-loop = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 97, col 5) : (val x-iup-loop = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67491,7 +67551,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 105, col 9) : (val x-iup-get-pointer = (func' :nested (h..."
+                            "@/iup/iup.ceu : (lin 104, col 9) : (val x-iup-get-pointer = (func' :nested (h..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67524,7 +67584,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 109, col 9) : (val x-iup-get-bool = (func' :nested (h,na..."
+                            "@/iup/iup.ceu : (lin 108, col 9) : (val x-iup-get-bool = (func' :nested (h,na..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67557,7 +67617,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 113, col 9) : (val x-iup-get-number = (func' :nested (h,..."
+                            "@/iup/iup.ceu : (lin 112, col 9) : (val x-iup-get-number = (func' :nested (h,..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67594,7 +67654,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 104, col 5) : (val x-iup-get :IUP.Get = group { (val x-i..."
+                            "@/iup/iup.ceu : (lin 103, col 5) : (val x-iup-get :IUP.Get = group { (val x-i..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67627,7 +67687,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 120, col 5) : (val x-iup-set = (func' :nested (h,name,va..."
+                            "@/iup/iup.ceu : (lin 119, col 5) : (val x-iup-set = (func' :nested (h,name,va..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67660,7 +67720,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 141, col 5) : (val x-iup-button = (func' :nested (label)..."
+                            "@/iup/iup.ceu : (lin 139, col 5) : (val x-iup-button = (func' :nested (label)..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67693,7 +67753,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 148, col 5) : (val x-iup-label = (func' :nested (label) ..."
+                            "@/iup/iup.ceu : (lin 146, col 5) : (val x-iup-label = (func' :nested (label) ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67726,7 +67786,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 153, col 5) : (val x-iup-list = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 151, col 5) : (val x-iup-list = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67759,7 +67819,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 159, col 5) : (val x-iup-text = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 157, col 5) : (val x-iup-text = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67792,7 +67852,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 167, col 5) : (val x-iup-hbox = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 165, col 5) : (val x-iup-hbox = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67825,7 +67885,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 171, col 5) : (val x-iup-vbox = (func' :nested () { grou..."
+                            "@/iup/iup.ceu : (lin 169, col 5) : (val x-iup-vbox = (func' :nested () { grou..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67858,7 +67918,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 175, col 5) : (val x-iup-append = (func' :nested (h,chil..."
+                            "@/iup/iup.ceu : (lin 173, col 5) : (val x-iup-append = (func' :nested (h,chil..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67891,7 +67951,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 181, col 5) : (val x-iup-dialog = (func' :nested (h) { g..."
+                            "@/iup/iup.ceu : (lin 179, col 5) : (val x-iup-dialog = (func' :nested (h) { g..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67924,7 +67984,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 185, col 5) : (val x-iup-show-xy = (func' :nested (h,x,y..."
+                            "@/iup/iup.ceu : (lin 183, col 5) : (val x-iup-show-xy = (func' :nested (h,x,y..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -67933,71 +67993,71 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                 { // TUPLE | 
                     
-                        CEU_Value ceu_args_76268[12];
+                        CEU_Value ceu_args_76236[12];
                     
                     
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_loop);
                     
-                            ceu_args_76268[0] = CEU_ACC_KEEP();
+                            ceu_args_76236[0] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_get);
                     
-                            ceu_args_76268[1] = CEU_ACC_KEEP();
+                            ceu_args_76236[1] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_set);
                     
-                            ceu_args_76268[2] = CEU_ACC_KEEP();
+                            ceu_args_76236[2] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_button);
                     
-                            ceu_args_76268[3] = CEU_ACC_KEEP();
+                            ceu_args_76236[3] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_label);
                     
-                            ceu_args_76268[4] = CEU_ACC_KEEP();
+                            ceu_args_76236[4] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_list);
                     
-                            ceu_args_76268[5] = CEU_ACC_KEEP();
+                            ceu_args_76236[5] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_text);
                     
-                            ceu_args_76268[6] = CEU_ACC_KEEP();
+                            ceu_args_76236[6] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_hbox);
                     
-                            ceu_args_76268[7] = CEU_ACC_KEEP();
+                            ceu_args_76236[7] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_vbox);
                     
-                            ceu_args_76268[8] = CEU_ACC_KEEP();
+                            ceu_args_76236[8] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_append);
                     
-                            ceu_args_76268[9] = CEU_ACC_KEEP();
+                            ceu_args_76236[9] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_dialog);
                     
-                            ceu_args_76268[10] = CEU_ACC_KEEP();
+                            ceu_args_76236[10] = CEU_ACC_KEEP();
                         
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_x_dash_iup_dash_show_dash_xy);
                     
-                            ceu_args_76268[11] = CEU_ACC_KEEP();
+                            ceu_args_76236[11] = CEU_ACC_KEEP();
                         
                     CEU_ACC (
-                        ceu_create_tuple(1, 12, ceu_args_76268 CEU_LEX_X(COMMA ceux->depth));
+                        ceu_create_tuple(1, 12, ceu_args_76236 CEU_LEX_X(COMMA ceux->depth));
                     );
                 }
             
@@ -68006,7 +68066,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ERROR_CHK_PTR (
                             continue,
                             ceu_lex_chk_own(ceu_acc, (CEU_Lex) { CEU_LEX_MUTAB, ceux->depth }),
-                            "@/iup/iup.ceu : (lin 94, col 1) : (val iup :IUP = group { (val x-iup-loop = ..."
+                            "@/iup/iup.ceu : (lin 93, col 1) : (val iup :IUP = group { (val x-iup-loop = ..."
                         );
                         #endif
                         ceu_gc_inc_val(ceu_acc);
@@ -68015,8 +68075,8 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 
                 { // SPAWN | 
                     
-                        CEU_Value ceu_tsks_84671;
-                        CEU_Value ceu_args_84671[0];
+                        CEU_Value ceu_tsks_84899;
+                        CEU_Value ceu_args_84899[0];
                     
 
                     
@@ -68027,10 +68087,10 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                 {
                     CEU_ACC (
                         ceu_create_clo_task (
-                            ceu_pro_84666,
+                            ceu_pro_84894,
                             0,
                             0
-                            , sizeof(CEU_Pro_84666)
+                            , sizeof(CEU_Pro_84894)
                             CEU50(COMMA ceux->exe)
                             CEU_LEX_X(COMMA ((CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }))
                         )
@@ -68042,11 +68102,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }
                 }
                 
-                    CEU_Dyn* ceu_a_84671 = (CEU_Dyn*)ceu_task_up(ceux);
-                    CEU_Block* ceu_b_84671 = &ceu_block_84727;
-                    CEU_Value ceu_exe_84671 = ceu_create_exe_task(ceu_acc, ceu_a_84671, ceu_b_84671 CEU_LEX_X(COMMA ceux->depth));
-                    CEU_ACC(ceu_exe_84671);
-                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 46, col 2) : (spawn (task' :fake () { group { (val labe...");
+                    CEU_Dyn* ceu_a_84899 = (CEU_Dyn*)ceu_task_up(ceux);
+                    CEU_Block* ceu_b_84899 = &ceu_block_84955;
+                    CEU_Value ceu_exe_84899 = ceu_create_exe_task(ceu_acc, ceu_a_84899, ceu_b_84899 CEU_LEX_X(COMMA ceux->depth));
+                    CEU_ACC(ceu_exe_84899);
+                    CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 48, col 2) : (spawn (task' :fake () { group { (val labe...");
                     
                 #ifdef CEU_LEX
                     CEU_ERROR_CHK_PTR (
@@ -68054,37 +68114,37 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         ceu_lex_chk_own(ceu_acc,
                             (CEU_Lex) { CEU_LEX_IMMUT, ceux->depth }
                         ),
-                        "02_temperature.ceu : (lin 46, col 2) : (spawn (task' :fake () { group { (val labe..."
+                        "02_temperature.ceu : (lin 48, col 2) : (spawn (task' :fake () { group { (val labe..."
                     );
                 #endif
         
                     
                     {
                         ceu_acc = (CEU_Value) { CEU_VALUE_NIL };
-                        CEUX ceux_84671 = {
-                            ceu_exe_84671.Dyn->Exe.clo,
-                            {.exe = (CEU_Exe*) ceu_exe_84671.Dyn},
+                        CEUX ceux_84899 = {
+                            ceu_exe_84899.Dyn->Exe.clo,
+                            {.exe = (CEU_Exe*) ceu_exe_84899.Dyn},
                             CEU_ACTION_RESUME,
                             ceux,
-                            CEU_LEX_X(ceu_exe_84671.Dyn->Exe.depth COMMA)
+                            CEU_LEX_X(ceu_exe_84899.Dyn->Exe.depth COMMA)
                             0,
-                            ceu_args_84671
+                            ceu_args_84899
                         };
-                        ceu_exe_84671.Dyn->Exe.clo->proto(&ceux_84671);
-                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84671);continue;}, "02_temperature.ceu : (lin 46, col 2) : (spawn (task' :fake () { group { (val labe...");
+                        ceu_exe_84899.Dyn->Exe.clo->proto(&ceux_84899);
+                        CEU_ERROR_CHK_ERR({ceu_gc_dec_val(ceu_exe_84899);continue;}, "02_temperature.ceu : (lin 48, col 2) : (spawn (task' :fake () { group { (val labe...");
                         if (CEU_ESCAPE != CEU_ESCAPE_NONE) {
-                            ceu_gc_dec_val(ceu_exe_84671);
+                            ceu_gc_dec_val(ceu_exe_84899);
                             continue;
                         }                                                            
                         ceu_gc_dec_val(ceu_acc);
                         
-                        ceu_acc = ceu_exe_84671;
+                        ceu_acc = ceu_exe_84899;
                     }
                 } // SPAWN | 
                 
                 { // CALL | 
                     
-                        CEU_Value ceu_args_84682[0];
+                        CEU_Value ceu_args_84910[0];
                     
                     
                     
@@ -68097,32 +68157,32 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         // ACC - GET | 
                         CEU_ACC(ceu_glb_iup);
                     
-                    CEU_Value ceu_col_84679 = CEU_ACC_KEEP();
+                    CEU_Value ceu_col_84907 = CEU_ACC_KEEP();
 
                     // IDX
                     
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NUMBER, {.Number=0} }));
                         
-                    CEU_Value ceu_idx_84679 = CEU_ACC_KEEP();
+                    CEU_Value ceu_idx_84907 = CEU_ACC_KEEP();
                 
-                        CEU_ACC(ceu_col_get(ceu_col_84679, ceu_idx_84679));
-                        ceu_gc_dec_val(ceu_col_84679);
-                        ceu_gc_dec_val(ceu_idx_84679);
-                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 48, col 1) : iup[:loop]");
+                        CEU_ACC(ceu_col_get(ceu_col_84907, ceu_idx_84907));
+                        ceu_gc_dec_val(ceu_col_84907);
+                        ceu_gc_dec_val(ceu_idx_84907);
+                        CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 50, col 1) : iup[:loop]");
                     
                 }
                 
-                    CEU_Value ceu_clo_84682 = CEU_ACC_KEEP();
-                    if (ceu_clo_84682.type != CEU_VALUE_CLO_FUNC) {
-                        ceu_gc_dec_val(ceu_clo_84682);
+                    CEU_Value ceu_clo_84910 = CEU_ACC_KEEP();
+                    if (ceu_clo_84910.type != CEU_VALUE_CLO_FUNC) {
+                        ceu_gc_dec_val(ceu_clo_84910);
                         CEU_ERROR_CHK_PTR (
                             continue,
                             "expected function",
-                            "02_temperature.ceu : (lin 48, col 1) : iup[:loop]()"
+                            "02_temperature.ceu : (lin 50, col 1) : iup[:loop]()"
                         );
                     }
-                    CEUX ceux_84682 = {
-                        (CEU_Clo*) ceu_clo_84682.Dyn,
+                    CEUX ceux_84910 = {
+                        (CEU_Clo*) ceu_clo_84910.Dyn,
                     #if CEU >= 3
                         {NULL}, CEU_ACTION_INVALID,
                     #endif
@@ -68131,12 +68191,12 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     #endif
                         CEU_LEX_X(ceux->depth+1 COMMA)
                         0,
-                        ceu_args_84682
+                        ceu_args_84910
                     };
-                    ceu_clo_84682.Dyn->Clo.proto(&ceux_84682);
-                    ceu_gc_dec_val(ceu_clo_84682);
+                    ceu_clo_84910.Dyn->Clo.proto(&ceux_84910);
+                    ceu_gc_dec_val(ceu_clo_84910);
                     
-            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 48, col 1) : iup[:loop]()");
+            CEU_ERROR_CHK_ERR(continue, "02_temperature.ceu : (lin 50, col 1) : iup[:loop]()");
             
         
                 } // CALL | 
@@ -68147,7 +68207,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     // keep ceu_acc and restore after defers/gc_dec/kills
                     // b/c they may change ceu_acc
                     
-                    CEU_Value ceu_acc_84727 = CEU_ACC_KEEP();
+                    CEU_Value ceu_acc_84955 = CEU_ACC_KEEP();
 
                     
                         { // BLOCK | defers | term | 
@@ -68184,7 +68244,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                         IupClose(); 
                         
-            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 89, col 5) : ```IupClose();```");
+            CEU_ERROR_CHK_ERR(continue, "@/iup/iup.ceu : (lin 88, col 5) : ```IupClose();```");
             
         
                     
@@ -68244,11 +68304,11 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     
                     
                     
-                        if (ceu_block_84727 != NULL) {
-                            CEU_LNKS(ceu_block_84727)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
+                        if (ceu_block_84955 != NULL) {
+                            CEU_LNKS(ceu_block_84955)->up.blk = NULL; // also on ceu_task_unlink (if unlinked before leave)
                         }
                         {
-                            CEU_Block cur = ceu_task_get(ceu_block_84727);
+                            CEU_Block cur = ceu_task_get(ceu_block_84955);
                             while (cur != NULL) {
                                 ceu_abort_dyn(cur);
                                 CEU_Dyn* nxt = ceu_task_get(CEU_LNKS(cur)->sd.nxt);
@@ -68501,7 +68561,7 @@ CEU_ACC(((CEU_Value) { CEU_VALUE_NIL }));
                     }                        
 
                     CEU_ACC((CEU_Value) { CEU_VALUE_NIL });
-                    ceu_acc = ceu_acc_84727;
+                    ceu_acc = ceu_acc_84955;
                     
             #ifdef CEU_LEX
                     ceux->depth--;
