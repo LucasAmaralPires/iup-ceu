@@ -2,4 +2,3 @@
 include/
 *.json
 *.exe
-*.c
