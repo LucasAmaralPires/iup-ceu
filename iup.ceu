@@ -10,7 +10,7 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number],
     set,
-    button, label, list, text,
+    button, label, timer, list, text,
     hbox, vbox, append,
     dialog, show-xy
 ]
@@ -148,6 +148,12 @@ val iup :IUP = group {
         `:pointer IupLabel($s.Pointer)`
     }
 
+    func x-iup-timer () {
+        val h = `:pointer IupTimer(NULL)`
+        `IupSetCallback($h.Pointer, "ACTION", (Icallback) iup_list_action_cb);`
+        h
+    }
+
     func x-iup-list () {
         val h = `:pointer IupList(NULL)`
         `IupSetCallback($h.Pointer, "ACTION", (Icallback) iup_list_action_cb);`
@@ -188,7 +194,7 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
-        x-iup-button, x-iup-label, x-iup-list, x-iup-text,
+        x-iup-button, x-iup-label, x-iup-timer, x-iup-list, x-iup-text,
         x-iup-hbox, x-iup-vbox, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
     ]
