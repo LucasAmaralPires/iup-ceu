@@ -1,8 +1,7 @@
 ^["@/iup/iup.ceu"]
 
 ;;;
-TODO -  Disable button when changing to return flight if necessary
-        Check button error without catch
+TODO -  Enable red and block button when return_flgiht is wrong
         Messages when pressing buttons
 ;;;
 
@@ -54,10 +53,15 @@ func check_button(end, start, button){
     val date :Date = catch :date {
         iup.get.pointer(end,:VALUE) -> to-string -> to-date
     }
-    if ((date_s.y < date.y) or ((date_s.m < date.m) and (date_s.y == date.y)) or ((date_s.d <= date.d) and (date_s.m == date.m) and (date_s.y == date.y))){
-        iup.set(button, :ACTIVE, "YES");
-    } else {
+    if ((date == :date) or (date_s == :date))
+    {
         iup.set(button, :ACTIVE, "NO");
+    } else {
+        if ((date_s.y < date.y) or ((date_s.m < date.m) and (date_s.y == date.y)) or ((date_s.d <= date.d) and (date_s.m == date.m) and (date_s.y == date.y))){
+            iup.set(button, :ACTIVE, "YES");
+        } else {
+            iup.set(button, :ACTIVE, "NO");
+        }
     }
 }
 
