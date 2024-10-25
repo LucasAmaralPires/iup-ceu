@@ -26,19 +26,16 @@ func to-date (s) {
         set tup[i] = vec[i] -> to-number -> assert
     }
 
-    val valid? = do {
-        val leap? = ((tup.y%400)==0) or (((tup.y%4)==0) and ((tup.y%100)/=0))
-        ifs {
-            (tup.d < 1) => false
-            ((tup.m==2) and leap?  and (tup.d>29)) => false
-            ((tup.m==2) and (not leap?) and (tup.d>28)) => false
-            ((tup.d>30) and ((tup.m==4) or (tup.m==6) or (tup.m==9) or (tup.m==11))) => false
-            ((tup.d>31) and ((tup.m==1) or (tup.m==3) or (tup.m==5) or (tup.m==7) or
-                             (tup.m==8) or (tup.m==10) or (tup.m==12))) => false
-            else => true
-        }
+    val leap? = ((tup.y%400)==0) or (((tup.y%4)==0) and ((tup.y%100)/=0))
+    ifs {
+        (tup.d < 1) => error(:date)
+        ((tup.m==2) and leap?  and (tup.d>29)) => error(:date)
+        ((tup.m==2) and (not leap?) and (tup.d>28)) => error(:date)
+        ((tup.d>30) and ((tup.m==4) or (tup.m==6) or (tup.m==9) or (tup.m==11))) => error(:date)
+        ((tup.d>31) and ((tup.m==1) or (tup.m==3) or (tup.m==5) or (tup.m==7) or
+                        (tup.m==8) or (tup.m==10) or (tup.m==12))) => error(:date)
+        else => true
     }
-    assert(valid?)
 
     drop(tup)
 }
@@ -104,7 +101,9 @@ spawn {
                 }
                 if date == :date {
                     iup.set(it.h, :VALID, false)
+                    iup.set(it.h, :BGCOLOR, "255 0 0")
                 } else {
+                    iup.set(it.h, :BGCOLOR, "255 255 255")
                     iup.set(it.h, :VALID, true);
                     iup.set(it.h, :DAY,   date.d);
                     iup.set(it.h, :MONTH, date.m);
