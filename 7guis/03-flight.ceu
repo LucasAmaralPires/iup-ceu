@@ -1,5 +1,11 @@
 ^["@/iup/iup.ceu"]
 
+;;;
+TODO -  Error when inputing letters
+        Disable button when changing to return flight if necessary
+        Messages when pressing buttons
+;;;
+
 data :Date = [d,m,y]
 
 func to-date (s) {
@@ -40,7 +46,22 @@ func to-date (s) {
     drop(tup)
 }
 
+func check_button(end, start, button){
+    val date_s :Date = catch :date {
+        iup.get.pointer(start,:VALUE) -> to-string -> to-date
+    }
+    val date :Date = catch :date {
+        iup.get.pointer(end,:VALUE) -> to-string -> to-date
+    }
+    if ((date_s.y < date.y) or ((date_s.m < date.m) and (date_s.y == date.y)) or ((date_s.d <= date.d) and (date_s.m == date.m) and (date_s.y == date.y))){
+        iup.set(button, :ACTIVE, "YES");
+    } else {
+        iup.set(button, :ACTIVE, "NO");
+    }
+}
+
 spawn {
+    
     val list = iup.list()
         iup.set(list, :EXPAND,   "HORIZONTAL")
         iup.set(list, :DROPDOWN, true)
@@ -79,6 +100,7 @@ spawn {
 
     val dlg = iup.dialog(vbox)
         iup.set(dlg, :TITLE, "Book Flight")
+        iup.set(dlg, :SIZE, "150")
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
@@ -93,16 +115,23 @@ spawn {
         par-or {
             await :Iup.List.Action | (it.h==list) and (it.state) {
                 iup.set(end, :ACTIVE, (it.item == 2))
+                check_button(end, start, button)
             }
         } with {
             await :Iup.Value | (it.h==start) or (it.h==end) {
                 val date :Date = catch :date {
                     iup.get.pointer(it.h,:VALUE) -> to-string -> to-date
                 }
+
                 if date == :date {
                     iup.set(it.h, :VALID, false)
                     iup.set(it.h, :BGCOLOR, "255 0 0")
+                    iup.set(button, :ACTIVE, "NO");
                 } else {
+                    iup.set(button, :ACTIVE, "YES");
+                    if it.h == end {
+                        check_button(end, start, button)
+                    }
                     iup.set(it.h, :BGCOLOR, "255 255 255")
                     iup.set(it.h, :VALID, true);
                     iup.set(it.h, :DAY,   date.d);
