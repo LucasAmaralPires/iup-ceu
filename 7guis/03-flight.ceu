@@ -1,8 +1,8 @@
 ^["@/iup/iup.ceu"]
 
 ;;;
-TODO -  Error when inputing letters
-        Disable button when changing to return flight if necessary
+TODO -  Disable button when changing to return flight if necessary
+        Check button error without catch
         Messages when pressing buttons
 ;;;
 
@@ -16,6 +16,7 @@ func to-date (s) {
             set vec[+] = sub
             set sub = ""
         } else {
+            if((to.number(c) < 48) or (to.number(c) > 57)) { error(:date) }
             set sub[+] = c
         }
     }
