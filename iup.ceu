@@ -10,7 +10,7 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number],
     set,
-    button, label, gauge, val, list, text,
+    button, label, gauge, val, list, text, message,
     hbox, vbox, append,
     dialog, show-xy
 ]
@@ -172,6 +172,12 @@ val iup :IUP = group {
         h
     }
 
+    func x-iup-message (tt, msn){
+        val title = to.pointer(tt)
+        val format = to.pointer(msn)
+        `IupMessage($title.Pointer,$format.Pointer);`
+    }
+
     ;; CONTAINERS
 
     func x-iup-hbox () {
@@ -200,7 +206,7 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
-        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text,
+        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message,
         x-iup-hbox, x-iup-vbox, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
     ]
