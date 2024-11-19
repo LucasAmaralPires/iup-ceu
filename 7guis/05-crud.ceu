@@ -110,21 +110,12 @@ iup.loop()
 ;;;
 int main(int argc, char **argv)
 {
-
-
-  hbx_top = IupHbox(hbx_filter, IupFill(), NULL);
-  IupSetAttribute(hbx_top, "HOMOGENEOUS", "YES");
- 
- 
-
   /* Registers callbacks */
   IupSetCallback(btn_create, "ACTION", (Icallback)btn_create_cb);
   IupSetCallback(btn_update, "ACTION", (Icallback)btn_update_cb);
   IupSetCallback(btn_delete, "ACTION", (Icallback)btn_delete_cb);
   IupSetCallback(lst_names, "VALUECHANGED_CB", (Icallback)lst_valuechanged_cb);
   IupSetCallback(txt_filter, "VALUECHANGED_CB", (Icallback)txt_valuechanged_cb);
-
  }
-
 
 ;;;
