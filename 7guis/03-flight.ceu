@@ -1,9 +1,5 @@
 ^["@/iup/iup.ceu"]
 
-;;;
-TODO -  Enable red and block button when return_flgiht is wrong
-;;;
-
 data :Date = [d,m,y]
 
 func to-date (s) {
@@ -113,10 +109,6 @@ spawn {
     loop {
         val act2? = iup.get.bool(end, :ACTIVE)
         val val2? = iup.get.bool(end, :VALID)
-
-        iup.set(end, :BGCOLOR, color) where {
-            val color = ((val2? or (not act2?)) and "255 255 255") or "255 0 0"
-        }
 
         par-or {
             await :Iup.List.Action | (it.h==list) and (it.state) {
