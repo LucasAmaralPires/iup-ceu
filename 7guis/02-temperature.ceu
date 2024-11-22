@@ -1,5 +1,9 @@
 ^["@/iup/iup.ceu"]
 
+;;
+TODO - Mudar o print para tirar o C
+;;
+
 spawn {
     val labelC = iup.label("Celsius =")
     val labelF = iup.label("Fahrenheit")
