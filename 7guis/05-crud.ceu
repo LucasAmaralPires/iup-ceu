@@ -1,11 +1,45 @@
 ^["@/iup/iup.ceu"]
 
+data :FName = [nm, snm, id]
+
 ;;;
 TODO - 
-    Criar a funcionalidade dos botões
+    Criar funcionalidade do botão Create
+        Criar datebase  interno
+        Dar update nos botões (? Código original tem, não sei pq)
+        Elimiar espaços quando criar listagens
+        Descobrir pq loadList é chamado no original
+    Criar funcionalidade do botão update
+    Criar funcionalidade do botão delete
     Descobrir porque esta surgindo tanto espaço vazio
 ;;;
 
+;;;
+val db_names_list :FName = #[]
+var db_names_count = 0
+
+func create_db(name, surname) {
+    set db_names_list.name = name 
+}
+;;;
+
+func btn_create(button, name, surname) {
+    val name_value = iup.get.pointer(name, :VALUE) -> to-string
+    val surname_value = iup.get.pointer(surname, :VALUE) -> to-string
+    println(name_value)
+    println(surname_value)
+    iup.set(name, :VALUE, nil)
+    iup.set(surname, :VALUE, nil)
+
+}
+
+func btn_update() {
+    
+}
+
+func btn_delete() {
+    
+}
 
 spawn {
     
@@ -103,6 +137,10 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
+    every :Iup.Action | it.h==button_create {
+        btn_create(button_create, name_text, surname_text)
+    }
+
 }
 
 iup.loop()
@@ -111,7 +149,6 @@ iup.loop()
 int main(int argc, char **argv)
 {
   /* Registers callbacks */
-  IupSetCallback(btn_create, "ACTION", (Icallback)btn_create_cb);
   IupSetCallback(btn_update, "ACTION", (Icallback)btn_update_cb);
   IupSetCallback(btn_delete, "ACTION", (Icallback)btn_delete_cb);
   IupSetCallback(lst_names, "VALUECHANGED_CB", (Icallback)lst_valuechanged_cb);
