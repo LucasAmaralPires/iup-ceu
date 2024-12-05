@@ -1,8 +1,8 @@
 ^["@/iup/iup.ceu"]
 
-;;
-TODO - Mudar o print para tirar o C
-;;
+;;;
+TODO - Mudar o print para tirar o C (MUltiplar por 100, colocar math.floor ,dividir por 100 [Não esta funcionando])
+;;;
 
 spawn {
     val labelC = iup.label("Celsius =")
