@@ -14,22 +14,49 @@ TODO -
     Descobrir porque esta surgindo tanto espaço vazio
 ;;;
 
-;;;
+
+val MAX_NAMES = 80
 val db_names_list :FName = #[]
 var db_names_count = 0
 
 func create_db(name, surname) {
-    set db_names_list.name = name 
-}
+    set db_names_count = db_names_count + 1
+    println(db_names_count)
+    println(name)
+    println(surname)
+    set db_names_list[+] = [name,surname,0]
+    println(db_names_list)
 ;;;
+  static int lastId = 0;
+
+  if (namesCount == MAX_NAMES)
+    return -1;
+
+  strcpy(namesList[namesCount].surname, surname);
+  strcpy(namesList[namesCount].name, name);
+  namesList[namesCount].id = lastId;  /* each circle has an unique id */
+
+  namesCount++;
+  lastId++;
+  return lastId - 1;
+;;;
+
+}
 
 func btn_create(button, name, surname) {
     val name_value = iup.get.pointer(name, :VALUE) -> to-string
     val surname_value = iup.get.pointer(surname, :VALUE) -> to-string
     println(name_value)
     println(surname_value)
+    create_db(name_value, surname_value)
     iup.set(name, :VALUE, nil)
     iup.set(surname, :VALUE, nil)
+
+;;;
+  crud_create(surname, name);
+  loadList(ih);
+  updateButtonsState(ih);
+;;;
 
 }
 
