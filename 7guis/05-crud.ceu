@@ -12,33 +12,70 @@ TODO -
     Criar funcionalidade do botão update
     Criar funcionalidade do botão delete
     Descobrir porque esta surgindo tanto espaço vazio
+    Erro na criação databese com 80
 ;;;
 
 
 val MAX_NAMES = 80
 val db_names_list :FName = #[]
 var db_names_count = 0
+var db_names_id = 0
+
+;;;;;;;;;;;;;;;;;;;;;;;;; DATABASE OF NAMES ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 func create_db(name, surname) {
+    ;;;
+    if db_names_count == 80 {
+        error
+    }
+    ;;;
+
+    set db_names_list[+] = [name,surname,db_names_id]
+
     set db_names_count = db_names_count + 1
-    println(db_names_count)
-    println(name)
-    println(surname)
-    set db_names_list[+] = [name,surname,0]
-    println(db_names_list)
+    set db_names_id = db_names_id + 1
+}
+
 ;;;
-  static int lastId = 0;
+func create_update(name, surname) {
+    loop {
 
-  if (namesCount == MAX_NAMES)
-    return -1;
+    }
+}
+;;;
 
-  strcpy(namesList[namesCount].surname, surname);
-  strcpy(namesList[namesCount].name, name);
-  namesList[namesCount].id = lastId;  /* each circle has an unique id */
+;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  namesCount++;
-  lastId++;
-  return lastId - 1;
+func loadList () {
+    
+;;;
+  Ihandle *txtFilter = IupGetDialogChild(ih, "TXT_FILTER");
+  Ihandle *listNames = IupGetDialogChild(ih, "LST_NAMES");
+  Name data;
+  int count = crud_length();
+  char *filterTxt = IupGetAttribute(txtFilter, "VALUE");
+  int filter = 1;
+  int i, j;
+
+  filterTxt = trim(filterTxt);
+  if (*filterTxt == '\0')
+    filter = 0;
+
+  IupSetAttribute(listNames, "1", NULL);
+
+  j = 1;
+  for (i = 1; i <= count; i++)
+  {
+    Name name = crud_read(i-1);
+    if (!filter || filterName(name.surname, filterTxt))
+    {
+      IupSetStrfId(listNames, "", j, "%s, %s", name.surname, name.name);
+      IupSetIntId(listNames, "ID", j, name.id);
+      j++;
+    }
+  }
+
+  IupSetAttribute(listNames, "VALUE", NULL);
 ;;;
 
 }
