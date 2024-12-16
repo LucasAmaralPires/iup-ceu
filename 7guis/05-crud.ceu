@@ -46,13 +46,43 @@ func create_update(name, surname) {
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-func loadList () {
-    
+func trim (word) {
+    var trim_word = ""
+    var temp_word = ""
+    var start_word = false
+    var end_word = false
+    loop c in word {
+        ifs {
+            (c /= ' ')  and (start_word == false) {
+                set trim_word[+] = c
+                set start_word = true
+            }
+            (c == ' ') and (start_word == true) and (end_word == true){
+                set temp_word[+] = c
+            }
+            (c == ' ') and (start_word == true) {
+                set end_word = true
+                set temp_word[+] = c
+            }
+            (c /= ' ')  and (end_word == true) {
+                set trim_word = trim_word ++ temp_word
+                set trim_word[+] = c
+                set temp_word = ""
+                set end_word = false
+            }
+            (start_word == true) and (end_word == false) {
+                set trim_word[+] = c
+            }
+        } 
+    }
+}
+
+func loadList (filter_f) {
+
+    val filter_text = iup.get.pointer(filter_f, :VALUE) -> to-string
+       
 ;;;
-  Ihandle *txtFilter = IupGetDialogChild(ih, "TXT_FILTER");
-  Ihandle *listNames = IupGetDialogChild(ih, "LST_NAMES");
-  Name data;
-  int count = crud_length();
+
   char *filterTxt = IupGetAttribute(txtFilter, "VALUE");
   int filter = 1;
   int i, j;
@@ -81,20 +111,12 @@ func loadList () {
 }
 
 func btn_create(button, name, surname) {
-    val name_value = iup.get.pointer(name, :VALUE) -> to-string
-    val surname_value = iup.get.pointer(surname, :VALUE) -> to-string
-    println(name_value)
-    println(surname_value)
+    val name_value = iup.get.pointer(name, :VALUE) -> to-string -> trim
+    val surname_value = iup.get.pointer(surname, :VALUE) -> to-string -> trim
     create_db(name_value, surname_value)
+    println(db_names_list)
     iup.set(name, :VALUE, nil)
     iup.set(surname, :VALUE, nil)
-
-;;;
-  crud_create(surname, name);
-  loadList(ih);
-  updateButtonsState(ih);
-;;;
-
 }
 
 func btn_update() {
@@ -201,10 +223,20 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
-    every :Iup.Action | it.h==button_create {
-        btn_create(button_create, name_text, surname_text)
-    }
+    loop {
+        par-or {
+            await :Iup.Action | it.h==button_create {
+                btn_create(button_create, name_text, surname_text)
+            }
+        } with {
+            await :Iup.Action | it.h==button_update {
+;;                btn_create(button_create, name_text, surname_text)
+            }
+        }
 
+;;       loadList(filter)
+;;       updateButtonsState()
+    }
 }
 
 iup.loop()
