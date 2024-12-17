@@ -7,7 +7,6 @@ TODO -
     Criar funcionalidade do botão Create
         Criar datebase  interno
         Dar update nos botões (? Código original tem, não sei pq)
-        Elimiar espaços quando criar listagens
         Descobrir pq loadList é chamado no original
     Criar funcionalidade do botão update
     Criar funcionalidade do botão delete
@@ -79,15 +78,13 @@ func trim (word) {
 
 func loadList (filter_f) {
 
-    val filter_text = iup.get.pointer(filter_f, :VALUE) -> to-string
+    val filter_text = iup.get.pointer(filter_f, :VALUE) -> to-string -> trim
        
 ;;;
 
-  char *filterTxt = IupGetAttribute(txtFilter, "VALUE");
   int filter = 1;
   int i, j;
 
-  filterTxt = trim(filterTxt);
   if (*filterTxt == '\0')
     filter = 0;
 
