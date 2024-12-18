@@ -45,6 +45,16 @@ func create_update(name, surname) {
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+func filterName(surname, filter) {
+;;;
+  char lname[80], lfilter[80];
+  strLower(lname, name);
+  strLower(lfilter, filter);
+  int i = strncmp(lname, lfilter, strlen(filter));
+  return (i==0);
+;;;
+}
+
 func trim (word) {
     var trim_word = ""
     var temp_word = ""
