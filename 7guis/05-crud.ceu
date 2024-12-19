@@ -73,7 +73,6 @@ func filterName(surname, filter) {
         set i = i + 1
     }
     true
-
 }
 
 func trim (word) {
@@ -250,6 +249,8 @@ spawn {
         iup.set(dlg, :GAP, "10")
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+
+;;    `IupSetStrfId($list.Pointer, "", 1, "%s, %s", "teste", "teste");` EXEMPLO DE COMO FAZER ACRESCENTAR A LISTA ANTES DE MODIFICAR O iup.ceu
 
     loop {
         par-or {
