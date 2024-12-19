@@ -84,6 +84,7 @@ func trim (word) {
             }
         } 
     }
+    trim_word
 }
 
 func loadList (filter_f) {
