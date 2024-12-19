@@ -45,14 +45,35 @@ func create_update(name, surname) {
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
+func strLower(word) {
+    var temp_word = ""
+    loop c in word {
+        if (to.number(c) >= 65) and (to.number(c) <= 90) {
+            set temp_word[+] = to.char(to.number(c) + 32)
+        } else {
+            set temp_word[+] = c
+        }
+    }
+    temp_word
+}
+
 func filterName(surname, filter) {
-;;;
-  char lname[80], lfilter[80];
-  strLower(lname, name);
-  strLower(lfilter, filter);
-  int i = strncmp(lname, lfilter, strlen(filter));
-  return (i==0);
-;;;
+    val temp_surname = strLower(surname)
+    val temp_filter = strLower(filter)
+    var i = 0
+    if(#temp_filter > #temp_surname){
+        return(false)
+    }
+    println(#temp_filter)
+    println(#temp_surname)
+    loop c in temp_filter {
+        if (c /= temp_surname[i]) {
+            return(false)
+        }
+        set i = i + 1
+    }
+    true
+
 }
 
 func trim (word) {
@@ -90,7 +111,6 @@ func trim (word) {
 func loadList (filter_f) {
 
     val filter_text = iup.get.pointer(filter_f, :VALUE) -> to-string -> trim
-       
 ;;;
 
   int filter = 1;
