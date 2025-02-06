@@ -80,9 +80,8 @@ int iup_list_action_cb (Ihandle* h, char *text, int item, int state) {
     return IUP_DEFAULT;
 }
 
-/*
-int timer_cb (Ihandle *self) {
-    puts("xxx");
+
+int iup_timer_cb (Ihandle* h) {
     CEU_Value args[] = {
         { CEU_VALUE_NUMBER, {.Number=50} }
     };
@@ -94,14 +93,13 @@ int timer_cb (Ihandle *self) {
 
     ceu_broadcast_global(evt);
     ceu_gc_dec_val(evt);
-    
+
     if (CEU_ERROR != CEU_ERROR_NONE) {
         IupExitLoop();
         return IUP_CLOSE;   // TODO
     }
     return IUP_DEFAULT;
 }
-*/
 
 ```
 
@@ -120,12 +118,11 @@ val iup :IUP = group {
 
     func x-iup-loop () {
         ```
-/*
-        Ihandle* timer = IupTimer();
-        IupSetAttribute(timer, "TIME", "50");
-        IupSetAttribute(timer, "TOTALELAPSEDTIME", "0");
-        IupSetCallback(timer, "ACTION_CB", (Icallback)timer_cb);
-*/
+        Ihandle* iup_timer = IupTimer();
+        IupSetAttribute(iup_timer, "TIME", "50");
+        IupSetAttribute(iup_timer, "RUN", "YES");
+        IupSetCallback(iup_timer, "ACTION_CB", (Icallback)iup_timer_cb);
+
         IupMainLoop();
         ```
     }
