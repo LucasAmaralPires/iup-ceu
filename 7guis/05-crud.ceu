@@ -276,7 +276,7 @@ spawn {
             iup.set(list, :VALUE, nil)
         }
         if loadupdate[1] == true {
-            if iup.get.number(list, :VALUE) == false {
+            if iup.get.number(list, :VALUE) == 0 {
                 iup.set(button_update, :ACTIVE, "NO")
                 iup.set(button_delete, :ACTIVE, "NO")
             } else {
