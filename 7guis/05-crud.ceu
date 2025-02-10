@@ -4,7 +4,6 @@ data :FName = [nm, snm, id]
 
 ;;;
 TODO - 
-    Criar funcionalidade do botão delete
     Refazer a função trim
     Descobrir porque esta surgindo tanto espaço vazio
     LoadList
@@ -27,7 +26,7 @@ func create_db(name, surname) {
     }
     ;;;
 
-    set db_names_list[+] = [name,surname,db_names_id]
+    set db_names_list[db_names_count] = [name,surname,db_names_id]
 
     set db_names_count = db_names_count + 1
     set db_names_id = db_names_id + 1
@@ -191,8 +190,6 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
-;;    `IupSetStrfId($list.Pointer, "", 1, "%s, %s", "teste", "teste");` EXEMPLO DE COMO FAZER ACRESCENTAR A LISTA ANTES DE MODIFICAR O iup.ceu
-
     var loadupdate
 
     loop {
@@ -211,8 +208,10 @@ spawn {
                 val id = iup.get.id(list, :ID, id_val)
                 val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+
                 set db_names_list[id][0] = name_value
                 set db_names_list[id][1] = surname_value
+
                 iup.set(name_text, :VALUE, nil)
                 iup.set(surname_text, :VALUE, nil)
             }
@@ -224,7 +223,12 @@ spawn {
                 val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
 
-                ;;crud_delete(id, surname, name);
+                loop i in {id => (db_names_count-1){ {
+                    set db_names_list[i] = db_names_list[i + 1]
+                    set db_names_list[i][2] = db_names_list[i][2] - 1
+                }
+                set db_names_count = db_names_count - 1
+                set db_names_id = db_names_id - 1
 
                 iup.set(name_text, :VALUE, nil)
                 iup.set(surname_text, :VALUE, nil)
@@ -280,19 +284,8 @@ spawn {
                 iup.set(button_delete, :ACTIVE, "YES")
             }
         }
-
-;;        updateButtonsState(list, button_update, button_delete)
     }
 }
 
 iup.loop()
 
-;;;
-int main(int argc, char **argv)
-{
-  /* Registers callbacks */
-  IupSetCallback(btn_update, "ACTION", (Icallback)btn_update_cb);
-  IupSetCallback(btn_delete, "ACTION", (Icallback)btn_delete_cb);
- }
-
-;;;
