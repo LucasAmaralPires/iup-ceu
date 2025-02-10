@@ -109,22 +109,6 @@ func trim (word) {
     trim_word
 }
 
-func btn_create(button, name, surname) {
-    val name_value = iup.get.pointer(name, :VALUE) -> to-string -> trim
-    val surname_value = iup.get.pointer(surname, :VALUE) -> to-string -> trim
-    create_db(name_value, surname_value)
-    iup.set(name, :VALUE, nil)
-    iup.set(surname, :VALUE, nil)
-}
-
-func btn_update() {
-    
-}
-
-func btn_delete() {
-    
-}
-
 spawn {
     
     val filter = iup.label("Filter Prefix: ")
@@ -228,12 +212,24 @@ spawn {
     loop {
         set loadupdate = par-or {
             await :Iup.Action | it.h==button_create {
-                btn_create(button_create, name_text, surname_text)
+                val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
+                val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+                create_db(name_value, surname_value)
+                iup.set(name_text, :VALUE, nil)
+                iup.set(surname_text, :VALUE, nil)
             }
             [true,true]
         } with {
             await :Iup.Action | it.h==button_update {
-;;                btn_create(button_create, name_text, surname_text)
+                val id_val = iup.get.number(list, :VALUE)
+                val id = iup.get.id(list, :ID, id_val)
+                val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
+                val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+
+                ;;crud_update(id, surname, name);
+
+                iup.set(name_text, :VALUE, nil)
+                iup.set(surname_text, :VALUE, nil)
             }
             [true,true]
         } with {
@@ -293,8 +289,6 @@ int main(int argc, char **argv)
   /* Registers callbacks */
   IupSetCallback(btn_update, "ACTION", (Icallback)btn_update_cb);
   IupSetCallback(btn_delete, "ACTION", (Icallback)btn_delete_cb);
-  IupSetCallback(lst_names, "VALUECHANGED_CB", (Icallback)lst_valuechanged_cb);
-  IupSetCallback(txt_filter, "VALUECHANGED_CB", (Icallback)txt_valuechanged_cb);
  }
 
 ;;;
