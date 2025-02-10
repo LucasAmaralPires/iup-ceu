@@ -11,7 +11,7 @@ data :IUP = [
     get :PICO-Get = [pointer,bool,number,id],
     set,
     button, label, gauge, val, list, text, message,
-    hbox, vbox, append,
+    hbox, vbox, fill, append,
     dialog, show-xy
 ]
 
@@ -221,6 +221,10 @@ val iup :IUP = group {
         `:pointer IupVbox(NULL)`
     }
 
+    func x-iup-fill () {
+        `:pointer IupFill()`
+    }
+
     func x-iup-append (h, child) {
         `:pointer IupAppend($h.Pointer, $child.Pointer)`
     }
@@ -240,7 +244,7 @@ val iup :IUP = group {
     [
         x-iup-loop, x-iup-get, x-iup-set,
         x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message,
-        x-iup-hbox, x-iup-vbox, x-iup-append,
+        x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
     ]
 }

@@ -112,7 +112,7 @@ spawn {
     val hbox_top = iup.hbox()
         iup.set(hbox_top, :HOMOGENEOUS, "YES")
         iup.append(hbox_top, hbox_filter)
-        iup.append(hbox_top, `:pointer IupFill()`)
+        iup.append(hbox_top, iup.fill())
 
     val name = iup.label("Name:")
         iup.set(name, :NAME, "Name")
