@@ -1,0 +1,48 @@
+^["@/iup/iup.ceu"]
+
+;;;
+    TODO
+        Add second callback to iup.ceu
+        All the logic of the program
+;;;
+
+spawn {
+    
+    val undoButton = iup.button("UNDO")
+        iup.set(undoButton, :NAME, "UNDO")
+        iup.set(undoButton, :SIZE, "60")
+
+    val redoButton = iup.button("REDO")
+        iup.set(redoButton, :NAME, "UNDO")
+        iup.set(redoButton, :SIZE, "60")
+
+    iup.set(undoButton, :ACTIVE, "NO")
+    iup.set(redoButton, :ACTIVE, "NO")
+
+    val canvas = iup.canvas()
+        iup.set(canvas, :NAME, "CANVAS")
+        iup.set(canvas, :EXPAND, "YES")
+        iup.set(canvas, :HIGHLIGHTEDCIRCLE, -1)
+
+    val hbox = iup.hbox()
+        iup.append(hbox, iup.fill())
+        iup.append(hbox, undoButton)
+        iup.append(hbox, redoButton)
+        iup.append(hbox, iup.fill())
+
+    val vbox = iup.vbox()
+        iup.append(vbox, hbox)
+        iup.append(vbox, canvas)
+        iup.set(vbox, :NMARGIN, "10x10")
+        iup.set(vbox, :GAP, "10")
+
+    val dlg = iup.dialog(vbox)
+        iup.set(dlg, :TITLE, "Circle Drawer")
+        iup.set(dlg, :SIZE, "300x150")
+
+    iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+
+}
+
+iup.loop()
+

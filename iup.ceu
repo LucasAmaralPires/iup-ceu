@@ -10,7 +10,7 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number,id],
     set,
-    button, label, gauge, val, list, text, message,
+    button, label, gauge, val, list, text, message, canvas,
     hbox, vbox, fill, append,
     dialog, show-xy
 ]
@@ -211,6 +211,12 @@ val iup :IUP = group {
         `IupMessage($title.Pointer,$format.Pointer);`
     }
 
+    func x-iup-canvas () {
+        val h = `:pointer IupCanvas(NULL)`
+       `IupSetCallback($h.Pointer, "ACTION", iup_action_cb);`
+        h
+    }
+
     ;; CONTAINERS
 
     func x-iup-hbox () {
@@ -243,7 +249,7 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
-        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message,
+        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas,
         x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
     ]
