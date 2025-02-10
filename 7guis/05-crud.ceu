@@ -4,13 +4,9 @@ data :FName = [nm, snm, id]
 
 ;;;
 TODO - 
-    Criar funcionalidade do botão Create
-        Dar update nos botões (? Código original tem, não sei pq)
-    Criar funcionalidade do botão update
     Criar funcionalidade do botão delete
     Refazer a função trim
     Descobrir porque esta surgindo tanto espaço vazio
-    Descobrir porque não está marcando a seleção na lista
     LoadList
         Ver como usar uma única variável ao invés de 3 temporarios
     Erro na criação databese com 80
@@ -37,14 +33,6 @@ func create_db(name, surname) {
     set db_names_id = db_names_id + 1
 }
 
-;;;
-func create_update(name, surname) {
-    loop {
-
-    }
-}
-;;;
-
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 func strLower(word) {
@@ -66,8 +54,6 @@ func filterName(surname, filter) {
     if(#temp_filter > #temp_surname){
         return(false)
     }
-    println(#temp_filter)
-    println(#temp_surname)
     loop c in temp_filter {
         if (c /= temp_surname[i]) {
             return(false)
@@ -225,9 +211,8 @@ spawn {
                 val id = iup.get.id(list, :ID, id_val)
                 val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
-
-                ;;crud_update(id, surname, name);
-
+                set db_names_list[id][0] = name_value
+                set db_names_list[id][1] = surname_value
                 iup.set(name_text, :VALUE, nil)
                 iup.set(surname_text, :VALUE, nil)
             }
@@ -287,7 +272,13 @@ spawn {
             iup.set(list, :VALUE, nil)
         }
         if loadupdate[1] == true {
-            println("AQUI")
+            if iup.get.number(list, :VALUE) == false {
+                iup.set(button_update, :ACTIVE, "NO")
+                iup.set(button_delete, :ACTIVE, "NO")
+            } else {
+                iup.set(button_update, :ACTIVE, "YES")
+                iup.set(button_delete, :ACTIVE, "YES")
+            }
         }
 
 ;;        updateButtonsState(list, button_update, button_delete)
