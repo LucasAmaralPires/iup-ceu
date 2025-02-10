@@ -8,7 +8,7 @@ data :Iup = [h] {
 
 data :IUP = [
     loop,
-    get :PICO-Get = [pointer,bool,number],
+    get :PICO-Get = [pointer,bool,number,id],
     set,
     button, label, gauge, val, list, text, message,
     hbox, vbox, append,
@@ -142,7 +142,11 @@ val iup :IUP = group {
             val s = to.pointer(name)
             `:number IupGetFloat($h.Pointer, $s.Pointer+1)`
         }
-        [x-iup-get-pointer, x-iup-get-bool, x-iup-get-number]
+        func x-iup-get-id (h, name, id_val) {
+            val s = to.pointer(name)
+            `:number IupGetIntId($h.Pointer, $s.Pointer+1, $id_val.Number)`
+        }
+        [x-iup-get-pointer, x-iup-get-bool, x-iup-get-number, x-iup-get-id]
     }
 
     func x-iup-set (h, name, value) {
@@ -191,7 +195,7 @@ val iup :IUP = group {
 
     func x-iup-list () {
         val h = `:pointer IupList(NULL)`
-        `IupSetCallback($h.Pointer, "ACTION", (Icallback) iup_list_action_cb);`
+        `IupSetCallback($h.Pointer, "VALUECHANGED_CB", iup_value_cb);`
         h
     }
 
