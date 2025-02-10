@@ -38,6 +38,35 @@ int iup_action_cb (Ihandle* h) {
     return IUP_DEFAULT;
 }
 
+;;;
+(Ihandle *ih, int but, int pressed, int x, int y, char* status)
+
+int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status) {
+    CEU_Value args[] = {
+        { CEU_VALUE_POINTER, {.Pointer=h} },
+        { CEU_VALUE_NUMBER,  {.Number=but} },
+        { CEU_VALUE_NUMBER,  {.Number=pressed} },
+        { CEU_VALUE_NUMBER,  {.Number=x} },
+        { CEU_VALUE_NUMBER,  {.Number=y} }
+    };
+    CEU_Value evt = ceu_create_tuple(1, 1, args CEU_LEX_X(COMMA 1));
+    ceu_gc_inc_val(evt);
+
+    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Action} };
+    ceu_tag_set(tag, evt);
+
+    ceu_broadcast_global(evt);
+    ceu_gc_dec_val(evt);
+
+    if (CEU_ERROR != CEU_ERROR_NONE) {
+        IupExitLoop();
+        return IUP_CLOSE;   // TODO
+    }
+
+    return IUP_DEFAULT;
+}
+;;;
+
 int iup_value_cb (Ihandle* h) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} }
