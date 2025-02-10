@@ -1,10 +1,21 @@
 ^["@/iup/iup.ceu"]
 
+
+data :Circle = [x, y, r, id]
+
 ;;;
     TODO
         Add second callback to iup.ceu
         All the logic of the program
 ;;;
+
+val DEF_RADIUS = 30
+val MAX_RADIUS = 100
+val MAX_CIRCLES = 80
+
+val circlesList :Circle = #[]
+var circlesCount = 0
+
 
 spawn {
     

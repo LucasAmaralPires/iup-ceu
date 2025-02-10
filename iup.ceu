@@ -39,8 +39,6 @@ int iup_action_cb (Ihandle* h) {
 }
 
 ;;;
-(Ihandle *ih, int but, int pressed, int x, int y, char* status)
-
 int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} },
@@ -52,7 +50,7 @@ int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status)
     CEU_Value evt = ceu_create_tuple(1, 1, args CEU_LEX_X(COMMA 1));
     ceu_gc_inc_val(evt);
 
-    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Action} };
+    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Value} };
     ceu_tag_set(tag, evt);
 
     ceu_broadcast_global(evt);

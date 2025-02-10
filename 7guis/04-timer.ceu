@@ -8,11 +8,8 @@ func timer_cb (s) {
 ;;;
 
 spawn {
-    val labelET = iup.label("Elapsed Time: ")
-    val labelTemp_s = iup.label("0.0s")
-        iup.set(labelTemp_s, :NAME, "LABEL");
-        iup.set(labelTemp_s, :EXPAND, "HORIZONTAL");
-    val labelDur = iup.label("Duration: ")
+
+    val glabel = iup.label("Elapsed Time: ")
 
     val gauge = iup.gauge()
         iup.set(gauge, :NAME, "GAUGE");    
@@ -22,42 +19,41 @@ spawn {
         iup.set(gauge, :EXPAND, "HORIZONTAL");
         iup.set(gauge, :SHOWTEXT, "NO");
 
-    val labelVal = iup.val("HORIZONTAL")
-        iup.set(labelVal, :EXPAND, "HORIZONTAL");
-        iup.set(labelVal, :NAME, "VAL");
-        iup.set(labelVal, :MAX, "60.0");
-        iup.set(labelVal, :STEP, ".1");
-        iup.set(labelVal, :VALUE, "30.0");
-        iup.set(labelVal, :PAGESTEP, ".5");
+    val label = iup.label("0.0s")
+        iup.set(label, :NAME, "LABEL");
+        iup.set(label, :EXPAND, "HORIZONTAL");
 
-    val butReset = iup.button("Reset")
-        iup.set(butReset, "EXPAND", "HORIZONTAL");
-        iup.set(butReset, "NAME", "BUTTON");
-;;;
-    val timer = iup.timer()
-        iup.set(timer, :TIME, "100");
-        iup.set(timer, :TOTALELAPSEDTIME, "0");
-        iup.set(timer, :GAUGE, gauge);
-        iup.set(timer, :LABEL, labelTemp_s); 
-        iup.set(timer, :VAL, labelVal);
-;;;
+    val vlable = iup.label("Duration: ")
+
+    val iupval = iup.val("HORIZONTAL")
+        iup.set(iupval, :EXPAND, "HORIZONTAL");
+        iup.set(iupval, :NAME, "VAL");
+        iup.set(iupval, :MAX, "60.0");
+        iup.set(iupval, :STEP, ".1");
+        iup.set(iupval, :VALUE, "30.0");
+        iup.set(iupval, :PAGESTEP, ".5");
+
+    val button = iup.button("Reset")
+        iup.set(button, "EXPAND", "HORIZONTAL");
+        iup.set(button, "NAME", "BUTTON");
+
     val hbox1 = iup.hbox()
-        iup.append(hbox1, labelET)
+        iup.append(hbox1, glabel)
         iup.append(hbox1, gauge)
-        iup.set(hbox1, :MARGIN, "10x10")
+        iup.set(hbox1, :MARGIN, "0x0")
         iup.set(hbox1, :ALIGNMENT, "ACENTER")
 
     val hbox2 = iup.hbox()
-        iup.append(hbox2, labelDur)
-        iup.append(hbox2, labelVal)
-        iup.set(hbox2, :MARGIN, "10x10")
+        iup.append(hbox2, vlable)
+        iup.append(hbox2, iupval)
+        iup.set(hbox2, :MARGIN, "0x0")
         iup.set(hbox2, :ALIGNMENT, "ACENTER")
 
     val vbox = iup.vbox()
         iup.append(vbox,hbox1)
-        iup.append(vbox,labelTemp_s)
+        iup.append(vbox,label)
         iup.append(vbox,hbox2)
-        iup.append(vbox,butReset)
+        iup.append(vbox,button)
         iup.set(vbox, :MARGIN, "10x10")
         iup.set(vbox, :GAP, "10")
 
@@ -66,11 +62,26 @@ spawn {
         iup.set(dlg, :SIZE, "200")
 ;;        iup.set(dlg, :TIMER, timer)
 
+    iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+;;;
+    loop {
+        par-or {
+            await :Iup.Action | it.h==button {
+
+            }
+        }
+    }
+;;;
+    loop {
+        every <100:ms> {
+            println("AQUI")
+        }
+    }
+
 ;;  IupSetCallback(timer, "ACTION_CB", (Icallback)timer_cb);
 ;;  IupSetCallback(val, "VALUECHANGED_CB", (Icallback)val_valuechanged_cb);
 ;;  IupSetCallback(button, "ACTION", (Icallback)btn_reset_cb);
 
-    iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 }
 
 iup.loop()
