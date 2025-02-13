@@ -1,12 +1,5 @@
 ^["@/iup/iup.ceu"]
 
-;;;
-func timer_cb (s) {
-
-
-}
-;;;
-
 spawn {
 
     val glabel = iup.label("Elapsed Time: ")
@@ -63,24 +56,45 @@ spawn {
 ;;        iup.set(dlg, :TIMER, timer)
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
-;;;
+
+    var timer = [false, 0] 
+
     loop {
         par-or {
-            await :Iup.Action | it.h==button {
+            await :Iup.Value | it.h==iupval {
+                val value = iup.get.number(iupval, :VALUE)
 
+                iup.set(gauge, :MAX, value)
+
+                if timer[1] < (value*10) {
+                    set timer[0] = true
+                } else {
+                    iup.set(gauge, :VALUE, iup.get.pointer(gauge, :MAX))
+                }
+                println(value)
+            }
+        } with {
+            await :Iup.Action | it.h==button {
+                set timer[0] = true
+                set timer[1] = 0
+                iup.set(iupval, :VALUE, "30")
+            }
+        } with {
+            await <100:ms>
+            if timer[0] == true {
+                val value = iup.get.number(iupval, :VALUE)
+                set timer[1] = timer[1] + 1
+                if timer[1] > (value*10) {
+                    set timer[0] = false
+                    iup.set(label, :TITLE, value)
+                    iup.set(gauge, :VALUE, value)
+                } else {
+                    iup.set(label, :TITLE, timer[1]/10)
+                    iup.set(gauge, :VALUE, timer[1]/10)
+                }  
             }
         }
     }
-;;;
-    loop {
-        every <100:ms> {
-            println("AQUI")
-        }
-    }
-
-;;  IupSetCallback(timer, "ACTION_CB", (Icallback)timer_cb);
-;;  IupSetCallback(val, "VALUECHANGED_CB", (Icallback)val_valuechanged_cb);
-;;  IupSetCallback(button, "ACTION", (Icallback)btn_reset_cb);
 
 }
 
