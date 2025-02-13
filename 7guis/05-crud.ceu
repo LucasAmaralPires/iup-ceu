@@ -144,56 +144,54 @@ spawn {
         iup.set(button_delete, :SIZE, "30")
         iup.set(button_delete, :ACTIVE, "NO")
 
-    val hbox_filter = iup.hbox()
-        iup.set(hbox_filter, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_filter, filter)
-        iup.append(hbox_filter, text)
+    val hbx_filter = iup.hbox()
+        iup.append(hbx_filter, filter)
+        iup.append(hbx_filter, text)
+        iup.set(hbx_filter, :ALIGNMENT, "ACENTER")
 
-    val hbox_top = iup.hbox()
-        iup.set(hbox_top, :HOMOGENEOUS, "YES")
-        iup.append(hbox_top, hbox_filter)
-        iup.append(hbox_top, iup.fill())
+    val hbx_top = iup.hbox()
+        iup.append(hbx_top, hbx_filter)
+        iup.append(hbx_top, iup.fill())
+        iup.set(hbx_top, :HOMOGENEOUS, "YES")
 
-    val hbox_name = iup.hbox()
-        iup.set(hbox_name, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_name, name)
-        iup.append(hbox_name, name_text)
+    val hbx_name = iup.hbox()
+        iup.append(hbx_name, name)
+        iup.append(hbx_name, name_text)
+        iup.set(hbx_name, :ALIGNMENT, "ACENTER")
 
-    val hbox_surname = iup.hbox()
-        iup.set(hbox_surname, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_surname, surname)
-        iup.append(hbox_surname, surname_text)
+    val hbx_surname = iup.hbox()
+        iup.append(hbx_surname, surname)
+        iup.append(hbx_surname, surname_text)
+        iup.set(hbx_surname, :ALIGNMENT, "ACENTER")
 
-    val hbox_button = iup.hbox()
-        iup.append(hbox_button, button_create)
-        iup.append(hbox_button, button_update)
-        iup.append(hbox_button, button_delete)
+    val hbx_buttons = iup.hbox()
+        iup.append(hbx_buttons, button_create)
+        iup.append(hbx_buttons, button_update)
+        iup.append(hbx_buttons, button_delete)
 
-    val vbox_fullname = iup.vbox()
-        iup.append(vbox_fullname,hbox_name)
-        iup.append(vbox_fullname,hbox_surname)
+    val vbx_input = iup.vbox()
+        iup.append(vbx_input,hbx_name)
+        iup.append(vbx_input,hbx_surname)
 
-    val hbox_n_s_l = iup.hbox()
-        iup.set(hbox_n_s_l, :HOMOGENEOUS, "YES")
-        iup.append(hbox_n_s_l, list)
-        iup.append(hbox_n_s_l, vbox_fullname)
+    val hbox = iup.hbox()
+        iup.append(hbox, list)
+        iup.append(hbox, vbx_input)
+        iup.set(hbox, :HOMOGENEOUS, "YES")
 
-    val vbox_final = iup.vbox()
-        iup.set(vbox_final, :MARGIN, "10x10")
-        iup.append(vbox_final, hbox_top)
-        iup.append(vbox_final, hbox_n_s_l)
-        iup.append(vbox_final, hbox_button)
+    val box = iup.vbox()
+        iup.append(box, hbx_top)
+        iup.append(box, hbox)
+        iup.append(box, hbx_buttons)
+        iup.set(box, :NMARGIN, "10x10")
 
-    val dlg = iup.dialog(vbox_final)
+    val dlg = iup.dialog(box)
         iup.set(dlg, :TITLE, "CRUD")
         iup.set(dlg, :GAP, "10")
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
-    var loadupdate
-
     loop {
-        set loadupdate = par-or {
+        val loadupdate = par-or {
             await :Iup.Action | it.h==button_create {
                 val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
