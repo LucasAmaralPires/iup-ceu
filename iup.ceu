@@ -1,5 +1,6 @@
 data :Iup = [h] {
     :Action = []
+    :Button = [but,pressed?,x,y,status]
     :Value = []
     :List = [item,state] {
         :Action = []
@@ -14,6 +15,10 @@ data :IUP = [
     hbox, vbox, fill, append,
     dialog, show-xy
 ]
+
+enum :Mouse {
+    Left, Middle, Right
+}
 
 ```:pre
 #include <iup.h>
@@ -38,19 +43,19 @@ int iup_action_cb (Ihandle* h) {
     return IUP_DEFAULT;
 }
 
-;;;
 int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} },
-        { CEU_VALUE_NUMBER,  {.Number=but} },
-        { CEU_VALUE_NUMBER,  {.Number=pressed} },
+        { CEU_VALUE_TAG,     {.Tag=CEU_TAG_Mouse_dash_Left} },
+        { CEU_VALUE_BOOL,    {.Bool=pressed} },
         { CEU_VALUE_NUMBER,  {.Number=x} },
-        { CEU_VALUE_NUMBER,  {.Number=y} }
+        { CEU_VALUE_NUMBER,  {.Number=y} },
+        { CEU_VALUE_POINTER, {.Pointer=status} }
     };
-    CEU_Value evt = ceu_create_tuple(1, 1, args CEU_LEX_X(COMMA 1));
+    CEU_Value evt = ceu_create_tuple(1, 6, args CEU_LEX_X(COMMA 1));
     ceu_gc_inc_val(evt);
 
-    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Value} };
+    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Iup_Button} };
     ceu_tag_set(tag, evt);
 
     ceu_broadcast_global(evt);
@@ -63,7 +68,6 @@ int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status)
 
     return IUP_DEFAULT;
 }
-;;;
 
 int iup_value_cb (Ihandle* h) {
     CEU_Value args[] = {
@@ -223,6 +227,7 @@ val iup :IUP = group {
     func x-iup-list () {
         val h = `:pointer IupList(NULL)`
         `IupSetCallback($h.Pointer, "VALUECHANGED_CB", iup_value_cb);`
+        `IupSetCallback($h.Pointer, "ACTION", (Icallback)iup_list_action_cb);`
         h
     }
 
@@ -241,6 +246,7 @@ val iup :IUP = group {
     func x-iup-canvas () {
         val h = `:pointer IupCanvas(NULL)`
        `IupSetCallback($h.Pointer, "ACTION", iup_action_cb);`
+       `IupSetCallback($h.Pointer, "BUTTON_CB", (Icallback)iup_button_cb);`
         h
     }
 
