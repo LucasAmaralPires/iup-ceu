@@ -16,6 +16,13 @@ val MAX_CIRCLES = 80
 val circlesList :Circle = #[]
 var circlesCount = 0
 
+;;;
+spawn {
+    every :Iup.Button {
+        println(it.h, it.x)
+    }
+}
+;;;
 
 spawn {
     
