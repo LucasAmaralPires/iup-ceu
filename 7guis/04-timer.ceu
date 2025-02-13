@@ -27,8 +27,8 @@ spawn {
         iup.set(iupval, :PAGESTEP, ".5");
 
     val button = iup.button("Reset")
-        iup.set(button, "EXPAND", "HORIZONTAL");
-        iup.set(button, "NAME", "BUTTON");
+        iup.set(button, :EXPAND, "HORIZONTAL");
+        iup.set(button, :NAME, "BUTTON");
 
     val hbox1 = iup.hbox()
         iup.append(hbox1, glabel)
