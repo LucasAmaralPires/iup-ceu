@@ -53,7 +53,6 @@ spawn {
     val dlg = iup.dialog(vbox)
         iup.set(dlg, :TITLE, "Timer")
         iup.set(dlg, :SIZE, "200")
-;;        iup.set(dlg, :TIMER, timer)
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 

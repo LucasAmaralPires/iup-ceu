@@ -104,15 +104,11 @@ spawn {
         iup.set(text, :EXPAND, "HORIZONTAL")
         iup.set(text, :SIZE, "60x")
 
-    val hbox_filter = iup.hbox()
-        iup.set(hbox_filter, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_filter, filter)
-        iup.append(hbox_filter, text)
-
-    val hbox_top = iup.hbox()
-        iup.set(hbox_top, :HOMOGENEOUS, "YES")
-        iup.append(hbox_top, hbox_filter)
-        iup.append(hbox_top, iup.fill())
+    val list = iup.list()
+        iup.set(list, :NAME, "list_names")
+        iup.set(list, :EXPAND, "YES")
+        iup.set(list, :SIZE, "60x")
+        iup.set(list, :VISIBLELINES, "6")
 
     val name = iup.label("Name:")
         iup.set(name, :NAME, "Name")
@@ -120,14 +116,9 @@ spawn {
 
     val name_text = iup.text()
         iup.set(name_text, :NAME, "Text_Name")
-        iup.set(name_text, :EXPAND, "HORIZONTAL")
         iup.set(name_text, :SIZE, "60")
         iup.set(name_text, :NC, "80")
-
-    val hbox_name = iup.hbox()
-        iup.set(hbox_name, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_name, name)
-        iup.append(hbox_name, name_text)
+        iup.set(name_text, :EXPAND, "HORIZONTAL")
 
     val surname = iup.label("Surname:")
         iup.set(surname, :NAME, "Surname")
@@ -138,26 +129,6 @@ spawn {
         iup.set(surname_text, :EXPAND, "HORIZONTAL")
         iup.set(surname_text, :SIZE, "60")
         iup.set(surname_text, :NC, "80")
-
-    val hbox_surname = iup.hbox()
-        iup.set(hbox_surname, :ALIGNMENT, "ACENTER")
-        iup.append(hbox_surname, surname)
-        iup.append(hbox_surname, surname_text)
-
-    val vbox_fullname = iup.vbox()
-        iup.append(vbox_fullname,hbox_name)
-        iup.append(vbox_fullname,hbox_surname)
-
-    val list = iup.list()
-        iup.set(list, :NAME, "list_names")
-        iup.set(list, :EXPAND, "YES")
-        iup.set(list, :SIZE, "60x")
-        iup.set(list, :VISIBLELINES, "6")
-
-    val hbox_n_s_l = iup.hbox()
-        iup.set(hbox_n_s_l, :HOMOGENEOUS, "YES")
-        iup.append(hbox_n_s_l, list)
-        iup.append(hbox_n_s_l, vbox_fullname)
 
     val button_create = iup.button("Create")
         iup.set(button_create, :NAME, "B_Create")
@@ -173,10 +144,39 @@ spawn {
         iup.set(button_delete, :SIZE, "30")
         iup.set(button_delete, :ACTIVE, "NO")
 
+    val hbox_filter = iup.hbox()
+        iup.set(hbox_filter, :ALIGNMENT, "ACENTER")
+        iup.append(hbox_filter, filter)
+        iup.append(hbox_filter, text)
+
+    val hbox_top = iup.hbox()
+        iup.set(hbox_top, :HOMOGENEOUS, "YES")
+        iup.append(hbox_top, hbox_filter)
+        iup.append(hbox_top, iup.fill())
+
+    val hbox_name = iup.hbox()
+        iup.set(hbox_name, :ALIGNMENT, "ACENTER")
+        iup.append(hbox_name, name)
+        iup.append(hbox_name, name_text)
+
+    val hbox_surname = iup.hbox()
+        iup.set(hbox_surname, :ALIGNMENT, "ACENTER")
+        iup.append(hbox_surname, surname)
+        iup.append(hbox_surname, surname_text)
+
     val hbox_button = iup.hbox()
         iup.append(hbox_button, button_create)
         iup.append(hbox_button, button_update)
         iup.append(hbox_button, button_delete)
+
+    val vbox_fullname = iup.vbox()
+        iup.append(vbox_fullname,hbox_name)
+        iup.append(vbox_fullname,hbox_surname)
+
+    val hbox_n_s_l = iup.hbox()
+        iup.set(hbox_n_s_l, :HOMOGENEOUS, "YES")
+        iup.append(hbox_n_s_l, list)
+        iup.append(hbox_n_s_l, vbox_fullname)
 
     val vbox_final = iup.vbox()
         iup.set(vbox_final, :MARGIN, "10x10")
