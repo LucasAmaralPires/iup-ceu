@@ -44,9 +44,17 @@ int iup_action_cb (Ihandle* h) {
 }
 
 int iup_button_cb (Ihandle* h, int but, int pressed, int x, int y, char *status) {
+    int button;
+    if (but == 49) {
+        button = CEU_TAG_Mouse_dash_Left;
+    } else if (but == 50) {
+        button = CEU_TAG_Mouse_dash_Middle;
+    } else if (but == 51) {
+        button = CEU_TAG_Mouse_dash_Right;
+    }
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} },
-        { CEU_VALUE_TAG,     {.Tag=CEU_TAG_Mouse_dash_Left} },
+        { CEU_VALUE_TAG,     {.Tag=button} },
         { CEU_VALUE_BOOL,    {.Bool=pressed} },
         { CEU_VALUE_NUMBER,  {.Number=x} },
         { CEU_VALUE_NUMBER,  {.Number=y} },
