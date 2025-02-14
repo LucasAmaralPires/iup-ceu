@@ -97,50 +97,40 @@ func trim (word) {
 spawn {
     
     val lbl_filter = iup.label("Filter Prefix: ")
-        iup.set(lbl_filter, :NAME, "Filter")
 
     val txt_filter = iup.text()
-        iup.set(txt_filter, :NAME, "Text")
         iup.set(txt_filter, :EXPAND, "HORIZONTAL")
         iup.set(txt_filter, :SIZE, "60x")
 
     val lst_names = iup.list()
-        iup.set(lst_names, :NAME, "list_names")
         iup.set(lst_names, :EXPAND, "YES")
         iup.set(lst_names, :SIZE, "60x")
         iup.set(lst_names, :VISIBLELINES, "6")
 
     val lbl_name = iup.label("Name:")
-        iup.set(lbl_name, :NAME, "Name")
         iup.set(lbl_name, :SIZE, "35")
 
     val txt_name = iup.text()
-        iup.set(txt_name, :NAME, "Text_Name")
         iup.set(txt_name, :SIZE, "60")
         iup.set(txt_name, :NC, "80")
         iup.set(txt_name, :EXPAND, "HORIZONTAL")
 
     val lbl_surname = iup.label("Surname:")
-        iup.set(lbl_surname, :NAME, "Surname")
         iup.set(lbl_surname, :SIZE, "35")
 
     val txt_surname = iup.text()
-        iup.set(txt_surname, :NAME, "Text_Surname")
         iup.set(txt_surname, :EXPAND, "HORIZONTAL")
         iup.set(txt_surname, :SIZE, "60")
         iup.set(txt_surname, :NC, "80")
 
     val btn_create = iup.button("Create")
-        iup.set(btn_create, :NAME, "B_Create")
         iup.set(btn_create, :SIZE, "30")
 
     val btn_update = iup.button("Update")
-        iup.set(btn_update, :NAME, "B_Update")
         iup.set(btn_update, :SIZE, "30")
         iup.set(btn_update, :ACTIVE, "NO")
 
     val btn_delete = iup.button("Delete")
-        iup.set(btn_delete, :NAME, "B_Delete")
         iup.set(btn_delete, :SIZE, "30")
         iup.set(btn_delete, :ACTIVE, "NO")
 

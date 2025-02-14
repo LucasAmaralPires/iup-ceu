@@ -5,7 +5,6 @@ spawn {
     val glabel = iup.label("Elapsed Time: ")
 
     val gauge = iup.gauge()
-        iup.set(gauge, :NAME, "GAUGE");    
         iup.set(gauge, :MIN, ".1");
         iup.set(gauge, :MAX, "30");
         iup.set(gauge, :VALUE, "30");
@@ -13,14 +12,12 @@ spawn {
         iup.set(gauge, :SHOWTEXT, "NO");
 
     val label = iup.label("0.0s")
-        iup.set(label, :NAME, "LABEL");
         iup.set(label, :EXPAND, "HORIZONTAL");
 
     val vlable = iup.label("Duration: ")
 
     val iupval = iup.val("HORIZONTAL")
         iup.set(iupval, :EXPAND, "HORIZONTAL");
-        iup.set(iupval, :NAME, "VAL");
         iup.set(iupval, :MAX, "60.0");
         iup.set(iupval, :STEP, ".1");
         iup.set(iupval, :VALUE, "30.0");
@@ -28,7 +25,6 @@ spawn {
 
     val button = iup.button("Reset")
         iup.set(button, :EXPAND, "HORIZONTAL");
-        iup.set(button, :NAME, "BUTTON");
 
     val hbox1 = iup.hbox()
         iup.append(hbox1, glabel)
