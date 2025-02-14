@@ -110,14 +110,14 @@ spawn {
         val act2? = iup.get.bool(end, :ACTIVE)
         val val2? = iup.get.bool(end, :VALID)
 
-        par-or {
-            await :Iup.List.Action | (it.h==list) and (it.state) {
+        par {
+            every :Iup.List.Action | (it.h==list) and (it.state) {
                 iup.set(end, :ACTIVE, (it.item == 2))
                 set state = not state
                 check_button(end, start, button)
             }
         } with {
-            await :Iup.Action | it.h==button {
+            every :Iup.Action | it.h==button {
                 val date_s :Date = catch :date {iup.get.pointer(start,:VALUE) -> to-string -> to-date}
                 val date :Date = catch :date {iup.get.pointer(end,:VALUE) -> to-string -> to-date}
                 if state == false {
@@ -127,7 +127,7 @@ spawn {
                 }
             }
         } with {
-            await :Iup.Value | (it.h==start) or (it.h==end) {
+            every :Iup.Value | (it.h==start) or (it.h==end) {
                 val date :Date = catch :date {
                     iup.get.pointer(it.h,:VALUE) -> to-string -> to-date
                 }
