@@ -96,57 +96,57 @@ func trim (word) {
 
 spawn {
     
-    val filter = iup.label("Filter Prefix: ")
-        iup.set(filter, :NAME, "Filter")
+    val lbl_filter = iup.label("Filter Prefix: ")
+        iup.set(lbl_filter, :NAME, "Filter")
 
-    val text = iup.text()
-        iup.set(text, :NAME, "Text")
-        iup.set(text, :EXPAND, "HORIZONTAL")
-        iup.set(text, :SIZE, "60x")
+    val txt_filter = iup.text()
+        iup.set(txt_filter, :NAME, "Text")
+        iup.set(txt_filter, :EXPAND, "HORIZONTAL")
+        iup.set(txt_filter, :SIZE, "60x")
 
-    val list = iup.list()
-        iup.set(list, :NAME, "list_names")
-        iup.set(list, :EXPAND, "YES")
-        iup.set(list, :SIZE, "60x")
-        iup.set(list, :VISIBLELINES, "6")
+    val lst_names = iup.list()
+        iup.set(lst_names, :NAME, "list_names")
+        iup.set(lst_names, :EXPAND, "YES")
+        iup.set(lst_names, :SIZE, "60x")
+        iup.set(lst_names, :VISIBLELINES, "6")
 
-    val name = iup.label("Name:")
-        iup.set(name, :NAME, "Name")
-        iup.set(name, :SIZE, "35")
+    val lbl_name = iup.label("Name:")
+        iup.set(lbl_name, :NAME, "Name")
+        iup.set(lbl_name, :SIZE, "35")
 
-    val name_text = iup.text()
-        iup.set(name_text, :NAME, "Text_Name")
-        iup.set(name_text, :SIZE, "60")
-        iup.set(name_text, :NC, "80")
-        iup.set(name_text, :EXPAND, "HORIZONTAL")
+    val txt_name = iup.text()
+        iup.set(txt_name, :NAME, "Text_Name")
+        iup.set(txt_name, :SIZE, "60")
+        iup.set(txt_name, :NC, "80")
+        iup.set(txt_name, :EXPAND, "HORIZONTAL")
 
-    val surname = iup.label("Surname:")
-        iup.set(surname, :NAME, "Surname")
-        iup.set(surname, :SIZE, "35")
+    val lbl_surname = iup.label("Surname:")
+        iup.set(lbl_surname, :NAME, "Surname")
+        iup.set(lbl_surname, :SIZE, "35")
 
-    val surname_text = iup.text()
-        iup.set(surname_text, :NAME, "Text_Surname")
-        iup.set(surname_text, :EXPAND, "HORIZONTAL")
-        iup.set(surname_text, :SIZE, "60")
-        iup.set(surname_text, :NC, "80")
+    val txt_surname = iup.text()
+        iup.set(txt_surname, :NAME, "Text_Surname")
+        iup.set(txt_surname, :EXPAND, "HORIZONTAL")
+        iup.set(txt_surname, :SIZE, "60")
+        iup.set(txt_surname, :NC, "80")
 
-    val button_create = iup.button("Create")
-        iup.set(button_create, :NAME, "B_Create")
-        iup.set(button_create, :SIZE, "30")
+    val btn_create = iup.button("Create")
+        iup.set(btn_create, :NAME, "B_Create")
+        iup.set(btn_create, :SIZE, "30")
 
-    val button_update = iup.button("Update")
-        iup.set(button_update, :NAME, "B_Update")
-        iup.set(button_update, :SIZE, "30")
-        iup.set(button_update, :ACTIVE, "NO")
+    val btn_update = iup.button("Update")
+        iup.set(btn_update, :NAME, "B_Update")
+        iup.set(btn_update, :SIZE, "30")
+        iup.set(btn_update, :ACTIVE, "NO")
 
-    val button_delete = iup.button("Delete")
-        iup.set(button_delete, :NAME, "B_Delete")
-        iup.set(button_delete, :SIZE, "30")
-        iup.set(button_delete, :ACTIVE, "NO")
+    val btn_delete = iup.button("Delete")
+        iup.set(btn_delete, :NAME, "B_Delete")
+        iup.set(btn_delete, :SIZE, "30")
+        iup.set(btn_delete, :ACTIVE, "NO")
 
     val hbx_filter = iup.hbox()
-        iup.append(hbx_filter, filter)
-        iup.append(hbx_filter, text)
+        iup.append(hbx_filter, lbl_filter)
+        iup.append(hbx_filter, txt_filter)
         iup.set(hbx_filter, :ALIGNMENT, "ACENTER")
 
     val hbx_top = iup.hbox()
@@ -155,26 +155,26 @@ spawn {
         iup.set(hbx_top, :HOMOGENEOUS, "YES")
 
     val hbx_name = iup.hbox()
-        iup.append(hbx_name, name)
-        iup.append(hbx_name, name_text)
+        iup.append(hbx_name, lbl_name)
+        iup.append(hbx_name, txt_name)
         iup.set(hbx_name, :ALIGNMENT, "ACENTER")
 
     val hbx_surname = iup.hbox()
-        iup.append(hbx_surname, surname)
-        iup.append(hbx_surname, surname_text)
+        iup.append(hbx_surname, lbl_surname)
+        iup.append(hbx_surname, txt_surname)
         iup.set(hbx_surname, :ALIGNMENT, "ACENTER")
 
     val hbx_buttons = iup.hbox()
-        iup.append(hbx_buttons, button_create)
-        iup.append(hbx_buttons, button_update)
-        iup.append(hbx_buttons, button_delete)
+        iup.append(hbx_buttons, btn_create)
+        iup.append(hbx_buttons, btn_update)
+        iup.append(hbx_buttons, btn_delete)
 
     val vbx_input = iup.vbox()
         iup.append(vbx_input,hbx_name)
         iup.append(vbx_input,hbx_surname)
 
     val hbox = iup.hbox()
-        iup.append(hbox, list)
+        iup.append(hbox, lst_names)
         iup.append(hbox, vbx_input)
         iup.set(hbox, :HOMOGENEOUS, "YES")
 
@@ -192,34 +192,34 @@ spawn {
 
     loop {
         val loadupdate = par-or {
-            await :Iup.Action | it.h==button_create {
-                val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
-                val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+            await :Iup.Action | it.h==btn_create {
+                val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
+                val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
                 create_db(name_value, surname_value)
-                iup.set(name_text, :VALUE, nil)
-                iup.set(surname_text, :VALUE, nil)
+                iup.set(txt_name, :VALUE, nil)
+                iup.set(txt_surname, :VALUE, nil)
             }
             [true,true]
         } with {
-            await :Iup.Action | it.h==button_update {
-                val id_val = iup.get.number(list, :VALUE)
-                val id = iup.get.id(list, :ID, id_val)
-                val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
-                val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+            await :Iup.Action | it.h==btn_update {
+                val id_val = iup.get.number(lst_names, :VALUE)
+                val id = iup.get.id(lst_names, :ID, id_val)
+                val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
+                val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
 
                 set db_names_list[id][0] = name_value
                 set db_names_list[id][1] = surname_value
 
-                iup.set(name_text, :VALUE, nil)
-                iup.set(surname_text, :VALUE, nil)
+                iup.set(txt_name, :VALUE, nil)
+                iup.set(txt_surname, :VALUE, nil)
             }
             [true,true]
         } with {
-            await :Iup.Action | it.h==button_delete {
-                val id_val = iup.get.number(list, :VALUE)
-                val id = iup.get.id(list, :ID, id_val)
-                val name_value = iup.get.pointer(name_text, :VALUE) -> to-string -> trim
-                val surname_value = iup.get.pointer(surname_text, :VALUE) -> to-string -> trim
+            await :Iup.Action | it.h==btn_delete {
+                val id_val = iup.get.number(lst_names, :VALUE)
+                val id = iup.get.id(lst_names, :ID, id_val)
+                val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
+                val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
 
                 loop i in {id => (db_names_count-1){ {
                     set db_names_list[i] = db_names_list[i + 1]
@@ -228,26 +228,26 @@ spawn {
                 set db_names_count = db_names_count - 1
                 set db_names_id = db_names_id - 1
 
-                iup.set(name_text, :VALUE, nil)
-                iup.set(surname_text, :VALUE, nil)
+                iup.set(txt_name, :VALUE, nil)
+                iup.set(txt_surname, :VALUE, nil)
             }
             [true,true]
         } with {
-            await :Iup.Value | it.h==text {}
+            await :Iup.Value | it.h==txt_filter {}
             [true,false]
         } with {
-            await :Iup.Value | it.h==list {
-                val id_val = iup.get.number(list, :VALUE)
-                val id = iup.get.id(list, :ID, id_val)
-                iup.set(name_text, :VALUE, db_names_list[id][0])
-                iup.set(surname_text, :VALUE, db_names_list[id][1])
+            await :Iup.Value | it.h==lst_names {
+                val id_val = iup.get.number(lst_names, :VALUE)
+                val id = iup.get.id(lst_names, :ID, id_val)
+                iup.set(txt_name, :VALUE, db_names_list[id][0])
+                iup.set(txt_surname, :VALUE, db_names_list[id][1])
             }
             [false,true]
         }
 
 
         if loadupdate[0] == true {   
-            val filter_text = iup.get.pointer(text,:VALUE) -> to-string -> trim
+            val filter_text = iup.get.pointer(txt_filter,:VALUE) -> to-string -> trim
             var fil = true
             var j = 1
             var temp_surname
@@ -259,27 +259,27 @@ spawn {
                 set fil = false
             }
 
-            iup.set(list, :1, nil)
+            iup.set(lst_names, :1, nil)
 
             loop i in {1 => db_names_count} {
                 set temp_id = db_names_list[i-1][2]
                 set temp_surname = db_names_list[i-1][1]
                 set temp_name = db_names_list[i-1][0]
                 if ((not fil) or (filterName(temp_surname, filter_text))) {
-                    `IupSetStrfId($list.Pointer, "", $j.Number, "%s, %s", $temp_surname.Dyn->Vector.buf, $temp_name.Dyn->Vector.buf);`
-                    `IupSetIntId($list.Pointer, "ID", $j.Number, $temp_id.Number);`
+                    `IupSetStrfId($lst_names.Pointer, "", $j.Number, "%s, %s", $temp_surname.Dyn->Vector.buf, $temp_name.Dyn->Vector.buf);`
+                    `IupSetIntId($lst_names.Pointer, "ID", $j.Number, $temp_id.Number);`
                     set j = j + 1
                 }        
             }
-            iup.set(list, :VALUE, nil)
+            iup.set(lst_names, :VALUE, nil)
         }
         if loadupdate[1] == true {
-            if iup.get.number(list, :VALUE) == 0 {
-                iup.set(button_update, :ACTIVE, "NO")
-                iup.set(button_delete, :ACTIVE, "NO")
+            if iup.get.number(lst_names, :VALUE) == 0 {
+                iup.set(btn_update, :ACTIVE, "NO")
+                iup.set(btn_delete, :ACTIVE, "NO")
             } else {
-                iup.set(button_update, :ACTIVE, "YES")
-                iup.set(button_delete, :ACTIVE, "YES")
+                iup.set(btn_update, :ACTIVE, "YES")
+                iup.set(btn_delete, :ACTIVE, "YES")
             }
         }
     }
