@@ -16,29 +16,18 @@ val MAX_CIRCLES = 80
 val circlesList :Circle = #[]
 var circlesCount = 0
 
-;;;
-spawn {
-    every :Iup.Button {
-        println(it.h, it.x)
-    }
-}
-;;;
-
 spawn {
     
     val undoButton = iup.button("UNDO")
-        iup.set(undoButton, :NAME, "UNDO")
         iup.set(undoButton, :SIZE, "60")
 
     val redoButton = iup.button("REDO")
-        iup.set(redoButton, :NAME, "UNDO")
         iup.set(redoButton, :SIZE, "60")
 
     iup.set(undoButton, :ACTIVE, "NO")
     iup.set(redoButton, :ACTIVE, "NO")
 
     val canvas = iup.canvas()
-        iup.set(canvas, :NAME, "CANVAS")
         iup.set(canvas, :EXPAND, "YES")
         iup.set(canvas, :HIGHLIGHTEDCIRCLE, -1)
 
@@ -60,6 +49,18 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
+    par {
+        every :Iup.Button | it.h==canvas {
+
+            if (it.but == :Mouse-Left) and (it.pressed == true) {
+                println("AQUI");
+            }
+        }
+    } with {
+        every :Iup.Action | it.h==undoButton {
+
+        }       
+    }
 }
 
 iup.loop()

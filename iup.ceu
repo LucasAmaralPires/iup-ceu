@@ -1,6 +1,6 @@
 data :Iup = [h] {
     :Action = []
-    :Button = [but,pressed?,x,y,status]
+    :Button = [but,pressed,x,y,status]
     :Value = []
     :List = [item,state] {
         :Action = []
