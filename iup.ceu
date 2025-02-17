@@ -11,6 +11,7 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number,id],
     set,
+    draw-begin, draw-getsize, draw-rectangle, draw-arc, draw-end,
     button, label, gauge, val, list, text, message, canvas,
     hbox, vbox, fill, append,
     dialog, show-xy
@@ -22,6 +23,7 @@ enum :Mouse {
 
 ```:pre
 #include <iup.h>
+#include <iupdraw.h>
 int iup_action_cb (Ihandle* h) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} }
@@ -206,6 +208,32 @@ val iup :IUP = group {
         }
     }
 
+    ;; DRAW 
+
+    func x-iup-draw-begin(h) {
+        `IupDrawBegin($h.Pointer);`
+    }
+
+    func x-iup-draw-getsize(h) {
+        ```
+        int w, h;
+        IupDrawGetSize($h.Pointer, &w, &h);
+        ```
+        [`:number w`, `:number h`]
+    }
+
+    func x-iup-draw-rectangle(h, x1, y1, x2, y2) {
+        `IupDrawRectangle($h.Pointer, $x1.Number, $y1.Number, $x2.Number, $y2.Number);`
+    }
+
+    func x-iup-draw-arc(h, x1, y1, x2, y2, a1, a2) {
+        `IupDrawArc($h.Pointer, $x1.Number, $y1.Number, $x2.Number, $y2.Number, $a1.Number, $a2.Number);`
+    }
+
+    func x-iup-draw-end(h) {
+        `IupDrawEnd($h.Pointer);`
+    }
+
     ;; CONTROLS
 
     func x-iup-button (label) {
@@ -290,6 +318,7 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
+        x-iup-draw-begin, x-iup-draw-getsize, x-iup-draw-rectangle, x-iup-draw-arc, x-iup-draw-end,
         x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas,
         x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
