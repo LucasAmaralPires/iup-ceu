@@ -3,18 +3,13 @@
 
 data :Circle = [x, y, r, id]
 
+data :Operation = [type, circle]
+
 ;;;
     TODO
         Add second callback to iup.ceu
         All the logic of the program
 ;;;
-
-val DEF_RADIUS = 30
-val MAX_RADIUS = 100
-val MAX_CIRCLES = 80
-
-val circlesList :Circle = #[]
-var circlesCount = 0
 
 spawn {
     
@@ -49,16 +44,88 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
-    par {
-        every :Iup.Button | it.h==canvas {
+    val DEF_RADIUS = 30
+    val MAX_RADIUS = 100
+    val MAX_CIRCLES = 80
+    val MAX_OPERATIONS = 200
 
-            if (it.but == :Mouse-Left) and (it.pressed == true) {
-                println("AQUI");
+    val circlesList :Circle = #[]
+    var circlesCount = 0
+    var lastId = 0
+
+    var operationsList :Operation = #[]
+    var operationsCount = 0
+    var currentOperation = -1
+
+    enum :OP {
+        Create, Remove, Update
+    }
+
+;;;
+    loop {
+        watching <nenhum-foco> {
+            var o = <await-foco>
+            loop {
+                set o = watching <await-mude-foco> {
+                    ;; faca acoes em "o" com o foco
+                }
             }
         }
-    } with {
-        every :Iup.Action | it.h==undoButton {
+    }
 
+    par-or {
+        await <5:s>
+    } with {
+        ...
+    }
+
+    watching |... {
+        ...
+    }
+;;;
+
+    par {
+        every :Iup.Button | it.h==canvas {
+            if (it.but == :Mouse-Left) and (it.pressed == true) {
+                ;;;
+                if (circlesCount == MAX_CIRCLES)
+                    return -1;
+                ;;;
+                set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
+                set circlesCount = circlesCount + 1
+                set lastId = lastId + 1
+
+                ;;;
+                if (operationsCount == MAX_OPERATIONS)
+                    return -1;
+                ;;;
+                if (currentOperation < (operationsCount - 1)) {
+                    set operationsCount = currentOperation + 1
+                }
+                ;; mudar circlesList para a função circle_find na linha abaixo
+                set operationsList[operationsCount] = [0, circlesList[lastId-1]]
+                set currentOperation = operationsCount
+                set operationsCount = operationsCount + 1
+            }
+;;            println(circlesList)
+;;            println(operationsList)
+        }
+    } with {
+        every :Iup.Action | it.h==canvas {
+            iup.draw-begin(canvas)
+
+            val [width, height] = iup.draw-getsize(canvas)
+
+            iup.set(canvas, :DRAWCOLOR, "255 255 255")
+            iup.set(canvas, :DRAWSTYLE, "FILL");
+            iup.draw-rectangle(canvas, 0, 0, width-1, height -1)
+
+            iup.set(canvas, :DRAWCOLOR, "0 0 0")
+            iup.set(canvas, :DRAWSTYLE, "STROKE");
+
+            iup.draw-arc(canvas, 30,30,90,90,0,360)
+
+            iup.draw-end(canvas)
         }       
     }
 }
