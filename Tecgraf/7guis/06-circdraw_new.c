@@ -25,7 +25,6 @@ static int circlesCount = 0;
 static int circles_add(int x, int y)
 {
   static int lastId = 0;
-
   if (circlesCount == MAX_CIRCLES)
     return -1;
 
