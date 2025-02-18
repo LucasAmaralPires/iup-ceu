@@ -11,7 +11,7 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number,id],
     set,
-    draw-begin, draw-getsize, draw-rectangle, draw-arc, draw-end,
+    draw-begin, draw-getsize, draw-rectangle, draw-arc, draw-update, draw-end,
     button, label, gauge, val, list, text, message, canvas,
     hbox, vbox, fill, append,
     dialog, show-xy
@@ -230,6 +230,10 @@ val iup :IUP = group {
         `IupDrawArc($h.Pointer, $x1.Number, $y1.Number, $x2.Number, $y2.Number, $a1.Number, $a2.Number);`
     }
 
+    func x-iup-draw-update(h) {
+        `IupUpdate($h.Pointer);`
+    }
+
     func x-iup-draw-end(h) {
         `IupDrawEnd($h.Pointer);`
     }
@@ -318,7 +322,7 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
-        x-iup-draw-begin, x-iup-draw-getsize, x-iup-draw-rectangle, x-iup-draw-arc, x-iup-draw-end,
+        x-iup-draw-begin, x-iup-draw-getsize, x-iup-draw-rectangle, x-iup-draw-arc, x-iup-draw-update, x-iup-draw-end,
         x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas,
         x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
         x-iup-dialog, x-iup-show-xy,
