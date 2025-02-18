@@ -40,11 +40,15 @@ func circles_pick(x,y) {
 
         if (r < circlesList[i][2]) {
             ifs { 
-                (id < 0) => set id = circlesList[i][3]
+                (id < 0) {
+                    set id = circlesList[i][3]
+                    set min_r = r
+                }
                 (r < min_r) => set id = circlesList[i][3]
             } 
         }
     }
+    id
 }
 
 spawn {
