@@ -1,6 +1,5 @@
 ^["@/iup/iup.ceu"]
 
-
 data :Circle = [x, y, r, id]
 
 data :Operation = [type, circle]
@@ -10,6 +9,43 @@ data :Operation = [type, circle]
         Add second callback to iup.ceu
         All the logic of the program
 ;;;
+
+val DEF_RADIUS = 30
+val MAX_CIRCLES = 80
+val MAX_RADIUS = 100
+val MAX_OPERATIONS = 200
+
+val circlesList :Circle = #[]
+var circlesCount = 0
+var lastId = 0
+
+var operationsList :Operation = #[]
+var operationsCount = 0
+var currentOperation = -1
+
+enum :OP {
+    Create, Remove, Update
+}
+
+func circles_pick(x,y) {
+    var min_r = MAX_RADIUS
+    var id = -1
+
+    loop i in {0 => circlesCount{ {
+        val dx = circlesList[i][0] - x;
+        val dy = circlesList[i][1] - y;
+
+        var r = (dx * dx) + (dy * dy)
+        set r = r**0.5
+
+        if (r < circlesList[i][2]) {
+            ifs { 
+                (id < 0) => set id = circlesList[i][3]
+                (r < min_r) => set id = circlesList[i][3]
+            } 
+        }
+    }
+}
 
 spawn {
     
@@ -44,23 +80,6 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
-    val DEF_RADIUS = 30
-    val MAX_RADIUS = 100
-    val MAX_CIRCLES = 80
-    val MAX_OPERATIONS = 200
-
-    val circlesList :Circle = #[]
-    var circlesCount = 0
-    var lastId = 0
-
-    var operationsList :Operation = #[]
-    var operationsCount = 0
-    var currentOperation = -1
-
-    enum :OP {
-        Create, Remove, Update
-    }
-
 ;;;
     loop {
         watching <nenhum-foco> {
@@ -91,9 +110,12 @@ spawn {
                 if (circlesCount == MAX_CIRCLES)
                     return -1;
                 ;;;
+
                 set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
                 set circlesCount = circlesCount + 1
                 set lastId = lastId + 1
+
+                circles_pick(it.x, it.y)
 
                 ;;;
                 if (operationsCount == MAX_OPERATIONS)
@@ -102,18 +124,17 @@ spawn {
                 if (currentOperation < (operationsCount - 1)) {
                     set operationsCount = currentOperation + 1
                 }
+
                 ;; mudar circlesList para a função circle_find na linha abaixo
                 set operationsList[operationsCount] = [0, circlesList[lastId-1]]
                 set currentOperation = operationsCount
                 set operationsCount = operationsCount + 1
             }
-;;            println(circlesList)
-;;            println(operationsList)
+            iup.draw-update(canvas)
         }
     } with {
         every :Iup.Action | it.h==canvas {
             iup.draw-begin(canvas)
-
             val [width, height] = iup.draw-getsize(canvas)
 
             iup.set(canvas, :DRAWCOLOR, "255 255 255")
@@ -123,7 +144,13 @@ spawn {
             iup.set(canvas, :DRAWCOLOR, "0 0 0")
             iup.set(canvas, :DRAWSTYLE, "STROKE");
 
-            iup.draw-arc(canvas, 30,30,90,90,0,360)
+            loop i in {0 => circlesCount{ {
+                iup.draw-arc(canvas, circlesList[i][0] - circlesList[i][2],
+                                     circlesList[i][1] - circlesList[i][2],
+                                     circlesList[i][0] + circlesList[i][2],
+                                     circlesList[i][1] + circlesList[i][2],0,360)
+
+            }
 
             iup.draw-end(canvas)
         }       
