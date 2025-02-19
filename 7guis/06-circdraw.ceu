@@ -110,29 +110,35 @@ spawn {
     par {
         every :Iup.Button | it.h==canvas {
             if (it.but == :Mouse-Left) and (it.pressed == true) {
-                ;;;
-                if (circlesCount == MAX_CIRCLES)
-                    return -1;
-                ;;;
+                val id = circles_pick(it.x, it.y)
 
-                set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
-                set circlesCount = circlesCount + 1
-                set lastId = lastId + 1
+                if (id >= 0) {
+                    iup.set(canvas, :HIGHLIGHTEDCIRCLE, id)
+                } else {
+                    ;;;
+                    if (circlesCount == MAX_CIRCLES)
+                        return -1;
+                    ;;;
 
-                circles_pick(it.x, it.y)
+                    set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
+                    set circlesCount = circlesCount + 1
+                    set lastId = lastId + 1
 
-                ;;;
-                if (operationsCount == MAX_OPERATIONS)
-                    return -1;
-                ;;;
-                if (currentOperation < (operationsCount - 1)) {
-                    set operationsCount = currentOperation + 1
+                    ;;;
+                    if (operationsCount == MAX_OPERATIONS)
+                        return -1;
+                    ;;;
+                    if (currentOperation < (operationsCount - 1)) {
+                        set operationsCount = currentOperation + 1
+                    }
+
+                    ;;;
+                    ;; mudar circlesList para a função circle_find na linha abaixo
+                    set operationsList[operationsCount] = [0, circlesList[lastId-1]]
+                    set currentOperation = operationsCount
+                    set operationsCount = operationsCount + 1
+                    ;;;
                 }
-
-                ;; mudar circlesList para a função circle_find na linha abaixo
-                set operationsList[operationsCount] = [0, circlesList[lastId-1]]
-                set currentOperation = operationsCount
-                set operationsCount = operationsCount + 1
             }
             iup.draw-update(canvas)
         }
@@ -148,12 +154,20 @@ spawn {
             iup.set(canvas, :DRAWCOLOR, "0 0 0")
             iup.set(canvas, :DRAWSTYLE, "STROKE");
 
+            val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
+
             loop i in {0 => circlesCount{ {
+                if (hl == circlesList[i][3]) {
+                    iup.set(canvas, :DRAWCOLOR, "128 128 128")
+                    iup.set(canvas, :DRAWSTYLE, "FILL")
+                } else {
+                    iup.set(canvas, :DRAWCOLOR, "0 0 0")
+                    iup.set(canvas, :DRAWSTYLE, "STROKE")
+                }
                 iup.draw-arc(canvas, circlesList[i][0] - circlesList[i][2],
                                      circlesList[i][1] - circlesList[i][2],
                                      circlesList[i][0] + circlesList[i][2],
                                      circlesList[i][1] + circlesList[i][2],0,360)
-
             }
 
             iup.draw-end(canvas)
