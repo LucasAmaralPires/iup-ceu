@@ -3,15 +3,16 @@
 
 int btn_reset_cb( Ihandle *self )
 {
-  Ihandle* text = IupGetDialogChild(self, "GAUGE");
+  Ihandle* gauge = IupGetDialogChild(self, "GAUGE");
   Ihandle* val = IupGetDialogChild(self, "VAL");
   Ihandle* dial = IupGetDialog(self);
-  Ihandle* timer = (char *)IupGetAttribute(dial, "TIMER");
+  Ihandle* timer = (Ihandle *)IupGetAttribute(dial, "TIMER");
 
   IupSetAttribute(timer, "RUN", "NO");
   IupSetAttribute(timer, "RUN", "YES");
 
   IupSetAttribute(timer, "TOTALELAPSEDTIME", "0");
+  IupSetDouble(gauge, "MAX", 30);
   IupSetAttribute(val, "VALUE", "30");
 
   return IUP_DEFAULT;
@@ -21,7 +22,7 @@ int val_valuechanged_cb(Ihandle *self)
 {
   Ihandle* gauge = IupGetDialogChild(self, "GAUGE");
   Ihandle* dial = IupGetDialog(self);
-  Ihandle* timer = (char *) IupGetAttribute(dial, "TIMER");
+  Ihandle* timer = (Ihandle *) IupGetAttribute(dial, "TIMER");
   double value = IupGetDouble(self, "VALUE");
   double totalTime = IupGetDouble(timer, "TOTALELAPSEDTIME");
 
