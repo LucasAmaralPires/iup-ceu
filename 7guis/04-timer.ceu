@@ -53,46 +53,60 @@ spawn {
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
     var timer = [false, 0] 
+    par {
+        loop {
+            par-or {
+                every :Iup.Value | it.h==iupval {
+                    val value = iup.get.number(iupval, :VALUE)
 
-    loop {
-        par-or {
-            await :Iup.Value | it.h==iupval {
-                val value = iup.get.number(iupval, :VALUE)
+                    iup.set(gauge, :MAX, value)
 
-                iup.set(gauge, :MAX, value)
-
-                if timer[1] < (value*10) {
+                    if timer[1] < (value*10) {
+                        set timer[0] = true
+                        broadcast (:evt [100,123]) in :global
+                    } else {
+                        iup.set(gauge, :VALUE, value)
+                    }
+                }
+            } with {
+                every :Iup.Action | it.h==button {
                     set timer[0] = true
-                } else {
-                    iup.set(gauge, :VALUE, iup.get.pointer(gauge, :MAX))
+                    set timer[1] = 0
+                    iup.set(iupval, :VALUE, "30")
+                    iup.set(gauge, :MAX, 30)
+                }
+            } with {
+                await <100:ms>
+                if timer[0] == true {
+                    val value = iup.get.number(iupval, :VALUE)
+                    set timer[1] = timer[1] + 1
+                    if timer[1] > (value*10) {
+                        set timer[0] = false
+                        `static char str[16]; sprintf(str, "%.2lfs", $value.Number);`
+                        iup.set(label, :TITLE, `:pointer str`)
+                        iup.set(gauge, :VALUE, `:pointer str`)
+                    } else {
+                        var temp = timer[1]/10
+                        `static char str[16]; sprintf(str, "%.2lfs", $temp.Number);`
+                        iup.set(label, :TITLE, `:pointer str`)
+                        iup.set(gauge, :VALUE, `:pointer str`)
+                    }  
                 }
             }
-        } with {
-            await :Iup.Action | it.h==button {
-                set timer[0] = true
-                set timer[1] = 0
-                iup.set(iupval, :VALUE, "30")
-            }
-        } with {
-            await <100:ms>
-            if timer[0] == true {
-                val value = iup.get.number(iupval, :VALUE)
-                set timer[1] = timer[1] + 1
-                if timer[1] > (value*10) {
-                    set timer[0] = false
-                    `static char str[16]; sprintf(str, "%.2lfs", $value.Number);`
-                    iup.set(label, :TITLE, `:pointer str`)
-                    iup.set(gauge, :VALUE, `:pointer str`)
-                } else {
-                    var temp = timer[1]/10
-                    `static char str[16]; sprintf(str, "%.2lfs", $temp.Number);`
-                    iup.set(label, :TITLE, `:pointer str`)
-                    iup.set(gauge, :VALUE, `:pointer str`)
-                }  
-            }
         }
-    }
+    } with {
+        
+;;;
+    while (timer == true) {
 
+    }
+    await broadcast {timer = value}
+    await atualizar value
+;;;
+        every :evt {
+            println(it[0])
+        }
+    }  
 }
 
 iup.loop()
