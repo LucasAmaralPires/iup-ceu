@@ -66,7 +66,6 @@ spawn {
                 } else {
                     iup.set(gauge, :VALUE, iup.get.pointer(gauge, :MAX))
                 }
-                println(value)
             }
         } with {
             await :Iup.Action | it.h==button {
@@ -81,11 +80,14 @@ spawn {
                 set timer[1] = timer[1] + 1
                 if timer[1] > (value*10) {
                     set timer[0] = false
-                    iup.set(label, :TITLE, value)
-                    iup.set(gauge, :VALUE, value)
+                    `static char str[16]; sprintf(str, "%.2lfs", $value.Number);`
+                    iup.set(label, :TITLE, `:pointer str`)
+                    iup.set(gauge, :VALUE, `:pointer str`)
                 } else {
-                    iup.set(label, :TITLE, timer[1]/10)
-                    iup.set(gauge, :VALUE, timer[1]/10)
+                    var temp = timer[1]/10
+                    `static char str[16]; sprintf(str, "%.2lfs", $temp.Number);`
+                    iup.set(label, :TITLE, `:pointer str`)
+                    iup.set(gauge, :VALUE, `:pointer str`)
                 }  
             }
         }
