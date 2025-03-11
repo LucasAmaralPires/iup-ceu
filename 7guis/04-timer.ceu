@@ -63,7 +63,7 @@ spawn {
 
                     if timer[1] < (value*10) {
                         set timer[0] = true
-                        broadcast (:evt [100,123]) in :global
+                        broadcast (:evt [true]) in :global
                     } else {
                         iup.set(gauge, :VALUE, value)
                     }
@@ -95,7 +95,16 @@ spawn {
             }
         }
     } with {
-        
+        time_passed = 0
+        loop {
+            par {
+                await :evt {
+                    println(it[0])
+                }
+            } with {
+                while 
+            }
+        }
 ;;;
     while (timer == true) {
 
@@ -103,9 +112,6 @@ spawn {
     await broadcast {timer = value}
     await atualizar value
 ;;;
-        every :evt {
-            println(it[0])
-        }
     }  
 }
 
