@@ -62,7 +62,6 @@ spawn {
                     iup.set(gauge, :MAX, value)
 
                     if timer[1] < (value*10) {
-                        set timer[0] = true
                         broadcast (:evt [true]) in :global
                     } else {
                         iup.set(gauge, :VALUE, value)
@@ -70,23 +69,30 @@ spawn {
                 }
             } with {
                 every :Iup.Action | it.h==button {
-                    set timer[0] = true
                     set timer[1] = 0
                     iup.set(iupval, :VALUE, "30")
                     iup.set(gauge, :MAX, 30)
+                    broadcast (:evt [true]) in :global
                 }
-            } with {
-                await <100:ms>
-                if timer[0] == true {
+            }
+        }
+    } with {
+;; Find out why time_passed must be immutable and how to resolve timer[1]
+        var timer2 = false
+        loop {
+            await :evt {
+                set timer2 = it[0]
+                while timer2 == true {
+                    await <100:ms>
                     val value = iup.get.number(iupval, :VALUE)
-                    set timer[1] = timer[1] + 1
-                    if timer[1] > (value*10) {
-                        set timer[0] = false
+                    set time_passed = time_passed + 1
+                    if time_passed > (value*10) {
+                        set timer2 = false
                         `static char str[16]; sprintf(str, "%.2lfs", $value.Number);`
                         iup.set(label, :TITLE, `:pointer str`)
                         iup.set(gauge, :VALUE, `:pointer str`)
                     } else {
-                        var temp = timer[1]/10
+                        var temp = time_passed/10
                         `static char str[16]; sprintf(str, "%.2lfs", $temp.Number);`
                         iup.set(label, :TITLE, `:pointer str`)
                         iup.set(gauge, :VALUE, `:pointer str`)
@@ -94,25 +100,8 @@ spawn {
                 }
             }
         }
-    } with {
-        time_passed = 0
-        loop {
-            par {
-                await :evt {
-                    println(it[0])
-                }
-            } with {
-                while 
-            }
-        }
-;;;
-    while (timer == true) {
-
-    }
-    await broadcast {timer = value}
-    await atualizar value
-;;;
     }  
 }
+
 
 iup.loop()
