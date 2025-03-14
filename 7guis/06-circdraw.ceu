@@ -171,24 +171,21 @@ spawn {
                         set operationsCount = operationsCount + 1
                         ;;;
                     }
-                    iup.draw-update(canvas)
                 }
                 ((it.but == :Mouse-Right) and (it.pressed == true)) {
                     val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
                     if ((id /= -1) and (id == hl)) {
-                        val circle :Circle = circles_find(id)
-                        val x = circle.x
-                        val y = circle.y
+                        val x = circlesList[id][0]
+                        val y = circlesList[id][1]
                         `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
-                        iup.set(vl, :VALUE, circle.r)
+                        iup.set(vl, :VALUE, circlesList[id][2])
 
                         iup.popup(dlg_config)
 
-                        val new_r = iup.get(vl, :VALUE)
-
-                        if (new_r /= circle.r)
-                        {
-                            
+                        val new_r = iup.get.number(vl, :VALUE)
+;;descobri pq, e para modifica com o dialogo aberto. Fazer de novo isso aqui
+                        if (new_r /= circlesList[id][2]) {
+                            set circlesList[id][2] = new_r
                         }
 ;;;
                         new_r = IupGetInt(val, "VALUE");
@@ -204,6 +201,7 @@ spawn {
                     }
                 }
             }
+            iup.draw-update(canvas)
         }
     } with {
         every :Iup.Action | it.h==canvas {
