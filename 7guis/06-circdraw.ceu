@@ -6,8 +6,12 @@ data :Operation = [type, circle]
 
 ;;;
     TODO
-        Add second callback to iup.ceu
-        All the logic of the program
+        Add the operation control
+        Add the redo button
+        Add the undo button
+        Change highlight logic (remove global variable)
+        Add find logic
+        Add second dialogue
 ;;;
 
 val DEF_RADIUS = 30
@@ -25,6 +29,15 @@ var currentOperation = -1
 
 enum :OP {
     Create, Remove, Update
+}
+
+func circles_find (id) {
+    val found = loop i in {0 => circlesCount{ {
+        if (circlesList[i][3] == id){
+            break(i)
+        }
+    }
+    circlesList[found]
 }
 
 func circles_pick(x,y) {
@@ -55,12 +68,11 @@ spawn {
     
     val undoButton = iup.button("UNDO")
         iup.set(undoButton, :SIZE, "60")
+        iup.set(undoButton, :ACTIVE, "NO")
 
     val redoButton = iup.button("REDO")
         iup.set(redoButton, :SIZE, "60")
-
-    iup.set(undoButton, :ACTIVE, "NO")
-    iup.set(redoButton, :ACTIVE, "NO")
+        iup.set(redoButton, :ACTIVE, "NO")
 
     val canvas = iup.canvas()
         iup.set(canvas, :EXPAND, "YES")
@@ -83,6 +95,26 @@ spawn {
         iup.set(dlg, :SIZE, "300x150")
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+
+    val lbl = iup.label()
+        iup.set(lbl, :EXPAND, "HORIZONTAL")
+        iup.set(lbl, :TITLE, "Adjust the diameter of the circle at (100, 100)")
+
+    val vl = iup.val("HORIZONTAL")
+        iup.set(vl, :EXPAND, "HORIZONTAL")
+        iup.set(vl, :MIN, "0")
+        iup.set(vl, :MAX, MAX_RADIUS)
+
+    val box = iup.vbox()
+        iup.append(box,iup.fill())
+        iup.append(box,lbl)
+        iup.append(box,vl)
+        iup.append(box,iup.fill())
+        iup.set(box, :ALIGMENT, "ACENTER")
+        iup.set(box, :NMARGIN, "10x10")
+
+    val dlg_config = iup.dialog(box)
+        iup.set(dlg_config, :TITLE, "Circle Config")
 
 ;;;
     loop {
@@ -109,38 +141,69 @@ spawn {
 
     par {
         every :Iup.Button | it.h==canvas {
-            if (it.but == :Mouse-Left) and (it.pressed == true) {
-                val id = circles_pick(it.x, it.y)
+            val id = circles_pick(it.x, it.y)
+            ifs {
+                ((it.but == :Mouse-Left) and (it.pressed == true)) {
+                    if (id >= 0) {
+                        iup.set(canvas, :HIGHLIGHTEDCIRCLE, id)
+                    } else {
+                        ;;;
+                        if (circlesCount == MAX_CIRCLES)
+                            return -1;
+                        ;;;
 
-                if (id >= 0) {
-                    iup.set(canvas, :HIGHLIGHTEDCIRCLE, id)
-                } else {
-                    ;;;
-                    if (circlesCount == MAX_CIRCLES)
-                        return -1;
-                    ;;;
+                        set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
+                        set circlesCount = circlesCount + 1
+                        set lastId = lastId + 1
 
-                    set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
-                    set circlesCount = circlesCount + 1
-                    set lastId = lastId + 1
+                        ;;;
+                        if (operationsCount == MAX_OPERATIONS)
+                            return -1;
+                        ;;;
+                        if (currentOperation < (operationsCount - 1)) {
+                            set operationsCount = currentOperation + 1
+                        }
 
-                    ;;;
-                    if (operationsCount == MAX_OPERATIONS)
-                        return -1;
-                    ;;;
-                    if (currentOperation < (operationsCount - 1)) {
-                        set operationsCount = currentOperation + 1
+                        ;;;
+                        ;; mudar circlesList para a função circle_find na linha abaixo
+                        set operationsList[operationsCount] = [0, circlesList[lastId-1]]
+                        set currentOperation = operationsCount
+                        set operationsCount = operationsCount + 1
+                        ;;;
                     }
+                    iup.draw-update(canvas)
+                }
+                ((it.but == :Mouse-Right) and (it.pressed == true)) {
+                    val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
+                    if ((id /= -1) and (id == hl)) {
+                        val circle :Circle = circles_find(id)
+                        val x = circle.x
+                        val y = circle.y
+                        `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
+                        iup.set(vl, :VALUE, circle.r)
 
-                    ;;;
-                    ;; mudar circlesList para a função circle_find na linha abaixo
-                    set operationsList[operationsCount] = [0, circlesList[lastId-1]]
-                    set currentOperation = operationsCount
-                    set operationsCount = operationsCount + 1
-                    ;;;
+                        iup.popup(dlg_config)
+
+                        val new_r = iup.get(vl, :VALUE)
+
+                        if (new_r /= circle.r)
+                        {
+                            
+                        }
+;;;
+                        new_r = IupGetInt(val, "VALUE");
+                        if (new_r != old_r)
+                        {
+                            op_add(OP_UPDATE, circle); /* add both old and new */
+                            circle.r = new_r;
+                            op_add(OP_UPDATE, circle);
+
+                            update_buttons(ih);
+                        }
+;;;
+                    }
                 }
             }
-            iup.draw-update(canvas)
         }
     } with {
         every :Iup.Action | it.h==canvas {
@@ -171,6 +234,10 @@ spawn {
             }
 
             iup.draw-end(canvas)
+        }       
+    } with {
+        every :Iup.Value | it.h==vl {
+            println("AQUI")
         }       
     }
 }

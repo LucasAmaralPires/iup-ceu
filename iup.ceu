@@ -14,7 +14,7 @@ data :IUP = [
     draw-begin, draw-getsize, draw-rectangle, draw-arc, draw-update, draw-end,
     button, label, gauge, val, list, text, message, canvas,
     hbox, vbox, fill, append,
-    dialog, show-xy
+    dialog, popup, show-xy
 ]
 
 enum :Mouse {
@@ -314,6 +314,10 @@ val iup :IUP = group {
         `:pointer IupDialog($h.Pointer)`
     }
 
+    func x-iup-popup (h, x,y) {
+        `IupPopup($h.Pointer, IUP_CENTERPARENT, IUP_CENTERPARENT);`
+    }
+
     func x-iup-show-xy (h, x, y) {
         `:number IupShowXY($h.Pointer, $x.Number, $y.Number)`
     }
@@ -325,6 +329,6 @@ val iup :IUP = group {
         x-iup-draw-begin, x-iup-draw-getsize, x-iup-draw-rectangle, x-iup-draw-arc, x-iup-draw-update, x-iup-draw-end,
         x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas,
         x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
-        x-iup-dialog, x-iup-show-xy,
+        x-iup-dialog, x-iup-popup, x-iup-show-xy,
     ]
 }
