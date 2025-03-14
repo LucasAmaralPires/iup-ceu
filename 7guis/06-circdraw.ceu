@@ -12,6 +12,7 @@ data :Operation = [type, circle]
         Change highlight logic (remove global variable)
         Add find logic
         Add second dialogue
+        Create and modify circle_find where appropriate
 ;;;
 
 val DEF_RADIUS = 30
@@ -38,6 +39,15 @@ func circles_find (id) {
         }
     }
     circlesList[found]
+}
+
+func circles_update (circle :Circle) {
+    val found = loop i in {0 => circlesCount{ {
+        if (circlesList[i][3] == circle.id){
+            break(i)
+        }
+    }
+    set circlesList[found][2] = circle.r
 }
 
 func circles_pick(x,y) {
@@ -116,28 +126,8 @@ spawn {
     val dlg_config = iup.dialog(box)
         iup.set(dlg_config, :TITLE, "Circle Config")
 
-;;;
-    loop {
-        watching <nenhum-foco> {
-            var o = <await-foco>
-            loop {
-                set o = watching <await-mude-foco> {
-                    ;; faca acoes em "o" com o foco
-                }
-            }
-        }
-    }
-
-    par-or {
-        await <5:s>
-    } with {
-        ...
-    }
-
-    watching |... {
-        ...
-    }
-;;;
+;; search for possible removal of following variable
+    var circleid = -1
 
     par {
         every :Iup.Button | it.h==canvas {
@@ -171,37 +161,35 @@ spawn {
                         set operationsCount = operationsCount + 1
                         ;;;
                     }
+                    iup.draw-update(canvas)
                 }
                 ((it.but == :Mouse-Right) and (it.pressed == true)) {
                     val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
                     if ((id /= -1) and (id == hl)) {
-                        val x = circlesList[id][0]
-                        val y = circlesList[id][1]
+                        val circle :Circle = circles_find(id)
+                        val x = circle.x
+                        val y = circle.y
                         `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
-                        iup.set(vl, :VALUE, circlesList[id][2])
+                        iup.set(vl, :VALUE, circle.r)
+                        set circleid = circle.id
 
                         iup.popup(dlg_config)
 
                         val new_r = iup.get.number(vl, :VALUE)
-;;descobri pq, e para modifica com o dialogo aberto. Fazer de novo isso aqui
-                        if (new_r /= circlesList[id][2]) {
-                            set circlesList[id][2] = new_r
-                        }
+
+                        if (new_r /= circle.r) {
 ;;;
-                        new_r = IupGetInt(val, "VALUE");
-                        if (new_r != old_r)
-                        {
                             op_add(OP_UPDATE, circle); /* add both old and new */
-                            circle.r = new_r;
                             op_add(OP_UPDATE, circle);
 
                             update_buttons(ih);
                         }
 ;;;
+                            set circle.r = new_r
+                        }
                     }
                 }
             }
-            iup.draw-update(canvas)
         }
     } with {
         every :Iup.Action | it.h==canvas {
@@ -235,7 +223,11 @@ spawn {
         }       
     } with {
         every :Iup.Value | it.h==vl {
-            println("AQUI")
+            val r = iup.get.number(vl, :VALUE)
+            val circle :Circle = circles_find(circleid)
+            set circle.r = r
+            circles_update(circle)
+            iup.draw-update(canvas)
         }       
     }
 }
