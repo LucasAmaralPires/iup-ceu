@@ -13,6 +13,7 @@ data :Operation = [type, circle]
         Add find logic
         Add second dialogue
         Create and modify circle_find where appropriate
+        Discover why circle.r is updating
 ;;;
 
 val DEF_RADIUS = 30
@@ -72,6 +73,37 @@ func circles_pick(x,y) {
         }
     }
     id
+}
+
+func op_add(type, circle :Circle) {
+;;;
+    if (operationsCount == MAX_OPERATIONS)
+        return -1;
+;;;
+    if (currentOperation < (operationsCount - 1)) {
+        set operationsCount = currentOperation + 1
+    }
+
+    println(type)
+
+    set operationsList[operationsCount] = [type, circle]
+    set currentOperation = operationsCount
+    set operationsCount = operationsCount + 1
+
+}
+
+func update_buttons(button_undo, button_redo) {
+    if(currentOperation < 0) {
+        iup.set(button_undo, :ACTIVE, "NO")
+    } else {
+        iup.set(button_undo, :ACTIVE, "YES")
+    }
+
+    if((currentOperation + 1) < operationsCount) {
+        iup.set(button_redo, :ACTIVE, "NO")
+    } else {
+        iup.set(button_redo, :ACTIVE, "YES")
+    }
 }
 
 spawn {
@@ -144,22 +176,12 @@ spawn {
 
                         set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
                         set circlesCount = circlesCount + 1
+                        op_add(:OP-Create, circles_find(lastId))
+
                         set lastId = lastId + 1
 
-                        ;;;
-                        if (operationsCount == MAX_OPERATIONS)
-                            return -1;
-                        ;;;
-                        if (currentOperation < (operationsCount - 1)) {
-                            set operationsCount = currentOperation + 1
-                        }
+                        update_buttons(undoButton, redoButton)
 
-                        ;;;
-                        ;; mudar circlesList para a função circle_find na linha abaixo
-                        set operationsList[operationsCount] = [0, circlesList[lastId-1]]
-                        set currentOperation = operationsCount
-                        set operationsCount = operationsCount + 1
-                        ;;;
                     }
                     iup.draw-update(canvas)
                 }
@@ -167,6 +189,7 @@ spawn {
                     val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
                     if ((id /= -1) and (id == hl)) {
                         val circle :Circle = circles_find(id)
+                        val old_r = circle.r
                         val x = circle.x
                         val y = circle.y
                         `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
@@ -177,15 +200,12 @@ spawn {
 
                         val new_r = iup.get.number(vl, :VALUE)
 
-                        if (new_r /= circle.r) {
-;;;
-                            op_add(OP_UPDATE, circle); /* add both old and new */
-                            op_add(OP_UPDATE, circle);
-
-                            update_buttons(ih);
-                        }
-;;;
+                        if (new_r /= old_r) {
+                            println("AQUI")
+                            op_add(:OP-Update, circle)
                             set circle.r = new_r
+                            op_add(:OP-Update, circle)
+                            update_buttons(undoButton, redoButton);
                         }
                     }
                 }
@@ -227,6 +247,18 @@ spawn {
             val circle :Circle = circles_find(circleid)
             set circle.r = r
             circles_update(circle)
+            iup.draw-update(canvas)
+        }       
+    } with {
+        every :Iup.Action | it.h==undoButton {
+            println(operationsList)
+            update_buttons(undoButton, redoButton)
+            iup.draw-update(canvas)
+        }       
+    } with {
+        every :Iup.Action | it.h==redoButton {
+            
+            update_buttons(undoButton, redoButton)
             iup.draw-update(canvas)
         }       
     }
