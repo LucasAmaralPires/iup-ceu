@@ -113,6 +113,48 @@ func op_add(type, circle :Circle) {
 
 }
 
+func op_undo() {
+;;;
+    if currentOperation < 0 {
+        return
+    }
+;;;
+    var op :Operation = operationsList[currentOperation]
+    set currentOperation = currentOperation - 1 
+    ifs {
+        (op.type == :OP-Create) {
+            circles_remove(op.circle)
+        }
+        (op.type == :OP-Update) {
+            set op = operationsList[currentOperation]
+            set currentOperation = currentOperation - 1
+            circles_update(op.circle)
+        }
+    }
+}
+
+func op_redo() {
+;;;
+    if (currentOperation + 1) == operationsCount {
+        return
+    }
+;;;
+    set currentOperation = currentOperation + 1 
+    var op :Operation = operationsList[currentOperation]
+
+    ifs {
+        (op.type == :OP-Create) {
+            circles_insert(op.circle)
+        }
+        (op.type == :OP-Update) {
+            set currentOperation = currentOperation + 1
+            set op = operationsList[currentOperation]
+            circles_update(op.circle)
+        }
+    }
+}
+
+
 func update_buttons(button_undo, button_redo) {
     if(currentOperation < 0) {
         iup.set(button_undo, :ACTIVE, "NO")
@@ -121,9 +163,9 @@ func update_buttons(button_undo, button_redo) {
     }
 
     if((currentOperation + 1) < operationsCount) {
-        iup.set(button_redo, :ACTIVE, "NO")
-    } else {
         iup.set(button_redo, :ACTIVE, "YES")
+    } else {
+        iup.set(button_redo, :ACTIVE, "NO")
     }
 }
 
@@ -271,13 +313,13 @@ spawn {
         }       
     } with {
         every :Iup.Action | it.h==undoButton {
-            println(operationsList)
+            op_undo()
             update_buttons(undoButton, redoButton)
             iup.draw-update(canvas)
         }       
     } with {
         every :Iup.Action | it.h==redoButton {
-            
+            op_redo()
             update_buttons(undoButton, redoButton)
             iup.draw-update(canvas)
         }       
