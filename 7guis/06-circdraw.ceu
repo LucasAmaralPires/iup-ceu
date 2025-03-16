@@ -10,10 +10,6 @@ data :Operation = [type, circle]
         Add the redo button
         Add the undo button
         Change highlight logic (remove global variable)
-        Add find logic
-        Add second dialogue
-        Create and modify circle_find where appropriate
-        Discover why circle.r is updating
 ;;;
 
 val DEF_RADIUS = 30
