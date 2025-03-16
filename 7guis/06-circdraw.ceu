@@ -192,6 +192,7 @@ spawn {
                         val old_r = circle.r
                         val x = circle.x
                         val y = circle.y
+                        println(circle)
                         `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
                         iup.set(vl, :VALUE, circle.r)
                         set circleid = circle.id
