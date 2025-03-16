@@ -6,9 +6,6 @@ data :Operation = [type, circle]
 
 ;;;
     TODO
-        Add the operation control
-        Add the redo button
-        Add the undo button
         Change highlight logic (remove global variable)
         Add test max cir to circles_insert
 ;;;
