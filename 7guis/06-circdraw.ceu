@@ -176,7 +176,7 @@ spawn {
 
                         set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
                         set circlesCount = circlesCount + 1
-                        op_add(:OP-Create, circles_find(lastId))
+                        op_add(:OP-Create, copy(circles_find(lastId)))
 
                         set lastId = lastId + 1
 
@@ -188,11 +188,10 @@ spawn {
                 ((it.but == :Mouse-Right) and (it.pressed == true)) {
                     val hl = iup.get.number(canvas, :HIGHLIGHTEDCIRCLE)
                     if ((id /= -1) and (id == hl)) {
-                        val circle :Circle = circles_find(id)
+                        val circle :Circle = copy(circles_find(id))
                         val old_r = circle.r
                         val x = circle.x
                         val y = circle.y
-                        println(circle)
                         `IupSetStrf($lbl.Pointer, "TITLE", "Adjust the diameter of the circle at (%d, %d)", (int)$x.Number, (int)$y.Number);`
                         iup.set(vl, :VALUE, circle.r)
                         set circleid = circle.id
@@ -202,8 +201,7 @@ spawn {
                         val new_r = iup.get.number(vl, :VALUE)
 
                         if (new_r /= old_r) {
-                            println("AQUI")
-                            op_add(:OP-Update, circle)
+                            op_add(:OP-Update, copy(circle))
                             set circle.r = new_r
                             op_add(:OP-Update, circle)
                             update_buttons(undoButton, redoButton);
