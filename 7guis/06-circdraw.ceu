@@ -10,6 +10,7 @@ data :Operation = [type, circle]
         Add the redo button
         Add the undo button
         Change highlight logic (remove global variable)
+        Add test max cir to circles_insert
 ;;;
 
 val DEF_RADIUS = 30
@@ -45,6 +46,30 @@ func circles_update (circle :Circle) {
         }
     }
     set circlesList[found][2] = circle.r
+}
+
+func circles_insert (circle :Circle) {
+
+    ;;TESTE MAX CIRCULOS
+
+    set circlesList[circlesCount] = copy(circle)
+
+    set circlesCount = circlesCount + 1
+}
+
+func circles_remove (circle :Circle) {
+
+    val found = loop i in {0 => circlesCount{ {
+        if (circlesList[i][3] == circle.id){
+            break(i)
+        }
+    }
+
+    set circlesCount = circlesCount - 1
+
+    loop j in {found => circlesCount{ {
+        set circlesList[j] = copy(circlesList[j+1])
+    }
 }
 
 func circles_pick(x,y) {
