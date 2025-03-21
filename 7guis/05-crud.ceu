@@ -4,16 +4,12 @@ data :FName = [nm, snm, id]
 
 ;;;
 TODO - 
-    Refazer a função trim
     Colocar variaveis globais dentro do spawn
     Erro na criação databese com 80
 ;;;
 
 
 val MAX_NAMES = 80
-val db_names_list :FName = #[]
-var db_names_count = 0
-var db_names_id = 0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -47,32 +43,20 @@ func filterName(surname, filter) {
 
 func trim (word) {
     var trim_word = ""
-    var temp_word = ""
-    var start_word = false
-    var end_word = false
-    loop c in word {
-        ifs {
-            (c /= ' ')  and (start_word == false) {
-                set trim_word[+] = c
-                set start_word = true
-            }
-            (c == ' ') and (start_word == true) and (end_word == true){
-                set temp_word[+] = c
-            }
-            (c == ' ') and (start_word == true) {
-                set end_word = true
-                set temp_word[+] = c
-            }
-            (c /= ' ')  and (end_word == true) {
-                set trim_word = trim_word ++ temp_word
-                set trim_word[+] = c
-                set temp_word = ""
-                set end_word = false
-            }
-            (start_word == true) and (end_word == false) {
-                set trim_word[+] = c
-            }
-        } 
+    val start_word = loop i in {0 => #word{ {
+        if (word[i] /= ' ') {
+            break(i)
+        }
+    }
+    val end_word = loop j in }#word => 0} :step -1 {
+        if (word[j] /= ' ') {
+            break(j)
+        }
+    }
+    if ((start_word /= false) and (end_word /= false)) {
+        loop l in {start_word => end_word} {
+            set trim_word[+] = word[l]
+        }
     }
     trim_word
 }
@@ -163,6 +147,10 @@ spawn {
 
     iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
 
+    val db_names_list :FName = #[]
+    var db_names_count = 0
+    var db_names_id = 0
+
     loop {
         val loadupdate = par-or {
             await :Iup.Action | it.h==btn_create {
@@ -222,9 +210,6 @@ spawn {
                 loop j in {found => db_names_count{ {
                     set db_names_list[j] = copy(db_names_list[j + 1])
                 }
-
-                println(db_names_list)
-                println(db_names_count)
 
                 iup.set(txt_name, :VALUE, nil)
                 iup.set(txt_surname, :VALUE, nil)
