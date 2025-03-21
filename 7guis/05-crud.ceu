@@ -2,15 +2,6 @@
 
 data :FName = [nm, snm, id]
 
-;;;
-TODO - 
-    Colocar variaveis globais dentro do spawn
-    Erro na criação databese com 80
-;;;
-
-
-val MAX_NAMES = 80
-
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 func strLower(word) {
@@ -157,19 +148,14 @@ spawn {
                 val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
 
-                ;;;
-                if db_names_count == 80 {
-                    error
+                if (db_names_count < 80) {
+                    set db_names_list[db_names_count] = [name_value,surname_value,db_names_id]
+                    set db_names_count = db_names_count + 1
+                    set db_names_id = db_names_id + 1
+
+                    iup.set(txt_name, :VALUE, nil)
+                    iup.set(txt_surname, :VALUE, nil)
                 }
-                ;;;
-
-                set db_names_list[db_names_count] = [name_value,surname_value,db_names_id]
-
-                set db_names_count = db_names_count + 1
-                set db_names_id = db_names_id + 1
-
-                iup.set(txt_name, :VALUE, nil)
-                iup.set(txt_surname, :VALUE, nil)
             }
             [true,true]
         } with {
@@ -243,7 +229,6 @@ spawn {
             var temp_surname
             var temp_name
             var temp_id
-            ;;    var temp :FName;
             
             if (#filter_text == 0) {
                 set fil = false
