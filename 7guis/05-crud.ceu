@@ -5,9 +5,7 @@ data :FName = [nm, snm, id]
 ;;;
 TODO - 
     Refazer a função trim
-    Realocar create_db to dentro de spawn
     Colocar variaveis globais dentro do spawn
-    Mudar a busca para ficar como original
     Erro na criação databese com 80
 ;;;
 
@@ -16,21 +14,6 @@ val MAX_NAMES = 80
 val db_names_list :FName = #[]
 var db_names_count = 0
 var db_names_id = 0
-
-;;;;;;;;;;;;;;;;;;;;;;;;; DATABASE OF NAMES ;;;;;;;;;;;;;;;;;;;;;;;;;
-
-func create_db(name, surname) {
-    ;;;
-    if db_names_count == 80 {
-        error
-    }
-    ;;;
-
-    set db_names_list[db_names_count] = [name,surname,db_names_id]
-
-    set db_names_count = db_names_count + 1
-    set db_names_id = db_names_id + 1
-}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -185,7 +168,18 @@ spawn {
             await :Iup.Action | it.h==btn_create {
                 val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
-                create_db(name_value, surname_value)
+
+                ;;;
+                if db_names_count == 80 {
+                    error
+                }
+                ;;;
+
+                set db_names_list[db_names_count] = [name_value,surname_value,db_names_id]
+
+                set db_names_count = db_names_count + 1
+                set db_names_id = db_names_id + 1
+
                 iup.set(txt_name, :VALUE, nil)
                 iup.set(txt_surname, :VALUE, nil)
             }
@@ -197,8 +191,14 @@ spawn {
                 val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
 
-                set db_names_list[id][0] = name_value
-                set db_names_list[id][1] = surname_value
+                val found = loop i in {0 => db_names_count{ {
+                    if (db_names_list[i][2] == id){
+                        break(i)
+                    }
+                }
+
+                set db_names_list[found][0] = name_value
+                set db_names_list[found][1] = surname_value
 
                 iup.set(txt_name, :VALUE, nil)
                 iup.set(txt_surname, :VALUE, nil)
@@ -211,12 +211,20 @@ spawn {
                 val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
 
-                loop i in {id => (db_names_count-1){ {
-                    set db_names_list[i] = db_names_list[i + 1]
-                    set db_names_list[i][2] = db_names_list[i][2] - 1
+                val found = loop i in {0 => db_names_count{ {
+                    if (db_names_list[i][2] == id){
+                        break(i)
+                    }
                 }
+
                 set db_names_count = db_names_count - 1
-                set db_names_id = db_names_id - 1
+
+                loop j in {found => db_names_count{ {
+                    set db_names_list[j] = copy(db_names_list[j + 1])
+                }
+
+                println(db_names_list)
+                println(db_names_count)
 
                 iup.set(txt_name, :VALUE, nil)
                 iup.set(txt_surname, :VALUE, nil)
@@ -229,8 +237,15 @@ spawn {
             await :Iup.Value | it.h==lst_names {
                 val id_val = iup.get.number(lst_names, :VALUE)
                 val id = iup.get.id(lst_names, :ID, id_val)
-                iup.set(txt_name, :VALUE, db_names_list[id][0])
-                iup.set(txt_surname, :VALUE, db_names_list[id][1])
+
+                val found = loop i in {0 => db_names_count{ {
+                    if (db_names_list[i][2] == id){
+                        break(i)
+                    }
+                }
+
+                iup.set(txt_name, :VALUE, db_names_list[found][0])
+                iup.set(txt_surname, :VALUE, db_names_list[found][1])
             }
             [false,true]
         }
@@ -251,10 +266,10 @@ spawn {
 
             iup.set(lst_names, :1, nil)
 
-            loop i in {1 => db_names_count} {
-                set temp_id = db_names_list[i-1][2]
-                set temp_surname = db_names_list[i-1][1]
-                set temp_name = db_names_list[i-1][0]
+            loop i in {0 => db_names_count{ {
+                set temp_id = db_names_list[i][2]
+                set temp_surname = db_names_list[i][1]
+                set temp_name = db_names_list[i][0]
                 if ((not fil) or (filterName(temp_surname, filter_text))) {
                     `IupSetStrfId($lst_names.Pointer, "", $j.Number, "%s, %s", $temp_surname.Dyn->Vector.buf, $temp_name.Dyn->Vector.buf);`
                     `IupSetIntId($lst_names.Pointer, "ID", $j.Number, $temp_id.Number);`
