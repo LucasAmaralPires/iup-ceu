@@ -7,8 +7,7 @@ TODO -
     Refazer a função trim
     Realocar create_db to dentro de spawn
     Colocar variaveis globais dentro do spawn
-    LoadList
-        Ver como usar uma única variável ao invés de 3 temporarios
+    Mudar a busca para ficar como original
     Erro na criação databese com 80
 ;;;
 
