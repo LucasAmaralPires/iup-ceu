@@ -7,13 +7,8 @@ data :Operation = [type, circle]
 ;;;
     TODO
         Change highlight logic (remove global variable)
-        Add test max cir to circles_insert
+        Remove circleid
 ;;;
-
-val DEF_RADIUS = 30
-val MAX_CIRCLES = 80
-val MAX_RADIUS = 100
-val MAX_OPERATIONS = 200
 
 val circlesList :Circle = #[]
 var circlesCount = 0
@@ -70,7 +65,7 @@ func circles_remove (circle :Circle) {
 }
 
 func circles_pick(x,y) {
-    var min_r = MAX_RADIUS
+    var min_r = 100
     var id = -1
 
     loop i in {0 => circlesCount{ {
@@ -94,59 +89,51 @@ func circles_pick(x,y) {
 }
 
 func op_add(type, circle :Circle) {
-;;;
-    if (operationsCount == MAX_OPERATIONS)
-        return -1;
-;;;
-    if (currentOperation < (operationsCount - 1)) {
-        set operationsCount = currentOperation + 1
+    if (operationsCount < 200) {
+        if (currentOperation < (operationsCount - 1)) {
+            set operationsCount = currentOperation + 1
+        }
+
+        println(type)
+
+        set operationsList[operationsCount] = [type, circle]
+        set currentOperation = operationsCount
+        set operationsCount = operationsCount + 1
     }
-
-    println(type)
-
-    set operationsList[operationsCount] = [type, circle]
-    set currentOperation = operationsCount
-    set operationsCount = operationsCount + 1
-
 }
 
 func op_undo() {
-;;;
-    if currentOperation < 0 {
-        return
-    }
-;;;
-    var op :Operation = operationsList[currentOperation]
-    set currentOperation = currentOperation - 1 
-    ifs {
-        (op.type == :OP-Create) {
-            circles_remove(op.circle)
-        }
-        (op.type == :OP-Update) {
-            set op = operationsList[currentOperation]
-            set currentOperation = currentOperation - 1
-            circles_update(op.circle)
+    if (currentOperation >= 0) {
+        var op :Operation = operationsList[currentOperation]
+        set currentOperation = currentOperation - 1 
+        ifs {
+            (op.type == :OP-Create) {
+                circles_remove(op.circle)
+            }
+            (op.type == :OP-Update) {
+                set op = operationsList[currentOperation]
+                set currentOperation = currentOperation - 1
+                circles_update(op.circle)
+            }
         }
     }
 }
 
 func op_redo() {
-;;;
-    if (currentOperation + 1) == operationsCount {
-        return
-    }
-;;;
-    set currentOperation = currentOperation + 1 
-    var op :Operation = operationsList[currentOperation]
 
-    ifs {
-        (op.type == :OP-Create) {
-            circles_insert(op.circle)
-        }
-        (op.type == :OP-Update) {
-            set currentOperation = currentOperation + 1
-            set op = operationsList[currentOperation]
-            circles_update(op.circle)
+    if (currentOperation + 1) /= operationsCount {
+        set currentOperation = currentOperation + 1 
+        var op :Operation = operationsList[currentOperation]
+
+        ifs {
+            (op.type == :OP-Create) {
+                circles_insert(op.circle)
+            }
+            (op.type == :OP-Update) {
+                set currentOperation = currentOperation + 1
+                set op = operationsList[currentOperation]
+                circles_update(op.circle)
+            }
         }
     }
 }
@@ -205,7 +192,7 @@ spawn {
     val vl = iup.val("HORIZONTAL")
         iup.set(vl, :EXPAND, "HORIZONTAL")
         iup.set(vl, :MIN, "0")
-        iup.set(vl, :MAX, MAX_RADIUS)
+        iup.set(vl, :MAX, 100)
 
     val box = iup.vbox()
         iup.append(box,iup.fill())
@@ -229,19 +216,15 @@ spawn {
                     if (id >= 0) {
                         iup.set(canvas, :HIGHLIGHTEDCIRCLE, id)
                     } else {
-                        ;;;
-                        if (circlesCount == MAX_CIRCLES)
-                            return -1;
-                        ;;;
+                        if (circlesCount < 80) {
+                            set circlesList[circlesCount] = [it.x, it.y, 30, lastId]
+                            set circlesCount = circlesCount + 1
+                            op_add(:OP-Create, copy(circles_find(lastId)))
 
-                        set circlesList[circlesCount] = [it.x, it.y, DEF_RADIUS, lastId]
-                        set circlesCount = circlesCount + 1
-                        op_add(:OP-Create, copy(circles_find(lastId)))
+                            set lastId = lastId + 1
 
-                        set lastId = lastId + 1
-
-                        update_buttons(undoButton, redoButton)
-
+                            update_buttons(undoButton, redoButton)
+                        }
                     }
                     iup.draw-update(canvas)
                 }
