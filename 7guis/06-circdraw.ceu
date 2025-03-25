@@ -8,6 +8,7 @@ data :Operation = [type, circle]
     TODO
         Change highlight logic (remove global variable)
         Remove circleid
+        Add hashtable
 ;;;
 
 val circlesList :Circle = #[]
@@ -93,9 +94,6 @@ func op_add(type, circle :Circle) {
         if (currentOperation < (operationsCount - 1)) {
             set operationsCount = currentOperation + 1
         }
-
-        println(type)
-
         set operationsList[operationsCount] = [type, circle]
         set currentOperation = operationsCount
         set operationsCount = operationsCount + 1

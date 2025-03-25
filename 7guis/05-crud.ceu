@@ -2,6 +2,10 @@
 
 data :FName = [nm, snm, id]
 
+;;;
+TODO - Add hashtable
+;;;
+
 ;;;;;;;;;;;;;;;;;;;;;;;;; OPERATIONS ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 func strLower(word) {
