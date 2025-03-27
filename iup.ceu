@@ -11,8 +11,9 @@ data :IUP = [
     loop,
     get :PICO-Get = [pointer,bool,number,id],
     set,
+    control-open,
     draw-begin, draw-getsize, draw-rectangle, draw-arc, draw-update, draw-end,
-    button, label, gauge, val, list, text, message, canvas,
+    button, label, gauge, val, list, text, message, canvas, matrix,
     hbox, vbox, fill, append,
     dialog, popup, show-xy
 ]
@@ -24,6 +25,7 @@ enum :Mouse {
 ```:pre
 #include <iup.h>
 #include <iupdraw.h>
+#include <iupcontrols.h>
 int iup_action_cb (Ihandle* h) {
     CEU_Value args[] = {
         { CEU_VALUE_POINTER, {.Pointer=h} }
@@ -208,6 +210,12 @@ val iup :IUP = group {
         }
     }
 
+    ;;CONTROL
+    
+    func x-iup-controls-open(h) {
+        `IupControlsOpen();`
+    }
+
     ;; DRAW 
 
     func x-iup-draw-begin(h) {
@@ -290,6 +298,11 @@ val iup :IUP = group {
         h
     }
 
+    func x-iup-matrix () {
+        val h = `:pointer IupMatrix(NULL)`
+        h
+    }
+
     ;; CONTAINERS
 
     func x-iup-hbox () {
@@ -326,8 +339,9 @@ val iup :IUP = group {
 
     [
         x-iup-loop, x-iup-get, x-iup-set,
+        x-iup-controls-open,
         x-iup-draw-begin, x-iup-draw-getsize, x-iup-draw-rectangle, x-iup-draw-arc, x-iup-draw-update, x-iup-draw-end,
-        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas,
+        x-iup-button, x-iup-label, x-iup-gauge, x-iup-val, x-iup-list, x-iup-text, x-iup-message, x-iup-canvas, x-iup-matrix,
         x-iup-hbox, x-iup-vbox, x-iup-fill, x-iup-append,
         x-iup-dialog, x-iup-popup, x-iup-show-xy,
     ]
