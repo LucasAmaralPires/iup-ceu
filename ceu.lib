@@ -1,1 +1,1 @@
--g -I /usr/include/iup -l iup
+-g -I /usr/include/iup -l iup -l iupcontrols
