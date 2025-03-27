@@ -1,0 +1,25 @@
+^["@/iup/iup.ceu"]
+
+spawn {
+
+    iup.control-open()
+    
+    val matrix = iup.matrix()
+        iup.set(matrix, :NUMCOL, 26)
+        iup.set(matrix, :NUMLIN, 100)
+;;        iup.set(matrix, :NUMCOL_VISIBLE, "4")
+;;        iup.set(matrix, :NUMLIN_VISIBLE, "7")
+        iup.set(matrix, :WIDTH0, "15")
+        iup.set(matrix, :WIDTHDEF, "40")
+        iup.set(matrix, :HEIGHT0, "8")
+        iup.set(matrix, :RESIZEMATRIX, "YES")
+
+    val dlg = iup.dialog(matrix)
+        iup.set(dlg, :TITLE, "Cells")
+        iup.set(dlg, :SIZE, "300x150")
+
+    iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+
+}
+
+iup.loop()
