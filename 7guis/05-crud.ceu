@@ -147,7 +147,7 @@ spawn {
     var db_names_id = 0
 
     loop {
-        val loadupdate = par-or {
+        val [load-list?, update-button?] = par-or {
             await :Iup.Action | it.h==btn_create {
                 val name_value = iup.get.pointer(txt_name, :VALUE) -> to-string -> trim
                 val surname_value = iup.get.pointer(txt_surname, :VALUE) -> to-string -> trim
@@ -226,7 +226,7 @@ spawn {
         }
 
 
-        if loadupdate[0] == true {   
+        if load-list? {   
             val filter_text = iup.get.pointer(txt_filter,:VALUE) -> to-string -> trim
             var fil = true
             var j = 1
@@ -252,7 +252,7 @@ spawn {
             }
             iup.set(lst_names, :VALUE, nil)
         }
-        if loadupdate[1] == true {
+        if update-button? {
             if iup.get.number(lst_names, :VALUE) == 0 {
                 iup.set(btn_update, :ACTIVE, "NO")
                 iup.set(btn_delete, :ACTIVE, "NO")
