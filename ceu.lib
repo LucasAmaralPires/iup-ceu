@@ -1,1 +1,1 @@
--g -I /usr/include/iup -l iup -l iupcontrols
+-g -I /usr/include/iup -I /usr/local/include/wsserver -l iup -l iupcontrols ws.o sha1.o utf8.o base64.o handshake.o toyws.o
