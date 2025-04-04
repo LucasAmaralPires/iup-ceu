@@ -25,14 +25,14 @@ spawn {
 
     ws.client()
 
-    par {
-        every :Iup.Action | it.h==button {
+    every :Iup.Action | it.h==button {
+        ;;IF YOU PUT SET AFTER SEND IT STOPS WORKING
+        iup.set(button, :ACTIVE, "NO")
+        ws.send("Button")
+        await :Ws.Msn {
             val v = iup.get.number(text, :VALUE)
             iup.set(text, :VALUE, v+1)
-        }
-    } with {
-        every <2:s> {
-            ws.send("Lucas")
+            iup.set(button, :ACTIVE, "YES")
         }
     }
 }
