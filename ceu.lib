@@ -1,1 +1,1 @@
--g -I /usr/include/iup -I /home/lucas/Desktop/ceu/iup/7guis/7guis-ws/ -l iup -l iupcontrols iup/7guis/7guis-ws/base64.o iup/7guis/7guis-ws/ws.o iup/7guis/7guis-ws/utf8.o iup/7guis/7guis-ws/toyws.o iup/7guis/7guis-ws/sha1.o iup/7guis/7guis-ws/handshake.o
+-g -I /usr/include/iup -I iup/7guis/7guis-ws/ -l iup -l iupcontrols iup/7guis/7guis-ws/base64.o iup/7guis/7guis-ws/ws.o iup/7guis/7guis-ws/utf8.o iup/7guis/7guis-ws/toyws.o iup/7guis/7guis-ws/sha1.o iup/7guis/7guis-ws/handshake.o
