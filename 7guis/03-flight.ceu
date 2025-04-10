@@ -69,8 +69,6 @@ spawn {
         iup.set(list, :2,        "return flight")
         iup.set(list, :VALUE,    :1)
 
-    var state = false
-
     val start = iup.text()
         iup.set(start, :EXPAND, "HORIZONTAL")
         iup.set(start, :VALID,  true)
@@ -110,17 +108,19 @@ spawn {
         val act2? = iup.get.bool(end, :ACTIVE)
         val val2? = iup.get.bool(end, :VALID)
 
+        var two-way? = false
+
         par {
-            every :Iup.List.Action | (it.h==list) and (it.state) {
+            every :Iup.List.Action | (it.h==list) and it.state {
                 iup.set(end, :ACTIVE, (it.item == 2))
-                set state = not state
+                set two-way? = not two-way?
                 check_button(end, start, button)
             }
         } with {
             every :Iup.Action | it.h==button {
                 val date_s :Date = catch :date {iup.get.pointer(start,:VALUE) -> to-string -> to-date}
                 val date :Date = catch :date {iup.get.pointer(end,:VALUE) -> to-string -> to-date}
-                if state == false {
+                if not two-way? {
                     iup.message("Attention!", "You have booked a one-way flight on " ++ to.string(date_s[0]) ++ "." ++ to.string(date_s[1]) ++ "." ++ to.string(date_s[2]) ++ ".")            
                 } else {
                     iup.message("Attention!", "You have booked a return flight on " ++ to.string(date_s[0]) ++ "." ++ to.string(date_s[1]) ++ "." ++ to.string(date_s[2]) ++ " and " ++ to.string(date[0]) ++ "." ++ to.string(date[1]) ++ "." ++ to.string(date[2]) ++ ".")                     
