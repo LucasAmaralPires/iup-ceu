@@ -3,20 +3,19 @@ data :WS = [
     client, send
 ]
 
-data :Ws = [text] {
-    :Msn = []
-}
+data :Ws = [n,v]
+
+var N = 0
 
 ```:pre
 #include <stdlib.h>
 #include <ws.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 #include "toyws.h"
 
 struct tws_ctx ctx;
-static int msn_num = 0;
-
 void onopen(ws_cli_conn_t client)
 {
 	char *cli, *port;
@@ -35,17 +34,19 @@ void onclose(ws_cli_conn_t client)
 void onmessage(ws_cli_conn_t client, const unsigned char *msg, uint64_t size, int type)
 {
 	char *cli;
+    usleep(500000); // TODO entr 100ms e 500ms
 
 	cli = ws_getaddress(client);
 	printf("I receive a message: %s (size: %" PRId64 ", type: %d), from: %s\n", msg, size, type, cli);
 
     CEU_Value args[] = {
-        { CEU_VALUE_NUMBER,  {.Number=msn_num++} }
+        { CEU_VALUE_NUMBER,  {.Number=msg[0]} },
+        { CEU_VALUE_NUMBER,  {.Number=msg[1]} }
     };
-    CEU_Value evt = ceu_create_tuple(1, 1, args CEU_LEX_X(COMMA 1));
+    CEU_Value evt = ceu_create_tuple(1, 2, args CEU_LEX_X(COMMA 1));
     ceu_gc_inc_val(evt);
 
-    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Ws_Msn} };
+    CEU_Value tag = { CEU_VALUE_TAG, {.Tag=CEU_TAG_Ws} };
     ceu_tag_set(tag, evt);
 
     ceu_broadcast_global(evt);
@@ -81,10 +82,14 @@ val ws :WS = group {
         ```
     }
 
-    func x-ws-send(text) {
+    func x-ws-send(v) {
+        val n = N
+        set N = N + 1
         ```
-        tws_sendframe(&ctx, $text.Dyn->Vector.buf, strlen($text.Dyn->Vector.buf), FRM_TXT);
+        char msg[2] = { $n.Number, $v.Number };
+        tws_sendframe(&ctx, msg, 2, FRM_TXT);
         ```
+        n
     }
 
     [

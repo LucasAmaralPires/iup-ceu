@@ -27,13 +27,14 @@ spawn {
 
     every :Iup.Action | it.h==button {
         ;;IF YOU PUT SET AFTER SEND IT STOPS WORKING
+        val v = iup.get.number(text, :VALUE)
+        val n = ws.send(v+1)
+
         iup.set(button, :ACTIVE, "NO")
-        ws.send("Button")
-        await :Ws.Msn {
-            val v = iup.get.number(text, :VALUE)
-            iup.set(text, :VALUE, v+1)
-            iup.set(button, :ACTIVE, "YES")
-        }
+        val e :Ws = await(:Ws | it.n==n)
+        iup.set(button, :ACTIVE, "YES")
+
+        iup.set(text, :VALUE, e.v)
     }
 }
 
