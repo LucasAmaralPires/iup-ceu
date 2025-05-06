@@ -1,0 +1,72 @@
+^["@/iup/iup.ceu"]
+
+task T () {
+    loop {
+        await <1:s>
+        println(:1,1)
+    }
+}
+spawn T()
+
+;;
+
+spawn {
+    loop {
+        await <1:s>
+        println(:1,1)
+    }
+}
+
+;;
+
+spawn {
+    par {
+        xxx
+    } with {
+        yyy
+    }
+}
+
+;;
+
+task X () {
+    xxx
+}
+task Y () {
+    yyy
+}
+task M () {
+    spawn X()
+    spawn Y()
+    await(false)
+}
+spawn M()
+
+;;
+
+spawn {
+    par-and {
+        xxx
+    } with {
+        yyy
+    }
+}
+
+;;
+
+task X () {
+    xxx
+}
+task Y () {
+    yyy
+}
+task M () {
+    val x = spawn X()
+    val y = spawn Y()
+    await(x)
+    await(y)
+}
+spawn M()
+
+
+iup.loop()
