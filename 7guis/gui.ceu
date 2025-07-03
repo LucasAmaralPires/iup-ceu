@@ -1,0 +1,34 @@
+^["@/iup/iup.ceu"]
+
+spawn {
+    val button = iup.button("Hello!")
+        iup.set(button, :SIZE, "60")
+
+    val text = iup.label("")
+        iup.set(text, :SIZE,     "60")
+        iup.set(text, :ALIGNMENT, "ACENTER")
+
+    val vbox = iup.vbox()
+        iup.append(vbox, button)
+        iup.append(vbox, text)
+
+    val hbox = iup.hbox()
+        iup.append(hbox, iup.fill())
+        iup.append(hbox, vbox)
+        iup.append(hbox, iup.fill())
+        iup.set(hbox, :MARGIN, "10x10")
+        iup.set(hbox, :SIZE, "200x50")
+        iup.set(hbox, :GAP,    "10")
+
+    val dlg = iup.dialog(hbox)
+        iup.set(dlg, :TITLE, "Hello GUI!")
+
+    iup.show-xy(dlg, `:number IUP_CENTER`, `:number IUP_CENTER`)
+
+    every :Iup.Action | it.h==button {
+        val v = iup.get.number(text, :VALUE)
+        iup.set(text, :TITLE, "Hello GUI!")
+    }
+}
+
+iup.loop()
