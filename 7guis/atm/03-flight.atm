@@ -1,0 +1,124 @@
+require "atmos.env.iup"
+require "iuplua"
+
+func checkDateFormat(str_date) {
+	val str_date = string.gsub(str_date, "^%s*(.-)%s*$", "%1")
+	val check = string.find(str_date, "^%d?%d.%d?%d.%d%d%d%d$")
+	if !check {
+		return (nil)
+    }
+	val day, month, year = string["match"](str_date, "(%d?%d).(%d?%d).(%d%d%d%d)")
+	if (day==nil) || (month==nil) || (year==nil) {
+		return (nil)
+    }
+	(1, tonumber(day), tonumber(month), tonumber(year))
+}
+
+func validateDate(day, month, year) {
+	var leapYear = 0
+	if (day && (day < 1)) || (day>31) || (month && (month < 1)) || (month > 12) {
+		return (nil)
+	}
+	if ((year % 400) == 0) || (((year % 4) == 0) && ((year % 100) != 0)) {
+		set leapYear = 1
+    }
+	if (month == 2) && leapYear && (day > 29) {
+		return (nil)
+	}
+
+	if (month == 2) && (!leapYear) && (day > 28){
+		return (nil)
+	}
+
+	if ((month == 4) || (month == 6) || (month == 9) || (month == 11)) && (day > 30) {
+		return (nil)
+	}
+    1
+}
+
+func startBeforeEnd(startDay, startMonth, startYear, endDay, endMonth, endYear) {
+    ifs {
+        (startYear < endYear) => 1
+        (startYear == endYear) && (startMonth < endMonth) => 1
+        (startYear == endYear) && (startMonth == endMonth) && (startDay <= endDay) => 1
+        else => nil
+    }
+}
+
+func checkDate(self) {
+	val check, day, month, year = checkDateFormat(self.value)
+	if  !check {
+		set self.bgcolor = "255 0 0"
+		set self.valid = nil
+		return ()
+	}
+
+	val valid = validateDate(day, month, year)
+	if  !valid {
+		set self.bgcolor = "255 0 0"
+		set self.valid = nil
+		return ()
+    }
+
+    set self.bgcolor = "255 255 255"
+	set self.valid = 1
+	set self.day = day
+	set self.month = month
+	set self.year = year
+}
+
+val lst_flight = iup.list@{"one-way flight", "return flight", dropdown = "YES", value = 1, expand = "HORIZONTAL"}
+val txt_startDate = iup.text@{expand = "HORIZONTAL", value = "22.09.1957"}
+val txt_returnDate = iup.text@{expand = "HORIZONTAL", active="NO", value = "22.09.1957"}
+val btn_book = iup.button@{title = "Book", expand = "HORIZONTAL"}
+
+val dlg = iup.dialog@{iup.vbox@{lst_flight, txt_startDate, txt_returnDate, btn_book, gap="10"}, title = "Book Flight", size = "150", margin = "10x10"}
+
+dlg::showxy( iup.CENTER, iup.CENTER )
+
+loop {
+    par {
+        every lst_flight, :value {
+            if lst_flight.value == "1" {
+                set txt_returnDate.active = "NO"
+            }
+            else {
+                set txt_returnDate.active = "YES"
+            }
+        }
+    } with {
+        every btn_book, :action {
+            val flightType = lst_flight.value
+            if lst_flight.value == "1" {
+                iup.Message("Attention!", "You have booked a one-way flight on " ++ txt_startDate.value ++".")
+            }
+            else {
+                iup.Message("Attention!", "You have booked a return flight on " ++ txt_startDate.value ++
+                                        " and " ++ txt_returnDate.value ++ ".")
+            }
+        }
+    } with {
+        every txt_startDate, :value {
+            checkDate(txt_startDate)
+            if ((txt_startDate.valid) && (txt_returnDate.active == "NO")) ||
+            (txt_returnDate.valid && startBeforeEnd(txt_startDate.day, txt_startDate.month, txt_startDate.year,
+                                                        txt_returnDate.day, txt_returnDate.month, txt_returnDate.year)){
+                set btn_book.active = "YES"
+            }
+            else {
+                set btn_book.active = "NO"
+            }            
+        }
+    } with {
+        every txt_returnDate, :value {
+            checkDate(txt_returnDate)
+            if ((txt_returnDate.valid) && (txt_startDate.valid) && startBeforeEnd(xt_startDate.day, txt_startDate.month, txt_startDate.year,
+		              txt_returnDate.day, txt_returnDate.month, txt_returnDate.year)){
+                set btn_book.active = "YES"
+            }
+            else {
+                set btn_book.active = "NO"
+            }            
+        }
+    }
+}
